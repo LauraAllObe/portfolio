@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+</head>
+<body>
+    <div class="slideshow-background" id="slideshow1">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <!-- First slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='hackerNewsThumbnail.png') }}">
+                <div class="slideshow-text">Hacker News Application Thumbnail</div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='CatProfessional.gif') }}">
+                <div class="slideshow-text">CatProfessional</div>
+            </div>
+            <!-- Navigation buttons for this slide -->
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</button>
+                <button class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="slideshow-background" id="slideshow2">
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <!-- First slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='CatExhaustedFromWork.gif') }}">
+                <div class="slideshow-text">Slide 1 Description</div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='CatTyping.gif') }}">
+                <div class="slideshow-text">Slide 2 Description</div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Third slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='CatWorking.gif') }}">
+                <div class="slideshow-text">Slide 3 Description</div>
+            </div>
+            <!-- Navigation buttons for this slide -->
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</button>
+                <button class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var slideIndices = {'slideshow1': 1, 'slideshow2': 1}; // Dictionary to track slide index for each slideshow
+        
+        function showSlides(n, slideshowId) {
+            var slides = document.querySelectorAll("#" + slideshowId + " .mySlides");
+            var slideIndex = slideIndices[slideshowId];
+            if (n > slides.length) { slideIndex = 1; }
+            if (n < 1) { slideIndex = slides.length; }
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex - 1].style.display = "flex";
+            slideIndices[slideshowId] = slideIndex;
+        }
+    
+        function plusSlides(n, slideshowId) {
+            showSlides(slideIndices[slideshowId] += n, slideshowId);
+        }
+    
+        window.onload = function() {
+            showSlides(slideIndices['slideshow1'], 'slideshow1');
+            showSlides(slideIndices['slideshow2'], 'slideshow2');
+        };
+    </script>
+</body>
+</html>
