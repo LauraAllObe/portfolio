@@ -3,69 +3,430 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Laura's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
 </head>
 <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="image-container"> <!-- Wrapper for image and close button -->
+                <img class="modal-image" src="" alt="Expanded view">
+                <span class="close">&times;</span>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <div class="main-background">
+        <h1>Laura Allison Obermaier</h1>
+        <img class="main-image" src="{{ url_for('static', filename='placeholderPhoto.jpg') }}"/>
+        <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
+    </div>
+    <!-- First slideshow -->
     <div class="slideshow-background" id="slideshow1">
         <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
+                <h2>Hacker News Web Application</h2>
+            </a>            
+            <div class="slideshow-skills">Python, HTML5, CSS, JSON, SQLite, Auth0, Nginx, Gunicorn, Linode, Lynis</div>
             <div class="mySlides">
                 <!-- First slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='hackerNewsThumbnail.png') }}">
-                <div class="slideshow-text">Hacker News Application Thumbnail</div>
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/uVsRSZlpIrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        The HackerNews Flask application provides a robust and secure platform for delivering the latest news from the Hacker News website, updated hourly. Utilizing nginx and gunicorn for its configuration and SQLite for data management, it offers a streamlined user experience with features like pagination, and user interaction through likes and dislikes for logged-in users. Authentication is managed via Auth0, enabling users to sign in with Google. The application includes several functional routes, such as a profile view for account information and an admin interface for managing user roles. Continuous updates and user interactions are facilitated on a cleanly designed interface, ensuring that users remain engaged and informed.
+                    </div>
+                </div>
             </div>
             <div class="mySlides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='CatProfessional.gif') }}">
-                <div class="slideshow-text">CatProfessional</div>
+                <div class="slideshow-image">
+                    <img style="max-height: 40vh" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)">
+                    <img style="max-height: 10vh" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)">
+                </div>
+                <div class="slideshow-text">
+                    <h3>Likes and Dislikes</h3>
+                    <div>
+                        Registered users have the ability to like or dislike individual news items. When a user interacts with a news item, their selection is highlighted in red, while unselected options appear in brown. Each interaction updates the total count of likes or dislikes associated with the news item in real time. If a user reselects a highlighted (red) option, it will deselect their like or dislike. Alternatively, if a user selects the opposite option (i.e., liking an item they had previously disliked or vice versa), the system automatically transfers their preference. This user-specific data persists in the database until the user's account is deleted, at which point all associated likes and dislikes are also removed.
+                    </div>
+                    <h3>Sorting and Pagination</h3>
+                    <div>
+                        News items are primarily sorted by the number of likes, from highest to lowest. In cases where items have the same number of likes, they are further sorted by their publication time, from newest to oldest. To facilitate easier viewing, these items are paginated, with each page displaying up to 10 news items. Users can navigate through the pages either by using the page navigation controls located at the bottom of the page or by directly specifying the page number in the URL.
+                    </div>
+                </div>
             </div>
-            <!-- Navigation buttons for this slide -->
+            <div class="mySlides" style="display:none;">
+                <!-- Third slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Automatic Updates</h3>
+                    <div>
+                        The system automatically refreshes news items hourly, retrieving the latest 50 unique entries from the Hacker News Firebase API. To ensure users receive up-to-date information, the top 30 items are displayed on the newsfeed page in JSON format, providing a streamlined view of the latest developments.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Fourth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Admin Permissions</h3>
+                    <div>
+                        Users with administrative privileges can access the admin page, either by entering the URL directly or via the navigation bar. On this page, administrators have the capability to manage user roles. They can remove non-administrative users as well as add or remove administrative rights for existing users. It is important to note that altering administrative rights does not delete the user's account; it merely changes their access permissions within the system.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Fifth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>User Login</h3>
+                    <div>
+                        This feature allows users to sign in using their Google account credentials. Upon their initial login, user data is retrieved and automatically added to the Hacker News database. New users will appear in the "All-time users" list accessible from the sidebar.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Sixth slide pair: Image and text -->
+                <div class="slideshow-image">  
+                    <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)">
+                    <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)">
+                </div>
+                <div class="slideshow-text">
+                    <h3>User Account</h3>
+                    <div>
+                        Once logged in, users have the ability to access their personal account page.
+                    </div>
+                    <h3>Sidebar</h3>
+                    <div>
+                        A list of the all-time users, as well as the UTC time and developer notes can be found in the hacker news sidebar.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                    <h3>Code Snippets 1/3 </h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                    <h3>Code Snippets 2/3 </h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Nine slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                    <h3>Code Snippets 3/3 </h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
             <div class="button-container">
                 <button class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
                 <button class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</button>
             </div>
         </div>
     </div>
-
+    <!-- Second slideshow -->
     <div class="slideshow-background" id="slideshow2">
         <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Legal Practice Management Web Application on GitHub">
+                <h2>Legal Practice Management Web Application</h2>
+            </a>            
+            <div class="slideshow-skills">C#, XML, JSON, .NET MAUI, Context Factory, DTOs, REST APIs, MVVM</div>
             <div class="mySlides">
                 <!-- First slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='CatExhaustedFromWork.gif') }}">
-                <div class="slideshow-text">Slide 1 Description</div>
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/4RhOKUSKGfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        This comprehensive web application offers robust law firm management tools, facilitating efficient handling of clients, projects, and staff. It supports full CRUD operations and features advanced utilities like a windowed timer, mass-billing capabilities, customizable interface options, and secure data deletion protocols.
+                    </div>
+                </div>
             </div>
             <div class="mySlides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='CatTyping.gif') }}">
-                <div class="slideshow-text">Slide 2 Description</div>
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/appMenuImage.png') }}" title="Application Menu" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Navigation</h3>
+                    <div>
+                        Users can seamlessly navigate through the application using interactive buttons that open new views. These include text-based main views and icon-driven secondary views. A dedicated 'Back' button at the bottom of the screen ensures easy navigation to previous screens. The application’s title and the current view (when applicable) are consistently displayed at the top for clear orientation.
+                    </div>
+                </div>
             </div>
             <div class="mySlides" style="display:none;">
                 <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='CatWorking.gif') }}">
-                <div class="slideshow-text">Slide 3 Description</div>
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeListImage.png') }}" title="Employee List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Employee Management 1/2</h3>
+                    <div>
+                        The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view, ensuring efficient management within the application.
+                    </div>
+                </div>
             </div>
-            <!-- Navigation buttons for this slide -->
+            <div class="mySlides" style="display:none;">
+                <!-- Fourth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeManagementImage.png') }}" title="Employee Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Employee Management 2/2</h3>
+                    <div>
+                        The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Fifth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientListImage.png') }}" title="Client List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Client Management 1/2</h3>
+                    <div>
+                        The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Sixth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientManagementImage.png') }}" title="Client Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Client Management 2/2</h3>
+                    <div>
+                        The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Seventh slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectListImage.png') }}" title="Project List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Project Management 1/2</h3>
+                    <div>
+                        The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Eigth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectManagementImage.png') }}" title="Project Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Project Management 2/2</h3>
+                    <div>
+                        The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeListImage.png') }}" title="Time List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Time Management 1/2</h3>
+                    <div>
+                        The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Tenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeManagementImage.png') }}" title="Time Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Time Management 2/2</h3>
+                    <div>
+                        The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Eleventh slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillListImage.png') }}" title="Project Bill List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Bill Management 1/4</h3>
+                    <div>
+                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Twelfth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillManagementImage.png') }}" title="Project Bill Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Bill Management 2/4</h3>
+                    <div>
+                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Thirteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillListImage.png') }}" title="Client Bill List" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Bill Management 3/4</h3>
+                    <div>
+                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Fourteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillManagementImage.png') }}" title="Client Bill Management" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Bill Management 4/4</h3>
+                    <div>
+                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Fifteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeSearchImage.png') }}" title="Employee Search" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Searching</h3>
+                    <div>
+                        On all management pages, users have the ability to search for specific object instances using the search bar and button positioned at the top of the screen.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Sixteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timerImage.png') }}" title="Timer" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Windowed Timer</h3>
+                    <div>
+                        A windowed timer is accessible via the timer icon button on the project page. Users must specify an Employee ID to activate the timer. The timer features start, stop, and submit functionalities. Note that the submit button is only enabled after the timer exceeds 10 minutes.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Seventeenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 1/5</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Eighteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 2/5</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Nineteenth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 3/5</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Twentieth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 4/5</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="mySlides" style="display:none;">
+                <!-- Twentyfirst slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 5/5</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
             <div class="button-container">
                 <button class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
                 <button class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</button>
             </div>
         </div>
     </div>
-
+    <!-- Contact & Links -->
+    <div class="end-background">
+        <div class="end-horizontal">
+            <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
+            <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
+            <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+            <a href="tel:+19543488139" target="_blank" class="end-clickables" title="Call Me: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='telephone.png') }}" alt="Telephone"></a>
+            <a href="sms:+19543488139" target="_blank" class="end-clickables" title="SMS: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='message.png') }}" alt="Message"></a>
+            <a href="mailto:lauraaobermaier@gmail.com?subject=Portfolio Questions&body=Your questions here" target="_blank" class="end-clickables" title="Email Me: lauraaobermaier@gmail.com"><img class="end-clickables" src="{{ url_for('static', filename='mail.png') }}" alt="Email"></a>
+            <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV"></a>
+        </div>
+        <div class="end-copyright">© 2024 Laura Allison Obermaier. All rights reserved.</div>
+    </div>
+    <!-- Modal and Slideshow Navigation Code -->
     <script>
+        var modal = document.getElementById("myModal");
+        var modalImg = document.querySelector(".modal-image");
+        var span = document.getElementsByClassName("close")[0];
+
+        function showModal(src) {
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
         var slideIndices = {'slideshow1': 1, 'slideshow2': 1}; // Dictionary to track slide index for each slideshow
         
         function showSlides(n, slideshowId) {
+            var i;
             var slides = document.querySelectorAll("#" + slideshowId + " .mySlides");
             var slideIndex = slideIndices[slideshowId];
-            if (n > slides.length) { slideIndex = 1; }
-            if (n < 1) { slideIndex = slides.length; }
-            for (var i = 0; i < slides.length; i++) {
+            var totalSlides = slides.length;
+
+            if (n > totalSlides) {
+                slideIndex = 1;
+            } else if (n < 1) {
+                slideIndex = totalSlides;
+            } else {
+                slideIndex = n;
+            }
+
+            for (i = 0; i < totalSlides; i++) {
                 slides[i].style.display = "none";  
             }
             slides[slideIndex - 1].style.display = "flex";
+
+            var navigationText = document.querySelector("#" + slideshowId + " .slide-navigation-text");
+            if (navigationText) {
+                navigationText.innerHTML = "Slide " + slideIndex + " of " + totalSlides;
+            }
+
             slideIndices[slideshowId] = slideIndex;
         }
+
     
         function plusSlides(n, slideshowId) {
             showSlides(slideIndices[slideshowId] += n, slideshowId);
@@ -75,6 +436,6 @@
             showSlides(slideIndices['slideshow1'], 'slideshow1');
             showSlides(slideIndices['slideshow2'], 'slideshow2');
         };
-    </script>
+    </script>    
 </body>
 </html>

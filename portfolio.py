@@ -2,8 +2,8 @@ from flask import Flask, render_template, session
 import os
 
 app = Flask(__name__)
-#app.secret_key = '5305c0328237c354c422e0bae6da2b1b'  # Set a secret key for security purposes
-app.secret_key = os.environ.get('FLASK_SECRET_KEY')
+app.secret_key = '5305c0328237c354c422e0bae6da2b1b'  # Set a secret key for security purposes
+#app.secret_key = os.environ.get('FLASK_SECRET_KEY')
 
 @app.route('/')
 def hello_world():
