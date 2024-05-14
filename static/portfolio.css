@@ -85,7 +85,7 @@ a:hover {
     justify-content: center;
 }
 
-.mySlides {
+.slides {
     display: flex;
     justify-content: space-between;
     align-items: center;
