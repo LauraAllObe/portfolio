@@ -521,24 +521,155 @@
             <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
                 <h2>FAT32 Filesystem</h2>
             </a>            
-            <div class="slideshow-skills">Skills</div>
+            <div class="slideshow-skills">C, FAT32 Filesystem Management</div>
             <div class="slides">
                 <!-- First slide pair: Image and text -->
                 <iframe class="slideshow-video" src="https://www.youtube.com/embed/PwfMXMGMbD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="slideshow-text">
-                    <h3>Application Overview</h3>
+                    <h3>Program Overview</h3>
                     <div>
-                        Text.
+                        This program facilitates the manipulation of FAT32 images through a shell-like interface, supporting commands such as ls, cd, mkdir, creat, open, close, read, append, lseek, lsof, rm, and rm -r.
                     </div>
                 </div>
             </div>
             <div class="slides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mountImage.png') }}" title="Mounting the Image Image" onclick="showModal(this.src)">
                 <div class="slideshow-text">
-                    <h3>Title</h3>
+                    <h3>Mount Image</h3>
                     <div>
-                        Text.
+                        When the program is started, initial values of the image are printed after mounting is complete.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Third slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Changing Directory and Making a File</h3>
+                    <div>
+                        The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Fourth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Making a Directory</h3>
+                    <div>
+                        The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Fifth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Remove and Recursive Remove</h3>
+                    <div>
+                        The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Sixth slide pair: Image and text -->
+                <div class="slideshow-image" style="max-width: 21vw">
+                    <img src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)">
+                    <img src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)">
+                </div>
+                
+                <div class="slideshow-text">
+                    <h3>File Operations 1/2</h3>
+                    <div>
+                        The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Seventh slide pair: Image and text -->
+                <div class="slideshow-image" style="max-width: 27.5vw">
+                    <img src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)">
+                    <img src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)">
+                </div>
+                
+                <div class="slideshow-text">
+                    <h3>File Operations 2/2</h3>
+                    <div>
+                        The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Eigth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/infoExitImage.png') }}" title="Get Image Info and Exit Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Get Info and Exit</h3>
+                    <div>
+                        The info command displays image data, and the exit command terminates the program. Neither command requires arguments.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 1/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 2/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 3/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 4/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 5/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 6/6</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                     </div>
                 </div>
             </div>
