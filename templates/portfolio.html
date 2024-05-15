@@ -367,10 +367,44 @@
     <!-- Third slideshow -->
     <div class="slideshow-background" id="slideshow3">
         <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the Legal Practice Management Web Application on GitHub">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
+                <h2>My Notes Mobile Application</h2>
+            </a>            
+            <div class="slideshow-skills">Java, XML, Android SDK, Room DB, MVVM, LiveData, Androidn Nav Component, Fragments, Navigation Graph, Recycler View, Data Passing with Bundles</div>
+            <div class="slides">
+                <!-- First slide pair: Image and text -->
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/LBIV-_afX_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Title</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
+                <button class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fourth slideshow -->
+    <div class="slideshow-background" id="slideshow4">
+        <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
                 <h2>ProFessUp Web Application</h2>
             </a>            
-            <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js</div>
+            <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js, MongoDB</div>
             <div class="slides">
                 <!-- First slide pair: Image and text -->
                 <iframe class="slideshow-video" src="https://www.youtube.com/embed/0SFSC4hThjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -383,7 +417,51 @@
             </div>
             <div class="slides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/text.png') }}" title="Application Menu" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 1/2</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Third slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 2/2</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
+                <button class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <!-- Fifth slideshow -->
+    <div class="slideshow-background" id="slideshow5">
+        <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
+                <h2>FAT32 Filesystem</h2>
+            </a>            
+            <div class="slideshow-skills">Skills</div>
+            <div class="slides">
+                <!-- First slide pair: Image and text -->
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/PwfMXMGMbD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
                 <div class="slideshow-text">
                     <h3>Title</h3>
                     <div>
@@ -392,9 +470,77 @@
                 </div>
             </div>
             <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</button>
+                <button class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</button>
                 <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</button>
+                <button class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <!-- Sixth slideshow -->
+    <div class="slideshow-background" id="slideshow6">
+        <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
+                <h2>Shell</h2>
+            </a>            
+            <div class="slideshow-skills">Skills</div>
+            <div class="slides">
+                <!-- First slide pair: Image and text -->
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/isSNxwJRsO0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Title</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow6')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
+                <button class="next" onclick="plusSlides(1, 'slideshow6')">&#10095;</button>
+            </div>
+        </div>
+    </div>
+    <!-- Seventh slideshow -->
+    <div class="slideshow-background" id="slideshow7">
+        <div class="slideshow-container">
+            <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
+                <h2>Elevator Kernel Module</h2>
+            </a>            
+            <div class="slideshow-skills">Skills</div>
+            <div class="slides">
+                <!-- First slide pair: Image and text -->
+                <iframe class="slideshow-video" src="https://www.youtube.com/embed/Nlg-2q-6LFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="slideshow-text">
+                    <h3>Application Overview</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Title</h3>
+                    <div>
+                        Text.
+                    </div>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="prev" onclick="plusSlides(-1, 'slideshow7')">&#10094;</button>
+                <div class="slide-navigation-text"></div>
+                <button class="next" onclick="plusSlides(1, 'slideshow7')">&#10095;</button>
             </div>
         </div>
     </div>
@@ -432,7 +578,15 @@
             }
         }
 
-        var slideIndices = {'slideshow1': 1, 'slideshow2': 1, 'slideshow3': 1}; // Dictionary to track slide index for each slideshow
+        var slideIndices = {
+            'slideshow1': 1, 
+            'slideshow2': 1, 
+            'slideshow3': 1,
+            'slideshow4': 1,
+            'slideshow5': 1,
+            'slideshow6': 1,
+            'slideshow7': 1
+        };
         
         function showSlides(n, slideshowId) {
             var i;
@@ -470,6 +624,10 @@
             showSlides(slideIndices['slideshow1'], 'slideshow1');
             showSlides(slideIndices['slideshow2'], 'slideshow2');
             showSlides(slideIndices['slideshow3'], 'slideshow3');
+            showSlides(slideIndices['slideshow4'], 'slideshow4');
+            showSlides(slideIndices['slideshow5'], 'slideshow5');
+            showSlides(slideIndices['slideshow6'], 'slideshow6');
+            showSlides(slideIndices['slideshow7'], 'slideshow7');
         };
     </script>    
 </body>
