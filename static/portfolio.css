@@ -87,7 +87,7 @@ a:hover {
 
 .slides {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
@@ -97,8 +97,8 @@ a:hover {
     max-width: 45%;
     max-height: 52.5vh;
     width: auto;
-    margin: 0 auto;
     object-fit: contain;
+    margin-inline: 5px;
     display: flex;
     flex-direction: column;
 }
@@ -135,8 +135,8 @@ a:hover {
     z-index: 1000;
     left: 0;
     top: 0;
-    width: 100%;
-    height: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
     overflow: auto;
     background-color: rgba(0,0,0,0);
 }
@@ -154,8 +154,8 @@ a:hover {
     width: auto;
     height: auto;
     z-index: 1000;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 90vw;
+    max-height: 90vh;
 }
 
 .image-container {
@@ -166,8 +166,9 @@ a:hover {
 
 .modal-image {
     display: block;
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: scale-down;
     border: 10px solid black;
     border-radius: 8px;
 }

@@ -377,17 +377,90 @@
                 <div class="slideshow-text">
                     <h3>Application Overview</h3>
                     <div>
-                        Text.
+                        This Android application provides comprehensive note management and customization features. Users can adjust text color, background color, font size, and text alignment. It supports saving, deleting, and undoing changes to notes, which can be displayed individually or in a card/recycle view format.
                     </div>
                 </div>
             </div>
             <div class="slides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/detailsImage.png') }}" title="Notes Details Screen Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Note Details</h3>
+                    <div>
+                        The note detail view includes a back button, title and content input fields, and customization options such as text color, background color, text alignment, and adjustable font size in increments of 10s and 1s. It also features buttons for note management, including discard, undo, and save actions. Note that upon exiting, the note content will be automatically saved.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Third slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/colorImage.png') }}" title="Color Selector Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Color Selection</h3>
+                    <div>
+                        A third-party color selection wheel is utilized to choose both text and background colors. Users can select a color and confirm with "OK" or cancel the selection.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Fourth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Font Size</h3>
+                    <div>
+                        Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Fifth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Text Alignment</h3>
+                    <div>
+                        Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Sixth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/scrollImage.png') }}" title="Note Scrolling Image" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Scrolling and Note Overview</h3>
+                    <div>
+                        The notes overview utilizes a recycle view, allowing users to add and effortlessly scroll through numerous notes. Each note is presented in a card view, maintaining the same customizations and content as seen in the detail view, with the exception of slightly adjusted font sizes.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Seventh slide pair: Image and text -->
                 <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
                 <div class="slideshow-text">
-                    <h3>Title</h3>
+                    <h3>Code Snippet 1/3</h3>
                     <div>
-                        Text.
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Eigth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 2/3</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                    </div>
+                </div>
+            </div>
+            <div class="slides" style="display:none;">
+                <!-- Ninth slide pair: Image and text -->
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                <div class="slideshow-text">
+                    <h3>Code Snippet 3/3</h3>
+                    <div>
+                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                     </div>
                 </div>
             </div>
@@ -411,13 +484,13 @@
                 <div class="slideshow-text">
                     <h3>Application Overview</h3>
                     <div>
-                        ProFessUp is a platform modeled after Rate My Professor, designed to facilitate CRUD operations for professors, reviews, courses, and user profiles. The application enables users to efficiently search for professors and filter reviews by course. It presents professor profiles and reviews in a card-based layout, utilizing sliders, drop-down menus, buttons, and checkboxes to enhance usability and comprehension. The interface employs a user-friendly color scheme to optimize the user experience.
+                        ProFessUp is a platform modeled after Rate My Professor, designed to facilitate CRUD operations for professors, reviews, courses, and user profiles. The application enables users to efficiently search for professors and filter reviews by course. It presents professor profiles and reviews in a card-based layout, utilizing sliders, drop-down menus, buttons, and checkboxes to enhance usability and comprehension. The interface employs a user-friendly color scheme to optimize the user experience. Due to the deletion of the MongoDB, note functionality is demonstrated exclusively through video in this portfolio project.
                     </div>
                 </div>
             </div>
             <div class="slides" style="display:none;">
                 <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
                 <div class="slideshow-text">
                     <h3>Code Snippet 1/2</h3>
                     <div>
@@ -427,7 +500,7 @@
             </div>
             <div class="slides" style="display:none;">
                 <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
                 <div class="slideshow-text">
                     <h3>Code Snippet 2/2</h3>
                     <div>
