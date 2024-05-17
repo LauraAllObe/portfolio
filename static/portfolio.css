@@ -1,6 +1,6 @@
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    margin: 0px;
     background-color: #e8eaeb;
     overflow: auto;
     font-size: 18px;
@@ -34,22 +34,22 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 55vh;
+    height: 500px;
     box-sizing: border-box;
     position: relative;
 }
 
 .main-image {
     display: block; 
-    max-width: 13%;
-    margin: 0 auto;
+    max-width: 250px;
+    margin: 0px auto;
     object-fit: contain;
     display: flex;
     flex-direction: column;
 }
 
 .main-text {
-    margin-top: 2.5vh;
+    margin-top: 20px;
     text-align: center;
     font-size: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -71,15 +71,14 @@ a:hover {
     background-color: #708090;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 40vh;
+    margin-bottom: 360px;
 }
 
 
 .slideshow-container {
     margin-top: 50px;
     width: 98%;
-    max-height: 60vh;
-    height: 100vh;
+    height: 540px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,8 +134,8 @@ a:hover {
     z-index: 1000;
     left: 0;
     top: 0;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 1200px;
+    max-height: 800px;
     overflow: auto;
     background-color: rgba(0,0,0,0);
 }
@@ -154,8 +153,8 @@ a:hover {
     width: auto;
     height: auto;
     z-index: 1000;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 1200px;
+    max-height: 800px;
 }
 
 .image-container {
@@ -166,8 +165,8 @@ a:hover {
 
 .modal-image {
     display: block;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 1200px;
+    max-height: 800px;
     object-fit: scale-down;
     border: 10px solid black;
     border-radius: 8px;
@@ -215,8 +214,8 @@ a:hover {
 }
 
 .slide-navigation-text {
-    margin-left: 22vw;
-    margin-right: 22vw;
+    margin-left: 420px;
+    margin-right: 420px;
     text-align: center;
     display: flex;
     align-items: center;
@@ -227,7 +226,7 @@ a:hover {
 
 .end-background {
     width: 100%;
-    height: 15vh;
+    height: 135px;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0,0,0,0.8);
@@ -244,7 +243,7 @@ a:hover {
 
 .end-clickables {
     margin: 10px;
-    height: 3vh;
+    height: 27px;
 }
 
 .end-copyright {
