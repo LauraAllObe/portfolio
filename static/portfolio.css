@@ -258,6 +258,14 @@ a:hover {
 
 @media (max-width: 768px) {
 
+    body {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0px;
+        background-color: #e8eaeb;
+        overflow: auto;
+        font-size: 15px;
+    }
+
     h2 {
         font-size: 24px;
     }
@@ -274,10 +282,11 @@ a:hover {
     .slideshow-skills {
         display: flex;
         justify-content: center;
+        text-align: center;
         width: 100%;
         position: absolute;
         top: 120px;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .modal {
