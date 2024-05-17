@@ -267,7 +267,12 @@ a:hover {
     }
 
     .slideshow-skills {
-        top: 150px;
+        top: 120px;
+        font-size: 15px;
+    }
+
+    .slideshow-image {
+        max-width: 45%;
     }
 
     .modal {
@@ -283,6 +288,10 @@ a:hover {
     .modal-image {
         max-width: 80%; 
         max-height: 700px;
+    }
+
+    .phone-friendly {
+        max-width: 45%;
     }
 
 }
