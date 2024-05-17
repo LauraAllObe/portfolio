@@ -257,16 +257,17 @@ a:hover {
 }
 
 @media (max-width: 768px) {
+
+    h2 {
+        font-size: 24px;
+    }
+    
     .slides {
         margin-top: 170px;
     }
 
     .slideshow-skills {
         top: 150px;
-    }
-
-    .h2 {
-        font-size: 24px;
     }
 
     .modal {
