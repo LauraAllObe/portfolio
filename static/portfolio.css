@@ -135,10 +135,7 @@ a:hover {
     z-index: 1000;
     left: 0;
     top: 0;
-    max-width: 90%;
-    max-height: 800px;
     overflow: auto;
-    background-color: rgba(0,0,0,0);
 }
 
 .modal-content {
@@ -150,32 +147,35 @@ a:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: auto;
-    width: auto;
-    height: auto;
     z-index: 1000;
-    max-width: 90%;
-    max-height: 800px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: rgba(0, 0, 0, 0.718);
 }
 
 .image-container {
     position: relative;
-    display: inline-block;
-    line-height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .modal-image {
-    display: block;
     max-width: 90%;
     max-height: 800px;
-    object-fit: scale-down;
-    border: 10px solid black;
-    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: zoom-in;
 }
+
+.modal-zoomed-in {
+    transform: scale(2);
+    cursor: zoom-out;
+}
+
 .close {
     position: absolute;
-    top: -25px;
-    right: -25px;
+    top: -15px;
+    right: 5%;
     color: #55616d;
     font-size: 35px;
     font-weight: bold;
@@ -259,10 +259,6 @@ a:hover {
 @media (max-width: 768px) {
 
     body {
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        margin: 0px;
-        background-color: #e8eaeb;
-        overflow: auto;
         font-size: 15px;
     }
 
@@ -271,58 +267,18 @@ a:hover {
     }
     
     .slides {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
         margin-top: 150px;
         margin-bottom: 30px;
     }
 
     .slideshow-skills {
-        display: flex;
-        justify-content: center;
         text-align: center;
-        width: 100%;
         position: absolute;
-        top: 120px;
+        top: 100px;
         font-size: 12px;
     }
 
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        max-width: 80%;
-        max-height: 700px;
-        overflow: auto;
-        background-color: rgba(0,0,0,0);
-    }
-
-    .modal-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        width: auto;
-        height: auto;
-        z-index: 1000;
-        max-width: 80%; 
-        max-height: 700px;
-    }
-
     .modal-image {
-        display: block;
-        object-fit: scale-down;
-        border: 10px solid black;
-        border-radius: 8px;
         max-width: 80%; 
         max-height: 700px;
     }
@@ -334,6 +290,10 @@ a:hover {
     .end-clickables {
         margin: 8px;
         height: 18px;
+    }
+
+    .prev, .next {
+        font-size: 12px;
     }
 
 }

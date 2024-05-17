@@ -9,7 +9,7 @@
 <body>
     <!-- The Modal -->
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div id="modalContent" class="modal-content">
             <div class="image-container"> <!-- Wrapper for image and close button -->
                 <img class="modal-image" src="" alt="Expanded view">
                 <span class="close">&times;</span>
@@ -855,6 +855,7 @@
         var modal = document.getElementById("myModal");
         var modalImg = document.querySelector(".modal-image");
         var span = document.getElementsByClassName("close")[0];
+        var modalContent = document.getElementById("modalContent");
 
         function showModal(src) {
             modal.style.display = "block";
@@ -863,13 +864,27 @@
 
         span.onclick = function() {
             modal.style.display = "none";
+            modalImg.classList.remove('modal-zoomed-in');
         }
 
         window.onclick = function(event) {
-            if (event.target == modal) {
+            if (event.target == modal || event.target == modalContent) {
                 modal.style.display = "none";
+                modalImg.classList.remove('modal-zoomed-in');
             }
         }
+
+        function toggleZoom() {
+            if (modalImg.classList.contains('modal-zoomed-in')) {
+                modalImg.classList.remove('modal-zoomed-in');
+            } else {
+                modalImg.classList.add('modal-zoomed-in');
+            }
+        }
+
+        modalImg.addEventListener('click', function() {
+            toggleZoom();
+        });
 
         var slideIndices = {
             'slideshow1': 1, 
