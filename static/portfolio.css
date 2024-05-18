@@ -4,6 +4,7 @@ body {
     background-color: #e8eaeb;
     overflow: auto;
     font-size: 18px;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -55,6 +56,75 @@ a:hover {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.clouds {
+    position: relative;
+    padding: 100px;
+}
+
+.clouds img {
+    top: 0;
+    left: 0;
+    height: 400px;
+    pointer-events: none;
+    position: absolute;
+    transition: margin-top 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+#cloud1 {
+    top: 50px;
+    left:0px;
+}
+
+#cloud2 {
+    top: 0px;
+    left: 1280px;
+}
+
+#cloud3 {
+    top: 500px;
+    left: 900px;
+}
+
+#cloud4 {
+    top: 500px;
+    left: 200px;
+}
+
+#cloud5 {
+    top: 800px;
+    left: 100px;
+}
+
+#cloud5 {
+    top: 150px;
+    left: 900px;
+}
+
+#cloud6 {
+    top: 500px;
+    left: 600px;
+}
+
+#cloud8 {
+    left: 700px;
+    height: 250px;
+}
+
+#cloud9 {
+    left: 2000px;
+    top: 7550px;
+}
+
+#cloud10 {
+    left: -500px;
+    top: 7650px;
+}
+
+#cloud11 {
+    left: -500px;
+    top: 7500px;
+}
+
 .slideshow-title {
     position: absolute;
     top: 15px;
@@ -62,15 +132,17 @@ a:hover {
     text-decoration: none;
     color: inherit;
     font-size: inherit;
+    z-index: 100;
 }
 
 .slideshow-background {
     width: 100%;
     padding-bottom: 70px;
-    background-color: #708090;
+    background-color: #70809081;
     box-sizing: border-box;
     position: relative;
     margin-bottom: 360px;
+    z-index: 100;
 }
 
 
@@ -82,6 +154,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 
 .slides {
@@ -91,6 +164,7 @@ a:hover {
     width: 100%;
     margin-top: 110px;
     margin-bottom: 30px;
+    z-index: 100;
 }
 
 .slideshow-image {
@@ -101,6 +175,7 @@ a:hover {
     object-fit: contain;
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 
 .slideshow-video {
@@ -109,6 +184,7 @@ a:hover {
     height: 480px;
     margin: 0 auto;
     object-fit: contain;
+    z-index: 100;
 }
 
 .slideshow-text {
@@ -118,6 +194,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 100;
 }
 
 .slideshow-skills {
@@ -127,6 +204,7 @@ a:hover {
     position: absolute;
     top:100px;
     font-size: 15px;
+    z-index: 100;
 }
 
 .modal {
@@ -227,10 +305,10 @@ a:hover {
 
 .end-background {
     width: 100%;
-    height: 135px;
+    height: 230px;
     box-sizing: border-box;
     position: relative;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.722);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,7 +335,6 @@ a:hover {
 }
 
 @media (max-width: 768px) {
-
     body {
         font-size: 15px;
     }
@@ -295,5 +372,4 @@ a:hover {
     .prev, .next {
         font-size: 12px;
     }
-
 }

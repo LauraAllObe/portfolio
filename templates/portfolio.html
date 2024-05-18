@@ -7,6 +7,19 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
 </head>
 <body>
+    <div class="clouds">
+        <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}"/>
+        <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
+        <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
+        <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
+        <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
+        <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
+        <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
+        <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
+        <img id="cloud9" src="{{ url_for('static', filename='clouds/cloud8.1.png') }}"/>
+        <img id="cloud10" src="{{ url_for('static', filename='clouds/cloud2.png') }}"/>
+        <img id="cloud11" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
+    </div>
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <div id="modalContent" class="modal-content">
@@ -937,6 +950,53 @@
             showSlides(slideIndices['slideshow6'], 'slideshow6');
             showSlides(slideIndices['slideshow7'], 'slideshow7');
         };
+
+        let cloud1 = document.getElementById('cloud1');
+        let cloud2 = document.getElementById('cloud2');
+        let cloud3 = document.getElementById('cloud3');
+        let cloud4 = document.getElementById('cloud4');
+        let cloud5 = document.getElementById('cloud5');
+        let cloud6 = document.getElementById('cloud6');
+        let cloud7 = document.getElementById('cloud7');
+        let cloud8 = document.getElementById('cloud8');
+        let cloud9 = document.getElementById('cloud9');
+        let cloud10 = document.getElementById('cloud10');
+        let cloud11 = document.getElementById('cloud11');
+
+        window.addEventListener('scroll', () => {
+            let value = window.scrollY;
+
+            cloud1.style.marginTop = -value * 1.5  + 'px';
+            cloud1.style.marginLeft = -value * 2.5  + 'px';
+            cloud2.style.marginTop = -value * 1.5  + 'px';
+            cloud2.style.marginLeft = value * 2.5  + 'px';
+            cloud3.style.marginTop = -value * 1.5  + 'px';
+            cloud3.style.marginLeft = value * 2.5  + 'px';
+            cloud4.style.marginTop = -value * 1.5  + 'px';
+            cloud4.style.marginLeft = -value * 2.5  + 'px';
+            cloud5.style.marginTop = -value * 1.5  + 'px';
+            cloud5.style.marginLeft = -value * 2.5  + 'px';
+            cloud6.style.marginTop = -value * 1.5  + 'px';
+            cloud6.style.marginLeft = value * 2.5  + 'px';
+            cloud7.style.marginTop = -value * 1.5  + 'px';
+            cloud7.style.marginLeft = value * 2.5  + 'px';
+            cloud8.style.marginTop = -value * 1.5  + 'px';
+            cloud8.style.marginLeft = value * 2.5  + 'px';
+
+            if (value >= 7000) {
+                // Cloud 9 moves down and left (negative X direction)
+                cloud9.style.transform = 'translate(-900px, 500px)';
+                cloud9.style.transition = 'transform 1s ease-out';
+
+                // Cloud 10 moves down directly
+                cloud10.style.transform = 'translate(800px, 505px)';
+                cloud10.style.transition = 'transform 1s ease-out';
+
+                // Cloud 11 moves down and right (positive X direction)
+                cloud11.style.transform = 'translate(300px, 500px)';
+                cloud11.style.transition = 'transform 1s ease-out';
+            }
+        });
     </script>    
 </body>
 </html>
