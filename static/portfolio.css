@@ -85,7 +85,7 @@ a:hover {
 .clouds img {
     top: 0;
     left: 0;
-    height: 250px;
+    height: 400px;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -99,7 +99,7 @@ a:hover {
 
 #cloud2 {
     top: 0px;
-    left: 1280px;
+    left: 0px;
 }
 
 #cloud3 {
@@ -184,12 +184,21 @@ a:hover {
 
 .slides {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     margin-top: 110px;
     margin-bottom: 30px;
     z-index: 100;
+}
+
+.notes-multi-image {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 45%;
 }
 
 .slideshow-image {
@@ -279,7 +288,7 @@ a:hover {
     position: absolute;
     top: -15px;
     right: 5%;
-    color: #55616d;
+    color: #77797a;
     font-size: 35px;
     font-weight: bold;
     z-index: 1100;
@@ -359,9 +368,13 @@ a:hover {
     color: #d5dbe0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     body {
         font-size: 15px;
+    }
+
+    .overflow-mobile {
+        overflow-x: hidden !important;
     }
 
     h2 {
@@ -369,7 +382,7 @@ a:hover {
     }
     
     .slides {
-        margin-top: 150px;
+        margin-top: 100px;
         margin-bottom: 30px;
     }
 
@@ -377,6 +390,11 @@ a:hover {
         text-align: center;
         position: absolute;
         font-size: 12px;
+        top: 70px;
+    }
+
+    .slideshow-container {
+        min-height: 540px;
     }
 
     #slideshow-legal-skills {
@@ -388,10 +406,6 @@ a:hover {
         max-height: 700px;
     }
 
-    .phone-friendly {
-        max-width: 45%;
-    }
-
     .end-clickables {
         margin: 8px;
         height: 18px;
@@ -401,17 +415,18 @@ a:hover {
         font-size: 12px;
     }
 
-    #cloud2 {
-        top: 150px;
-        left:0px;
+    .clouds img {
+        height: 400px;
     }
 
     #cloud3 {
-        display: none;
+        top: 500px;
+        left: 0px;
     }
 
     #cloud4 {
-        display: none;
+        top: 500px;
+        left: 0px;
     }
 
     #cloud5 {
@@ -431,40 +446,37 @@ a:hover {
     }
 
     #cloud9 {
-        left: 500px;
-        top: 8050px;
+        display: none;
+        left: 800px;
+        top: 7250px;
     }
     
     #cloud10 {
-        left: -500px;
-        top: 8150px;
-    }
-    
-    #cloud11 {
-        left: -500px;
-        top: 8000px;
+        display: none;
+        left: -1250px;
+        top: 7100px;
     }
 
     .slideshow-video {
-        max-height: 380px;
-        max-width: 90%;
+        width: 90%;
+        height: 200px;
     }
 
-    .slideshow-text {
-        max-height: 380px;
-        max-width: 100%;
+    .slideshow-text, .slideshow-image {
+        width: 100%;
     }
 
-    .slideshow-image {
-        max-height: 380px;
-        max-width: 90%;
-    }
-
-    .slideshow-container {
-        flex-direction: row;
+    .slides {
+        flex-direction: column;
+        width: 100%;
     }
 
     .loading-screen {
         font-size: 80px;
+    }
+
+    .close {
+        top: -15px;
+        right: 10%;
     }
 }

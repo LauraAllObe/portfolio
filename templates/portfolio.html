@@ -6,1047 +6,1079 @@
     <title>Laura's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="clouds">
-        <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}"/>
-        <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
-        <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
-        <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
-        <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
-        <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
-        <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
-        <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
-        <img id="cloud9" src="{{ url_for('static', filename='clouds/cloud8.1.png') }}"/>
-        <img id="cloud10" src="{{ url_for('static', filename='clouds/cloud2.png') }}"/>
-        <img id="cloud11" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
-    </div>
-    <!-- The Loading Screen -->
-    <div id="loadingScreen" class="loading-screen">
-        <div>Loading...</div>
-    </div>
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <div id="modalContent" class="modal-content">
-            <div class="image-container"> <!-- Wrapper for image and close button -->
-                <img class="modal-image" src="" alt="Expanded view">
-                <span class="close">&times;</span>
+    <div class="overflow-mobile">
+        <div class="clouds">
+            <picture>
+                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
+                <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
+            </picture>
+            <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
+            <picture>
+                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
+                <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
+            </picture>
+            <picture>
+                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
+                <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
+            </picture>
+            <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
+            <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
+            <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
+            <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
+            <img id="cloud9" src="{{ url_for('static', filename='clouds/cloud8.1.png') }}"/>
+            <img id="cloud10" src="{{ url_for('static', filename='clouds/cloud2.png') }}"/>
+            <img id="cloud11" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
+        </div>
+        <!-- The Loading Screen -->
+        <div id="loadingScreen" class="loading-screen">
+            <div>Loading...</div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <div id="modalContent" class="modal-content">
+                <div class="image-container"> <!-- Wrapper for image and close button -->
+                    <img class="modal-image" src="" alt="Expanded view">
+                    <span class="close">&times;</span>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Header -->
-    <div class="main-background">
-        <h1>Laura Allison Obermaier</h1>
-        <img class="main-image" src="{{ url_for('static', filename='placeholderPhoto.jpg') }}"/>
-        <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
-    </div>
-    <!-- First slideshow -->
-    <div class="slideshow-background" id="slideshow1">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
-                <h2>Hacker News Web Application</h2>
-            </a>            
-            <div class="slideshow-skills">Python, HTML5, CSS, JSON, SQLite, Auth0, Nginx, Gunicorn, Linode, Lynis</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/uVsRSZlpIrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Application Overview</h3>
-                    <div>
-                        The HackerNews Flask application provides a robust and secure platform for delivering the latest news from the Hacker News website, updated hourly. Utilizing nginx and gunicorn for its configuration and SQLite for data management, it offers a streamlined user experience with features like pagination, and user interaction through likes and dislikes for logged-in users. Authentication is managed via Auth0, enabling users to sign in with Google. The application includes several functional routes, such as a profile view for account information and an admin interface for managing user roles. Continuous updates and user interactions are facilitated on a cleanly designed interface, ensuring that users remain engaged and informed.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <div class="slideshow-image">
-                    <img style="max-height: 40vh" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)">
-                    <img style="max-height: 10vh" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)">
-                </div>
-                <div class="slideshow-text">
-                    <h3>Likes and Dislikes</h3>
-                    <div>
-                        Registered users have the ability to like or dislike individual news items. When a user interacts with a news item, their selection is highlighted in red, while unselected options appear in brown. Each interaction updates the total count of likes or dislikes associated with the news item in real time. If a user reselects a highlighted (red) option, it will deselect their like or dislike. Alternatively, if a user selects the opposite option (i.e., liking an item they had previously disliked or vice versa), the system automatically transfers their preference. This user-specific data persists in the database until the user's account is deleted, at which point all associated likes and dislikes are also removed.
-                    </div>
-                    <h3>Sorting and Pagination</h3>
-                    <div>
-                        News items are primarily sorted by the number of likes, from highest to lowest. In cases where items have the same number of likes, they are further sorted by their publication time, from newest to oldest. To facilitate easier viewing, these items are paginated, with each page displaying up to 10 news items. Users can navigate through the pages either by using the page navigation controls located at the bottom of the page or by directly specifying the page number in the URL.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Automatic Updates</h3>
-                    <div>
-                        The system automatically refreshes news items hourly, retrieving the latest 50 unique entries from the Hacker News Firebase API. To ensure users receive up-to-date information, the top 30 items are displayed on the newsfeed page in JSON format, providing a streamlined view of the latest developments.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Admin Permissions</h3>
-                    <div>
-                        Users with administrative privileges can access the admin page, either by entering the URL directly or via the navigation bar. On this page, administrators have the capability to manage user roles. They can remove non-administrative users as well as add or remove administrative rights for existing users. It is important to note that altering administrative rights does not delete the user's account; it merely changes their access permissions within the system.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>User Login</h3>
-                    <div>
-                        This feature allows users to sign in using their Google account credentials. Upon their initial login, user data is retrieved and automatically added to the Hacker News database. New users will appear in the "All-time users" list accessible from the sidebar.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixth slide pair: Image and text -->
-                <div class="slideshow-image">  
-                    <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)">
-                    <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)">
-                </div>
-                <div class="slideshow-text">
-                    <h3>User Account</h3>
-                    <div>
-                        Once logged in, users have the ability to access their personal account page.
-                    </div>
-                    <h3>Sidebar</h3>
-                    <div>
-                        A list of the all-time users, as well as the UTC time and developer notes can be found in the hacker news sidebar.
-                    </div>
-                </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventh slide pair: Image and text -->
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+        <!-- Header -->
+        <div class="main-background">
+            <h1>Laura Allison Obermaier</h1>
+            <img class="main-image" src="{{ url_for('static', filename='placeholderPhoto.jpg') }}"/>
+            <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
+        </div>
+        <!-- First slideshow -->
+        <div class="slideshow-background" id="slideshow1">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
+                    <h2>Hacker News Web Application</h2>
+                </a>            
+                <div class="slideshow-skills">Python, HTML5, CSS, JSON, SQLite, Auth0, Nginx, Gunicorn, Linode, Lynis</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/uVsRSZlpIrU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="slideshow-text">
-                    <h3>Code Snippets 1/3 </h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        <h3>Application Overview</h3>
+                        <div>
+                            The HackerNews Flask application provides a robust and secure platform for delivering the latest news from the Hacker News website, updated hourly. Utilizing nginx and gunicorn for its configuration and SQLite for data management, it offers a streamlined user experience with features like pagination, and user interaction through likes and dislikes for logged-in users. Authentication is managed via Auth0, enabling users to sign in with Google. The application includes several functional routes, such as a profile view for account information and an admin interface for managing user roles. Continuous updates and user interactions are facilitated on a cleanly designed interface, ensuring that users remain engaged and informed.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventh slide pair: Image and text -->
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <div class="slideshow-image">
+                        <img style="max-height: 40vh" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)">
+                        <img style="max-height: 10vh" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)">
+                    </div>
                     <div class="slideshow-text">
-                    <h3>Code Snippets 2/3 </h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        <h3>Likes and Dislikes</h3>
+                        <div>
+                            Registered users have the ability to like or dislike individual news items. When a user interacts with a news item, their selection is highlighted in red, while unselected options appear in brown. Each interaction updates the total count of likes or dislikes associated with the news item in real time. If a user reselects a highlighted (red) option, it will deselect their like or dislike. Alternatively, if a user selects the opposite option (i.e., liking an item they had previously disliked or vice versa), the system automatically transfers their preference. This user-specific data persists in the database until the user's account is deleted, at which point all associated likes and dislikes are also removed.
+                        </div>
+                        <h3>Sorting and Pagination</h3>
+                        <div>
+                            News items are primarily sorted by the number of likes, from highest to lowest. In cases where items have the same number of likes, they are further sorted by their publication time, from newest to oldest. To facilitate easier viewing, these items are paginated, with each page displaying up to 10 news items. Users can navigate through the pages either by using the page navigation controls located at the bottom of the page or by directly specifying the page number in the URL.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Nine slide pair: Image and text -->
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)">
                     <div class="slideshow-text">
-                    <h3>Code Snippets 3/3 </h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        <h3>Automatic Updates</h3>
+                        <div>
+                            The system automatically refreshes news items hourly, retrieving the latest 50 unique entries from the Hacker News Firebase API. To ensure users receive up-to-date information, the top 30 items are displayed on the newsfeed page in JSON format, providing a streamlined view of the latest developments.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</button>
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Admin Permissions</h3>
+                        <div>
+                            Users with administrative privileges can access the admin page, either by entering the URL directly or via the navigation bar. On this page, administrators have the capability to manage user roles. They can remove non-administrative users as well as add or remove administrative rights for existing users. It is important to note that altering administrative rights does not delete the user's account; it merely changes their access permissions within the system.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>User Login</h3>
+                        <div>
+                            This feature allows users to sign in using their Google account credentials. Upon their initial login, user data is retrieved and automatically added to the Hacker News database. New users will appear in the "All-time users" list accessible from the sidebar.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <div class="slideshow-image">  
+                        <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)">
+                        <img style="max-width: 60%" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)">
+                    </div>
+                    <div class="slideshow-text">
+                        <h3>User Account</h3>
+                        <div>
+                            Once logged in, users have the ability to access their personal account page.
+                        </div>
+                        <h3>Sidebar</h3>
+                        <div>
+                            A list of the all-time users, as well as the UTC time and developer notes can be found in the hacker news sidebar.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                        <div class="slideshow-text">
+                        <h3>Code Snippets 1/3 </h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                        <div class="slideshow-text">
+                        <h3>Code Snippets 2/3 </h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Nine slide pair: Image and text -->
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                        <div class="slideshow-text">
+                        <h3>Code Snippets 3/3 </h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Second slideshow -->
-    <div class="slideshow-background" id="slideshow2">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Legal Practice Management Web Application on GitHub">
-                <h2>Legal Practice Management Web Application</h2>
-            </a>            
-            <div id="slideshow-legal-skills" class="slideshow-skills">C#, XML, JSON, .NET MAUI, Context Factory, DTOs, REST APIs, MVVM</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/4RhOKUSKGfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Application Overview</h3>
-                    <div>
-                        This comprehensive web application offers robust law firm management tools, facilitating efficient handling of clients, projects, and staff. It supports full CRUD operations and features advanced utilities like a windowed timer, mass-billing capabilities, customizable interface options, and secure data deletion protocols.
+        <!-- Second slideshow -->
+        <div class="slideshow-background" id="slideshow2">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Legal Practice Management Web Application on GitHub">
+                    <h2>Legal Practice Management Web Application</h2>
+                </a>            
+                <div id="slideshow-legal-skills" class="slideshow-skills">C#, XML, JSON, .NET MAUI, Context Factory, DTOs, REST APIs, MVVM</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/4RhOKUSKGfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Application Overview</h3>
+                        <div>
+                            This comprehensive web application offers robust law firm management tools, facilitating efficient handling of clients, projects, and staff. It supports full CRUD operations and features advanced utilities like a windowed timer, mass-billing capabilities, customizable interface options, and secure data deletion protocols.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/appMenuImage.png') }}" title="Application Menu" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Navigation</h3>
-                    <div>
-                        Users can seamlessly navigate through the application using interactive buttons that open new views. These include text-based main views and icon-driven secondary views. A dedicated 'Back' button at the bottom of the screen ensures easy navigation to previous screens. The application’s title and the current view (when applicable) are consistently displayed at the top for clear orientation.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/appMenuImage.png') }}" title="Application Menu" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Navigation</h3>
+                        <div>
+                            Users can seamlessly navigate through the application using interactive buttons that open new views. These include text-based main views and icon-driven secondary views. A dedicated 'Back' button at the bottom of the screen ensures easy navigation to previous screens. The application’s title and the current view (when applicable) are consistently displayed at the top for clear orientation.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeListImage.png') }}" title="Employee List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Employee Management 1/2</h3>
-                    <div>
-                        The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view, ensuring efficient management within the application.
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeListImage.png') }}" title="Employee List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Employee Management 1/2</h3>
+                        <div>
+                            The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view, ensuring efficient management within the application.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeManagementImage.png') }}" title="Employee Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Employee Management 2/2</h3>
-                    <div>
-                        The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view.
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeManagementImage.png') }}" title="Employee Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Employee Management 2/2</h3>
+                        <div>
+                            The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientListImage.png') }}" title="Client List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Client Management 1/2</h3>
-                    <div>
-                        The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientListImage.png') }}" title="Client List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Client Management 1/2</h3>
+                        <div>
+                            The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientManagementImage.png') }}" title="Client Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Client Management 2/2</h3>
-                    <div>
-                        The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientManagementImage.png') }}" title="Client Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Client Management 2/2</h3>
+                        <div>
+                            The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventh slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectListImage.png') }}" title="Project List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Project Management 1/2</h3>
-                    <div>
-                        The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectListImage.png') }}" title="Project List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Project Management 1/2</h3>
+                        <div>
+                            The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Eigth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectManagementImage.png') }}" title="Project Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Project Management 2/2</h3>
-                    <div>
-                        The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                <div class="slides" style="display:none;">
+                    <!-- Eigth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectManagementImage.png') }}" title="Project Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Project Management 2/2</h3>
+                        <div>
+                            The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeListImage.png') }}" title="Time List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Time Management 1/2</h3>
-                    <div>
-                        The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeListImage.png') }}" title="Time List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Time Management 1/2</h3>
+                        <div>
+                            The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Tenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeManagementImage.png') }}" title="Time Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Time Management 2/2</h3>
-                    <div>
-                        The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                <div class="slides" style="display:none;">
+                    <!-- Tenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeManagementImage.png') }}" title="Time Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Time Management 2/2</h3>
+                        <div>
+                            The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Eleventh slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillListImage.png') }}" title="Project Bill List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Bill Management 1/4</h3>
-                    <div>
-                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                <div class="slides" style="display:none;">
+                    <!-- Eleventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillListImage.png') }}" title="Project Bill List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Bill Management 1/4</h3>
+                        <div>
+                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Twelfth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillManagementImage.png') }}" title="Project Bill Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Bill Management 2/4</h3>
-                    <div>
-                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                <div class="slides" style="display:none;">
+                    <!-- Twelfth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillManagementImage.png') }}" title="Project Bill Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Bill Management 2/4</h3>
+                        <div>
+                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Thirteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillListImage.png') }}" title="Client Bill List" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Bill Management 3/4</h3>
-                    <div>
-                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                <div class="slides" style="display:none;">
+                    <!-- Thirteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillListImage.png') }}" title="Client Bill List" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Bill Management 3/4</h3>
+                        <div>
+                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillManagementImage.png') }}" title="Client Bill Management" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Bill Management 4/4</h3>
-                    <div>
-                        The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                <div class="slides" style="display:none;">
+                    <!-- Fourteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillManagementImage.png') }}" title="Client Bill Management" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Bill Management 4/4</h3>
+                        <div>
+                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeSearchImage.png') }}" title="Employee Search" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Searching</h3>
-                    <div>
-                        On all management pages, users have the ability to search for specific object instances using the search bar and button positioned at the top of the screen.
+                <div class="slides" style="display:none;">
+                    <!-- Fifteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeSearchImage.png') }}" title="Employee Search" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Searching</h3>
+                        <div>
+                            On all management pages, users have the ability to search for specific object instances using the search bar and button positioned at the top of the screen.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timerImage.png') }}" title="Timer" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Windowed Timer</h3>
-                    <div>
-                        A windowed timer is accessible via the timer icon button on the project page. Users must specify an Employee ID to activate the timer. The timer features start, stop, and submit functionalities. Note that the submit button is only enabled after the timer exceeds 10 minutes.
+                <div class="slides" style="display:none;">
+                    <!-- Sixteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timerImage.png') }}" title="Timer" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Windowed Timer</h3>
+                        <div>
+                            A windowed timer is accessible via the timer icon button on the project page. Users must specify an Employee ID to activate the timer. The timer features start, stop, and submit functionalities. Note that the submit button is only enabled after the timer exceeds 10 minutes.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventeenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/5</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Seventeenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/5</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Eighteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/5</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Eighteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/5</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Nineteenth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 3/5</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Nineteenth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/5</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Twentieth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 4/5</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Twentieth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 4/5</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Twentyfirst slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 5/5</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Twentyfirst slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 5/5</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Third slideshow -->
-    <div class="slideshow-background" id="slideshow3">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
-                <h2>My Notes Mobile Application</h2>
-            </a>            
-            <div class="slideshow-skills">Java, XML, Android SDK, Room DB, MVVM, LiveData, Androidn Nav Component, Fragments, Navigation Graph, Recycler View, Data Passing with Bundles</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/LBIV-_afX_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Application Overview</h3>
-                    <div>
-                        This Android application provides comprehensive note management and customization features. Users can adjust text color, background color, font size, and text alignment. It supports saving, deleting, and undoing changes to notes, which can be displayed individually or in a card/recycle view format.
+        <!-- Third slideshow -->
+        <div class="slideshow-background" id="slideshow3">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
+                    <h2>My Notes Mobile Application</h2>
+                </a>            
+                <div class="slideshow-skills">Java, XML, Android SDK, Room DB, MVVM, LiveData, Androidn Nav Component, Fragments, Navigation Graph, Recycler View, Data Passing with Bundles</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/LBIV-_afX_o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Application Overview</h3>
+                        <div>
+                            This Android application provides comprehensive note management and customization features. Users can adjust text color, background color, font size, and text alignment. It supports saving, deleting, and undoing changes to notes, which can be displayed individually or in a card/recycle view format.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/detailsImage.png') }}" title="Notes Details Screen Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Note Details</h3>
-                    <div>
-                        The note detail view includes a back button, title and content input fields, and customization options such as text color, background color, text alignment, and adjustable font size in increments of 10s and 1s. It also features buttons for note management, including discard, undo, and save actions. Note that upon exiting, the note content will be automatically saved.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/detailsImage.png') }}" title="Notes Details Screen Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Note Details</h3>
+                        <div>
+                            The note detail view includes a back button, title and content input fields, and customization options such as text color, background color, text alignment, and adjustable font size in increments of 10s and 1s. It also features buttons for note management, including discard, undo, and save actions. Note that upon exiting, the note content will be automatically saved.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/colorImage.png') }}" title="Color Selector Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Color Selection</h3>
-                    <div>
-                        A third-party color selection wheel is utilized to choose both text and background colors. Users can select a color and confirm with "OK" or cancel the selection.
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/colorImage.png') }}" title="Color Selector Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Color Selection</h3>
+                        <div>
+                            A third-party color selection wheel is utilized to choose both text and background colors. Users can select a color and confirm with "OK" or cancel the selection.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <div class="phone-friendly">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Font Size</h3>
-                    <div>
-                        Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <div class="notes-multi-image">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>Font Size</h3>
+                        <div>
+                            Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <div class="phone-friendly">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Text Alignment</h3>
-                    <div>
-                        Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <div class="notes-multi-image">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)">
+                    </div>
+                    
+                    
+                    <div class="slideshow-text">
+                        <h3>Text Alignment</h3>
+                        <div>
+                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/scrollImage.png') }}" title="Note Scrolling Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Scrolling and Note Overview</h3>
-                    <div>
-                        The notes overview utilizes a recycle view, allowing users to add and effortlessly scroll through numerous notes. Each note is presented in a card view, maintaining the same customizations and content as seen in the detail view, with the exception of slightly adjusted font sizes.
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/scrollImage.png') }}" title="Note Scrolling Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Scrolling and Note Overview</h3>
+                        <div>
+                            The notes overview utilizes a recycle view, allowing users to add and effortlessly scroll through numerous notes. Each note is presented in a card view, maintaining the same customizations and content as seen in the detail view, with the exception of slightly adjusted font sizes.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventh slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Eigth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Eigth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 3/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/myNotes" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Fourth slideshow -->
-    <div class="slideshow-background" id="slideshow4">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
-                <h2>ProFessUp Web Application</h2>
-            </a>            
-            <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js, MongoDB</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/0SFSC4hThjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Application Overview</h3>
-                    <div>
-                        ProFessUp is a platform modeled after Rate My Professor, designed to facilitate CRUD operations for professors, reviews, courses, and user profiles. The application enables users to efficiently search for professors and filter reviews by course. It presents professor profiles and reviews in a card-based layout, utilizing sliders, drop-down menus, buttons, and checkboxes to enhance usability and comprehension. The interface employs a user-friendly color scheme to optimize the user experience. Due to the deletion of the MongoDB, note functionality is demonstrated exclusively through video in this portfolio project.
+        <!-- Fourth slideshow -->
+        <div class="slideshow-background" id="slideshow4">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
+                    <h2>ProFessUp Web Application</h2>
+                </a>            
+                <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js, MongoDB</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/0SFSC4hThjk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Application Overview</h3>
+                        <div>
+                            ProFessUp is a platform modeled after Rate My Professor, designed to facilitate CRUD operations for professors, reviews, courses, and user profiles. The application enables users to efficiently search for professors and filter reviews by course. It presents professor profiles and reviews in a card-based layout, utilizing sliders, drop-down menus, buttons, and checkboxes to enhance usability and comprehension. The interface employs a user-friendly color scheme to optimize the user experience. Due to the deletion of the MongoDB, note functionality is demonstrated exclusively through video in this portfolio project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/2</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/2</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/2</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/2</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/ProFessUp" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Fifth slideshow -->
-    <div class="slideshow-background" id="slideshow5">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
-                <h2>FAT32 Filesystem</h2>
-            </a>            
-            <div class="slideshow-skills">C, FAT32 Filesystem Management, Systems Programming</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/PwfMXMGMbD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Program Overview</h3>
-                    <div>
-                        This program facilitates the manipulation of FAT32 images through a shell-like interface, supporting commands such as ls, cd, mkdir, creat, open, close, read, append, lseek, lsof, rm, and rm -r.
+        <!-- Fifth slideshow -->
+        <div class="slideshow-background" id="slideshow5">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
+                    <h2>FAT32 Filesystem</h2>
+                </a>            
+                <div class="slideshow-skills">C, FAT32 Filesystem Management, Systems Programming</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/PwfMXMGMbD8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Program Overview</h3>
+                        <div>
+                            This program facilitates the manipulation of FAT32 images through a shell-like interface, supporting commands such as ls, cd, mkdir, creat, open, close, read, append, lseek, lsof, rm, and rm -r.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mountImage.png') }}" title="Mounting the Image Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Mount Image</h3>
-                    <div>
-                        When the program is started, initial values of the image are printed after mounting is complete.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mountImage.png') }}" title="Mounting the Image Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Mount Image</h3>
+                        <div>
+                            When the program is started, initial values of the image are printed after mounting is complete.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <div class="phone-friendly">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Changing Directory and Making a File</h3>
-                    <div>
-                        The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <div class="phone-friendly">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>Changing Directory and Making a File</h3>
+                        <div>
+                            The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <div class="phone-friendly">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Making a Directory</h3>
-                    <div>
-                        The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <div class="phone-friendly">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>Making a Directory</h3>
+                        <div>
+                            The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <div class="phone-friendly">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Remove and Recursive Remove</h3>
-                    <div>
-                        The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <div class="phone-friendly">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>Remove and Recursive Remove</h3>
+                        <div>
+                            The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixth slide pair: Image and text -->
-                <div class="slideshow-image" style="max-width: 21vw">
-                    <img src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)">
-                    <img src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>File Operations 1/2</h3>
-                    <div>
-                        The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <div class="slideshow-image" style="max-width: 21vw">
+                        <img src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)">
+                        <img src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>File Operations 1/2</h3>
+                        <div>
+                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Seventh slide pair: Image and text -->
-                <div class="slideshow-image" style="max-width: 27.5vw">
-                    <img src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)">
-                    <img src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>File Operations 2/2</h3>
-                    <div>
-                        The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                    <div class="slideshow-image" style="max-width: 27.5vw">
+                        <img src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)">
+                        <img src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>File Operations 2/2</h3>
+                        <div>
+                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Eigth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/infoExitImage.png') }}" title="Get Image Info and Exit Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Get Info and Exit</h3>
-                    <div>
-                        The info command displays image data, and the exit command terminates the program. Neither command requires arguments.
+                <div class="slides" style="display:none;">
+                    <!-- Eigth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/infoExitImage.png') }}" title="Get Image Info and Exit Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Get Info and Exit</h3>
+                        <div>
+                            The info command displays image data, and the exit command terminates the program. Neither command requires arguments.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 3/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 4/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 4/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 5/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 5/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Ninth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 6/6</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Ninth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 6/6</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/fat32filesystem" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Sixth slideshow -->
-    <div class="slideshow-background" id="slideshow6">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
-                <h2>Shell</h2>
-            </a>
-            <div class="slideshow-skills">C, Shell Programming, Systems Programming</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/c9-mLxW2zOw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Program Overview</h3>
-                    <div>
-                        This program is designed to simulate a shell environment. It incorporates a comprehensive set of functionalities, including both internal and external command processing, as well as the capability to execute an external program. These features collectively emulate the typical operations of a conventional shell.
+        <!-- Sixth slideshow -->
+        <div class="slideshow-background" id="slideshow6">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
+                    <h2>Shell</h2>
+                </a>
+                <div class="slideshow-skills">C, Shell Programming, Systems Programming</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/c9-mLxW2zOw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Program Overview</h3>
+                        <div>
+                            This program is designed to simulate a shell environment. It incorporates a comprehensive set of functionalities, including both internal and external command processing, as well as the capability to execute an external program. These features collectively emulate the typical operations of a conventional shell.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage1.png') }}" title="Execution Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Execution Part 1/2</h3>
-                    <div>
-                        On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage1.png') }}" title="Execution Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Execution Part 1/2</h3>
+                        <div>
+                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <div class="slideshow-image">
-                    <img src="{{ url_for('static', filename='slideshow6/demoImage2.png') }}" title="Execution Image 2" onclick="showModal(this.src)">
-                    <img src="{{ url_for('static', filename='slideshow6/demoImage3.png') }}" title="Execution Image 3" onclick="showModal(this.src)">
-                </div>
-                
-                <div class="slideshow-text">
-                    <h3>Execution Part 2/2</h3>
-                    <div>
-                        On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <div class="slideshow-image">
+                        <img src="{{ url_for('static', filename='slideshow6/demoImage2.png') }}" title="Execution Image 2" onclick="showModal(this.src)">
+                        <img src="{{ url_for('static', filename='slideshow6/demoImage3.png') }}" title="Execution Image 3" onclick="showModal(this.src)">
+                    </div>
+                    
+                    <div class="slideshow-text">
+                        <h3>Execution Part 2/2</h3>
+                        <div>
+                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Sixth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 3/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/shell" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow6')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow6')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow6')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow6')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Seventh slideshow -->
-    <div class="slideshow-background" id="slideshow7">
-        <div class="slideshow-container">
-            <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
-                <h2>Elevator Kernel Module</h2>
-            </a>            
-            <div class="slideshow-skills">C, Kernel Programming, Systems Programming</div>
-            <div class="slides">
-                <!-- First slide pair: Image and text -->
-                <iframe class="slideshow-video" src="https://www.youtube.com/embed/Nlg-2q-6LFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <div class="slideshow-text">
-                    <h3>Program Overview</h3>
-                    <div>
-                        This program utilizes an advanced elevator scheduling algorithm that interfaces seamlessly with a custom kernel module. It incorporates system calls, efficient scheduling techniques, kernel operations, mutexes/locks, and multithreading to optimize performance and ensure robust system integration.
+        <!-- Seventh slideshow -->
+        <div class="slideshow-background" id="slideshow7">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
+                    <h2>Elevator Kernel Module</h2>
+                </a>            
+                <div class="slideshow-skills">C, Kernel Programming, Systems Programming</div>
+                <div class="slides">
+                    <!-- First slide pair: Image and text -->
+                    <iframe class="slideshow-video" src="https://www.youtube.com/embed/Nlg-2q-6LFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="slideshow-text">
+                        <h3>Program Overview</h3>
+                        <div>
+                            This program utilizes an advanced elevator scheduling algorithm that interfaces seamlessly with a custom kernel module. It incorporates system calls, efficient scheduling techniques, kernel operations, mutexes/locks, and multithreading to optimize performance and ensure robust system integration.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Second slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/elevatorImage.png') }}" title="Elevator Image" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Elevator Kernel Module</h3>
-                    <div>
-                        This program, a custom elevator kernel module, utilizes consumer and producer processes to manage start and stop functions. The proc_read function reports the current operational status. Passengers are serviced in a FIFO (First In, First Out) order, with a capacity limit of 750 lbs or five passengers. Once this limit is reached, the elevator will unload but not accept new passengers until capacity is available. The elevator operates in several states: OFFLINE, IDLE, LOADING, UP, and DOWN, and can transport passengers classified as FRESHMAN, SOPHOMORE, JUNIOR, and SENIOR, weighing 100, 150, 200, and 250 lbs respectively. An IDLE state indicates no current passenger service but readiness for input, while OFFLINE indicates a system shutdown via a custom system call.
+                <div class="slides" style="display:none;">
+                    <!-- Second slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/elevatorImage.png') }}" title="Elevator Image" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Elevator Kernel Module</h3>
+                        <div>
+                            This program, a custom elevator kernel module, utilizes consumer and producer processes to manage start and stop functions. The proc_read function reports the current operational status. Passengers are serviced in a FIFO (First In, First Out) order, with a capacity limit of 750 lbs or five passengers. Once this limit is reached, the elevator will unload but not accept new passengers until capacity is available. The elevator operates in several states: OFFLINE, IDLE, LOADING, UP, and DOWN, and can transport passengers classified as FRESHMAN, SOPHOMORE, JUNIOR, and SENIOR, weighing 100, 150, 200, and 250 lbs respectively. An IDLE state indicates no current passenger service but readiness for input, while OFFLINE indicates a system shutdown via a custom system call.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Third slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 1/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fourth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 2/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="slides" style="display:none;">
-                <!-- Fifth slide pair: Image and text -->
-                <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
-                <div class="slideshow-text">
-                    <h3>Code Snippet 3/3</h3>
-                    <div>
-                        For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="button-container">
-                <button class="prev" onclick="plusSlides(-1, 'slideshow7')">&#10094;</button>
-                <div class="slide-navigation-text"></div>
-                <button class="next" onclick="plusSlides(1, 'slideshow7')">&#10095;</button>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow7')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow7')">&#10095;</button>
+                </div>
             </div>
         </div>
-    </div>
-    <!-- Contact & Links -->
-    <div class="end-background">
-        <div class="end-horizontal">
-            <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
-            <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
-            <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
-            <a href="tel:+19543488139" target="_blank" class="end-clickables" title="Call Me: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='telephone.png') }}" alt="Telephone"></a>
-            <a href="sms:+19543488139" target="_blank" class="end-clickables" title="SMS: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='message.png') }}" alt="Message"></a>
-            <a href="mailto:lauraaobermaier@gmail.com?subject=Portfolio Questions&body=Your questions here" target="_blank" class="end-clickables" title="Email Me: lauraaobermaier@gmail.com"><img class="end-clickables" src="{{ url_for('static', filename='mail.png') }}" alt="Email"></a>
-            <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV"></a>
+        <!-- Contact & Links -->
+        <div class="end-background">
+            <div class="end-horizontal">
+                <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
+                <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
+                <a href="tel:+19543488139" target="_blank" class="end-clickables" title="Call Me: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='telephone.png') }}" alt="Telephone"></a>
+                <a href="sms:+19543488139" target="_blank" class="end-clickables" title="SMS: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='message.png') }}" alt="Message"></a>
+                <a href="mailto:lauraaobermaier@gmail.com?subject=Portfolio Questions&body=Your questions here" target="_blank" class="end-clickables" title="Email Me: lauraaobermaier@gmail.com"><img class="end-clickables" src="{{ url_for('static', filename='mail.png') }}" alt="Email"></a>
+                <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV"></a>
+            </div>
+            <div class="end-copyright">© 2024 Laura Allison Obermaier. All rights reserved.</div>
         </div>
-        <div class="end-copyright">© 2024 Laura Allison Obermaier. All rights reserved.</div>
-    </div>
-    <!-- Modal and Slideshow Navigation Code -->
-    <script>
-        var modal = document.getElementById("myModal");
-        var modalImg = document.querySelector(".modal-image");
-        var span = document.getElementsByClassName("close")[0];
-        var modalContent = document.getElementById("modalContent");
-
-        function showModal(src) {
-            modal.style.display = "block";
-            modalImg.src = src;
-        }
-
-        span.onclick = function() {
-            modal.style.display = "none";
-            modalImg.classList.remove('modal-zoomed-in');
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal || event.target == modalContent) {
+        <!-- Modal and Slideshow Navigation Code -->
+        <script>
+            var modal = document.getElementById("myModal");
+            var modalImg = document.querySelector(".modal-image");
+            var span = document.getElementsByClassName("close")[0];
+            var modalContent = document.getElementById("modalContent");
+    
+            function showModal(src) {
+                modal.style.display = "block";
+                modalImg.src = src;
+            }
+    
+            span.onclick = function() {
                 modal.style.display = "none";
                 modalImg.classList.remove('modal-zoomed-in');
             }
-        }
-
-        function toggleZoom() {
-            if (modalImg.classList.contains('modal-zoomed-in')) {
-                modalImg.classList.remove('modal-zoomed-in');
-            } else {
-                modalImg.classList.add('modal-zoomed-in');
+    
+            window.onclick = function(event) {
+                if (event.target == modal || event.target == modalContent) {
+                    modal.style.display = "none";
+                    modalImg.classList.remove('modal-zoomed-in');
+                }
             }
-        }
-
-        modalImg.addEventListener('click', function() {
-            toggleZoom();
-        });
-
-        var slideIndices = {
-            'slideshow1': 1, 
-            'slideshow2': 1, 
-            'slideshow3': 1,
-            'slideshow4': 1,
-            'slideshow5': 1,
-            'slideshow6': 1,
-            'slideshow7': 1
-        };
+    
+            function toggleZoom() {
+                if (modalImg.classList.contains('modal-zoomed-in')) {
+                    modalImg.classList.remove('modal-zoomed-in');
+                } else {
+                    modalImg.classList.add('modal-zoomed-in');
+                }
+            }
+    
+            modalImg.addEventListener('click', function() {
+                toggleZoom();
+            });
+    
+            var slideIndices = {
+                'slideshow1': 1, 
+                'slideshow2': 1, 
+                'slideshow3': 1,
+                'slideshow4': 1,
+                'slideshow5': 1,
+                'slideshow6': 1,
+                'slideshow7': 1
+            };
+            
+            function showSlides(n, slideshowId) {
+                var i;
+                var slides = document.querySelectorAll("#" + slideshowId + " .slides");
+                var slideIndex = slideIndices[slideshowId];
+                var totalSlides = slides.length;
+    
+                if (n > totalSlides) {
+                    slideIndex = 1;
+                } else if (n < 1) {
+                    slideIndex = totalSlides;
+                } else {
+                    slideIndex = n;
+                }
+    
+                for (i = 0; i < totalSlides; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slides[slideIndex - 1].style.display = "flex";
+    
+                var navigationText = document.querySelector("#" + slideshowId + " .slide-navigation-text");
+                if (navigationText) {
+                    navigationText.innerHTML = "Slide " + slideIndex + " of " + totalSlides;
+                }
+    
+                slideIndices[slideshowId] = slideIndex;
+            }
+    
         
-        function showSlides(n, slideshowId) {
-            var i;
-            var slides = document.querySelectorAll("#" + slideshowId + " .slides");
-            var slideIndex = slideIndices[slideshowId];
-            var totalSlides = slides.length;
-
-            if (n > totalSlides) {
-                slideIndex = 1;
-            } else if (n < 1) {
-                slideIndex = totalSlides;
-            } else {
-                slideIndex = n;
+            function plusSlides(n, slideshowId) {
+                showSlides(slideIndices[slideshowId] += n, slideshowId);
             }
-
-            for (i = 0; i < totalSlides; i++) {
-                slides[i].style.display = "none";  
-            }
-            slides[slideIndex - 1].style.display = "flex";
-
-            var navigationText = document.querySelector("#" + slideshowId + " .slide-navigation-text");
-            if (navigationText) {
-                navigationText.innerHTML = "Slide " + slideIndex + " of " + totalSlides;
-            }
-
-            slideIndices[slideshowId] = slideIndex;
-        }
-
+        
+            window.onload = function() {
+                showSlides(slideIndices['slideshow1'], 'slideshow1');
+                showSlides(slideIndices['slideshow2'], 'slideshow2');
+                showSlides(slideIndices['slideshow3'], 'slideshow3');
+                showSlides(slideIndices['slideshow4'], 'slideshow4');
+                showSlides(slideIndices['slideshow5'], 'slideshow5');
+                showSlides(slideIndices['slideshow6'], 'slideshow6');
+                showSlides(slideIndices['slideshow7'], 'slideshow7');
+                adjustElementPosition();
     
-        function plusSlides(n, slideshowId) {
-            showSlides(slideIndices[slideshowId] += n, slideshowId);
-        }
+                const loadingScreen = document.getElementById('loadingScreen');
+                loadingScreen.style.display = 'none';
+                const body = document.body;
+                body.style.overflowY = 'visible';
+                clearInterval(interval);
+            };
     
-        window.onload = function() {
-            showSlides(slideIndices['slideshow1'], 'slideshow1');
-            showSlides(slideIndices['slideshow2'], 'slideshow2');
-            showSlides(slideIndices['slideshow3'], 'slideshow3');
-            showSlides(slideIndices['slideshow4'], 'slideshow4');
-            showSlides(slideIndices['slideshow5'], 'slideshow5');
-            showSlides(slideIndices['slideshow6'], 'slideshow6');
-            showSlides(slideIndices['slideshow7'], 'slideshow7');
-
-            const loadingScreen = document.getElementById('loadingScreen');
-            loadingScreen.style.display = 'none';
-            const body = document.body;
-            body.style.overflowY = 'visible';
-            clearInterval(interval);
-        };
-
-        let cloud1 = document.getElementById('cloud1');
-        let cloud2 = document.getElementById('cloud2');
-        let cloud3 = document.getElementById('cloud3');
-        let cloud4 = document.getElementById('cloud4');
-        let cloud5 = document.getElementById('cloud5');
-        let cloud6 = document.getElementById('cloud6');
-        let cloud7 = document.getElementById('cloud7');
-        let cloud8 = document.getElementById('cloud8');
-        let cloud9 = document.getElementById('cloud9');
-        let cloud10 = document.getElementById('cloud10');
-        let cloud11 = document.getElementById('cloud11');
-
-        let lastScrollTop = 0;
-
-        window.addEventListener('load', () => {
-            window.scrollTo(0, 0);
-            document.getElementById('loadingScreen').style.display = 'none';
-        });
-
-        window.addEventListener('scroll', () => {
-            let value = window.scrollY;
-            let st = window.pageYOffset || document.documentElement.scrollTop;
-
-            cloud1.style.marginTop = -value * 1.5  + 'px';
-            cloud1.style.marginLeft = -value * 2.5  + 'px';
-            cloud2.style.marginTop = -value * 1.5  + 'px';
-            cloud2.style.marginLeft = value * 2.5  + 'px';
-            cloud3.style.marginTop = -value * 1.5  + 'px';
-            cloud3.style.marginLeft = value * 2.5  + 'px';
-            cloud4.style.marginTop = -value * 1.5  + 'px';
-            cloud4.style.marginLeft = -value * 2.5  + 'px';
-            cloud5.style.marginTop = -value * 1.5  + 'px';
-            cloud5.style.marginLeft = -value * 2.5  + 'px';
-            cloud6.style.marginTop = -value * 1.5  + 'px';
-            cloud6.style.marginLeft = value * 2.5  + 'px';
-            cloud7.style.marginTop = -value * 1.5  + 'px';
-            cloud7.style.marginLeft = value * 2.5  + 'px';
-            cloud8.style.marginTop = -value * 1.5  + 'px';
-            cloud8.style.marginLeft = value * 2.5  + 'px';
-
-            if (value >= 7200) {
-                cloud9.style.display = 'flex';
-                cloud10.style.display = 'flex';
-                cloud11.style.display = 'flex';
-
-                requestAnimationFrame(() => {
+            let cloud1 = document.getElementById('cloud1');
+            let cloud2 = document.getElementById('cloud2');
+            let cloud3 = document.getElementById('cloud3');
+            let cloud4 = document.getElementById('cloud4');
+            let cloud5 = document.getElementById('cloud5');
+            let cloud6 = document.getElementById('cloud6');
+            let cloud7 = document.getElementById('cloud7');
+            let cloud8 = document.getElementById('cloud8');
+            let cloud9 = document.getElementById('cloud9');
+            let cloud10 = document.getElementById('cloud10');
+            let cloud11 = document.getElementById('cloud11');
+    
+            let lastScrollTop = 0;
+    
+            window.addEventListener('load', () => {
+                window.scrollTo(0, 0);
+                document.getElementById('loadingScreen').style.display = 'none';
+            });
+    
+            window.addEventListener('scroll', () => {
+                let value = window.scrollY;
+                let st = window.pageYOffset || document.documentElement.scrollTop;
+    
+                cloud1.style.marginTop = -value * 1.5  + 'px';
+                cloud1.style.marginLeft = -value * 2.5  + 'px';
+                cloud2.style.marginTop = -value * 1.5  + 'px';
+                cloud2.style.marginLeft = value * 2.5  + 'px';
+                cloud3.style.marginTop = -value * 1.5  + 'px';
+                cloud3.style.marginLeft = value * 2.5  + 'px';
+                cloud4.style.marginTop = -value * 1.5  + 'px';
+                cloud4.style.marginLeft = -value * 2.5  + 'px';
+                cloud5.style.marginTop = -value * 1.5  + 'px';
+                cloud5.style.marginLeft = -value * 2.5  + 'px';
+                cloud6.style.marginTop = -value * 1.5  + 'px';
+                cloud6.style.marginLeft = value * 2.5  + 'px';
+                cloud7.style.marginTop = -value * 1.5  + 'px';
+                cloud7.style.marginLeft = value * 2.5  + 'px';
+                cloud8.style.marginTop = -value * 1.5  + 'px';
+                cloud8.style.marginLeft = value * 2.5  + 'px';
+                var first = 7200;
+                if(screen.width <= 800)
+                {
+                    first = 7000;
+                }
+                if (value >= first) {//TRANSITION BOTTOM CLOUDS (MOVE IN)
+                    cloud9.style.display = 'flex';
+                    cloud10.style.display = 'flex';
+                    if(screen.width > 800)
+                        cloud11.style.display = 'flex';
+    
                     requestAnimationFrame(() => {
-                        cloud9.style.transform = 'translate(-900px, 300px)';
-                        cloud9.style.transition = 'transform 1s ease-out';
-                        
-                        cloud10.style.transform = 'translate(800px, 400px)';
-                        cloud10.style.transition = 'transform 1s ease-out';
-
-                        cloud11.style.transform = 'translate(300px, 400px)';
-                        cloud11.style.transition = 'transform 1s ease-out';
+                        requestAnimationFrame(() => {
+                            cloud9.style.transform = 'translate(-900px, 300px)';
+                            cloud9.style.transition = 'transform 1s ease-out';
+                            
+                            cloud10.style.transform = 'translate(800px, 400px)';
+                            cloud10.style.transition = 'transform 1s ease-out';
+    
+                            cloud11.style.transform = 'translate(300px, 400px)';
+                            cloud11.style.transition = 'transform 1s ease-out';
+                        });
                     });
-                });
+                }//DETRANSITION BOTTOM CLOUDS (MOVE OUT)
+                else if (st < lastScrollTop && value < 8000) {
+                    cloud9.style.transform = 'translate(900px, -300px)';
+                    cloud9.style.transition = 'transform 1s ease-out';
+    
+                    cloud10.style.transform = 'translate(-800px, -400px)';
+                    cloud10.style.transition = 'transform 1s ease-out';
+                    
+                    cloud11.style.transform = 'translate(-300px, -400px)';
+                    cloud11.style.transition = 'transform 1s ease-out';
+                    
+                    const transitionEndHandler = () => {
+                        cloud9.style.display = 'none';
+                        cloud10.style.display = 'none';
+                        cloud11.style.display = 'none';
+    
+                        // Cleanup: remove event listeners after they trigger
+                        cloud9.removeEventListener('transitionend', transitionEndHandler);
+                        cloud10.removeEventListener('transitionend', transitionEndHandler);
+                        cloud11.removeEventListener('transitionend', transitionEndHandler);
+                    };
+    
+                    cloud9.addEventListener('transitionend', transitionEndHandler);
+                    cloud10.addEventListener('transitionend', transitionEndHandler);
+                    cloud11.addEventListener('transitionend', transitionEndHandler);
+                }
+                lastScrollTop = st <= 0 ? 0 : st;
+            });
+    
+            function adjustElementPosition() {
+                var slideshowBackground = document.querySelector('.slideshow-background');
+                var width = slideshowBackground.offsetWidth;
+                //ALIGN TO END OF SCREEN WIDTH
+                var screenWidth = screen.width;
+                let cloud2 = document.getElementById('cloud2');
+                let cloud3 = document.getElementById('cloud3');
+                cloud2.style.left = (screenWidth - cloud2.offsetWidth) + "px";
+                if (screenWidth <= 800) {
+                    cloud3.style.left = (screenWidth - cloud3.offsetWidth) + "px";
+                }
             }
-            else if (st < lastScrollTop && value < 8000) {
-                cloud9.style.transform = 'translate(900px, -300px)';
-                cloud9.style.transition = 'transform 1s ease-out';
-
-                cloud10.style.transform = 'translate(-800px, -400px)';
-                cloud10.style.transition = 'transform 1s ease-out';
-                
-                cloud11.style.transform = 'translate(-300px, -400px)';
-                cloud11.style.transition = 'transform 1s ease-out';
-                
-                const transitionEndHandler = () => {
-                    cloud9.style.display = 'none';
-                    cloud10.style.display = 'none';
-                    cloud11.style.display = 'none';
-
-                    // Cleanup: remove event listeners after they trigger
-                    cloud9.removeEventListener('transitionend', transitionEndHandler);
-                    cloud10.removeEventListener('transitionend', transitionEndHandler);
-                    cloud11.removeEventListener('transitionend', transitionEndHandler);
-                };
-
-                cloud9.addEventListener('transitionend', transitionEndHandler);
-                cloud10.addEventListener('transitionend', transitionEndHandler);
-                cloud11.addEventListener('transitionend', transitionEndHandler);
-            }
-            lastScrollTop = st <= 0 ? 0 : st;
-        });
-    </script>    
+        </script>
+    </div>    
 </body>
 </html>
