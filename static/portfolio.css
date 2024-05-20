@@ -462,8 +462,18 @@ a:hover {
         height: 200px;
     }
 
-    .slideshow-text, .slideshow-image {
+    .slideshow-text {
         width: 100%;
+    }
+
+    .slideshow-image {
+        max-width: 90%;
+        align-items: center;
+    }
+
+    .slideshow-image img {
+        max-width: 90%;
+        max-height: 22.5vh;
     }
 
     .slides {
