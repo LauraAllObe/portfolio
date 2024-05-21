@@ -10,6 +10,24 @@
 </head>
 <body>
     <div class="overflow-mobile">
+        <!-- Navigation Icon and Dropdown Menu -->
+        <div class="navbar">
+            <button class="dropbtn" onclick="toggleMenu()">☰</button>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#top">Top of Page</a>
+                <a href="#slideshow1">Hacker News Web App</a>
+                <a href="#slideshow2">Legal Practice Management App</a>
+                <a href="#slideshow3">My Notes App</a>
+                <a href="#slideshow4">ProFessUp App</a>
+                <a href="#slideshow5">FAT32 Filesystem</a>
+                <a href="#slideshow6">Shell Implementation</a>
+                <a href="#slideshow7">Elevator Kernel Module</a>
+                <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV">Download Resume</a>
+                <a href="#bottom">Bottom of Page</a>
+            </div>
+            <button onclick="toggleMenu()" class="closebtn">✕</button>
+        </div>
+        <!-- Parallax Clouds -->
         <div class="clouds">
             <picture>
                 <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
@@ -48,7 +66,7 @@
         <!-- Header -->
         <div class="main-background">
             <h1>Laura Allison Obermaier</h1>
-            <img class="main-image" src="{{ url_for('static', filename='placeholderPhoto.jpg') }}"/>
+            <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
             <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
         </div>
         <!-- First slideshow -->
@@ -1076,6 +1094,37 @@
                 cloud2.style.left = (screenWidth - cloud2.offsetWidth) + "px";
                 if (screenWidth <= 800) {
                     cloud3.style.left = (screenWidth - cloud3.offsetWidth) + "px";
+                }
+            }
+
+            function toggleMenu() {
+            var dropdown = document.getElementById("myDropdown");
+            var dropbtn = document.querySelector('.dropbtn');
+            var closebtn = document.querySelector('.closebtn');
+                if (dropdown.style.display === "flex") {
+                    dropdown.style.display = "none";
+                    closebtn.style.display = "none";
+                    dropbtn.style.display = "block";
+                } else {
+                    dropdown.style.display = "flex";
+                    closebtn.style.display = "block";
+                    dropbtn.style.display = "none";
+                }
+            }
+
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var dropbtn = document.querySelector('.dropbtn');
+                    var closebtn = document.querySelector('.closebtn');
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.style.display === "flex") {
+                            openDropdown.style.display = "none";
+                            closebtn.style.display = "none";
+                            dropbtn.style.display = "block";
+                        }
+                    }
                 }
             }
         </script>
