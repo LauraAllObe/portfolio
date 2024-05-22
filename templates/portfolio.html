@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laura's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="overflow-mobile">
@@ -49,10 +47,6 @@
             <img id="cloud9" src="{{ url_for('static', filename='clouds/cloud8.1.png') }}"/>
             <img id="cloud10" src="{{ url_for('static', filename='clouds/cloud2.png') }}"/>
             <img id="cloud11" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
-        </div>
-        <!-- The Loading Screen -->
-        <div id="loadingScreen" class="loading-screen">
-            <div>Loading...</div>
         </div>
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -985,9 +979,6 @@
                 showSlides(slideIndices['slideshow6'], 'slideshow6');
                 showSlides(slideIndices['slideshow7'], 'slideshow7');
                 adjustElementPosition();
-    
-                const loadingScreen = document.getElementById('loadingScreen');
-                loadingScreen.style.display = 'none';
                 const body = document.body;
                 body.style.overflowY = 'visible';
                 clearInterval(interval);
@@ -1009,7 +1000,6 @@
     
             window.addEventListener('load', () => {
                 window.scrollTo(0, 0);
-                document.getElementById('loadingScreen').style.display = 'none';
             });
     
             window.addEventListener('scroll', () => {

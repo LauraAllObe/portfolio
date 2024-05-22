@@ -90,21 +90,6 @@ a:hover {
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #d5dbe0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    font-family: 'VT323';
-    font-size: 150px;
-}
-
 .main-background {
     width: 100%;
     height: 500px;
@@ -424,6 +409,10 @@ a:hover {
         font-size: 15px;
     }
 
+    .loading-screen {
+        font-size: 100px;
+    }
+
     .overflow-mobile {
         overflow-x: hidden !important;
     }
@@ -530,10 +519,6 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
-    }
-
-    .loading-screen {
-        font-size: 80px;
     }
 
     .close {
