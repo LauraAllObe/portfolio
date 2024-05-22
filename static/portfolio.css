@@ -197,7 +197,7 @@ a:hover {
 }
 
 .slideshow-background {
-    width: 100%;
+    width:fit-content;
     padding-bottom: 70px;
     background-color: #70809081;
     box-sizing: border-box;
@@ -407,10 +407,6 @@ a:hover {
 @media (max-width: 800px) {
     body {
         font-size: 15px;
-    }
-
-    .loading-screen {
-        font-size: 100px;
     }
 
     .overflow-mobile {
