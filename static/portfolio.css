@@ -197,7 +197,7 @@ a:hover {
 }
 
 .slideshow-background {
-    width:fit-content;
+    width: 100%;
     padding-bottom: 70px;
     background-color: #70809081;
     box-sizing: border-box;
