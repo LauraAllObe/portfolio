@@ -92,7 +92,7 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 680px;
+    height: 650px;
     box-sizing: border-box;
     position: relative;
 }
@@ -104,10 +104,11 @@ a:hover {
     object-fit: contain;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 
 .main-text {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     font-size: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
