@@ -13,6 +13,7 @@
             <button class="dropbtn" onclick="toggleMenu()">☰</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#top">Top of Page</a>
+                <a href="#slideshow0">Combined Models ML Notebook</a>
                 <a href="#slideshow1">Hacker News Web App</a>
                 <a href="#slideshow2">Legal Practice Management App</a>
                 <a href="#slideshow3">My Notes App</a>
@@ -62,6 +63,142 @@
             <h1>Laura Allison Obermaier</h1>
             <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
             <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
+        </div>
+        <!-- Slideshow 0 -->
+        <div class="slideshow-background" id="slideshow0">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="#" target="_blank" title="Combined Models Machine Learning Notebook">
+                    <h2>Combined Models Machine Learning Notebook</h2>
+                </a>            
+                <div class="slideshow-skills">Jupyter Notebook, Python, Pandas, Scikit-learn, Matplotlib, SMOTE, Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, Stacking Classifier</div>
+                <!-- Slide 1 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='bias^2vsVariance.png') }}" title="Application Overview" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Application Overview</h3>
+                        <div>
+                            This project involved implementing multiple machine learning models and combining them using a stacking ensemble technique. A variety of classifiers, including Logistic Regression, Decision Trees, Random Forests, and Gradient Boosting, were stacked to improve accuracy. The notebook also includes bias-variance decomposition to evaluate model performance, with visuals showcasing trade-offs between bias and variance, as well as model accuracy. The best model combination, Logistic Regression with Random Forest Classifier, achieved a mean accuracy of 98.66% with a Bias^2 + Variance value of 0.5. The project culminates in predicting bankruptcy cases and submitting results in CSV format.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-1.png') }}" title="Dataset Import and Scaling" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Dataset Import and Scaling</h3>
+                        <div>
+                            In this step, the dataset is loaded using Pandas, and features are extracted. A StandardScaler is applied to normalize the data for better model performance.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-2.png') }}" title="Handling Class Imbalance" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Handling Class Imbalance</h3>
+                        <div>
+                            The class imbalance in the dataset is handled using SMOTE (Synthetic Minority Oversampling Technique), ensuring the minority class has adequate representation.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-3.png') }}" title="Model Initialization" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Model Initialization</h3>
+                        <div>
+                            A variety of models are initialized for stacking, including Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, and Support Vector Classifier.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-4.png') }}" title="Bias-Variance Decomposition" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 4/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Bias-Variance Decomposition</h3>
+                        <div>
+                            This function computes the bias^2 and variance of different model combinations using K-fold cross-validation, giving insights into model performance trade-offs.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-5.png') }}" title="Model Combination and Stacking" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 5/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Model Combination and Stacking</h3>
+                        <div>
+                            Here, different models are combined using a Stacking Classifier, with Logistic Regression as the meta-learner, to improve predictive accuracy.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-6.png') }}" title="Results Visuals (Bias-Variance Plot)" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 6/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Results Visuals (Bias-Variance Plot)</h3>
+                        <div>
+                            The scatter plot shows the relationship between bias^2 and variance for various model combinations, helping to visualize the performance of the combined models.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-7.png') }}" title="Results Visuals (Accuracy Plot)" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 7/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Results Visuals (Accuracy Plot)</h3>
+                        <div>
+                            This bar chart displays the accuracy of different model combinations, enabling a quick comparison of performance across various model stacks.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="slides" style="display:none;">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='codeSnippet0-8.png') }}" title="Best Model and Submission" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 8/8</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                        <h3>Best Model and Submission</h3>
+                        <div>
+                            The best model combination is trained on the full resampled dataset, and predictions are made on the test set. Results are saved as a CSV file for submission.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow0')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow0')">&#10095;</button>
+                </div>
+            </div>
         </div>
         <!-- First slideshow -->
         <div class="slideshow-background" id="slideshow1">
@@ -885,8 +1022,6 @@
                 <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
                 <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
                 <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='github.png') }}" alt="GitHub"></a>
-                <a href="tel:+19543488139" target="_blank" class="end-clickables" title="Call Me: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='telephone.png') }}" alt="Telephone"></a>
-                <a href="sms:+19543488139" target="_blank" class="end-clickables" title="SMS: +1 954-348-8139"><img class="end-clickables" src="{{ url_for('static', filename='message.png') }}" alt="Message"></a>
                 <a href="mailto:lauraaobermaier@gmail.com?subject=Portfolio Questions&body=Your questions here" target="_blank" class="end-clickables" title="Email Me: lauraaobermaier@gmail.com"><img class="end-clickables" src="{{ url_for('static', filename='mail.png') }}" alt="Email"></a>
                 <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV"></a>
             </div>
@@ -929,6 +1064,7 @@
             });
     
             var slideIndices = {
+                'slideshow0': 1, 
                 'slideshow1': 1, 
                 'slideshow2': 1, 
                 'slideshow3': 1,
@@ -971,6 +1107,7 @@
             }
         
             window.onload = function() {
+                showSlides(slideIndices['slideshow0'], 'slideshow0');
                 showSlides(slideIndices['slideshow1'], 'slideshow1');
                 showSlides(slideIndices['slideshow2'], 'slideshow2');
                 showSlides(slideIndices['slideshow3'], 'slideshow3');
