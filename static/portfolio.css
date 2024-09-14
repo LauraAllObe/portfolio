@@ -405,6 +405,10 @@ a:hover {
 }
 
 @media (max-width: 800px) {
+    .main-background {
+        height: 750px;
+    }
+
     body {
         font-size: 15px;
     }
