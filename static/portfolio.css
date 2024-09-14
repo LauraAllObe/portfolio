@@ -406,7 +406,7 @@ a:hover {
 
 @media (max-width: 800px) {
     .main-background {
-        height:850px;
+        height:880px;
     }
 
     body {
@@ -488,13 +488,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 7250px;
+        top: 7750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 7100px;
+        top: 7600px;
     }
 
     .slideshow-video {
