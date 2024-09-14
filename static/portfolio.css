@@ -171,19 +171,19 @@ a:hover {
 #cloud9 {
     display: none;
     left: 2000px;
-    top: 9050px;
+    top: 8750px;
 }
 
 #cloud10 {
     display: none;
     left: -500px;
-    top: 9150px;
+    top: 8850px;
 }
 
 #cloud11 {
     display: none;
     left: -500px;
-    top: 9000px;
+    top: 8700px;
 }
 
 .slideshow-title {
@@ -460,12 +460,12 @@ a:hover {
     }
 
     #cloud3 {
-        top: 650px;
+        top: 850px;
         left: 0px;
     }
 
     #cloud4 {
-        top: 650px;
+        top: 850px;
         left: 0px;
     }
 
@@ -488,13 +488,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 8250px;
+        top: 8750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 8100px;
+        top: 8600px;
     }
 
     .slideshow-video {
