@@ -144,8 +144,8 @@ a:hover {
 }
 
 #cloud4 {
-    top: 500px;
-    left: 50px;
+    top: 520px;
+    left: 0px;
 }
 
 #cloud5 {
@@ -455,12 +455,12 @@ a:hover {
     }
 
     #cloud3 {
-        top: 650px;
+        height: 650px;
         left: 0px;
     }
 
     #cloud4 {
-        top: 650px;
+        height: 650px;
         left: 0px;
     }
 
