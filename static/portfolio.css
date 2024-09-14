@@ -459,13 +459,13 @@ a:hover {
         height: 400px;
     }
 
-    #cloud3 img {
-        top: 1050px;
+    #cloud3 {
+        height: 1050px;
         left: 0px;
     }
 
-    #cloud4 img {
-        top: 1050px;
+    #cloud4 {
+        height: 850px;
         left: 0px;
     }
 
