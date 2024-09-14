@@ -139,12 +139,12 @@ a:hover {
 }
 
 #cloud3 {
-    top: 500px;
+    height: 500px;
     left: 900px;
 }
 
 #cloud4 {
-    top: 500px;
+    height: 500px;
     left: 200px;
 }
 
@@ -460,12 +460,12 @@ a:hover {
     }
 
     #cloud3 {
-        height: 1050px;
+        top: 1050px;
         left: 0px;
     }
 
     #cloud4 {
-        height: 850px;
+        top: 1050px;
         left: 0px;
     }
 
