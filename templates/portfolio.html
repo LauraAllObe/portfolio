@@ -1161,10 +1161,10 @@
                 cloud7.style.marginLeft = value * 2.5  + 'px';
                 cloud8.style.marginTop = -value * 1.5  + 'px';
                 cloud8.style.marginLeft = value * 2.5  + 'px';
-                var first = 7200;
+                var first = 8200;
                 if(screen.width <= 800)
                 {
-                    first = 7000;
+                    first = 7700;
                 }
                 if (value >= first) {//TRANSITION BOTTOM CLOUDS (MOVE IN)
                     cloud9.style.display = 'flex';
@@ -1185,7 +1185,7 @@
                         });
                     });
                 }//DETRANSITION BOTTOM CLOUDS (MOVE OUT)
-                else if (st < lastScrollTop && value < 8000) {
+                else if (st < lastScrollTop && value < 9000) {
                     cloud9.style.transform = 'translate(900px, -300px)';
                     cloud9.style.transition = 'transform 1s ease-out';
     
