@@ -59,15 +59,27 @@
             </div>
         </div>
         <!-- Header -->
-        <div class="main-background">
-            <h1>Laura Allison Obermaier</h1>
-            <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
-            <div class="main-text">FSU'23<br/>SIT'25<br/>Full-Stack Developer<br/>Cyber Security<br/>Machine Learning</div>
-        </div>
+        <div class="main-text">
+            FSU '23 | SIT '25<br/>
+            Full-Stack Developer | Agile Methods Advocate<br/>
+            Prospective Cybersecurity and Machine Learning Specialist<br/>
+            GPA: 4.0 (MS in Cybersecurity, Graduate Certificate in Machine Learning), 3.97 (BS in Computer Science)<br/>
+            
+            <strong>Programming Languages:</strong> Java, Python, C++, C#, C, JavaScript, Bash, HTML, CSS<br/>
+            <strong>Tools & Frameworks:</strong> React, Flask, Node.js, Nginx, Gunicorn, Git, GitHub, Anaconda, Jupyter Notebook<br/>
+            <strong>Technologies & Platforms:</strong> Microsoft Azure, Linux, Windows<br/>
+            <strong>Languages:</strong> English (native), German (native), French (advanced, 6＋ years)<br/>
+        
+            <strong>Scholarships & Achievements:</strong> Stevens Institute Graduate Scholarship, FSU Freshman Scholarship, FAS Bright Futures Scholarship, President's List (FSU), University Honors Program (FSU)<br/>
+            <strong>Research Experience:</strong> Research Assistant - Undergraduate Research Opportunity Program (Agile practices, application development, AI research, conference paper co-author)<br/>
+            
+            GitHub: <a href="https://github.com/LauraAllObe" target="_blank">LauraAllObe</a> | LinkedIn: <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank">laura-obermaier</a>
+            Looking for: Software Development & Engineering Internships for Spring or Summer 2025
+        </div>        
         <!-- Slideshow 0 -->
         <div class="slideshow-background" id="slideshow0">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="#" target="_blank" title="Combined Models Machine Learning Notebook">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Combined Models Machine Learning Notebook">
                     <h2>Combined Models Machine Learning Notebook</h2>
                 </a>            
                 <div class="slideshow-skills">Jupyter Notebook, Python, Pandas, Scikit-learn, Matplotlib, SMOTE, Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, Stacking Classifier</div>
@@ -125,29 +137,29 @@
                 </div>
                 <!-- Slide 5 -->
                 <div class="slides" style="display:none;">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-4.png') }}" title="Bias-Variance Decomposition" onclick="showModal(this.src)">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-4.png') }}" title="Model Combination and Evaluation 1/2" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>Code Snippet 4/7</h3>
                         <div>
                             For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
-                        <h3>Bias-Variance Decomposition</h3>
+                        <h3>Model Combination and Evaluation 1/2</h3>
                         <div>
-                            Here, different models are combined using a Stacking Classifier, with Logistic Regression as the meta-learner, to improve predictive accuracy.
+                            This section generates combinations of the base models and evaluates them using cross-validation. It calculates the mean accuracy and performs bias-variance decomposition to help select the best model combination based on accuracy and bias-variance score.
                         </div>
                     </div>
                 </div>
                 <!-- Slide 6 -->
                 <div class="slides" style="display:none;">
-                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-5.png') }}" title="Model Combination and Stacking" onclick="showModal(this.src)">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-5.png') }}" title="Model Combination and Evaluation 2/2" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>Code Snippet 5/7</h3>
                         <div>
                             For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/machineLearningProject" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
-                        <h3>Model Combination and Stacking</h3>
+                        <h3>Model Combination and Evaluation 2/2</h3>
                         <div>
-                            Here, different models are combined using a Stacking Classifier, with Logistic Regression as the meta-learner, to improve predictive accuracy.
+                            Once the best model combination is selected, it is trained on the resampled dataset. Predictions are then made on the test set, and the results are saved to a CSV file for submission.
                         </div>
                     </div>
                 </div>
