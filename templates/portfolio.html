@@ -1185,7 +1185,7 @@
                         });
                     });
                 }//DETRANSITION BOTTOM CLOUDS (MOVE OUT)
-                else if (st < lastScrollTop && value < 9000) {
+                else if (st < lastScrollTop && ((screen.width > 800 && value < 9000) || (screen.width <= 800 && value < 9500))) {
                     cloud9.style.transform = 'translate(900px, -300px)';
                     cloud9.style.transition = 'transform 1s ease-out';
     
