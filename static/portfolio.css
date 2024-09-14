@@ -92,14 +92,14 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 630px;
+    height: 640px;
     box-sizing: border-box;
     position: relative;
 }
 
 .main-image {
     display: block; 
-    max-height: 250px;
+    max-height: 220px;
     margin: 0px auto;
     object-fit: contain;
     display: flex;
