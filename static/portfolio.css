@@ -520,13 +520,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 11750px;
+        top: 15750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 11600px;
+        top: 15600px;
     }
 
     .slideshow-video {
@@ -552,6 +552,7 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
+        height: 900px;
     }
 
     .close {
@@ -560,6 +561,11 @@ a:hover {
     }
 
     .dropbtn, .closebtn {
+        font-size: 80px;
+    }
+
+    .closebtn {
+        padding-right: 10px;
         font-size: 80px;
     }
 
