@@ -404,7 +404,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height:800px;
+        height: 1500px;
     }
 
     body {
