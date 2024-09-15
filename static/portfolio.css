@@ -453,8 +453,7 @@ a:hover {
         font-size: 12px;
     }
 
-    .clouds img {
-        height: 400px;
+    .clouds {
         display: none;
     }
 
