@@ -441,11 +441,11 @@ a:hover {
         text-align: center;
         position: absolute;
         font-size: 24px;
-        top: 120px;
+        top: 130px;
     }
 
     .slideshow-container {
-        height: 640px;
+        height: 1200px;
     }
 
     .slideshow-title {
@@ -560,12 +560,10 @@ a:hover {
 
     .dropbtn, .closebtn {
         font-size: 80px;
-    } right: -30px;
     }
 
     .dropdown-content a {
         font-size: 80px;
     }
-
     
 }
