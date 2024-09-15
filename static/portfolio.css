@@ -416,11 +416,19 @@ a:hover {
     }
 
     h1 {
-        font-size: 60px;
+        font-size: 90px;
     }
 
     h2 {
-        font-size: 45px;
+        font-size: 60px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    .main-text {
+        font-size: 24px;
     }
     
     .slides {
@@ -431,7 +439,7 @@ a:hover {
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 18px;
+        font-size: 24px;
         top: 70px;
     }
 
@@ -458,10 +466,10 @@ a:hover {
     }
 
     .end-copyright {
-        font-size: 18px;
+        font-size: 24px;
     }
     .prev, .next {
-        font-size: 18px;
+        font-size: 24px;
     }
     
     .clouds img {
@@ -520,6 +528,7 @@ a:hover {
 
     .slideshow-text {
         width: 100%;
+        margin-bottom: 30px;
     }
 
     .slideshow-image {
