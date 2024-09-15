@@ -227,12 +227,8 @@ a:hover {
 }
 
 .notes-multi-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    align-self: center;
-    width: 45%;
+    justify-content:initial;
+    align-items: initial;
 }
 
 .slideshow-image {
@@ -413,7 +409,7 @@ a:hover {
 
     .main-image {
         min-height: 400px;
-        max-height: 440px:
+        max-height: 440px;
     }
 
     body {
@@ -594,7 +590,7 @@ a:hover {
     }
 
     #hackerslide2 {
-        max-height: 25vh;
+        max-height: 15vh;
     }
     
 }
