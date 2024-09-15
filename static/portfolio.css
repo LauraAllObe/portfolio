@@ -541,13 +541,17 @@ a:hover {
 
     .slideshow-image {
         max-width: 90%;
-        max-height: 30%;
+        max-height: 35%;
         align-items: center;
     }
 
     .slideshow-image img {
         max-width: 90%;
-        max-height: 30%;
+        max-height: 35%;
+    }
+
+    .notes-multi-image {
+        max-height: 35%;
     }
 
     .slides {
