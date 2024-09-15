@@ -445,26 +445,54 @@ a:hover {
     }
 
     .end-clickables {
-        margin: 8px;
-        height: 18px;
+        margin: 30px;
+        height: 50px;
     }
 
     .prev, .next {
         font-size: 12px;
     }
-
-    .clouds {
-        position: relative;
-        display: none;
-        width: 10%;
-    }
     
     .clouds img {
-        top: 0;
-        left: 0;
+        height: 400px;
+    }
+
+    #cloud3 {
+        top: 650px;
+        left: 0px;
+    }
+
+    #cloud4 {
+        top: 400px;
+        left: 0px;
+    }
+
+    #cloud5 {
         display: none;
-        position: absolute;
-        overflow: hidden;
+    }
+
+    #cloud6 {
+        display: none;
+    }
+
+    #cloud7 {
+        display: none;
+    }
+
+    #cloud8 {
+        display: none;
+    }
+
+    #cloud9 {
+        display: none;
+        left: 800px;
+        top: 8750px;
+    }
+    
+    #cloud10 {
+        display: none;
+        left: -1250px;
+        top: 8600px;
     }
 
     .slideshow-video {
