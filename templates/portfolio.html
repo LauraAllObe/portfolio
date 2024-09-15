@@ -1045,13 +1045,6 @@
                 modalImg.classList.remove('modal-zoomed-in');
             }
     
-            window.onclick = function(event) {
-                if (event.target == modal || event.target == modalContent) {
-                    modal.style.display = "none";
-                    modalImg.classList.remove('modal-zoomed-in');
-                }
-            }
-    
             function toggleZoom() {
                 if (modalImg.classList.contains('modal-zoomed-in')) {
                     modalImg.classList.remove('modal-zoomed-in');
@@ -1253,6 +1246,10 @@
                             dropbtn.style.display = "block";
                         }
                     }
+                }
+                else if (event.target == modal) {
+                    modal.style.display = "none";
+                    modalImg.classList.remove('modal-zoomed-in');
                 }
             }
         </script>
