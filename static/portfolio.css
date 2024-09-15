@@ -10,7 +10,6 @@ body {
     font-size: 18px;
     overflow-x: hidden;
     overflow-y: hidden;
-
 }
 
 h1 {
@@ -550,17 +549,17 @@ a:hover {
 
     .slideshow-image {
         max-width: 90%;
-        max-height: 35%;
+        max-height: 40%;
         align-items: center;
     }
 
     .slideshow-image img {
         max-width: 90%;
-        max-height: 35%;
+        max-height: 40%;
     }
 
     .notes-multi-image {
-        max-height: 35%;
+        max-height: 40%;
         justify-content:initial;
         align-self:initial;
         width: 90%;
