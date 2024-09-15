@@ -402,7 +402,7 @@ a:hover {
     color: #d5dbe0;
 }
 
-@media (max-width: 850px) {
+@media only screen and (max-width: 600px) and (orientation: portrait) {
     .main-background {
         height:880px;
     }
