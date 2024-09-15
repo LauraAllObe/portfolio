@@ -554,6 +554,7 @@ a:hover {
         max-height: 100%;
         padding: 0px;
         vertical-align: top;
+        justify-content:space-evenly;
     }
 
     .slides {
@@ -564,8 +565,8 @@ a:hover {
 
     .close {
         top: -30px;
-        right: 10%;
-        font-size: 120px;
+        right: 5%;
+        font-size: 90px;
     }
 
     .dropbtn, .closebtn {
@@ -573,7 +574,7 @@ a:hover {
     }
 
     .closebtn {
-        padding-right: 10px;
+        right: 5%;
         font-size: 80px;
     }
 
