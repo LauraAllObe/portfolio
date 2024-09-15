@@ -456,6 +456,7 @@ a:hover {
     .clouds {
         position: relative;
         display: none;
+        width: 10%;
     }
     
     .clouds img {
