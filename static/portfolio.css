@@ -545,7 +545,7 @@ a:hover {
 
     .slideshow-image img {
         max-width: 90%;
-        max-height: 22.5vh;
+        max-height: auto;
     }
 
     .slides {
@@ -563,7 +563,8 @@ a:hover {
     }
 
     .dropdown-content a {
-        font-size: 80px;
+        font-size: 60px;
+        padding: 20px 24px;
     }
     
 }
