@@ -555,6 +555,7 @@ a:hover {
         padding: 0px;
         vertical-align: top;
         justify-content:space-evenly;
+        align-self:auto;
     }
 
     .slides {
@@ -574,13 +575,17 @@ a:hover {
     }
 
     .closebtn {
-        right: 5%;
+        right: 2.5%;
         font-size: 80px;
     }
 
     .dropdown-content a {
         font-size: 60px;
         padding: 20px 24px;
+    }
+
+    #hackerslide2 {
+        max-height: 25vh;
     }
     
 }
