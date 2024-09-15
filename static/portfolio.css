@@ -560,7 +560,7 @@ a:hover {
 
     .notes-multi-image {
         max-height: 40%;
-        justify-content:space=between;
+        justify-content:space-evenly;
         align-self:center;
         width: 90%;
     }
