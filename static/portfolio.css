@@ -454,7 +454,16 @@ a:hover {
     }
 
     .clouds {
+        position: relative;
         display: none;
+    }
+    
+    .clouds img {
+        top: 0;
+        left: 0;
+        display: none;
+        position: absolute;
+        overflow: hidden;
     }
 
     .slideshow-video {
