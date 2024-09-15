@@ -404,7 +404,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height:680px;
+        height:800px;
     }
 
     body {
@@ -429,11 +429,11 @@ a:hover {
 
     .main-text {
         font-size: 24px;
-        padding-bottom: 300px;
     }
+
     
     .slides {
-        margin-top: 100px;
+        margin-top: 150px;
         margin-bottom: 30px;
     }
 
@@ -450,7 +450,6 @@ a:hover {
 
     .slideshow-title {
         font-size: 45px;
-        padding-bottom: 100px;
     }
 
     #slideshow-legal-skills {
@@ -560,11 +559,15 @@ a:hover {
     }
 
     .dropbtn, .closebtn {
-        font-size: 90px;
+        font-size: 180px;
+    }
+
+    .closebtn {
+        right: -30px;
     }
 
     .dropdown-content a {
-        font-size: 50px;
+        font-size: 90px;
     }
 
     
