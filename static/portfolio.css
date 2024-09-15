@@ -408,15 +408,19 @@ a:hover {
     }
 
     body {
-        font-size: 15px;
+        font-size: 30px;
     }
 
     .overflow-mobile {
         overflow-x: hidden !important;
     }
 
+    h1 {
+        font-size: 60px;
+    }
+
     h2 {
-        font-size: 24px;
+        font-size: 45px;
     }
     
     .slides {
@@ -427,7 +431,7 @@ a:hover {
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 14px;
+        font-size: 18px;
         top: 70px;
     }
 
@@ -436,7 +440,7 @@ a:hover {
     }
 
     .slideshow-title {
-        font-size: 24px;
+        font-size: 45px;
     }
 
     #slideshow-legal-skills {
@@ -453,22 +457,33 @@ a:hover {
         height: 50px;
     }
 
+    .end-copyright {
+        font-size: 18px;
+    }
     .prev, .next {
-        font-size: 14px;
+        font-size: 18px;
     }
     
     .clouds img {
         height: 400px;
     }
 
+    #cloud1 {
+        left: 400px;
+    }
+
+    #cloud2 {
+        left: 400px;
+    }
+
     #cloud3 {
         top: 650px;
-        left: 100px;
+        left: 400px;
     }
 
     #cloud4 {
         top: 400px;
-        left: 100px;
+        left: 400px;
     }
 
     #cloud5 {
@@ -490,13 +505,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 9750px;
+        top: 11750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 9600px;
+        top: 11600px;
     }
 
     .slideshow-video {
@@ -527,7 +542,5 @@ a:hover {
         right: 10%;
     }
 
-    .end-copyright {
-        font-size: 14px;
-    }
+    
 }
