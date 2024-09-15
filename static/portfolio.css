@@ -520,13 +520,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 15750px;
+        top: 13750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 15600px;
+        top: 13600px;
     }
 
     .slideshow-video {
@@ -534,6 +534,7 @@ a:hover {
     }
 
     .slideshow-text {
+        vertical-align: top;
         width: 100%;
         margin-bottom: 30px;
     }
