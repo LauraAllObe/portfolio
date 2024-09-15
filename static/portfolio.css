@@ -433,7 +433,7 @@ a:hover {
 
     
     .slides {
-        margin-top: 150px;
+        margin-top: 200px;
         margin-bottom: 30px;
     }
 
@@ -441,7 +441,7 @@ a:hover {
         text-align: center;
         position: absolute;
         font-size: 24px;
-        top: 70px;
+        top: 120px;
     }
 
     .slideshow-container {
@@ -559,15 +559,12 @@ a:hover {
     }
 
     .dropbtn, .closebtn {
-        font-size: 180px;
-    }
-
-    .closebtn {
-        right: -30px;
+        font-size: 80px;
+    } right: -30px;
     }
 
     .dropdown-content a {
-        font-size: 90px;
+        font-size: 80px;
     }
 
     
