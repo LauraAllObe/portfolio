@@ -568,7 +568,12 @@ a:hover {
 
     #n1, #n2, #n3, #n4, #n5 {
         width: 100%;
-        height: 100%
+        height: 100%;
+    }
+
+    #n1 img, #n2 img, #n3 img, #n4 img, #n5 img {
+        width: 100%;
+        height: 100%;
     }
 
     .slides {
