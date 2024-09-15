@@ -407,16 +407,16 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height: 1210px;
+        height: 51.71vh;
     }
 
     .main-image {
-        min-height: 400px;
-        max-height: 440px;
+        min-height: 17.09vh;
+        max-height: 18.80vh;
     }
 
     body {
-        font-size: 24px;
+        font-size: 2.22vw;
     }
 
     .overflow-mobile {
@@ -424,89 +424,61 @@ a:hover {
     }
 
     h1 {
-        font-size: 90px;
+        font-size: 8.33vw;
     }
 
     h2 {
-        font-size: 60px;
+        font-size: 5.56vw;
     }
 
     h3 {
-        font-size: 30px;
+        font-size: 2.78vw;
     }
 
     .main-text {
-        font-size: 24px;
-    }
-
-    
-    .slides {
-        margin-top: 180px;
-        margin-bottom: 30px;
+        font-size: 2.22vw;
+        line-height: 5px;
     }
 
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 24px;
-        top: 140px;
+        font-size: 2.22vw;
+        top: 5.98vh;
     }
 
     .slideshow-container {
-        height: 1200px;
+        height: 51.28vh;
     }
 
     .slideshow-title {
-        font-size: 45px;
+        font-size: 4.17vw;
     }
 
     #slideshow-legal-skills {
-        top: 100px;
+        top: 4.27vh;
     }
 
-    .modal-image {
-        max-width: 95%; 
-        max-height: 1800px;
-    }
-
-    .end-clickables {
-        margin: 30px;
-        height: 50px;
-    }
-
-    .end-copyright {
-        font-size: 24px;
-    }
-
-    .prev, .next {
-        padding: 24px;
-        font-size: 30px;
-    }
-
-    .slide-navigation-text {
-        font-size: 24px;
-    }
-    
     .clouds img {
-        height: 400px;
+        height: 17.09vh;
     }
 
     #cloud1 {
-        left: 400px;
+        left: 37.04vw;
     }
 
     #cloud2 {
-        left: 400px;
+        left: 37.04vw;
     }
 
     #cloud3 {
-        top: 650px;
-        left: 400px;
+        top: 27.78vh;
+        left: 37.04vw;
     }
 
     #cloud4 {
-        top: 400px;
-        left: 400px;
+        top: 17.09vh;
+        left: 37.04vw;
     }
 
     #cloud5 {
@@ -527,14 +499,14 @@ a:hover {
 
     #cloud9 {
         display: none;
-        left: 800px;
-        top: 13750px;
+        left: 74.07vw;
+        top: 587.18vh;
     }
-    
+
     #cloud10 {
         display: none;
-        left: -1250px;
-        top: 13600px;
+        left: -115.74vw;
+        top: 581.20vh;
     }
 
     .slideshow-video {
@@ -575,31 +547,35 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
-        height: 900px;
+        height: 38.46vh;
     }
 
     .close {
         top: -30px;
         right: 5%;
-        font-size: 90px;
+        font-size: 8.33vw;
     }
 
     .dropbtn, .closebtn {
-        font-size: 80px;
+        font-size: 7.41vw;
     }
 
     .closebtn {
         right: 2.5%;
-        font-size: 80px;
+        font-size: 7.41vw;
     }
 
     .dropdown-content a {
-        font-size: 60px;
+        font-size: 5.56vw;
         padding: 20px 24px;
+    }
+
+    .end-clickables {
+        margin: 30px;
+        height: 2.14vh;
     }
 
     #hackerslide2 {
         max-height: 15vh;
     }
-    
 }
