@@ -402,7 +402,7 @@ a:hover {
     color: #d5dbe0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     .main-background {
         height:880px;
     }
