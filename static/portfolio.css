@@ -429,7 +429,7 @@ a:hover {
 
     .main-text {
         font-size: 24px;
-        margin-bottom: 150px;
+        padding-bottom: 150px;
     }
     
     .slides {
@@ -450,7 +450,7 @@ a:hover {
 
     .slideshow-title {
         font-size: 45px;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
     #slideshow-legal-skills {
@@ -470,7 +470,13 @@ a:hover {
     .end-copyright {
         font-size: 24px;
     }
+
     .prev, .next {
+        padding: 24px;
+        font-size: 30px;
+    }
+
+    .slide-navigation-text {
         font-size: 24px;
     }
     
@@ -551,6 +557,14 @@ a:hover {
     .close {
         top: -15px;
         right: 10%;
+    }
+
+    .dropbtn, .closebtn {
+        font-size: 50px;
+    }
+
+    .dropdown-content {
+        font-size: 50px;
     }
 
     
