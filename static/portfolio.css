@@ -568,6 +568,8 @@ a:hover {
     .notes-multi-image-interior {
         height: 100%;
         align-items: center;
+        object-fit: contain;
+        z-index: 100;
     }
 
     .slides {
