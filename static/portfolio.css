@@ -427,12 +427,16 @@ a:hover {
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 12px;
+        font-size: 14px;
         top: 70px;
     }
 
     .slideshow-container {
         min-height: 540px;
+    }
+
+    .slideshow-title {
+        font-size: 24px;
     }
 
     #slideshow-legal-skills {
@@ -450,7 +454,7 @@ a:hover {
     }
 
     .prev, .next {
-        font-size: 12px;
+        font-size: 14px;
     }
     
     .clouds img {
@@ -459,12 +463,12 @@ a:hover {
 
     #cloud3 {
         top: 650px;
-        left: 0px;
+        left: 100px;
     }
 
     #cloud4 {
         top: 400px;
-        left: 0px;
+        left: 100px;
     }
 
     #cloud5 {
@@ -486,13 +490,13 @@ a:hover {
     #cloud9 {
         display: none;
         left: 800px;
-        top: 8750px;
+        top: 9750px;
     }
     
     #cloud10 {
         display: none;
         left: -1250px;
-        top: 8600px;
+        top: 9600px;
     }
 
     .slideshow-video {
@@ -521,5 +525,9 @@ a:hover {
     .close {
         top: -15px;
         right: 10%;
+    }
+
+    .end-copyright {
+        font-size: 14px;
     }
 }
