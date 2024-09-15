@@ -1170,7 +1170,12 @@
                     cloud9.style.display = 'flex';
                     cloud10.style.display = 'flex';
                     if(screen.width > 800)
-                        cloud11.style.display = 'flex';
+                    {
+                        cloud9.style.display = 'none';
+                        cloud10.style.display = 'none';
+                        cloud11.style.display = 'none';
+                    }
+                        
     
                     requestAnimationFrame(() => {
                         requestAnimationFrame(() => {

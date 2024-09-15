@@ -458,13 +458,11 @@ a:hover {
     }
 
     #cloud3 {
-        top: 650px;
-        left: 0px;
+        display: none;
     }
 
     #cloud4 {
-        top: 400px;
-        left: 0px;
+        display: none;
     }
 
     #cloud5 {
@@ -485,14 +483,10 @@ a:hover {
 
     #cloud9 {
         display: none;
-        left: 800px;
-        top: 8750px;
     }
     
     #cloud10 {
         display: none;
-        left: -1250px;
-        top: 8600px;
     }
 
     .slideshow-video {
