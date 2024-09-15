@@ -402,9 +402,18 @@ a:hover {
     color: #d5dbe0;
 }
 
+#hackerslide2 {
+    max-height: 40vh;
+}
+
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height: 1000px;
+        height: 1210px;
+    }
+
+    .main-image {
+        min-height: 400px;
+        max-height: 440px:
     }
 
     body {
