@@ -551,7 +551,9 @@ a:hover {
     }
 
     .notes-multi-image {
-        max-height: 35%;
+        max-height: 100%;
+        padding: 0px;
+        vertical-align: top;
     }
 
     .slides {
@@ -563,6 +565,7 @@ a:hover {
     .close {
         top: -30px;
         right: 10%;
+        font-size: 120px;
     }
 
     .dropbtn, .closebtn {
