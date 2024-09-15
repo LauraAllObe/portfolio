@@ -227,8 +227,12 @@ a:hover {
 }
 
 .notes-multi-image {
-    justify-content:initial;
-    align-items: initial;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    width: 45%;
 }
 
 .slideshow-image {
@@ -557,10 +561,8 @@ a:hover {
 
     .notes-multi-image {
         max-height: 100%;
-        padding: 0px;
-        vertical-align: top;
-        justify-content:space-evenly;
-        align-self:auto;
+        justify-content:initial;
+        align-self:initial;
     }
 
     .slides {
