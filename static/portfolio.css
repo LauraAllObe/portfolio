@@ -404,7 +404,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height:880px;
+        height:680px;
     }
 
     body {
@@ -469,7 +469,6 @@ a:hover {
 
     .slideshow-video {
         width: 90%;
-        height: 200px;
     }
 
     .slideshow-text {
