@@ -112,7 +112,7 @@ a:hover {
     margin-top: 30px;
     text-align: center;
     font-size: 40px;
-    white-space: 30px;
+    line-height: 1.5;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -446,6 +446,7 @@ a:hover {
         position: absolute;
         font-size: 2.22vw;
         top: 6.5vh;
+        bottom: 1vh;
     }
 
     .slideshow-container {
@@ -454,10 +455,6 @@ a:hover {
 
     .slideshow-title {
         font-size: 4vw;
-    }
-
-    #slideshow-legal-skills {
-        top: 4.27vh;
     }
 
     .clouds img {
