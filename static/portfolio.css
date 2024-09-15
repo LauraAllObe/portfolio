@@ -457,8 +457,8 @@ a:hover {
     }
 
     .modal-image {
-        max-width: 80%; 
-        max-height: 700px;
+        max-width: 95%; 
+        max-height: 1800px;
     }
 
     .end-clickables {
@@ -545,7 +545,7 @@ a:hover {
 
     .slideshow-image img {
         max-width: 90%;
-        max-height: auto;
+        max-height: 40%;
     }
 
     .slides {
