@@ -445,7 +445,7 @@ a:hover {
     }
 
     .slideshow-container {
-        min-height: 540px;
+        height: 640px;
     }
 
     .slideshow-title {
