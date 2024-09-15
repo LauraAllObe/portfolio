@@ -1167,15 +1167,13 @@
                     first = 8000;
                 }
                 if (value >= first) {//TRANSITION BOTTOM CLOUDS (MOVE IN)
-                    cloud9.style.display = 'flex';
-                    cloud10.style.display = 'flex';
+                    
                     if(screen.width > 800)
                     {
-                        cloud9.style.display = 'none';
-                        cloud10.style.display = 'none';
-                        cloud11.style.display = 'none';
+                        cloud9.style.display = 'flex';
+                        cloud10.style.display = 'flex';
+                        cloud11.style.display = 'flex';
                     }
-                        
     
                     requestAnimationFrame(() => {
                         requestAnimationFrame(() => {
