@@ -51,7 +51,7 @@ a:hover {
     background:none;
     color: #55616d;
     padding: 0.88vh 0.58vw;
-    font-size: 7vw;
+    font-size: 1.5vw;
     border: none;
     cursor: pointer;
 }
@@ -81,7 +81,7 @@ a:hover {
     color: black;
     padding: 2vh 1.5vw;
     display: block;
-    font-size: 2vw;
+    font-size: 1.5vw;
     text-decoration: none;
     font-stretch: expanded;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +124,7 @@ a:hover {
 .clouds img {
     top: 0;
     left: 0;
-    height: 30vh;
+    height: 35vh;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -232,12 +232,12 @@ a:hover {
     justify-content: space-between;
     align-items: center;
     align-self: center;
-    width: 45%;
+    max-height: 25%;
+    width: 90%
 }
 
 .notes-multi-image-interior {
-    height: 30%;
-    max-width: 40%;
+    height: 100%;
     align-items: center;
     object-fit: contain;
     z-index: 100;
@@ -329,11 +329,11 @@ a:hover {
 .close {
     position: absolute;
     top: -0.82vh;
-    right: 3vw;
+    right: 5%;
     color: #77797a;
     font-size: 2.5vw;
     font-weight: bold;
-    z-index: 1100;
+    z-index: 1200;
 }
 
 .close:hover,
@@ -354,7 +354,7 @@ a:hover {
 
 .prev, .next {
     cursor: pointer;
-    padding: 0.6vh 1vw;
+    padding: 0.7vh 1vw;
     color: #d5dbe0;
     font-weight: bold;
     font-size: 1.5vw;
@@ -397,6 +397,7 @@ a:hover {
 }
 
 .end-clickables {
+    margin-top: 4vh;
     margin: 4vh 0.5vw;
     height: 3vh;
 }
