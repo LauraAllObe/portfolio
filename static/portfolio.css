@@ -91,7 +91,7 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 710px;
+    height: 750px;
     box-sizing: border-box;
     position: relative;
 }
@@ -111,8 +111,8 @@ a:hover {
 .main-text {
     margin-top: 30px;
     text-align: center;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 18px;
+    line-height: 2;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -408,7 +408,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height: 55vh;
+        height: 70vh;
     }
 
     .main-image {
@@ -590,6 +590,7 @@ a:hover {
     .prev, .next {
         padding: 2.22vw;
         font-size: 2.78vw;
+        z-index: 500;
     }
 
     .slide-navigation-text {
