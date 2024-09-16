@@ -124,7 +124,7 @@ a:hover {
 .clouds img {
     top: 0;
     left: 0;
-    height: 25vh;
+    height: 30vh;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
