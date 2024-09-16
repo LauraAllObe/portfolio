@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #e8eaeb;
     overflow: auto;
-    font-size: 0.66vw;
+    font-size: 1vw;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -15,19 +15,19 @@ body {
 h1 {
     font-family:'Times New Roman', Times, serif;
     font-style: bold;
-    font-size: 1.64vw;
+    font-size: 2vw;
     text-align: center;
 }
 
 h2 {
     font-family:'Times New Roman', Times, serif;
-    font-size: 1.64vw;
+    font-size: 2vw;
 }
 
 h3 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: bold;
-    font-size: 0.66vw;
+    font-size: 1vw;
 }
 
 a {
@@ -91,15 +91,15 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 41.12vh;
+    height: 75vh;
     box-sizing: border-box;
     position: relative;
 }
 
 .main-image {
     display: block; 
-    min-height: 10.96vh;
-    max-height: 12.06vh;
+    min-height: 20vh;
+    max-height: 24vh;
     margin: 0vh auto;
     object-fit: contain;
     display: flex;
@@ -111,7 +111,7 @@ a:hover {
 .main-text {
     margin-top: 1.64vh;
     text-align: center;
-    font-size: 0.66vw;
+    font-size: 0.8vw;
     line-height: 2;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -208,7 +208,7 @@ a:hover {
 .slideshow-container {
     padding-top: 0.82vh;
     width: 98%;
-    min-height: 35.09vh;
+    min-height: 65vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -238,7 +238,7 @@ a:hover {
 .slideshow-image {
     display: block; 
     max-width: 45%;
-    max-height: 52.5vh;
+    max-height: 50vh;
     width: auto;
     object-fit: contain;
     display: flex;
@@ -249,7 +249,7 @@ a:hover {
 .slideshow-video {
     display: block; 
     width: 45%;
-    height: 26.32vh;
+    height: 45vh;
     margin: 0 auto;
     object-fit: contain;
     z-index: 100;
@@ -270,8 +270,8 @@ a:hover {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top: 5.48vh;
-    font-size: 0.55vw;
+    top: 6vh;
+    font-size: 0.8vw;
     z-index: 100;
 }
 
@@ -308,7 +308,7 @@ a:hover {
 
 .modal-image {
     max-width: 90%;
-    max-height: 43.86vh;
+    max-height: 80vh;
     transition: transform 0.3s ease;
     cursor: zoom-in;
 }
@@ -323,7 +323,7 @@ a:hover {
     top: -0.82vh;
     right: 5%;
     color: #77797a;
-    font-size: 1.28vw;
+    font-size: 1.5vw;
     font-weight: bold;
     z-index: 1100;
 }
@@ -349,7 +349,7 @@ a:hover {
     padding: 0.88vh;
     color: #d5dbe0;
     font-weight: bold;
-    font-size: 0.66vw;
+    font-size: 1.5vw;
     transition: 0.6s ease;
     user-select: none;
     background-color: rgba(0,0,0,0.8);
@@ -367,13 +367,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.55vw;
+    font-size: 0.8vw;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .end-background {
     width: 100%;
-    height: 12.61vh;
+    height: 18vh;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0, 0, 0, 0.722);
@@ -389,13 +389,13 @@ a:hover {
 }
 
 .end-clickables {
-    margin: 0.55vh 0.37vw;
-    height: 1.48vh;
+    margin: 1.2vh 0.5vw;
+    height: 3vh;
 }
 
 .end-copyright {
     margin-top: 1.64vh;
-    font-size: 0.4vw;
+    font-size: 0.8vw;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
     text-align: center;
@@ -556,17 +556,16 @@ a:hover {
     }
 
     .dropbtn, .closebtn {
-        font-size: 7.41vw;
+        font-size: 12vw;
     }
 
     .closebtn {
         right: 2.5%;
-        font-size: 7.41vw;
     }
 
     .dropdown-content a {
-        font-size: 5.56vw;
-        padding: 1.1vh 0.88vw;
+        font-size: 10vw;
+        padding: 2vh 1.5vw;
     }
 
     .end-clickables {
