@@ -91,7 +91,7 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 660px;
+    height: 710px;
     box-sizing: border-box;
     position: relative;
 }
@@ -111,7 +111,7 @@ a:hover {
 .main-text {
     margin-top: 30px;
     text-align: center;
-    font-size: 40px;
+    font-size: 14px;
     line-height: 1.5;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -408,7 +408,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) {
     .main-background {
-        height: 51.71vh;
+        height: 55vh;
     }
 
     .main-image {
