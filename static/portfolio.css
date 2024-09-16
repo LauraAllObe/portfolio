@@ -236,7 +236,8 @@ a:hover {
 }
 
 .notes-multi-image-interior {
-    height: 100%;
+    height: 30%;
+    max-width: 40%;
     align-items: center;
     object-fit: contain;
     z-index: 100;
@@ -353,7 +354,7 @@ a:hover {
 
 .prev, .next {
     cursor: pointer;
-    padding: 0.8vh;
+    padding: 0.6vh 1vw;
     color: #d5dbe0;
     font-weight: bold;
     font-size: 1.5vw;
@@ -450,7 +451,7 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
-        height: 38.46vh;
+        height: 38vh;
         margin-top: 7.69vh;
         margin-bottom: 1.28vh;
     }
@@ -459,7 +460,7 @@ a:hover {
         text-align: center;
         position: absolute;
         font-size: 2.22vw;
-        top: 6.5vh;
+        top: 7vh;
         bottom: 1vh;
     }
 
