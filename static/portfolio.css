@@ -4,10 +4,10 @@
 
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0px;
+    margin: 0;
     background-color: #e8eaeb;
     overflow: auto;
-    font-size: 18px;
+    font-size: 0.66vw;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -15,19 +15,19 @@ body {
 h1 {
     font-family:'Times New Roman', Times, serif;
     font-style: bold;
-    font-size: 45px;
+    font-size: 1.64vw;
     text-align: center;
 }
 
 h2 {
     font-family:'Times New Roman', Times, serif;
-    font-size: 45px;
+    font-size: 1.64vw;
 }
 
 h3 {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: bold;
-    font-size: 18px;
+    font-size: 0.66vw;
 }
 
 a {
@@ -47,11 +47,11 @@ a:hover {
 }
 
 .dropbtn, .closebtn {
-    width: 80px;
+    width: 2.92vw;
     background:none;
     color: #55616d;
-    padding: 16px;
-    font-size: 30px;
+    padding: 0.88vh 0.58vw;
+    font-size: 1.1vw;
     border: none;
     cursor: pointer;
 }
@@ -60,8 +60,8 @@ a:hover {
     display: none;
     position: absolute;
     z-index: 1300;
-    right: 0px;
-  top: 0px;
+    right: 0;
+    top: 0;
   }
 
   .dropdown-content {
@@ -79,9 +79,9 @@ a:hover {
 
 .dropdown-content a {
     color: black;
-    padding: 14px 16px;
+    padding: 0.77vh 0.58vw;
     display: block;
-    font-size: 26px;
+    font-size: 0.95vw;
     text-decoration: none;
     font-stretch: expanded;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -91,40 +91,40 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 750px;
+    height: 41.12vh;
     box-sizing: border-box;
     position: relative;
 }
 
 .main-image {
     display: block; 
-    min-height: 200px;
-    max-height: 220px;
-    margin: 0px auto;
+    min-height: 10.96vh;
+    max-height: 12.06vh;
+    margin: 0vh auto;
     object-fit: contain;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 1.1vh;
+    margin-top: 1.1vh;
 }
 
 .main-text {
-    margin-top: 30px;
+    margin-top: 1.64vh;
     text-align: center;
-    font-size: 18px;
+    font-size: 0.66vw;
     line-height: 2;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .clouds {
     position: relative;
-    padding: 100px;
+    padding: 5.48vh 3.65vw;
 }
 
 .clouds img {
     top: 0;
     left: 0;
-    height: 400px;
+    height: 21.93vh;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -132,61 +132,61 @@ a:hover {
 }
 
 #cloud1 {
-    top: 50px;
-    left:0px;
+    top: 2.74vh;
+    left: 0;
 }
 
 #cloud2 {
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
 }
 
 #cloud3 {
-    top: 500px;
-    left: 1000px;
+    top: 27.41vh;
+    left: 36.55vw;
 }
 
 #cloud4 {
-    top: 520px;
-    left: 0px;
+    top: 28.5vh;
+    left: 0;
 }
 
 #cloud5 {
-    top: 150px;
-    left: 900px;
+    top: 8.22vh;
+    left: 32.89vw;
 }
 
 #cloud6 {
-    top: 600px;
-    left: 600px;
+    top: 32.89vh;
+    left: 21.93vw;
 }
 
 #cloud8 {
-    left: 800px;
-    height: 250px;
+    left: 29.24vw;
+    height: 13.7vh;
 }
 
 #cloud9 {
     display: none;
-    left: 2000px;
-    top: 8750px;
+    left: 73.1vw;
+    top: 479.71vh;
 }
 
 #cloud10 {
     display: none;
-    left: -500px;
-    top: 8850px;
+    left: -18.27vw;
+    top: 485.2vh;
 }
 
 #cloud11 {
     display: none;
-    left: -500px;
-    top: 8700px;
+    left: -18.27vw;
+    top: 476.97vh;
 }
 
 .slideshow-title {
     position: absolute;
-    top: 15px;
+    top: 0.82vh;
     text-align: center;
     text-decoration: none;
     color: inherit;
@@ -196,19 +196,19 @@ a:hover {
 
 .slideshow-background {
     width: 100%;
-    padding-bottom: 70px;
+    padding-bottom: 3.84vh;
     background-color: #70809081;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 360px;
+    margin-bottom: 19.74vh;
     z-index: 100;
 }
 
 
 .slideshow-container {
-    padding-top: 15px;
+    padding-top: 0.82vh;
     width: 98%;
-    min-height: 640px;
+    min-height: 35.09vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -221,8 +221,8 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-top: 110px;
-    margin-bottom: 30px;
+    margin-top: 6.03vh;
+    margin-bottom: 1.64vh;
     z-index: 100;
 }
 
@@ -249,7 +249,7 @@ a:hover {
 .slideshow-video {
     display: block; 
     width: 45%;
-    height: 480px;
+    height: 26.32vh;
     margin: 0 auto;
     object-fit: contain;
     z-index: 100;
@@ -270,8 +270,8 @@ a:hover {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top:100px;
-    font-size: 15px;
+    top: 5.48vh;
+    font-size: 0.55vw;
     z-index: 100;
 }
 
@@ -308,7 +308,7 @@ a:hover {
 
 .modal-image {
     max-width: 90%;
-    max-height: 800px;
+    max-height: 43.86vh;
     transition: transform 0.3s ease;
     cursor: zoom-in;
 }
@@ -320,10 +320,10 @@ a:hover {
 
 .close {
     position: absolute;
-    top: -15px;
+    top: -0.82vh;
     right: 5%;
     color: #77797a;
-    font-size: 35px;
+    font-size: 1.28vw;
     font-weight: bold;
     z-index: 1100;
 }
@@ -338,7 +338,7 @@ a:hover {
 
 .button-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 1.1vh;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -346,14 +346,14 @@ a:hover {
 
 .prev, .next {
     cursor: pointer;
-    padding: 16px;
+    padding: 0.88vh;
     color: #d5dbe0;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 0.66vw;
     transition: 0.6s ease;
     user-select: none;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 3px;
+    border-radius: 0.16vh 0.1vw;
 }
 
 .prev:hover, .next:hover {
@@ -367,13 +367,13 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 15px;
+    font-size: 0.55vw;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .end-background {
     width: 100%;
-    height: 230px;
+    height: 12.61vh;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0, 0, 0, 0.722);
@@ -389,13 +389,13 @@ a:hover {
 }
 
 .end-clickables {
-    margin: 10px;
-    height: 27px;
+    margin: 0.55vh 0.37vw;
+    height: 1.48vh;
 }
 
 .end-copyright {
-    margin-top: 30px;
-    font-size: 11px;
+    margin-top: 1.64vh;
+    font-size: 0.4vw;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
     text-align: center;
@@ -521,7 +521,7 @@ a:hover {
     .slideshow-text {
         vertical-align: top;
         width: 100%;
-        margin-bottom: 30px;
+        margin-bottom:1.64;
     }
 
     .slideshow-image {
@@ -550,7 +550,7 @@ a:hover {
     }
 
     .close {
-        top: -30px;
+        top: -1.64vh;
         right: 5%;
         font-size: 8.33vw;
     }
@@ -566,11 +566,11 @@ a:hover {
 
     .dropdown-content a {
         font-size: 5.56vw;
-        padding: 20px 24px;
+        padding: 1.1vh 0.88vw;
     }
 
     .end-clickables {
-        margin: 30px;
+        margin: 1.64vh 1.64vw;
         height: 2.14vh;
     }
 

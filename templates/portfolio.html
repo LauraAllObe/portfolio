@@ -29,16 +29,16 @@
         <!-- Parallax Clouds -->
         <div class="clouds">
             <picture>
-                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
+                <source media="(max-width: 43.86vw)" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
                 <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
             </picture>
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
             <picture>
-                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
+                <source media="(max-width: 43.86vw)" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
                 <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
             </picture>
             <picture>
-                <source media="(max-width: 800px)" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
+                <source media="(max-width: 43.86vw)" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
                 <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
             </picture>
             <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
@@ -1137,22 +1137,23 @@
                 let value = window.scrollY;
                 let st = window.pageYOffset || document.documentElement.scrollTop;
     
-                cloud1.style.marginTop = -value * 1.5  + 'px';
-                cloud1.style.marginLeft = -value * 2.5  + 'px';
-                cloud2.style.marginTop = -value * 1.5  + 'px';
-                cloud2.style.marginLeft = value * 2.5  + 'px';
-                cloud3.style.marginTop = -value * 1.5  + 'px';
-                cloud3.style.marginLeft = value * 2.5  + 'px';
-                cloud4.style.marginTop = -value * 1.5  + 'px';
-                cloud4.style.marginLeft = -value * 2.5  + 'px';
-                cloud5.style.marginTop = -value * 1.5  + 'px';
-                cloud5.style.marginLeft = -value * 2.5  + 'px';
-                cloud6.style.marginTop = -value * 1.5  + 'px';
-                cloud6.style.marginLeft = value * 2.5  + 'px';
-                cloud7.style.marginTop = -value * 1.5  + 'px';
-                cloud7.style.marginLeft = value * 2.5  + 'px';
-                cloud8.style.marginTop = -value * 1.5  + 'px';
-                cloud8.style.marginLeft = value * 2.5  + 'px';
+                cloud1.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud1.style.marginLeft = (-value * 0.0913) + 'vw';
+                cloud2.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud2.style.marginLeft = (value * 0.0913) + 'vw';
+                cloud3.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud3.style.marginLeft = (value * 0.0913) + 'vw';
+                cloud4.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud4.style.marginLeft = (-value * 0.0913) + 'vw';
+                cloud5.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud5.style.marginLeft = (-value * 0.0913) + 'vw';
+                cloud6.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud6.style.marginLeft = (value * 0.0913) + 'vw';
+                cloud7.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud7.style.marginLeft = (value * 0.0913) + 'vw';
+                cloud8.style.marginTop = (-value * 0.0822) + 'vh';
+                cloud8.style.marginLeft = (value * 0.0913) + 'vw';
+
                 var first = 8200;
                 if(screen.width <= 1024)
                 {
@@ -1166,25 +1167,25 @@
     
                     requestAnimationFrame(() => {
                         requestAnimationFrame(() => {
-                            cloud9.style.transform = 'translate(-900px, 300px)';
+                            cloud9.style.transform = 'translate(-32.91vw, 16.44vh)';
                             cloud9.style.transition = 'transform 1s ease-out';
                             
-                            cloud10.style.transform = 'translate(800px, 400px)';
+                            cloud10.style.transform = 'translate(43.86vw, 21.93vh)';
                             cloud10.style.transition = 'transform 1s ease-out';
     
-                            cloud11.style.transform = 'translate(300px, 400px)';
+                            cloud11.style.transform = 'translate(10.97vw, 21.93vh)';
                             cloud11.style.transition = 'transform 1s ease-out';
                         });
                     });
                 }//DETRANSITION BOTTOM CLOUDS (MOVE OUT)
                 else if (st < lastScrollTop && ((screen.width > 1024 && value < 9000) || (screen.width <= 1024 && value < 13800))) {
-                    cloud9.style.transform = 'translate(900px, -300px)';
+                    cloud9.style.transform = 'translate(32.91vw, -16.44vh)';
                     cloud9.style.transition = 'transform 1s ease-out';
     
-                    cloud10.style.transform = 'translate(-800px, -400px)';
+                    cloud10.style.transform = 'translate(-43.86vw, -21.93vh)';
                     cloud10.style.transition = 'transform 1s ease-out';
                     
-                    cloud11.style.transform = 'translate(-300px, -400px)';
+                    cloud11.style.transform = 'translate(-10.97vw, -21.93vh)';
                     cloud11.style.transition = 'transform 1s ease-out';
                     
                     const transitionEndHandler = () => {
@@ -1209,12 +1210,14 @@
                 var slideshowBackground = document.querySelector('.slideshow-background');
                 var width = slideshowBackground.offsetWidth;
                 //ALIGN TO END OF SCREEN WIDTH
-                var screenWidth = screen.width;
+                var screenWidth = 100;
                 let cloud2 = document.getElementById('cloud2');
                 let cloud3 = document.getElementById('cloud3');
-                cloud2.style.left = (screenWidth - cloud2.offsetWidth) + "px";
+                var cloud2WidthVw = (cloud2.offsetWidth / window.innerWidth) * 100;
+                var cloud3WidthVw = (cloud3.offsetWidth / window.innerWidth) * 100;
+                cloud2.style.left = (screenWidth - cloud2WidthVw) + "vw";
                 if (screenWidth <= 1024) {
-                    cloud3.style.left = (screenWidth - cloud3.offsetWidth) + "px";
+                    cloud3.style.left = (screenWidth - cloud3WidthVw) + "vw";
                 }
             }
 
