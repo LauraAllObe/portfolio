@@ -47,7 +47,7 @@ a:hover {
 }
 
 .dropbtn, .closebtn {
-    width: 2.92vw;
+    width: 5vw;
     background:none;
     color: #55616d;
     padding: 0.88vh 0.58vw;
@@ -81,7 +81,7 @@ a:hover {
     color: black;
     padding: 2vh 1.5vw;
     display: block;
-    font-size: 5vw;
+    font-size: 3vw;
     text-decoration: none;
     font-stretch: expanded;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -124,7 +124,7 @@ a:hover {
 .clouds img {
     top: 0;
     left: 0;
-    height: 21.93vh;
+    height: 25vh;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -208,7 +208,7 @@ a:hover {
 .slideshow-container {
     padding-top: 0.82vh;
     width: 98%;
-    min-height: 65vh;
+    min-height: 68vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -270,7 +270,7 @@ a:hover {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top: 10vh;
+    top: 8vh;
     font-size: 0.8vw;
     z-index: 100;
 }
@@ -321,7 +321,7 @@ a:hover {
 .close {
     position: absolute;
     top: -0.82vh;
-    right: -0.82vw;
+    right: 3vw;
     color: #77797a;
     font-size: 2.5vw;
     font-weight: bold;
@@ -346,7 +346,7 @@ a:hover {
 
 .prev, .next {
     cursor: pointer;
-    padding: 1.5vh;
+    padding: 0.8vh;
     color: #d5dbe0;
     font-weight: bold;
     font-size: 1.5vw;
@@ -361,8 +361,8 @@ a:hover {
 }
 
 .slide-navigation-text {
-    margin-left: 21.5vw;
-    margin-right: 21.5vw;
+    margin-left: 18vw;
+    margin-right: 18vw;
     text-align: center;
     display: flex;
     align-items: center;
@@ -373,7 +373,7 @@ a:hover {
 
 .end-background {
     width: 100%;
-    height: 30vh;
+    height: 22vh;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0, 0, 0, 0.722);
@@ -389,7 +389,7 @@ a:hover {
 }
 
 .end-clickables {
-    margin: 1.2vh 0.5vw;
+    margin: 4vh 0.5vw;
     height: 3vh;
 }
 
