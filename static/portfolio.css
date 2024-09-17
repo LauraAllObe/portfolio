@@ -489,7 +489,7 @@ a:hover {
 
     #cloud2 {
         top: -5vh;
-        right: -10vw;
+        right: -20vw;
     }
 
     #cloud3 {
@@ -581,7 +581,7 @@ a:hover {
     }
 
     .dropdown-content a {
-        font-size: 5vw;
+        font-size: 4.8vw;
         padding: 1.5vh 1.5vw;
     }
 
