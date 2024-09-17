@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #e8eaeb;
     overflow: auto;
-    font-size: 1vw;
+    font-size: 1.2vw;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -60,7 +60,7 @@ a:hover {
     display: none;
     position: absolute;
     z-index: 1300;
-    right: 0;
+    right: 1vw;
     top: 0;
   }
 
@@ -91,7 +91,7 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 85vh;
+    height: 105vh;
     box-sizing: border-box;
     position: relative;
 }
@@ -279,7 +279,7 @@ a:hover {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top: 8vh;
+    top: 8.5vh;
     font-size: 1vw;
     z-index: 100;
 }
