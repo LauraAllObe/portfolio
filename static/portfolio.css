@@ -483,20 +483,22 @@ a:hover {
     }
 
     #cloud1 {
+        top: -5vh;
         left: 0vw;
     }
 
     #cloud2 {
+        top: -5vh;
         left: 0vw;
     }
 
     #cloud3 {
-        top: 40vh;
+        top: 60vh;
         left: 0vw;
     }
 
     #cloud4 {
-        top: 20vh;
+        top: 38vh;
         left: 0vw;
     }
 
