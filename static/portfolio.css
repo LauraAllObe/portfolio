@@ -479,7 +479,7 @@ a:hover {
     }
 
     .clouds img {
-        height: 25vh;
+        height: 35vh;
     }
 
     #cloud1 {
@@ -491,12 +491,12 @@ a:hover {
     }
 
     #cloud3 {
-        top: 60vh;
+        top: 40vh;
         left: 0vw;
     }
 
     #cloud4 {
-        top: 32vh;
+        top: 20vh;
         left: 0vw;
     }
 
