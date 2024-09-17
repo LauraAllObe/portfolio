@@ -329,7 +329,7 @@ a:hover {
 
 .close {
     position: absolute;
-    top: -5%;
+    top: -2.5%;
     right: 5%;
     color: #77797a;
     font-size: 2.8vw;
@@ -418,7 +418,7 @@ a:hover {
 
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 16/9) {
     .main-background {
-        height: 70vh;
+        height: 80vh;
     }
 
     .main-image {
@@ -570,11 +570,11 @@ a:hover {
     }
 
     .closebtn {
-        right: 2.5%;
+        right: 7.5%;
     }
 
     .dropdown-content {
-        font-size: 5vw;
+        font-size: 8vw;
         padding: 2vh 1.5vw;
     }
 
@@ -583,8 +583,12 @@ a:hover {
         height: 2.14vh;
     }
 
-    #hackerslide2 {
-        max-height: 15vh;
+    #hackerslide21 {
+        max-height: 12.5vh;
+    }
+
+    #hackerslide21 {
+        max-height: 4vh;
     }
 
     .modal-image {
