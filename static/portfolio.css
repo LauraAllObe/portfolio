@@ -229,9 +229,9 @@ a:hover {
 .notes-multi-image {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     max-height: 50vh;
-    width: 20vw;
+    width: 18vw;
     align-items: center;
     align-self: center;
 }
