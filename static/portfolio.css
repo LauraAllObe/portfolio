@@ -60,7 +60,7 @@ a:hover {
     display: none;
     position: absolute;
     z-index: 1300;
-    right: 15vw;
+    right: 0;
     top: 0;
   }
 
@@ -227,13 +227,10 @@ a:hover {
 }
 
 .notes-multi-image {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    max-width: 45%;
-    max-height: 50vh;
-    align-items: center;
-    align-self: center;
+    max-height: 40%;
+    justify-content:space-evenly;
+    align-self:center;
+    width: 90%;
 }
 
 .notes-multi-image-interior {
