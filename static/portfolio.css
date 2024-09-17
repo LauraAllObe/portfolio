@@ -91,7 +91,7 @@ a:hover {
 
 .main-background {
     width: 100%;
-    height: 105vh;
+    height: 95vh;
     box-sizing: border-box;
     position: relative;
 }
@@ -109,7 +109,7 @@ a:hover {
 }
 
 .main-text {
-    margin-top: 1.64vh;
+    margin-top: 4vh;
     text-align: center;
      font-size: 1vw;
     line-height: 2;
