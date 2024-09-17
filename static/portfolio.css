@@ -489,12 +489,13 @@ a:hover {
 
     #cloud2 {
         top: -5vh;
-        left: 0vw;
+        left: 10vw;
     }
 
     #cloud3 {
         top: 60vh;
         left: 0vw;
+        height: 45vh;
     }
 
     #cloud4 {
