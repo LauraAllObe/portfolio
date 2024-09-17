@@ -329,7 +329,7 @@ a:hover {
 
 .close {
     position: absolute;
-    top: 5%;
+    top: 0;
     right: 5%;
     color: #77797a;
     font-size: 2.8vw;
@@ -416,7 +416,7 @@ a:hover {
     max-height: 40vh;
 }
 
-@media screen and (min-device-aspect-ratio: 16:9) {
+@media screen and (min-device-aspect-ratio: 16/9) {
     .main-background {
         height: 70vh;
     }
