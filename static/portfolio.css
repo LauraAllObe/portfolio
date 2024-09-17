@@ -231,12 +231,14 @@ a:hover {
     flex-direction: row;
     justify-content: space-evenly;
     max-height: 50vh;
-    width: 70vw;
+    width: 30vw;
     align-items: center;
     align-self: center;
 }
 
 .notes-multi-image-interior {
+    max-height: 50vh;
+    width: 5vw;
     align-items: center;
     object-fit: contain;
     z-index: 100;
