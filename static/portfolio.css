@@ -475,25 +475,25 @@ a:hover {
     }
 
     .clouds img {
-        height: 15vh;
+        height: 25vh;
     }
 
     #cloud1 {
-        left: 15vw;
+        left: 0vw;
     }
 
     #cloud2 {
-        left: 15vw;
+        left: 0vw;
     }
 
     #cloud3 {
         top: 60vh;
-        left: 15vw;
+        left: 0vw;
     }
 
     #cloud4 {
         top: 32vh;
-        left: 15vw;
+        left: 0vw;
     }
 
     #cloud5 {
