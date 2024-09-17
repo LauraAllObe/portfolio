@@ -231,7 +231,7 @@ a:hover {
     flex-direction: row;
     justify-content: space-between;
     max-height: 50vh;
-    width: 30vw;
+    width: 40vw;
     align-items: center;
     align-self: center;
 }
