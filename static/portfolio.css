@@ -329,7 +329,7 @@ a:hover {
 
 .close {
     position: absolute;
-    top: -0.82vh;
+    top: 5%;
     right: 5%;
     color: #77797a;
     font-size: 2.8vw;
@@ -416,7 +416,7 @@ a:hover {
     max-height: 40vh;
 }
 
-@media all and (min-width:0px) and (max-width: 1024px) {
+@media screen and (min-device-aspect-ratio: 16:9) {
     .main-background {
         height: 70vh;
     }
@@ -427,7 +427,7 @@ a:hover {
     }
 
     body {
-        font-size: 2.22vw;
+        font-size: 2.6vw;
     }
 
     .overflow-mobile {
@@ -439,29 +439,29 @@ a:hover {
     }
 
     h2 {
-        font-size: 5.56vw;
+        font-size: 5.8vw;
     }
 
     h3 {
-        font-size: 2.78vw;
+        font-size: 3vw;
     }
 
     .main-text {
-        font-size: 2.22vw;
+        font-size: 2.4vw;
     }
     
     .slides {
         flex-direction: column;
         width: 100%;
         height: 38vh;
-        margin-top: 7.69vh;
+        margin-top: 3vh;
         margin-bottom: 1.28vh;
     }
 
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 2.22vw;
+        font-size: 2.4vw;
         top: 7vh;
         bottom: 1vh;
     }
@@ -471,7 +471,7 @@ a:hover {
     }
 
     .slideshow-title {
-        font-size: 4vw;
+        font-size: 4.2vw;
     }
 
     .clouds img {
@@ -531,7 +531,7 @@ a:hover {
     .slideshow-text {
         vertical-align: top;
         width: 100%;
-        margin-bottom:1.64;
+        margin-bottom: 1.64vh;
     }
 
     .slideshow-image {
@@ -560,21 +560,21 @@ a:hover {
     }
 
     .close {
-        top: -1.64vh;
-        right: 5%;
+        top: 3%;
+        right: 3%;
         font-size: 8.33vw;
     }
 
     .dropbtn, .closebtn {
-        font-size: 12vw;
+        font-size: 6vw;
     }
 
     .closebtn {
         right: 2.5%;
     }
 
-    .dropdown-content a {
-        font-size: 10vw;
+    .dropdown-content {
+        font-size: 5vw;
         padding: 2vh 1.5vw;
     }
 
@@ -593,16 +593,16 @@ a:hover {
     }
 
     .end-copyright {
-        font-size: 2.22vw;
+        font-size: 2.4vw;
     }
 
     .prev, .next {
         padding: 2.22vw;
-        font-size: 2.78vw;
+        font-size: 3vw;
         z-index: 500;
     }
 
     .slide-navigation-text {
-        font-size: w.22vw;
+        font-size: 2.4vw;
     }
 }
