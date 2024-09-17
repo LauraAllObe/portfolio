@@ -230,8 +230,8 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    max-height: 40%;
-    width: 45%;
+    max-height: 2%;
+    width: 2%;
     align-items: center;
     align-self: center;
 }
