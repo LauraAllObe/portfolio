@@ -238,6 +238,7 @@ a:hover {
 
 .notes-multi-image-interior {
     max-height: 50vh;
+    width: auto;
     align-items: center;
     object-fit: contain;
     z-index: 100;
