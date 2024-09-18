@@ -416,7 +416,7 @@ a:hover {
     max-height: 40vh;
 }
 
-@media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 16/9) {
+@media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-background {
         height: 75vh;
     }
