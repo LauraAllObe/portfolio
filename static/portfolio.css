@@ -416,6 +416,48 @@ a:hover {
     max-height: 40vh;
 }
 
+@media all and (min-aspect-ratio: 2/3) {
+    #multi1 {
+        height: 80%;
+    }
+
+    #multi2 {
+        height: 20%;
+    }
+
+    #multi3 {
+        height: 30%;
+    }
+
+    #multi4 {
+        height: 70%;
+    }
+
+    #multi5 {
+        height: 60%;
+    }
+
+    #multi6 {
+        height: 40%;
+    }
+
+    #multi7 {
+        height: 55%;
+    }
+
+    #multi8 {
+        height: 45%;
+    }
+
+    #multi9 {
+        height: 30%;
+    }
+
+    #multi10 {
+        height: 70%;
+    }
+}
+
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-background {
         height: 75vh;
