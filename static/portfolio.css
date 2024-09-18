@@ -418,43 +418,43 @@ a:hover {
 
 @media all and (min-aspect-ratio: 2/3) {
     #multi1 {
-        height: 80%;
+        max-height: 40vh;
     }
 
     #multi2 {
-        height: 20%;
+        max-height: 10vh;
     }
 
     #multi3 {
-        height: 30%;
+        max-height: 15vh;
     }
 
     #multi4 {
-        height: 70%;
+        max-height: 35vh;
     }
 
     #multi5 {
-        height: 60%;
+        max-height: 30vh;
     }
 
     #multi6 {
-        height: 40%;
+        max-height: 20vh;
     }
 
     #multi7 {
-        height: 55%;
+        max-height: 27.5vh;
     }
 
     #multi8 {
-        height: 45%;
+        max-height: 22.5vh;
     }
 
     #multi9 {
-        height: 30%;
+        max-height: 15vh;
     }
 
     #multi10 {
-        height: 70%;
+        max-height: 35vh;
     }
 }
 
