@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #e8eaeb;
     overflow: auto;
-    font-size: 18px;
+    font-size: 15px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -21,7 +21,7 @@ h1 {
 
 h2 {
     font-family:'Times New Roman', Times, serif;
-    font-size: 38 px;
+    font-size: 45 px;
 }
 
 h3 {
@@ -376,7 +376,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10 px;
+    font-size: 9 px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
