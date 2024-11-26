@@ -465,6 +465,36 @@ a:hover {
     }
 }
 
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-link:hover {
+    color: #A3A3CD;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    transition: transform 0.2s;
+}
+
+.social-link:hover .social-icon {
+    transform: translateY(-3px);
+}
+
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-background {
         height: 75vh;
