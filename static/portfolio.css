@@ -94,6 +94,15 @@ a:hover {
     height: 95vh;
     box-sizing: border-box;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 }
 
 .main-image {
