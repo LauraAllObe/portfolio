@@ -467,27 +467,29 @@ a:hover {
 
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 20vw;
     justify-content: center;
     align-items: center;
 }
 
 .social-link {
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-decoration: none;
+    background-color: transparent;
     color: #000;
     transition: transform 0.2s, color 0.2s;
 }
 
 .social-link:hover {
-    color: #A3A3CD;
+    background-color: #A3A3CD;
 }
 
 .social-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
+    width: 80px;
+    height: 80px;
+    margin-right: 1.5vw;
     transition: transform 0.2s;
 }
 
