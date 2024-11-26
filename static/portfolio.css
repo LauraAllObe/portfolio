@@ -90,9 +90,9 @@ a:hover {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .main-background {
-    top: -10vh;
+    top: -95px;
     width: 100%;
-    height: 95vh;
+    height: 902.5px;
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -125,13 +125,13 @@ a:hover {
 
 .clouds {
     position: relative;
-    padding: 5.48vh 3.65vw;
+    padding: 52.06px 3.65vw;
 }
 
 .clouds img {
     top: 0;
     left: 0;
-    height: 35vh;
+    height: 332.5px;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -139,7 +139,7 @@ a:hover {
 }
 
 #cloud1 {
-    top: 5vh;
+    top: 47.5px;
     left: 0;
 }
 
@@ -149,46 +149,46 @@ a:hover {
 }
 
 #cloud3 {
-    top: 58vh;
+    top: 551px;
     left: 36.55vw;
 }
 
 #cloud4 {
-    top: 62vh;
+    top: 589px;
     left: 0;
 }
 
 #cloud5 {
-    top: 17vh;
+    top: 161.5px;
     left: 32.89vw;
 }
 
 #cloud6 {
-    top: 68vh;
+    top: 646px;
     left: 21.93vw;
 }
 
 #cloud8 {
     left: 29.24vw;
-    height: 13.7vh;
+    height: 130.15px;
 }
 
 #cloud9 {
     display: none;
     left: 73.1vw;
-    top: 479.71vh;
+    top: 4557.24px;
 }
 
 #cloud10 {
     display: none;
     left: -18.27vw;
-    top: 485.2vh;
+    top: 4609.4px;
 }
 
 #cloud11 {
     display: none;
     left: -18.27vw;
-    top: 476.97vh;
+    top: 4531.22px;
 }
 
 .slideshow-title {
@@ -324,7 +324,7 @@ a:hover {
 
 .modal-image {
     max-width: 90%;
-    max-height: 760px;
+    max-height: 80vh;
     transition: transform 0.3s ease;
     cursor: zoom-in;
 }
