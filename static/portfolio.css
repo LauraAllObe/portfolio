@@ -50,8 +50,8 @@ a:hover {
     width: 1vw;
     background:none;
     color: #55616d;
-    padding: 0.88vh 0.58vw;
-    font-size: 25px;
+    padding: 0.44vh 0.58vw;
+    font-size: 24px;
     border: none;
     cursor: pointer;
 }
@@ -68,7 +68,7 @@ a:hover {
     display: none;
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: #d9e1e9e6;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1300;
@@ -79,9 +79,9 @@ a:hover {
 
 .dropdown-content a {
     color: black;
-    padding: 2vh 1.5vw;
+    padding: 1.65vh 1.5vw;
     display: block;
-    font-size: 25px;
+    font-size: 24px;
     text-decoration: none;
     font-stretch: expanded;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -90,9 +90,9 @@ a:hover {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .main-background {
-    top: -10vh;
+    top: -95px;
     width: 100%;
-    height: 95vh;
+    height: 902.5px;
     box-sizing: border-box;
     position: relative;
     display: flex;
@@ -108,9 +108,8 @@ a:hover {
 
 .main-image {
     display: block; 
-    min-height: 40vh;
-    max-height: 44vh;
-    margin: 0vh auto;
+    width: 16vw;
+    margin: 0px auto;
     object-fit: contain;
     display: flex;
     flex-direction: column;
@@ -125,13 +124,13 @@ a:hover {
 
 .clouds {
     position: relative;
-    padding: 5.48vh 3.65vw;
+    padding: 52.06px 3.65vw;
 }
 
 .clouds img {
     top: 0;
     left: 0;
-    height: 35vh;
+    height: 332.5px;
     pointer-events: none;
     position: absolute;
     overflow: hidden;
@@ -139,7 +138,7 @@ a:hover {
 }
 
 #cloud1 {
-    top: 5vh;
+    top: 47.5px;
     left: 0;
 }
 
@@ -149,51 +148,51 @@ a:hover {
 }
 
 #cloud3 {
-    top: 58vh;
+    top: 551px;
     left: 36.55vw;
 }
 
 #cloud4 {
-    top: 62vh;
+    top: 589px;
     left: 0;
 }
 
 #cloud5 {
-    top: 17vh;
+    top: 161.5px;
     left: 32.89vw;
 }
 
 #cloud6 {
-    top: 68vh;
+    top: 646px;
     left: 21.93vw;
 }
 
 #cloud8 {
     left: 29.24vw;
-    height: 13.7vh;
+    height: 130.15px;
 }
 
 #cloud9 {
     display: none;
     left: 73.1vw;
-    top: 479.71vh;
+    top: 4557.24px;
 }
 
 #cloud10 {
     display: none;
     left: -18.27vw;
-    top: 485.2vh;
+    top: 4609.4px;
 }
 
 #cloud11 {
     display: none;
     left: -18.27vw;
-    top: 476.97vh;
+    top: 4531.22px;
 }
 
 .slideshow-title {
     position: absolute;
-    top: 0.82vh;
+    top: 7.79px;
     text-align: center;
     text-decoration: none;
     color: inherit;
@@ -203,19 +202,19 @@ a:hover {
 
 .slideshow-background {
     width: 100%;
-    padding-bottom: 3.84vh;
+    padding-bottom: 36.48px;
     background-color: #70809081;
     box-sizing: border-box;
     position: relative;
-    margin-bottom: 40vh;
+    margin-bottom: 380px;
     z-index: 100;
 }
 
 
 .slideshow-container {
-    padding-top: 0.82vh;
+    padding-top: 7.79px;
     width: 98%;
-    min-height: 68vh;
+    min-height: 646px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,8 +227,8 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-top: 8.5vh;
-    margin-bottom: 1.64vh;
+    margin-top: 80.75px;
+    margin-bottom: 15.58px;
     z-index: 100;
 }
 
@@ -237,14 +236,14 @@ a:hover {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    max-height: 50vh;
+    max-height: 475px;
     width: 45vw;
     align-items: center;
     align-self: center;
 }
 
 .notes-multi-image-interior {
-    max-height: 50vh;
+    max-height: 475px;
     width:fit-content;
     align-items: center;
     object-fit: contain;
@@ -254,7 +253,7 @@ a:hover {
 .slideshow-image {
     display: block; 
     max-width: 45%;
-    max-height: 50vh;
+    max-height: 475px;
     width: auto;
     object-fit: contain;
     display: flex;
@@ -265,7 +264,7 @@ a:hover {
 .slideshow-video {
     display: block; 
     width: 45%;
-    height: 45vh;
+    height: 427.5px;
     margin: 0 auto;
     object-fit: contain;
     z-index: 100;
@@ -286,7 +285,7 @@ a:hover {
     justify-content: center;
     width: 100%;
     position: absolute;
-    top: 9vh;
+    top: 85.5px;
     font-size: 15px;
     z-index: 100;
 }
@@ -354,7 +353,7 @@ a:hover {
 
 .button-container {
     position: absolute;
-    bottom: 1.1vh;
+    bottom: 10.45px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -362,14 +361,14 @@ a:hover {
 
 .prev, .next {
     cursor: pointer;
-    padding: 0.7vh 1vw;
+    padding: 6.65px 1vw;
     color: #d5dbe0;
     font-weight: bold;
     font-size: 25.5px;
     transition: 0.6s ease;
     user-select: none;
     background-color: rgba(0,0,0,0.8);
-    border-radius: 0.16vh 0.2vw;
+    border-radius: 1.52px 0.2vw;
 }
 
 .prev:hover, .next:hover {
@@ -389,7 +388,7 @@ a:hover {
 
 .end-background {
     width: 100%;
-    height: 28vh;
+    height: 266px;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0, 0, 0, 0.722);
@@ -405,13 +404,13 @@ a:hover {
 }
 
 .end-clickables {
-    margin-top: 4vh;
-    margin: 4vh 0.5vw;
-    height: 3vh;
+    margin-top: 38px;
+    margin: 38px 0.5vw;
+    height: 28.5px;
 }
 
 .end-copyright {
-    margin-top: 2vh;
+    margin-top: 19px;
     font-size: 15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: block;
@@ -420,7 +419,7 @@ a:hover {
 }
 
 #hackerslide2 {
-    max-height: 40vh;
+    max-height: 380px;
 }
 
 @media all and (min-aspect-ratio: 2/3) {
@@ -587,7 +586,7 @@ a:hover {
     .slideshow-text {
         vertical-align: top;
         width: 100%;
-        margin-bottom: 1.64vh;
+        margin-bottom: 15.58px;
     }
 
     .slideshow-image {
@@ -636,7 +635,7 @@ a:hover {
 
     .end-clickables {
         margin-top: 2.5vh;
-        margin: 1.64vh 1.64vw;
+        margin: 15.58px 1.64vw;
         height: 2.14vh;
     }
 
