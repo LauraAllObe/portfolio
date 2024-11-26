@@ -108,8 +108,8 @@ a:hover {
 
 .main-image {
     display: block; 
-    min-height: 350px;
-    max-height: 380px;
+    min-height: 360px;
+    max-height: 400px;
     margin: 0vh auto;
     object-fit: contain;
     display: flex;
