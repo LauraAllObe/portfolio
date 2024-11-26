@@ -7,7 +7,7 @@ body {
     margin: 0;
     background-color: #e8eaeb;
     overflow: auto;
-    font-size: 16px;
+    font-size: 18px;
     overflow-x: hidden;
     overflow-y: hidden;
 }
@@ -15,13 +15,13 @@ body {
 h1 {
     font-family:'Times New Roman', Times, serif;
     font-style: bold;
-    font-size: 37.5 px;
+    font-size: 42 px;
     text-align: center;
 }
 
 h2 {
     font-family:'Times New Roman', Times, serif;
-    font-size: 33 px;
+    font-size: 38 px;
 }
 
 h3 {
@@ -376,7 +376,7 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12 px;
+    font-size: 10 px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
