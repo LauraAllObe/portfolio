@@ -482,7 +482,7 @@ a:hover {
     transition: transform 0.2s, color 0.2s;
 }
 
-.social-link:hover {
+.social-text:hover {
     background-color: #A3A3CD;
 }
 
