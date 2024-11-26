@@ -467,7 +467,7 @@ a:hover {
 
 .social-links {
     display: flex;
-    gap: 20vw;
+    gap: 10vw;
     justify-content: center;
     align-items: center;
 }
@@ -489,12 +489,11 @@ a:hover {
 .social-icon {
     width: 80px;
     height: 80px;
-    margin-right: 1.5vw;
     transition: transform 0.2s;
 }
 
 .social-link:hover .social-icon {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
 }
 
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
