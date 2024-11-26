@@ -79,7 +79,7 @@ a:hover {
 
 .dropdown-content a {
     color: black;
-    padding: 1.5vh 1.5vw;
+    padding: 1.65vh 1.5vw;
     display: block;
     font-size: 24px;
     text-decoration: none;
@@ -108,8 +108,8 @@ a:hover {
 
 .main-image {
     display: block; 
-    min-height: 370px;
-    max-height: 400px;
+    min-height: 380px;
+    max-height: 420px;
     margin: 0vh auto;
     object-fit: contain;
     display: flex;
