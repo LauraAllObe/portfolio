@@ -50,8 +50,8 @@ a:hover {
     width: 1vw;
     background:none;
     color: #55616d;
-    padding: 0.88vh 0.58vw;
-    font-size: 25px;
+    padding: 0.44vh 0.58vw;
+    font-size: 24px;
     border: none;
     cursor: pointer;
 }
@@ -81,7 +81,7 @@ a:hover {
     color: black;
     padding: 2vh 1.5vw;
     display: block;
-    font-size: 25px;
+    font-size: 24px;
     text-decoration: none;
     font-stretch: expanded;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
