@@ -107,8 +107,8 @@ a:hover {
 
 .main-image {
     display: block; 
-    min-height: 24vh;
-    max-height: 28vh;
+    min-height: 40vh;
+    max-height: 44vh;
     margin: 0vh auto;
     object-fit: contain;
     display: flex;
