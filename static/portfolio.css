@@ -109,6 +109,7 @@ a:hover {
 .main-image {
     display: block; 
     width: 16vw;
+    min-width: 20vw;
     margin: 0px auto;
     object-fit: contain;
     display: flex;
