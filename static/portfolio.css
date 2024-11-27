@@ -564,6 +564,11 @@ a:hover {
         max-height: 18.80vh;
     }
 
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
     body {
         font-size: 2.6vw;
     }
