@@ -127,13 +127,14 @@ a:hover {
 .banner-container {
     position: relative;
     display: inline-block;
+    z-index: 1;
 }
 
 .banner {
     content: '';
     position: absolute;
     top: 30px;
-    left: 10px;
+    right: 20px;
     width: 500px; 
     height: 30px;
     background-color: #A3A3CD;
