@@ -132,7 +132,7 @@ a:hover {
 .top-right-corner::before {
     top: -15px;
     right: -15px;
-    width: 90px;
+    width: 150px;
     height: 10px;
 }
 
