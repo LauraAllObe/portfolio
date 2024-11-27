@@ -115,6 +115,28 @@ a:hover {
     object-fit: contain;
     display: flex;
     flex-direction: column;
+    position: relative;
+}
+
+.main-image-container::before, 
+.main-image-container::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 5px;
+    background-color: #565FA1;
+}
+
+.main-image-container::before {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+}
+
+.main-image-container::after {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
 }
 
 .main-text {
@@ -509,7 +531,7 @@ a:hover {
 }
 
 .social-text {
-    width: 100px;
+    width: 110px;
     padding: 0px;
     margin-top: 10px;
     line-height: 1.5;
