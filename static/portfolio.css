@@ -109,7 +109,7 @@ a:hover {
 .main-image {
     display: block; 
     width: 16vw;
-    min-width: 20vw;
+    min-width: 10vw;
     margin: 0px auto;
     object-fit: contain;
     display: flex;
@@ -466,6 +466,7 @@ a:hover {
 }
 
 .social-links {
+    margin-top: 20px;
     display: flex;
     gap: 10vw;
     justify-content: center;
@@ -486,6 +487,10 @@ a:hover {
     background-color: #A3A3CD;
 }
 
+.social-text {
+    background-color: trnsparent;
+}
+
 .social-icon {
     width: 120px;
     height: 120px;
@@ -493,7 +498,7 @@ a:hover {
 }
 
 .social-link:hover .social-icon {
-    transform: translateY(-6px);
+    transform: translateY(-12px);
 }
 
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
