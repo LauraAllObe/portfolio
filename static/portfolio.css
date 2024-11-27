@@ -576,6 +576,10 @@ a:hover {
 }
 
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
+    .main-image {
+        flex-direction: row;
+    }
+
     .main-background {
         height: 75vh;
     }
