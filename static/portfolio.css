@@ -126,21 +126,38 @@ a:hover {
 .main-image-container::after {
     content: '';
     position: absolute;
-    width: 30px;
-    height: 5px;
-    background-color: #565FA1;
+    background-color: #565FA1; /* Frame color */
 }
 
+/* Horizontal bar for top-right */
 .main-image-container::before {
     top: 0;
     right: 0;
-    transform: rotate(90deg);
+    width: 30px; /* Length of the horizontal bar */
+    height: 5px; /* Thickness of the corner */
 }
 
+/* Vertical bar for top-right */
 .main-image-container::after {
+    top: 0;
+    right: 0;
+    width: 5px; /* Thickness of the corner */
+    height: 30px; /* Length of the vertical bar */
+}
+
+/* Bottom-left corner */
+.main-image-container::after,
+.main-image-container::before:nth-child(2) {
+    content: '';
+    position: absolute;
+    background-color: #565FA1; /* Frame color */
+}
+
+/* Horizontal bar for bottom-left */
+.main-image-container::after:nth-child(1) {
     bottom: 0;
     left: 0;
-    transform: rotate(-90deg);
+    width: 30px; /* Length of the horizontal bar */
 }
 
 .main-text {
