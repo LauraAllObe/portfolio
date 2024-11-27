@@ -115,7 +115,11 @@ a:hover {
     object-fit: contain;
     display: flex;
     flex-direction: column;
+}
+
+.main-image-container {
     position: relative;
+    display: inline-block;
 }
 
 .main-image-container::before, 
