@@ -556,12 +556,12 @@ a:hover {
     }
 
     .main-background {
-        height: 100vh;
+        height: 120vh;
     }
 
     .main-image {
-        width: 50vw;
-        min-width: 40vw;
+        width: 40vw;
+        min-width: 30vw;
     }
 
     .main-content {
