@@ -123,6 +123,23 @@ a:hover {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.banner-container {
+    position: relative;
+    display: inline-block;
+}
+
+.banner {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 150px; 
+    height: 40px;
+    background-color: #565FA1;
+    clip-path: polygon(5% 0%, 95% 0%, 100% 50%, 95% 100%, 5% 100%, 0% 50%);
+    z-index: -1;
+}
+
 .clouds {
     position: relative;
     padding: 52.06px 3.65vw;
@@ -489,11 +506,11 @@ a:hover {
 }
 
 .social-text {
-    width: 120px;
+    width: 100px;
     padding: 0px;
     margin-top: 10px;
-    line-height: 1.2;
-    color: #000;
+    line-height: 1.5;
+    color: #70809081;
     background-color: transparent;
     transition: background-color 0.2s;
 }
