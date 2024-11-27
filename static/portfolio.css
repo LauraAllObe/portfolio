@@ -122,44 +122,53 @@ a:hover {
     display: inline-block;
 }
 
-.main-image-container::before,
-.main-image-container::after,
-.main-image-container .bottom-left-horizontal,
-.main-image-container .bottom-left-vertical {
-    content: '';
+.top-right-corner, 
+.bottom-left-corner {
     position: absolute;
     background-color: #565FA1; /* Frame corner color */
 }
 
-/* Top-right corner - Horizontal bar */
-.main-image-container::before {
+/* Top-right corner styles */
+.top-right-corner::before,
+.top-right-corner::after {
+    content: '';
+    position: absolute;
+    background-color: #565FA1;
+}
+
+.top-right-corner::before {
     top: 0;
     right: 0;
     width: 30px; /* Horizontal bar length */
-    height: 5px; /* Thickness of the bar */
+    height: 5px; /* Bar thickness */
 }
 
-/* Top-right corner - Vertical bar */
-.main-image-container::after {
+.top-right-corner::after {
     top: 0;
     right: 0;
-    width: 5px; /* Thickness of the bar */
+    width: 5px; /* Bar thickness */
     height: 30px; /* Vertical bar length */
 }
 
-/* Bottom-left corner - Horizontal bar */
-.main-image-container::before:nth-of-type(2) {
+/* Bottom-left corner styles */
+.bottom-left-corner::before,
+.bottom-left-corner::after {
+    content: '';
+    position: absolute;
+    background-color: #565FA1;
+}
+
+.bottom-left-corner::before {
     bottom: 0;
     left: 0;
     width: 30px; /* Horizontal bar length */
-    height: 5px; /* Thickness of the bar */
+    height: 5px; /* Bar thickness */
 }
 
-/* Bottom-left corner - Vertical bar */
-.main-image-container::after:nth-of-type(2) {
+.bottom-left-corner::after {
     bottom: 0;
     left: 0;
-    width: 5px; /* Thickness of the bar */
+    width: 5px; /* Bar thickness */
     height: 30px; /* Vertical bar length */
 }
 
