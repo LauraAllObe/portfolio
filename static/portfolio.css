@@ -489,11 +489,11 @@ a:hover {
 }
 
 .social-text {
-    width: 80px;
+    width: 120px;
     padding: 0px;
     margin-top: 10px;
     line-height: 1.2;
-    color: #70809081;
+    color: #000;
     background-color: transparent;
     transition: background-color 0.2s;
 }
