@@ -131,12 +131,12 @@ a:hover {
 .banner {
     content: '';
     position: absolute;
-    top: -2px;
-    right: -2px;
-    width: 450px; 
+    top: 20px;
+    right: 10px;
+    width: 500px; 
     height: 30px;
-    background-color: #565FA1;
-    clip-path: polygon(0% 0%, 90% 0%, 100% 50%, 90% 100%, 0% 100%, 10% 50%);
+    background-color: #A3A3CD;
+    clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
     z-index: -1;
 }
 
