@@ -483,12 +483,16 @@ a:hover {
     transition: transform 0.2s, color 0.2s;
 }
 
-.social-text:hover {
+.social-link:hover .social-text {
     background-color: #A3A3CD;
 }
 
 .social-text {
-    background-color: trnsparent;
+    margin-top: 8px;
+    padding: 4px 8px;
+    background-color: transparent;
+    border-radius: 4px;
+    transition: background-color 0.2s;
 }
 
 .social-icon {
