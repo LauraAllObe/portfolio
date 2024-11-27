@@ -556,12 +556,12 @@ a:hover {
     }
 
     .main-background {
-        height: 75vh;
+        height: 100vh;
     }
 
     .main-image {
-        width: 30vw;
-        min-width: 20vw;
+        width: 50vw;
+        min-width: 40vw;
     }
 
     .main-content {
@@ -571,7 +571,7 @@ a:hover {
 
     .banner {
         top: 15px;
-        left: 148px;
+        left: 168px;
         width: 100px; 
     }
 
