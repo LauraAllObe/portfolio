@@ -560,7 +560,7 @@ a:hover {
     }
 
     .main-image {
-        min-height: 17.09vh;
+        min-height: 28vh;
         max-height: 30vh;
     }
 
@@ -570,8 +570,8 @@ a:hover {
     }
 
     .banner {
-        top: 35px;
-        left: 168px;
+        top: 15px;
+        left: 158px;
         width: 100px; 
     }
 
