@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     overflow-y: hidden;
+    z-index: 1;
 }
 
 h1 {
@@ -131,13 +132,13 @@ a:hover {
 .banner {
     content: '';
     position: absolute;
-    top: 20px;
-    right: 10px;
+    top: 30px;
+    left: 10px;
     width: 500px; 
     height: 30px;
     background-color: #A3A3CD;
     clip-path: polygon(0% 0%, 95% 0%, 100% 50%, 95% 100%, 0% 100%, 5% 50%);
-    z-index: -1;
+    z-index: 0;
 }
 
 .clouds {
