@@ -560,8 +560,8 @@ a:hover {
     }
 
     .main-image {
-        width: 16vw;
-        min-width: 10vw;
+        width: 30vw;
+        min-width: 20vw;
     }
 
     .main-content {
@@ -571,7 +571,7 @@ a:hover {
 
     .banner {
         top: 15px;
-        left: 158px;
+        left: 148px;
         width: 100px; 
     }
 
