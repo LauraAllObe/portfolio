@@ -126,8 +126,8 @@ a:hover {
     position: absolute;
     bottom: -8px;
     left: -8px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     transform: rotate(180deg);
 }
 
@@ -135,8 +135,8 @@ a:hover {
     position: absolute;
     top: -8px;
     right: -8px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
 }
 
 .main-text {
