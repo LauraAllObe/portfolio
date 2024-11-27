@@ -10,6 +10,7 @@ body {
     font-size: 16px;
     overflow-x: hidden;
     overflow-y: hidden;
+    z-index: 1;
 }
 
 h1 {
@@ -109,11 +110,33 @@ a:hover {
 .main-image {
     display: block; 
     width: 16vw;
-    min-width: 20vw;
+    min-width: 10vw;
     margin: 0px auto;
     object-fit: contain;
     display: flex;
     flex-direction: column;
+}
+
+.main-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.bottom-left-corner {
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg);
+}
+
+.top-right-corner {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 50px;
+    height: 50px;
 }
 
 .main-text {
@@ -123,9 +146,28 @@ a:hover {
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.banner-container {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.banner {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 163px;
+    width: 405px; 
+    height: 30px;
+    background-color: #A3A3CD;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: -1;
+}
+
 .clouds {
     position: relative;
     padding: 52.06px 3.65vw;
+    z-index: -2
 }
 
 .clouds img {
@@ -465,7 +507,54 @@ a:hover {
     }
 }
 
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 10vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.social-link:hover .social-text {
+    background-color: #70809081;
+    color: #e8eaeb;
+}
+
+.social-text {
+    width: 110px;
+    padding: 0px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #70809081;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.social-icon {
+    width: 120px;
+    height: 120px;
+    transition: transform 0.2s;
+}
+
+.social-link:hover .social-icon {
+    transform: translateY(-12px);
+}
+
 @media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
+    .main-image {
+        flex-direction: row;
+    }
+
     .main-background {
         height: 75vh;
     }

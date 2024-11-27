@@ -61,18 +61,33 @@
         <!-- Header -->
         <div class="main-background">
             <div class="main-content">
-                <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
+                <div class="main-image-container">
+                    <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
+                    <img src="{{ url_for('static', filename='frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
+                    <img src="{{ url_for('static', filename='frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
+                </div>               
                 <div>
-                    <h1>Hey, I'm Laura Allison Obermaier</h1>
+                    <div class="banner-container">
+                        <h1>Hey, I'm Laura Allison Obermaier</h1>
+                        <div class="banner"></div>
+                    </div>
                     <div class="main-text">
                         <strong>Masters Student</strong> | <strong>Cybersecurity</strong> enthusiast | Possible <strong>future colleague</strong><br/>
                         <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
                         MS in Cybersecurity & Graduate Certificate in Machine Learning (<strong>4.0 GPA</strong>)<br/>
                         BS in Computer Science (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
                         <strong>Research Assistant under Dr. Jonathan Adams</strong> - Undergraduate Research Opportunity Program<br/>
-                        
-                        GitHub: <a href="https://github.com/LauraAllObe" target="_blank">LauraAllObe</a> | LinkedIn: <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank">laura-obermaier-977472226</a><br/>
-                        Looking for Cybersecurity & Software Engineering Internships for <strong>Summer 2025</strong>
+                        Looking for Cybersecurity & Software Engineering Internships for <strong>Summer 2025</strong><br/>
+                        <div class="social-links">
+                            <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
+                                <img src="/static/gitHubIcon.svg" alt="GitHub Icon" class="social-icon">
+                                <span class="social-text">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="social-link">
+                                <img src="/static/linkedInIcon.svg" alt="LinkedIn Icon" class="social-icon">
+                                <span class="social-text">LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
