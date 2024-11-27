@@ -130,15 +130,15 @@ a:hover {
 }
 
 .top-right-corner::before {
-    top: -15px;
-    right: -15px;
+    top: -12px;
+    right: -12px;
     width: 90px;
     height: 10px;
 }
 
 .top-right-corner::after {
-    top: -15px;
-    right: -15px;
+    top: -12px;
+    right: -12px;
     width: 10px;
     height: 30px;
 }
@@ -151,15 +151,15 @@ a:hover {
 }
 
 .bottom-left-corner::before {
-    bottom: -15px;
-    left: -15px;
-    width: 90px;
+    bottom: -12px;
+    left: -12px;
+    width: 150px;
     height: 10px;
 }
 
 .bottom-left-corner::after {
-    bottom: -15px;
-    left: -15px;
+    bottom: -12px;
+    left: -12px;
     width: 10px;
     height: 30px;
 }
