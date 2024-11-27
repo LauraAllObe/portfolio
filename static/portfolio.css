@@ -122,46 +122,21 @@ a:hover {
     display: inline-block;
 }
 
-.top-right-corner::before,
-.top-right-corner::after {
-    content: '';
+.bottom-left-corner {
     position: absolute;
-    background-color: #A3A3CD;
+    bottom: -10px;
+    left: -10px;
+    width: 40px;
+    height: 40px;
 }
 
-.top-right-corner::before {
-    top: -15px;
-    right: -15px;
-    width: 150px;
-    height: 10px;
-}
-
-.top-right-corner::after {
-    top: -15px;
-    right: -15px;
-    width: 10px;
-    height: 30px;
-}
-
-.bottom-left-corner::before,
-.bottom-left-corner::after {
-    content: '';
+.top-right-corner {
     position: absolute;
-    background-color: #A3A3CD;
-}
-
-.bottom-left-corner::before {
-    bottom: 5px;
-    left: 5px;
-    width: 150px;
-    height: 10px;
-}
-
-.bottom-left-corner::after {
-    bottom: 5px;
-    left: 5px;
-    width: 10px;
-    height: 30px;
+    top: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    transform: rotate(180deg);
 }
 
 .main-text {
