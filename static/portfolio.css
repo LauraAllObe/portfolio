@@ -489,13 +489,14 @@ a:hover {
 }
 
 .social-text {
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 32px;
+    padding-right: 32px;
     padding-top: 0px;
     padding-bottom: 0px;
     margin-top: 10px;
+    line-height: 1;
     color: #70809081;
-    background-color: #e8eaeb;
+    background-color: transparent;
     transition: background-color 0.2s;
 }
 
