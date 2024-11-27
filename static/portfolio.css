@@ -561,12 +561,18 @@ a:hover {
 
     .main-image {
         min-height: 17.09vh;
-        max-height: 18.80vh;
+        max-height: 30vh;
     }
 
     .main-content {
         flex-direction: column;
         align-items: center;
+    }
+
+    .banner {
+        top: 35px;
+        left: 168px;
+        width: 100px; 
     }
 
     body {
