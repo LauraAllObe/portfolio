@@ -136,16 +136,16 @@ a:hover {
 .top-right-corner::before {
     top: 0;
     right: 0;
-    width: 30px; /* Horizontal bar length */
-    height: 15px; /* Bar thickness */
+    width: 35px; /* Horizontal bar length */
+    height: 8px; /* Bar thickness */
 }
 
 /* Top-right corner - Vertical bar */
 .top-right-corner::after {
     top: 0;
     right: 0;
-    width: 15px; /* Bar thickness */
-    height: 30px; /* Vertical bar length */
+    width: 8px; /* Bar thickness */
+    height: 35px; /* Vertical bar length */
 }
 
 /* Bottom-left corner */
@@ -162,16 +162,16 @@ a:hover {
 .bottom-left-corner::before {
     bottom: 0;
     left: 0;
-    width: 30px; /* Horizontal bar length */
-    height: 15px; /* Bar thickness */
+    width: 35px; /* Horizontal bar length */
+    height: 8px; /* Bar thickness */
 }
 
 /* Bottom-left corner - Vertical bar */
 .bottom-left-corner::after {
     bottom: 0;
     left: 0;
-    width: 15px; /* Bar thickness */
-    height: 30px; /* Vertical bar length */
+    width: 8px; /* Bar thickness */
+    height: 35px; /* Vertical bar length */
 }
 
 .main-text {
