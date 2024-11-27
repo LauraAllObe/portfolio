@@ -126,19 +126,19 @@ a:hover {
 .top-right-corner::after {
     content: '';
     position: absolute;
-    background-color: #565FA1;
+    background-color: #A3A3CD;
 }
 
 .top-right-corner::before {
-    top: -5px;
-    right: -5px;
+    top: -15px;
+    right: -15px;
     width: 30px;
     height: 10px;
 }
 
 .top-right-corner::after {
-    top: -5px;
-    right: -5px;
+    top: -15px;
+    right: -15px;
     width: 10px;
     height: 30px;
 }
@@ -147,19 +147,19 @@ a:hover {
 .bottom-left-corner::after {
     content: '';
     position: absolute;
-    background-color: #565FA1;
+    background-color: #A3A3CD;
 }
 
 .bottom-left-corner::before {
-    bottom: -5px;
-    left: -5px;
+    bottom: -15px;
+    left: -15px;
     width: 30px;
     height: 10px;
 }
 
 .bottom-left-corner::after {
-    bottom: -5px;
-    left: -5px;
+    bottom: -15px;
+    left: -15px;
     width: 10px;
     height: 30px;
 }
