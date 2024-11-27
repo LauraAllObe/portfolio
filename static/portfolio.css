@@ -124,8 +124,8 @@ a:hover {
 
 .bottom-left-corner {
     position: absolute;
-    bottom: -8px;
-    left: -8px;
+    bottom: -10px;
+    left: -10px;
     width: 60px;
     height: 60px;
     transform: rotate(180deg);
@@ -133,8 +133,8 @@ a:hover {
 
 .top-right-corner {
     position: absolute;
-    top: -8px;
-    right: -8px;
+    top: -10px;
+    right: -10px;
     width: 60px;
     height: 60px;
 }
