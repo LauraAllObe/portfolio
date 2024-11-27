@@ -122,20 +122,15 @@ a:hover {
     display: inline-block;
 }
 
-.top-right-corner, 
-.bottom-left-corner {
-    position: absolute;
-    background-color: #565FA1; /* Frame corner color */
-}
-
-/* Top-right corner styles */
+/* Top-right corner */
 .top-right-corner::before,
 .top-right-corner::after {
     content: '';
     position: absolute;
-    background-color: #565FA1;
+    background-color: #565FA1; /* Frame corner color */
 }
 
+/* Top-right corner - Horizontal bar */
 .top-right-corner::before {
     top: 0;
     right: 0;
@@ -143,6 +138,7 @@ a:hover {
     height: 5px; /* Bar thickness */
 }
 
+/* Top-right corner - Vertical bar */
 .top-right-corner::after {
     top: 0;
     right: 0;
@@ -150,14 +146,15 @@ a:hover {
     height: 30px; /* Vertical bar length */
 }
 
-/* Bottom-left corner styles */
+/* Bottom-left corner */
 .bottom-left-corner::before,
 .bottom-left-corner::after {
     content: '';
     position: absolute;
-    background-color: #565FA1;
+    background-color: #565FA1; /* Frame corner color */
 }
 
+/* Bottom-left corner - Horizontal bar */
 .bottom-left-corner::before {
     bottom: 0;
     left: 0;
@@ -165,6 +162,7 @@ a:hover {
     height: 5px; /* Bar thickness */
 }
 
+/* Bottom-left corner - Vertical bar */
 .bottom-left-corner::after {
     bottom: 0;
     left: 0;
