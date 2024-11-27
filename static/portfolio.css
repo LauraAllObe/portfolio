@@ -124,19 +124,19 @@ a:hover {
 
 .bottom-left-corner {
     position: absolute;
-    bottom: -12px;
-    left: -12px;
-    width: 60px;
-    height: 60px;
+    bottom: -10px;
+    left: -10px;
+    width: 45px;
+    height: 45px;
     transform: rotate(180deg);
 }
 
 .top-right-corner {
     position: absolute;
-    top: -12px;
-    right: -12px;
-    width: 60px;
-    height: 60px;
+    top: -10px;
+    right: -10px;
+    width: 45px;
+    height: 45px;
 }
 
 .main-text {
