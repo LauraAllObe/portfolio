@@ -122,42 +122,45 @@ a:hover {
     display: inline-block;
 }
 
-.main-image-container::before, 
-.main-image-container::after {
+.main-image-container::before,
+.main-image-container::after,
+.main-image-container .bottom-left-horizontal,
+.main-image-container .bottom-left-vertical {
     content: '';
     position: absolute;
-    background-color: #565FA1; /* Frame color */
+    background-color: #565FA1; /* Frame corner color */
 }
 
-/* Horizontal bar for top-right */
+/* Top-right corner - Horizontal bar */
 .main-image-container::before {
     top: 0;
     right: 0;
-    width: 30px; /* Length of the horizontal bar */
-    height: 5px; /* Thickness of the corner */
+    width: 30px; /* Horizontal bar length */
+    height: 5px; /* Thickness of the bar */
 }
 
-/* Vertical bar for top-right */
+/* Top-right corner - Vertical bar */
 .main-image-container::after {
     top: 0;
     right: 0;
-    width: 5px; /* Thickness of the corner */
-    height: 30px; /* Length of the vertical bar */
+    width: 5px; /* Thickness of the bar */
+    height: 30px; /* Vertical bar length */
 }
 
-/* Bottom-left corner */
-.main-image-container::after,
-.main-image-container::before:nth-child(2) {
-    content: '';
-    position: absolute;
-    background-color: #565FA1; /* Frame color */
-}
-
-/* Horizontal bar for bottom-left */
-.main-image-container::after:nth-child(1) {
+/* Bottom-left corner - Horizontal bar */
+.main-image-container::before:nth-of-type(2) {
     bottom: 0;
     left: 0;
-    width: 30px; /* Length of the horizontal bar */
+    width: 30px; /* Horizontal bar length */
+    height: 5px; /* Thickness of the bar */
+}
+
+/* Bottom-left corner - Vertical bar */
+.main-image-container::after:nth-of-type(2) {
+    bottom: 0;
+    left: 0;
+    width: 5px; /* Thickness of the bar */
+    height: 30px; /* Vertical bar length */
 }
 
 .main-text {
