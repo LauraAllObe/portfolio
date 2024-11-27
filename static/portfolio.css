@@ -134,8 +134,8 @@ a:hover {
     content: '';
     position: absolute;
     top: 25px;
-    left: 160px;
-    width: 420px; 
+    left: 165px;
+    width: 400px; 
     height: 30px;
     background-color: #A3A3CD;
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
