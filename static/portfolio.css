@@ -151,15 +151,15 @@ a:hover {
 }
 
 .bottom-left-corner::before {
-    bottom: 15px;
-    left: 15px;
+    bottom: 5px;
+    left: 5px;
     width: 150px;
     height: 10px;
 }
 
 .bottom-left-corner::after {
-    bottom: 15px;
-    left: 15px;
+    bottom: 5px;
+    left: 5px;
     width: 10px;
     height: 30px;
 }
