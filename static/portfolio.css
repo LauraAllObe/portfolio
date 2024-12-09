@@ -549,7 +549,8 @@ a:hover {
         min-height: 24vh;
         height: 24vh;
         margin-top: 15vh;
-        margin-bottom: 5vh;
+        margin-bottom: 2vh;
+        padding-bottom: 3vh;
     }
 
     .slideshow-skills {
