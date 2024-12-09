@@ -673,17 +673,17 @@ a:hover {
 
     .slideshow-image {
         max-width: 90%;
-        max-height: 40%;
+        max-height: 90%;
         align-items: center;
     }
 
     .slideshow-image img {
         max-width: 90%;
-        max-height: 40%;
+        max-height: 90%;
     }
 
     .notes-multi-image {
-        max-height: 40%;
+        max-height: 90%;
         justify-content:space-evenly;
         align-self:center;
         width: 90%;
