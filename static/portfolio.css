@@ -556,7 +556,7 @@ a:hover {
     }
 
     body {
-        font-size: 2.8vw;
+        font-size: 3.4vw;
     }
 
     .overflow-mobile {
@@ -576,17 +576,17 @@ a:hover {
     }
 
     .main-text {
-        font-size: 3vw;
+        font-size: 3.8vw;
     }
 
     .slideshow-background {
-        margin-bottom: 22vh;
+        margin-bottom: 25vh;
     }
     
     .slides {
         flex-direction: column;
         width: 100%;
-        height: 38vh;
+        height: 32vh;
         margin-top: 3vh;
         margin-bottom: 1.28vh;
     }
@@ -736,6 +736,6 @@ a:hover {
     }
 
     .slide-navigation-text {
-        font-size: 2.6vw;
+        font-size: 3vw;
     }
 }
