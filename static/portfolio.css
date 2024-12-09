@@ -587,6 +587,7 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
+        min-height: 34vh;
         height: 34vh;
         margin-top: 0;
         margin-bottom: 1.28vh;
@@ -731,6 +732,7 @@ a:hover {
     }
 
     .prev, .next {
+        margin-top: 1vh;
         padding: 3vw;
         font-size: 3vw;
         z-index: 500;
