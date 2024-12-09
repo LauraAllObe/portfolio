@@ -522,7 +522,7 @@ a:hover {
     }
 
     h1 {
-        font-size: 7vw;
+        font-size: 6vw;
     }
 
     h2 {
@@ -564,7 +564,8 @@ a:hover {
 
     .slideshow-container {
         padding-top: 0vh;
-        height: 40vh;
+        height: 30vh;
+        vertical-align: top;
     }
 
     .slideshow-title {
