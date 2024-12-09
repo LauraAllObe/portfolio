@@ -543,7 +543,7 @@ a:hover {
     }
     
     .slides {
-        justify-content:initial;
+        justify-content: start;
         flex-direction: column;
         width: 100%;
         min-height: 24vh;
