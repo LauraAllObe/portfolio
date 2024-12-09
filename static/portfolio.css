@@ -548,7 +548,7 @@ a:hover {
         width: 100%;
         min-height: 28vh;
         height: 28vh;
-        margin-top: 12vh;
+        margin-top: 14vh;
         margin-bottom: 2vh;
     }
 
@@ -755,12 +755,16 @@ a:hover {
     }
 
     .bottom-left-corner {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+        bottom: -8px;
+        left: -8px;
     }
     
     .top-right-corner {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
+        top: -8px;
+        right: -8px;
     }
 }
