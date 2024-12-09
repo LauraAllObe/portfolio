@@ -757,14 +757,14 @@ a:hover {
     .bottom-left-corner {
         width: 30px;
         height: 30px;
-        bottom: -8px;
-        left: -8px;
+        bottom: -5px;
+        left: -5px;
     }
     
     .top-right-corner {
         width: 30px;
         height: 30px;
-        top: -8px;
-        right: -8px;
+        top: -5px;
+        right: -5px;
     }
 }
