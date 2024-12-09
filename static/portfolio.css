@@ -556,7 +556,7 @@ a:hover {
     }
 
     body {
-        font-size: 2.6vw;
+        font-size: 2.8vw;
     }
 
     .overflow-mobile {
@@ -568,7 +568,7 @@ a:hover {
     }
 
     h2 {
-        font-size: 5.8vw;
+        font-size: 6vw;
     }
 
     h3 {
@@ -580,7 +580,7 @@ a:hover {
     }
 
     .slideshow-background {
-        margin-bottom: 25vh;
+        margin-bottom: 22vh;
     }
     
     .slides {
@@ -594,7 +594,7 @@ a:hover {
     .slideshow-skills {
         text-align: center;
         position: absolute;
-        font-size: 2.4vw;
+        font-size: 2.6vw;
         top: 7vh;
         bottom: 1vh;
     }
@@ -604,7 +604,7 @@ a:hover {
     }
 
     .slideshow-title {
-        font-size: 4.2vw;
+        font-size: 4.4vw;
     }
 
     .clouds img {
@@ -736,6 +736,6 @@ a:hover {
     }
 
     .slide-navigation-text {
-        font-size: 2.4vw;
+        font-size: 2.6vw;
     }
 }
