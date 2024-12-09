@@ -256,7 +256,7 @@ a:hover {
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
-    margin-top: 80.75px;
+    margin-top: 76px;
     margin-bottom: 15.58px;
     z-index: 100;
 }
@@ -561,6 +561,7 @@ a:hover {
     }
 
     .slideshow-container {
+        padding-top: 0;
         height: 40vh;
     }
 
