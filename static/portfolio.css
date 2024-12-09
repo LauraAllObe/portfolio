@@ -568,6 +568,7 @@ a:hover {
         min-height: unset;
         align-items:start;
         justify-content:start;
+        text-align: center;
         vertical-align: top;
         z-index: 100;
     }
