@@ -522,7 +522,7 @@ a:hover {
     }
 
     h1 {
-        font-size: 8vw;
+        font-size: 7vw;
     }
 
     h2 {
@@ -555,11 +555,10 @@ a:hover {
     .slideshow-skills {
         display: flex;
         justify-content: center;
-        text-align: center;
+        width: 100%;
         position: absolute;
-        font-size: 3vw;
         top: 7vh;
-        bottom: 0vh;
+        font-size: 3vw;
         z-index: 100;
     }
 
