@@ -567,8 +567,8 @@ a:hover {
         padding-top: 0px;
         height: 75vh;
         min-height: unset;
-        align-items:start;
-        justify-content:center;
+        align-items:center;
+        justify-content:start;
         text-align: center;
         vertical-align: top;
         z-index: 100;
