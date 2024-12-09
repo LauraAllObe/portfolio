@@ -545,8 +545,8 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
-        min-height: 30vh;
-        height: 30vh;
+        min-height: 24vh;
+        height: 24vh;
         margin-top: 0;
         margin-bottom: 2vh;
     }
@@ -690,7 +690,7 @@ a:hover {
     }
 
     .prev, .next {
-        margin-top: 1vh;
+        margin-top: 3vh;
         padding: 3vw;
         font-size: 3vw;
         z-index: 500;
@@ -709,11 +709,11 @@ a:hover {
     }
 
     #multi3 {
-        max-height: 15vh;
+        max-height: 8vh;
     }
 
     #multi4 {
-        max-height: 35vh;
+        max-height: 25vh;
     }
 
     #multi5 {
