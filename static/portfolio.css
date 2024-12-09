@@ -546,11 +546,10 @@ a:hover {
         justify-content: start;
         flex-direction: column;
         width: 100%;
-        min-height: 24vh;
-        height: 24vh;
+        min-height: 28vh;
+        height: 28vh;
         margin-top: 15vh;
         margin-bottom: 2vh;
-        padding-bottom: 3vh;
     }
 
     .slideshow-skills {
@@ -566,10 +565,10 @@ a:hover {
 
     .slideshow-container {
         padding-top: 0px;
-        height: 70vh;
+        height: 75vh;
         min-height: unset;
         align-items:start;
-        justify-content:start;
+        justify-content:center;
         text-align: center;
         vertical-align: top;
         z-index: 100;
