@@ -561,6 +561,7 @@ a:hover {
     }
 
     .slideshow-container {
+        position: relative;
         padding-top: 0vh;
         height: 40vh;
     }
@@ -720,19 +721,19 @@ a:hover {
     }
 
     #multi5 {
-        max-height: 20vh;
+        max-height: 17vh;
     }
 
     #multi6 {
-        max-height: 10vh;
+        max-height: 7vh;
     }
 
     #multi7 {
-        max-height: 18vh;
+        max-height: 15vh;
     }
 
     #multi8 {
-        max-height: 15.5vh;
+        max-height: 12vh;
     }
 
     #multi9 {
@@ -740,6 +741,6 @@ a:hover {
     }
 
     #multi10 {
-        max-height: 25vh;
+        max-height: 24vh;
     }
 }
