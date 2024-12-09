@@ -553,15 +553,17 @@ a:hover {
     }
 
     .slideshow-skills {
+        display: flex;
+        justify-content: center;
         text-align: center;
         position: absolute;
         font-size: 3vw;
         top: 7vh;
         bottom: 0vh;
+        z-index: 100;
     }
 
     .slideshow-container {
-        position: relative;
         padding-top: 0vh;
         height: 40vh;
     }
