@@ -232,15 +232,18 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
-                    <div class="slideshow-image">
-                        <img id="multi1" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)">
-                        <img id="multi2" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)">
-                    </div>
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>Likes and Dislikes</h3>
                         <div>
                             Registered users have the ability to like or dislike individual news items. When a user interacts with a news item, their selection is highlighted in red, while unselected options appear in brown. Each interaction updates the total count of likes or dislikes associated with the news item in real time. If a user reselects a highlighted (red) option, it will deselect their like or dislike. Alternatively, if a user selects the opposite option (i.e., liking an item they had previously disliked or vice versa), the system automatically transfers their preference. This user-specific data persists in the database until the user's account is deleted, at which point all associated likes and dislikes are also removed.
                         </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)">
+                    <div class="slideshow-text">
                         <h3>Sorting and Pagination</h3>
                         <div>
                             News items are primarily sorted by the number of likes, from highest to lowest. In cases where items have the same number of likes, they are further sorted by their publication time, from newest to oldest. To facilitate easier viewing, these items are paginated, with each page displaying up to 10 news items. Users can navigate through the pages either by using the page navigation controls located at the bottom of the page or by directly specifying the page number in the URL.
@@ -248,7 +251,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
+                    <!-- Fourth slide pair: Image and text -->
                     <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>Automatic Updates</h3>
@@ -258,7 +261,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
+                    <!-- Fifth slide pair: Image and text -->
                     <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>Admin Permissions</h3>
@@ -268,7 +271,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
+                    <!-- Sixth slide pair: Image and text -->
                     <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)">
                     <div class="slideshow-text">
                         <h3>User Login</h3>
@@ -278,7 +281,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
+                    <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-image">  
                         <img id="multi3" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)">
                         <img id="multi4" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)">
@@ -295,7 +298,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
+                    <!-- Eigth slide pair: Image and text -->
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)">
                         <div class="slideshow-text">
                         <h3>Code Snippets 1/3 </h3>
@@ -305,7 +308,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
+                    <!-- Ninth slide pair: Image and text -->
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)">
                         <div class="slideshow-text">
                         <h3>Code Snippets 2/3 </h3>
@@ -315,7 +318,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Nine slide pair: Image and text -->
+                    <!-- Tenth slide pair: Image and text -->
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)">
                         <div class="slideshow-text">
                         <h3>Code Snippets 3/3 </h3>
