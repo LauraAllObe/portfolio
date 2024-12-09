@@ -548,7 +548,7 @@ a:hover {
         width: 100%;
         min-height: 28vh;
         height: 28vh;
-        margin-top: 15vh;
+        margin-top: 12vh;
         margin-bottom: 2vh;
     }
 
@@ -752,5 +752,15 @@ a:hover {
 
     #multi10 {
         max-height: 24vh;
+    }
+
+    .bottom-left-corner {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .top-right-corner {
+        width: 40px;
+        height: 40px;
     }
 }
