@@ -549,11 +549,12 @@ a:hover {
         min-height: 24vh;
         height: 24vh;
         margin-top: 15vh;
-        margin-bottom: 2vh;
+        margin-bottom: 5vh;
     }
 
     .slideshow-skills {
         display: flex;
+        align-items:center;
         justify-content: center;
         width: 100%;
         position: absolute;
@@ -575,6 +576,8 @@ a:hover {
 
     .slideshow-title {
         font-size: 5vw;
+        align-items:center;
+        justify-content:center;
     }
 
     .clouds img {
