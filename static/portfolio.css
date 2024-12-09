@@ -545,10 +545,10 @@ a:hover {
     .slides {
         flex-direction: column;
         width: 100%;
-        min-height: 34vh;
-        height: 34vh;
+        min-height: 30vh;
+        height: 30vh;
         margin-top: 0;
-        margin-bottom: 1.28vh;
+        margin-bottom: 2vh;
     }
 
     .slideshow-skills {
@@ -556,7 +556,7 @@ a:hover {
         position: absolute;
         font-size: 3vw;
         top: 7vh;
-        bottom: 1vh;
+        bottom: 0vh;
     }
 
     .slideshow-container {
