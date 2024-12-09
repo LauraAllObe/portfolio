@@ -451,48 +451,6 @@ a:hover {
     max-height: 380px;
 }
 
-@media all and (min-aspect-ratio: 2/3) {
-    #multi1 {
-        max-height: 40vh;
-    }
-
-    #multi2 {
-        max-height: 10vh;
-    }
-
-    #multi3 {
-        max-height: 15vh;
-    }
-
-    #multi4 {
-        max-height: 35vh;
-    }
-
-    #multi5 {
-        max-height: 30vh;
-    }
-
-    #multi6 {
-        max-height: 20vh;
-    }
-
-    #multi7 {
-        max-height: 27.5vh;
-    }
-
-    #multi8 {
-        max-height: 22.5vh;
-    }
-
-    #multi9 {
-        max-height: 15vh;
-    }
-
-    #multi10 {
-        max-height: 35vh;
-    }
-}
-
 .social-links {
     margin-top: 20px;
     display: flex;
@@ -740,5 +698,45 @@ a:hover {
 
     .slide-navigation-text {
         font-size: 3vw;
+    }
+
+    #multi1 {
+        max-height: 40vh;
+    }
+
+    #multi2 {
+        max-height: 10vh;
+    }
+
+    #multi3 {
+        max-height: 15vh;
+    }
+
+    #multi4 {
+        max-height: 35vh;
+    }
+
+    #multi5 {
+        max-height: 20vh;
+    }
+
+    #multi6 {
+        max-height: 10vh;
+    }
+
+    #multi7 {
+        max-height: 27.5vh;
+    }
+
+    #multi8 {
+        max-height: 22.5vh;
+    }
+
+    #multi9 {
+        max-height: 15vh;
+    }
+
+    #multi10 {
+        max-height: 35vh;
     }
 }
