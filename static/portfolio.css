@@ -564,10 +564,8 @@ a:hover {
 
     .slideshow-container {
         padding-top: 0px;
-        height: 40vh;
+        height: 70vh;
         min-height: unset;
-        align-items:start;
-        justify-content:start;
         vertical-align: top;
         z-index: 100;
     }
