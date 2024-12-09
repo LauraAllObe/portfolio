@@ -560,7 +560,7 @@ a:hover {
     }
 
     .slideshow-container {
-        height: 40vh;
+        height: 35vh;
     }
 
     .slideshow-title {
@@ -697,6 +697,7 @@ a:hover {
     }
 
     .slide-navigation-text {
+        margin-top: 3vh;
         font-size: 3vw;
     }
 
@@ -709,11 +710,11 @@ a:hover {
     }
 
     #multi3 {
-        max-height: 8vh;
+        max-height: 5vh;
     }
 
     #multi4 {
-        max-height: 20vh;
+        max-height: 15vh;
     }
 
     #multi5 {
