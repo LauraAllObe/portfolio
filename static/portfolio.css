@@ -563,9 +563,13 @@ a:hover {
     }
 
     .slideshow-container {
-        padding-top: 0vh;
-        height: 30vh;
+        padding-top: 0px;
+        height: 40vh;
+        min-height: unset;
+        align-items:start;
+        justify-content:start;
         vertical-align: top;
+        z-index: 100;
     }
 
     .slideshow-title {
