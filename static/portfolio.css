@@ -521,7 +521,6 @@ a:hover {
     z-index: 1001;
     padding: 10px 15px;
     transform: translateY(-50%) rotate(-90deg);
-    transform-origin: right top;
 }
 
 .closebutton {
