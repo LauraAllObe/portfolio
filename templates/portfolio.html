@@ -60,6 +60,14 @@
                 </div>
             </div>
         </div>
+        <!-- About Me Sidebar -->
+        <div id="aboutMeSidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">×</a>
+            <h2>About Me</h2>
+            <p>This is some text about me...</p>
+            <!-- Add more content about yourself here -->
+        </div>
+        <button class="openbutton" onclick="openNav()">Click Here</button>
         <!-- Header -->
         <div class="main-background">
             <div class="main-content">
@@ -1266,6 +1274,14 @@
                     modal.style.display = "none";
                     modalImg.classList.remove('modal-zoomed-in');
                 }
+            }
+
+            function openNav() {
+                document.getElementById("aboutMeSidebar").style.width = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("aboutMeSidebar").style.width = "0";
             }
         </script>
     </div>    
