@@ -526,11 +526,11 @@ a:hover {
 .closebutton {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 10px;
     font-size: 36px;
     margin-left: 50px;
     cursor: pointer;
-    padding: 10px;
+    padding: 20px;
     text-decoration: none;
     display: block;
     z-index: 1001;
