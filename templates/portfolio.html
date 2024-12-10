@@ -64,10 +64,11 @@
         <div id="aboutMeSidebar" class="sidebar">
             <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">×</a>
             <h2>About Me</h2>
-            <p>This is some text about me...</p>
-            <!-- Add more content about yourself here -->
+            <p>Entering a flow state drives my passion for cybersecurity. In a competitive tech industry, standing out is essential— what sets me apart is my ability to maintain deep focus and thrive on the challenge of solving complex problems.
+
+                I initially pursued software engineering at Stevens Institute of Technology, but after realizing it closely aligned with my previous studies at Florida State University, I made a bold switch. In February 2024, I chose to pivot to cybersecurity. This decision further deepened my passion for the fast-paced, ever-evolving world of digital protection, allowing me to reach that state of deep focus often. I’m excited about the future and the dynamic challenges cybersecurity presents, constantly pushing me to sharpen my skills.</p>
         </div>
-        <button class="openbutton" onclick="openNav()">Click Here</button>
+        <button id="openbutton" class="openbutton" onclick="openNav()">Click Here</button>
         <!-- Header -->
         <div class="main-background">
             <div class="main-content">
@@ -1278,10 +1279,12 @@
 
             function openNav() {
                 document.getElementById("aboutMeSidebar").style.width = "250px";
+                document.getElementById("openbutton").style.display = "none";
             }
 
             function closeNav() {
                 document.getElementById("aboutMeSidebar").style.width = "0";
+                document.getElementById("openbutton").style.display = "initial";
             }
         </script>
     </div>    

@@ -494,7 +494,6 @@ a:hover {
     transform: translateY(-12px);
 }
 
-/* The sidebar styling */
 .sidebar {
     height: 100%;
     width: 0;
@@ -502,18 +501,19 @@ a:hover {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: rgba(0, 0, 0, 0.722);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
     color: white;
+    z-index: 1001;
 }
 
 .openbutton {
     font-size: 20px;
     cursor: pointer;
-    background-color: #555;
-    color: white;
+    background-color: #70809081;
+    color: #e8eaeb;
     border: none;
     position: fixed;
     top: 50%;
@@ -530,10 +530,11 @@ a:hover {
     font-size: 36px;
     margin-left: 50px;
     cursor: pointer;
+    z-index: 1001;
 }
 
 .sidebar a, .sidebar h2, .sidebar p {
-    color: white;
+    color: #e8eaeb;
     padding: 8px 15px;
 }
 
