@@ -518,9 +518,10 @@ a:hover {
     position: fixed;
     top: 50%;
     right: 0;
-    transform: translateY(-50%);
     z-index: 1001;
     padding: 10px 15px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right top;
 }
 
 .closebutton {
@@ -530,6 +531,9 @@ a:hover {
     font-size: 36px;
     margin-left: 50px;
     cursor: pointer;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
     z-index: 1001;
 }
 
