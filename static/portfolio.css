@@ -494,6 +494,7 @@ a:hover {
     transform: translateY(-12px);
 }
 
+/* The sidebar styling */
 .sidebar {
     height: 100%;
     width: 0;
@@ -508,37 +509,32 @@ a:hover {
     color: white;
 }
 
-.sidebar a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    display: block;
-    transition: 0.3s;
-}
-
 .openbutton {
     font-size: 20px;
     cursor: pointer;
-    background-color: #111;
+    background-color: #555;
     color: white;
     border: none;
     position: fixed;
-    top: 10px;
-    right: 10px;
-    width: 100px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1001;
+    padding: 10px 15px;
 }
 
-.sidebar a:hover {
-    color: #f1f1f1;
-}
-
-.sidebar .closebutton {
+.closebutton {
     position: absolute;
     top: 0;
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
+    cursor: pointer;
+}
+
+.sidebar a, .sidebar h2, .sidebar p {
+    color: white;
+    padding: 8px 15px;
 }
 
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
