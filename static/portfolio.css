@@ -519,7 +519,7 @@ a:hover {
     position: fixed;
     top: 50%;
     z-index: 1001;
-    padding: 25px 25px;
+    padding: 10px 15px;
     right: -35px;
 }
 
@@ -530,7 +530,7 @@ a:hover {
     font-size: 36px;
     margin-left: 50px;
     cursor: pointer;
-    padding: 10px;
+    padding: 25px;
     text-decoration: none;
     display: block;
     z-index: 1001;
