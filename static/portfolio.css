@@ -54,7 +54,7 @@ a:hover {
 .dropbtn, .closebtn {
     width: 1vw;
     background:none;
-    color: #55616d;
+    color: #55616d76;
     padding: 0.44vh 0.58vw;
     font-size: 24px;
     border: none;
@@ -494,7 +494,57 @@ a:hover {
     transform: translateY(-12px);
 }
 
-@media all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
+.sidebar {
+    height: 120%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.722);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    color: white;
+    z-index: 1001;
+}
+
+.openbutton {
+    transform: translateY(-50%) rotate(-90deg);
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #70809054;
+    color: #e8eaebd0;
+    border: none;
+    position: fixed;
+    top: 50%;
+    z-index: 1001;
+    padding: 10px 15px;
+    right: -40px;
+}
+
+.closebutton {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    cursor: pointer;
+    padding: 0.44vh 0.58vw;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center; 
+    z-index: 1001;
+}
+
+.sidebar a, .sidebar h2, .sidebar p {
+    color: #e8eaeb;
+    padding: 8px 15px;
+}
+
+@media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-image {
         flex-direction: row;
     }
