@@ -521,6 +521,7 @@ a:hover {
     right: 0;
     z-index: 1001;
     padding: 10px 15px;
+    right: -10vw;
 }
 
 .closebutton {
