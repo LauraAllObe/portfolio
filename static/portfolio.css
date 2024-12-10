@@ -519,8 +519,8 @@ a:hover {
     position: fixed;
     top: 50%;
     z-index: 1001;
-    padding: 10px 15px;
-    right: -50px;
+    padding: 25px 25px;
+    right: -35px;
 }
 
 .closebutton {
