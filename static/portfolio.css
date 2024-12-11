@@ -545,9 +545,9 @@ a:hover {
 }
 
 .email-form {
-    background-color: rgba(0, 0, 0, 0.848);
+    background-color: #d5dbe052;
     padding: 20px;
-    color: #d5dbe0;
+    color: rgba(0, 0, 0, 0.848);
     border-radius: 10px;
     width: 400px;
     margin: 20px auto;
@@ -560,9 +560,16 @@ a:hover {
     gap: 10px;
 }
 
+.form-input {
+    background-color: #f5f6f752;
+}
+
+.form-heading {
+    line-height: 1;
+}
 .email-form label {
     font-size: 14px;
-    color: #d5dbe0;
+    color: rgba(0, 0, 0, 0.848);
 }
 
 .email-form input, .email-form textarea {
