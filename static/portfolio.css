@@ -425,7 +425,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 
 .end-horizontal {
@@ -784,6 +784,10 @@ a:hover {
     .dropdown-content a {
         font-size: 4.8vw;
         padding: 1.5vh 1.5vw;
+    }
+
+    .end-background {
+        height: 800px;
     }
 
     .end-clickables {
