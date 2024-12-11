@@ -82,18 +82,14 @@ a:hover {
     flex-direction: column;
 }
 
-.dropdown-text {
-    font-family: Garamond, serif !important;
-}
-
 .dropdown-content a {
     color: black;
     padding: 1.65vh 1.5vw;
     display: block;
-    font-size: 24px;
+    font-size: 26px;
     text-decoration: none;
     font-stretch: expanded;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Garamond, serif
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
