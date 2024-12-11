@@ -544,6 +544,54 @@ a:hover {
     padding: 8px 15px;
 }
 
+.email-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.email-form h2 {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.email-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email-form label {
+    font-size: 14px;
+    color: #333;
+}
+
+.email-form input, .email-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.email-form button {
+    background-color: #55616d;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.email-form button:hover {
+    background-color: #333;
+}
+
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-image {
         flex-direction: row;

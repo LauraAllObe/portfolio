@@ -1043,6 +1043,24 @@
         </div>
         <!-- Contact & Links -->
         <div class="end-background">
+            <div id="email-form" class="email-form">
+                <h2>Contact Me</h2>
+                <form action="https://formspree.io/f/xanyzaoa" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Email Subject" required>
+                    
+                    <label for="content">Message:</label>
+                    <textarea id="content" name="content" placeholder="Write your message here..." rows="5" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
             <div class="end-horizontal">
                 <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn"></a>
                 <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram"></a>
