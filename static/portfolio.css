@@ -546,48 +546,45 @@ a:hover {
 
 .email-form {
     background-color: #d5dbe052;
-    padding: 20px;
-    color: rgba(0, 0, 0, 0.848);
+    padding: 15px;
+    color: #cad7e481;
     border-radius: 10px;
-    width: 400px;
-    margin: 20px auto;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 380px;
+    margin: 15px auto;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .email-form form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-}
-
-.form-input {
-    background-color: #f5f6f752;
+    gap: 8px;
 }
 
 .form-heading {
     line-height: 1;
+    font-size: 29px;
 }
 .email-form label {
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.848);
+    font-size: 13px;
+    color: #cad7e481;
 }
 
 .email-form input, .email-form textarea {
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 13px;
     width: 100%;
 }
 
 .email-form button {
     background-color: #55616d;
     color: white;
-    padding: 10px;
+    padding: 8px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .email-form button:hover {
@@ -627,6 +624,10 @@ a:hover {
 
     h2 {
         font-size: 6vw;
+    }
+
+    .form-heading {
+        font-size: 5vw;
     }
 
     h3 {
