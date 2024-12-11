@@ -417,14 +417,15 @@ a:hover {
 
 .end-background {
     width: 100%;
-    height: 266px;
+    height: 800px;
     box-sizing: border-box;
     position: relative;
     background-color: rgba(0, 0, 0, 0.722);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    padding-bottom: 50px;
 }
 
 .end-horizontal {
@@ -544,6 +545,50 @@ a:hover {
     padding: 8px 15px;
 }
 
+.email-form {
+    background-color: #d5dbe052;
+    padding: 15px;
+    color: #cad7e481;
+    width: 380px;
+    margin: 15px auto;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.email-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-heading {
+    line-height: 1;
+    font-size: 29px;
+}
+.email-form label {
+    font-size: 13px;
+    color: #cad7e481;
+}
+
+.email-form input, .email-form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 13px;
+    width: 100%;
+}
+
+.email-form button {
+    background-color: #55616d;
+    color: white;
+    padding: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.email-form button:hover {
+    background-color: #333;
+}
+
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-image {
         flex-direction: row;
@@ -577,6 +622,10 @@ a:hover {
 
     h2 {
         font-size: 6vw;
+    }
+
+    .form-heading {
+        font-size: 5vw;
     }
 
     h3 {
@@ -735,6 +784,10 @@ a:hover {
     .dropdown-content a {
         font-size: 4.8vw;
         padding: 1.5vh 1.5vw;
+    }
+
+    .end-background {
+        height: 700px;
     }
 
     .end-clickables {
