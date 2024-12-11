@@ -83,7 +83,7 @@ a:hover {
 }
 
 .dropdown-text {
-    font-family: Garamond, serif;
+    font-family: Garamond, serif !important;
 }
 
 .dropdown-content a {
