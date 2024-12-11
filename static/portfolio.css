@@ -80,6 +80,7 @@ a:hover {
     text-align: center;
     justify-content: center;
     flex-direction: column;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .dropdown-content a {
