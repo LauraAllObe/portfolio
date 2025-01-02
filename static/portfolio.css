@@ -505,13 +505,13 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.722);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 50px;
+    padding-top: 40px;
     color: white;
     z-index: 1001;
 }
 
 .sidebar p {
-    margin-top: 0px;
+    margin-top: -10px;
 }
 
 .openbutton {
