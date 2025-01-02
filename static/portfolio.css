@@ -510,6 +510,10 @@ a:hover {
     z-index: 1001;
 }
 
+.sidebar text {
+    height: 100%
+}
+
 .openbutton {
     transform: translateY(-50%) rotate(-90deg);
     font-size: 18px;
