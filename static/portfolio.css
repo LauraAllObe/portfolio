@@ -51,6 +51,10 @@ a:hover {
     z-index: 1200;
 }
 
+.dropbtn {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .dropbtn, .closebtn {
     width: 1vw;
     background:none;
@@ -237,6 +241,7 @@ a:hover {
     position: relative;
     margin-bottom: 380px;
     z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 
@@ -355,6 +360,7 @@ a:hover {
     max-height: 80vh;
     transition: transform 0.3s ease;
     cursor: zoom-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .modal-zoomed-in {
@@ -507,7 +513,7 @@ a:hover {
     transition: 0.5s;
     padding-top: 40px;
     color: white;
-    z-index: 1001;
+    z-index: 990;
 }
 
 .sidebar p {
@@ -523,9 +529,10 @@ a:hover {
     border: none;
     position: fixed;
     top: 50%;
-    z-index: 1001;
+    z-index: 990;
     padding: 10px 15px;
     right: -40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .closebutton {
@@ -541,7 +548,7 @@ a:hover {
     height: 50px;
     line-height: 50px;
     text-align: center; 
-    z-index: 1001;
+    z-index: 990;
 }
 
 .sidebar a, .sidebar h2, .sidebar p {
