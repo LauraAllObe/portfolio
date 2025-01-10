@@ -618,6 +618,8 @@ a:hover {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    right: -10px;
+    top: -5vh;
 }
 
 .email-modal-close-button:hover,
