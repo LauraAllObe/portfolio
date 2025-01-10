@@ -1045,7 +1045,7 @@
         <div class="end-background">
             <div id="email-form" class="email-form">
                 <h2 class="form-heading">Contact Me</h2>
-                <form action="https://formspree.io/f/xanyzaoa" method="POST">
+                <form id="contact-form" onsubmit="handleFormSubmit(event)">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     
@@ -1069,6 +1069,13 @@
                 <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV"></a>
             </div>
             <div class="end-copyright">© 2024 Laura Allison Obermaier. All rights reserved.</div>
+        </div>
+        <!-- Email form submission pop-up -->
+        <div id="successModal" class="email-modal">
+            <div class="email-modal-content">
+                <span class="email-modal-close-button" onclick="closeModal()">&times;</span>
+                <p>Your message has been sent successfully!</p>
+            </div>
         </div>
         <!-- Modal and Slideshow Navigation Code -->
         <script>
@@ -1306,6 +1313,21 @@
             function closeNav() {
                 document.getElementById("aboutMeSidebar").style.width = "0";
                 document.getElementById("openbutton").style.display = "initial";
+            }
+
+            function handleFormSubmit(event) {
+                event.preventDefault();
+
+                const modal = document.getElementById('successModal');
+                modal.style.display = 'flex';
+
+                const form = document.getElementById('contact-form');
+                form.reset();
+            }
+
+            function closeModal() {
+                const modal = document.getElementById('successModal');
+                modal.style.display = 'none';
             }
         </script>
     </div>    
