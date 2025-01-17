@@ -146,7 +146,6 @@ a:hover {
 .main-text {
     width: 80%;
     text-align: center;
-    justify-content: center;
     font-size: 15px;
     line-height: 2;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -652,6 +651,7 @@ a:hover {
     .main-content {
         flex-direction: column;
         align-items: center;
+        justify-content: space-evenly;
     }
 
     body {
