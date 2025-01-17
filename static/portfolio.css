@@ -144,8 +144,9 @@ a:hover {
 }
 
 .main-text {
-    width: 90%;
+    width: 80%;
     text-align: center;
+    align-items: center;
     font-size: 15px;
     line-height: 2;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
