@@ -45,9 +45,6 @@
             <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
             <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
             <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
-            <img id="cloud9" src="{{ url_for('static', filename='clouds/cloud8.1.png') }}"/>
-            <img id="cloud10" src="{{ url_for('static', filename='clouds/cloud2.png') }}"/>
-            <img id="cloud11" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
         </div>
         <!-- The Modal -->
         <div id="myModal" class="modal">
@@ -1170,11 +1167,7 @@
             let cloud6 = document.getElementById('cloud6');
             let cloud7 = document.getElementById('cloud7');
             let cloud8 = document.getElementById('cloud8');
-            let cloud9 = document.getElementById('cloud9');
-            let cloud10 = document.getElementById('cloud10');
-            let cloud11 = document.getElementById('cloud11');
     
-            let lastScrollTop = 0;
     
             window.addEventListener('load', () => {
                 window.scrollTo(0, 0);
@@ -1200,57 +1193,6 @@
                 cloud7.style.marginLeft = (value * 0.0913) + 'vw';
                 cloud8.style.marginTop = (-value * 0.0822) + 'vh';
                 cloud8.style.marginLeft = (value * 0.0913) + 'vw';
-
-                var first = 8200;
-                if(screen.width <= 1024)
-                {
-                    first = 13000;
-                }
-                if (value >= first) {//TRANSITION BOTTOM CLOUDS (MOVE IN)
-                    cloud9.style.display = 'flex';
-                    cloud10.style.display = 'flex';
-                    if(screen.width > 1024)
-                        cloud11.style.display = 'flex';
-    
-                    requestAnimationFrame(() => {
-                        requestAnimationFrame(() => {
-                            cloud9.style.transform = 'translate(-32.91vw, 16.44vh)';
-                            cloud9.style.transition = 'transform 1s ease-out';
-                            
-                            cloud10.style.transform = 'translate(43.86vw, 21.93vh)';
-                            cloud10.style.transition = 'transform 1s ease-out';
-    
-                            cloud11.style.transform = 'translate(10.97vw, 21.93vh)';
-                            cloud11.style.transition = 'transform 1s ease-out';
-                        });
-                    });
-                }//DETRANSITION BOTTOM CLOUDS (MOVE OUT)
-                else if (st < lastScrollTop && ((screen.width > 1024 && value < 9000) || (screen.width <= 1024 && value < 13800))) {
-                    cloud9.style.transform = 'translate(32.91vw, -16.44vh)';
-                    cloud9.style.transition = 'transform 1s ease-out';
-    
-                    cloud10.style.transform = 'translate(-43.86vw, -21.93vh)';
-                    cloud10.style.transition = 'transform 1s ease-out';
-                    
-                    cloud11.style.transform = 'translate(-10.97vw, -21.93vh)';
-                    cloud11.style.transition = 'transform 1s ease-out';
-                    
-                    const transitionEndHandler = () => {
-                        cloud9.style.display = 'none';
-                        cloud10.style.display = 'none';
-                        cloud11.style.display = 'none';
-    
-                        // Cleanup: remove event listeners after they trigger
-                        cloud9.removeEventListener('transitionend', transitionEndHandler);
-                        cloud10.removeEventListener('transitionend', transitionEndHandler);
-                        cloud11.removeEventListener('transitionend', transitionEndHandler);
-                    };
-    
-                    cloud9.addEventListener('transitionend', transitionEndHandler);
-                    cloud10.addEventListener('transitionend', transitionEndHandler);
-                    cloud11.addEventListener('transitionend', transitionEndHandler);
-                }
-                lastScrollTop = st <= 0 ? 0 : st;
             });
     
             function adjustElementPosition() {
