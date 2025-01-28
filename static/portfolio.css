@@ -282,10 +282,6 @@ a:hover {
     margin: 0 auto;
     object-fit: contain;
     z-index: 100;
-
-    --aspect-ratio: 16/9;
-    background: #000;
-    border-radius: 8px;
 }
 
 .slideshow-text {
@@ -766,10 +762,6 @@ a:hover {
 
     .slideshow-video {
         width: 90%;
-
-        --aspect-ratio: 16/9;
-        background: #000;
-        border-radius: 8px;
     }
 
     .slideshow-text {
