@@ -620,6 +620,14 @@ a:hover {
     cursor: pointer;
 }
 
+#multi3 {
+    max-height: 15vh;
+}
+
+#multi4 {
+    max-height: 30vh;
+}
+
 
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-image {
@@ -696,7 +704,7 @@ a:hover {
 
     .slideshow-container {
         padding-top: 0px;
-        height: 75vh;
+        height: 85vh;
         min-height: unset;
         align-items:center;
         justify-content:start;
