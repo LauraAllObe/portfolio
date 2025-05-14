@@ -17,15 +17,15 @@
             <button class="dropbtn" onclick="toggleMenu()">☰</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#top">Introduction</a>
-                <a href="#slideshow8">NLP Nutrition Summary Generation</a>
-                <a href="#slideshow0">Combined Models ML</a>
-                <a href="#slideshow1">Hacker News Web App</a>
-                <a href="#slideshow2">Law Practice Manager App</a>
-                <a href="#slideshow3">My Notes App</a>
-                <a href="#slideshow4">ProFessUp App</a>
-                <a href="#slideshow5">FAT32 Filesystem</a>
-                <a href="#slideshow6">Shell Implementation</a>
-                <a href="#slideshow7">Elevator Kernel Module</a>
+                <a href="#slideshow8" onclick="filterCategories('ml')">NLP Nutrition Summary Generation</a>
+                <a href="#slideshow0" onclick="filterCategories('ml')">Combined Models ML</a>
+                <a href="#slideshow1" onclick="filterCategories('appdev')">Hacker News Web App</a>
+                <a href="#slideshow2" onclick="filterCategories('appdev')">Law Practice Manager App</a>
+                <a href="#slideshow3" onclick="filterCategories('appdev')">My Notes App</a>
+                <a href="#slideshow4" onclick="filterCategories('appdev')">ProFessUp App</a>
+                <a href="#slideshow5" onclick="filterCategories('opsys')">FAT32 Filesystem</a>
+                <a href="#slideshow6" onclick="filterCategories('opsys')">Shell Implementation</a>
+                <a href="#slideshow7" onclick="filterCategories('opsys')">Elevator Kernel Module</a>
             </div>
             <button onclick="toggleMenu()" class="closebtn">✕</button>
         </div>
@@ -71,37 +71,63 @@
         <button id="openbutton" class="openbutton" onclick="openNav()">About Me</button>
         <!-- Header -->
         <div class="main-background">
-            <div class="main-content">
-                <div class="main-image-container">
-                    <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
-                    <img src="{{ url_for('static', filename='frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
-                    <img src="{{ url_for('static', filename='frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
-                </div>               
-                <div>
-                    <h1>Hey, I'm <mark>Laura Allison Obermaier</mark></h1>
-                    <div class="main-text">
-                        <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
-                        <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
-                        MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
-                        BS in <strong>Computer Science</strong> (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
-                        <strong>Full-stack software developer intern for NutriverseAI</strong> - Summer 2025<br/>
-                        <strong>Course Assistant under Dr. Reza Peyrovian</strong> - CS 600-A Advanced Algorithms at SIT - Spring 2025<br/>
-                        <strong>Research Assistant under Dr. Jonathan Adams</strong> - UROP at FSU - Fall 2022 & Spring 2023<br/>
-                        Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
-                        <div class="social-links">
-                            <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
-                                <img src="/static/gitHubIcon.svg" alt="GitHub Icon" class="social-icon">
-                                <span class="social-text">GitHub</span>
-                            </a>
-                            <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="social-link">
-                                <img src="/static/linkedInIcon.svg" alt="LinkedIn Icon" class="social-icon">
-                                <span class="social-text">LinkedIn</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            <div class="marquee-helicopter1">
+                <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="social-link">
+                    <img src="/static/planes&helicopters/helicopterbubble1.png" alt="ML Tab" class="helicopter-bubble-1">
+                    <img src="/static/planes&helicopters/helicopter1.png" alt="LinkedIn Helicopter" class="social-icon">
+                </a>
+            </div>
+            <div class="marquee-helicopter2">
+                <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
+                    <img src="/static/planes&helicopters/helicopterbubble2.png" alt="ML Tab" class="helicopter-bubble-2">
+                    <img src="/static/planes&helicopters/helicopter2.png" alt="GitHub Helicopter" class="social-icon">
+                </a>
+            </div>
+            <div class="marquee-plane1">
+                <button class="category-button" onclick="filterCategories('ml')">
+                    <img src="/static/planes&helicopters/planebubble1.png" alt="ML Tab" class="plane-bubble-1">
+                    <img src="/static/planes&helicopters/plane1.png" alt="ML Tab" class="category-icon">
+                </button>
+            </div>
+            <div class="marquee-plane2">
+                <button class="category-button" onclick="filterCategories('appdev')">
+                    <img src="/static/planes&helicopters/planebubble2.png" alt="App Dev Tab" class="plane-bubble-2">
+                    <img src="/static/planes&helicopters/plane2.png" alt="App Dev Tab" class="category-icon">
+                </button>
+            </div>
+            <div class="marquee-plane3">
+                <button class="category-button" onclick="filterCategories('opsys')">
+                    <img src="/static/planes&helicopters/planebubble3.png" alt="Op Sys Tab" class="plane-bubble-3">
+                    <img src="/static/planes&helicopters/plane3.png" alt="Op Sys Tab" class="category-icon">
+                </button>
+            </div>
+            <div class="marquee-plane4">
+                <button class="category-button" onclick="filterCategories('overview')">
+                    <img src="/static/planes&helicopters/planebubble4.png" alt="Overview Tab" class="plane-bubble-4">
+                    <img src="/static/planes&helicopters/plane4.png" alt="Overview Tab" class="category-icon">
+                </button>
             </div>
         </div>  
+        <div class="main-content" id="overview">
+            <div class="main-image-container">
+                <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
+                <img src="{{ url_for('static', filename='frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
+                <img src="{{ url_for('static', filename='frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
+            </div>               
+            <div>
+                <h1>Hey, I'm <mark>Laura Allison Obermaier</mark></h1>
+                <div class="main-text">
+                    <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
+                    <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
+                    MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
+                    BS in <strong>Computer Science</strong> (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
+                    <strong>Full-stack software developer intern for NutriverseAI</strong> - Summer 2025<br/>
+                    <strong>Course Assistant under Dr. Reza Peyrovian</strong> - CS 600-A Advanced Algorithms at SIT - Spring 2025<br/>
+                    <strong>Research Assistant under Dr. Jonathan Adams</strong> - UROP at FSU - Fall 2022 & Spring 2023<br/>
+                    Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
+                </div>
+            </div>
+        </div>
         <!-- Slideshow 8 (-1) -->   
         <div class="slideshow-background" id="slideshow8">
             <div class="slideshow-container">
@@ -1449,6 +1475,57 @@
             function closeModal() {
                 const modal = document.getElementById('successModal');
                 modal.style.display = 'none';
+            }
+
+            function filterCategories(category) {
+                const slideshow8 = document.getElementById('slideshow8');
+                const slideshow0 = document.getElementById('slideshow0');
+                const slideshow1 = document.getElementById('slideshow1');
+                const slideshow2 = document.getElementById('slideshow2');
+                const slideshow3 = document.getElementById('slideshow3');
+                const slideshow4 = document.getElementById('slideshow4');
+                const slideshow5 = document.getElementById('slideshow5');
+                const slideshow6 = document.getElementById('slideshow6');
+                const slideshow7 = document.getElementById('slideshow7');
+                const overview = document.getElementById('overview');
+
+                slideshow8.style.display = 'none';
+                slideshow0.style.display = 'none';
+                slideshow1.style.display = 'none';
+                slideshow2.style.display = 'none';
+                slideshow3.style.display = 'none';
+                slideshow4.style.display = 'none';
+                slideshow5.style.display = 'none';
+                slideshow6.style.display = 'none';
+                slideshow7.style.display = 'none';
+                overview.style.display = 'none';
+
+                if (category === 'ml')
+                {
+                    slideshow8.style.display = 'block';
+                    slideshow0.style.display = 'block';
+                    slideshow8.scrollIntoView();
+                }
+                else if (category === 'opsys')
+                {
+                    slideshow5.style.display = 'block';
+                    slideshow6.style.display = 'block';
+                    slideshow7.style.display = 'block';
+                    slideshow5.scrollIntoView();
+                }
+                else if (category === 'appdev')
+                {
+                    slideshow1.style.display = 'block';
+                    slideshow2.style.display = 'block';
+                    slideshow3.style.display = 'block';
+                    slideshow4.style.display = 'block';
+                    slideshow1.scrollIntoView();
+                }
+                else if (category === 'overview')
+                {
+                    overview.style.display = 'flex';
+                    overview.scrollIntoView();
+                }
             }
         </script>
     </div>    

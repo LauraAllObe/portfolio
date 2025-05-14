@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html { 
+    scroll-behavior: smooth; 
+}
+
 mark {
     background-color: #A3A3CD;
 }
@@ -95,22 +99,24 @@ a:hover {
 .dropdown-content a:hover {background-color: #ddd;}
 
 .main-background {
+    position: relative;
     top: -95px;
     width: 100%;
     height: 902.5px;
-    box-sizing: border-box;
-    position: relative;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main-content {
+    padding-top: 20vh;
     width: 80%;
     display: flex;
+    justify-self: center;
     align-items: center;
+    display: none;
     justify-content: space-evenly;
     gap: 40px;
+    margin-bottom: 30vh;
 }
 
 .main-image {
@@ -218,6 +224,7 @@ a:hover {
     padding-bottom: 36.48px;
     background-color: #70809081;
     box-sizing: border-box;
+    display: none;
     position: relative;
     margin-bottom: 380px;
     z-index: 100;
@@ -442,14 +449,6 @@ a:hover {
     max-height: 380px;
 }
 
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    gap: 10vw;
-    justify-content: center;
-    align-items: center;
-}
-
 .social-link {
     display: flex;
     flex-direction: column;
@@ -461,11 +460,13 @@ a:hover {
 }
 
 .social-link:hover .social-text {
+    text-align: center;
     background-color: #70809081;
     color: #e8eaeb;
 }
 
 .social-text {
+    text-align: center;
     width: 110px;
     padding: 0px;
     margin-top: 10px;
@@ -476,13 +477,143 @@ a:hover {
 }
 
 .social-icon {
-    width: 120px;
-    height: 120px;
+    width: 80px;
     transition: transform 0.2s;
+    padding-top: 12px;
 }
 
 .social-link:hover .social-icon {
     transform: translateY(-12px);
+}
+
+.marquee-helicopter1 { 
+  margin-top: 63vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueeHelicopterLeft linear 35s infinite;
+}
+
+.marquee-helicopter2 { 
+  margin-top: 80vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueeHelicopterLeft linear 40s infinite;
+}
+
+.marquee-plane1 { 
+  margin-top: 42vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueePlaneLeft linear 22s infinite;
+}
+
+.marquee-plane2 { 
+  margin-top: 19vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueePlaneLeft linear 20s infinite;
+}
+
+.marquee-plane3 { 
+  margin-top: 12vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueePlaneLeft linear 18s infinite;
+}
+
+.marquee-plane4 { 
+  margin-top: 15vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueePlaneLeft linear 15s infinite;
+}
+
+.category-button {
+    top: 0;
+    border: transparent;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background-color: transparent;
+    color: #000;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.category-button:hover .category-text {
+    text-align: center;
+    background-color: #70809081;
+    color: #e8eaeb;
+}
+
+.category-text {
+    text-align: center;
+    width: 110px;
+    padding: 0px;
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #70809081;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+.helicopter-bubble-1 {
+    width: 60px;
+    margin-bottom: -15px;
+    margin-left: 45px;
+}
+
+.helicopter-bubble-2 {
+    width: 60px;
+    margin-bottom: -15px;
+    margin-left: 45px;
+}
+
+.plane-bubble-1 {
+    width: 90px;
+    margin-bottom: -15px;
+    margin-left: 45px;
+}
+
+.plane-bubble-2 {
+    width: 105px;
+    margin-bottom: -15px;
+    margin-left: 45px;
+}
+
+.plane-bubble-3 {
+    width: 100px;
+    margin-bottom: -15px;
+    margin-left: 45px;
+}
+
+.plane-bubble-4 {
+    width: 70px;
+    margin-bottom: -35px;
+    margin-left: 30px;
+}
+
+.category-icon {
+    width: 150px;
+    transition: transform 0.2s;
+    padding-top: 12px;
+}
+
+.category-button:hover .category-icon {
+    transform: translateY(-12px);
+}
+
+@keyframes MarqueeHelicopterLeft
+{
+  0% { right: -2% }
+  100% { right: 100% }
+}
+
+@keyframes MarqueePlaneLeft
+{
+  0% { right: -30% }
+  100% { right: 100% }
 }
 
 .sidebar {
@@ -628,7 +759,6 @@ a:hover {
     max-height: 30vh;
 }
 
-
 @media screen and (max-width: 1024px) and (max-aspect-ratio: 2/3) {
     .main-image {
         flex-direction: row;
@@ -644,8 +774,10 @@ a:hover {
     }
 
     .main-content {
+        justify-self: center;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 30vh;
     }
 
     body {
