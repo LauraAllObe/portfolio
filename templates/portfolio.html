@@ -17,6 +17,7 @@
             <button class="dropbtn" onclick="toggleMenu()">☰</button>
             <div id="myDropdown" class="dropdown-content">
                 <a href="#top">Introduction</a>
+                <a href="#slideshow8">NLP Nutrition Summary Generation</a>
                 <a href="#slideshow0">Combined Models ML</a>
                 <a href="#slideshow1">Hacker News Web App</a>
                 <a href="#slideshow2">Law Practice Manager App</a>
@@ -81,10 +82,12 @@
                     <div class="main-text">
                         <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
                         <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
-                        MS in <strong>Software Engineering</strong>, Graduate Certificate in <strong>Machine Learning</strong>, & Graduate Certificate in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
+                        MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
                         BS in <strong>Computer Science</strong> (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
-                        <strong>Research Assistant under Dr. Jonathan Adams</strong> - Undergraduate Research Opportunity Program<br/>
-                        Looking for Software Engineering, Cyber Security, & Machine Learning Internships for <strong>Spring, Summer, and/or Fall 2025</strong><br/>
+                        <strong>Full-stack software developer intern for NutriverseAI</strong> - Summer 2025<br/>
+                        <strong>Course Assistant under Dr. Reza Peyrovian</strong> - CS 600-A Advanced Algorithms at SIT - Spring 2025<br/>
+                        <strong>Research Assistant under Dr. Jonathan Adams</strong> - UROP at FSU - Fall 2022 & Spring 2023<br/>
+                        Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
                         <div class="social-links">
                             <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
                                 <img src="/static/gitHubIcon.svg" alt="GitHub Icon" class="social-icon">
@@ -98,7 +101,181 @@
                     </div>
                 </div>
             </div>
-        </div>        
+        </div>  
+        <!-- Slideshow 8 (-1) -->   
+        <div class="slideshow-background" id="slideshow8">
+            <div class="slideshow-container">
+                <a class="slideshow-title" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit Nutrition Analyzer Web App on GitHub">
+                    <h2>NLP Nutrition Summary Generation</h2>
+                </a>
+                <div class="slideshow-skills">Jupyter Notebook, Python, NumPy, RapidFuzz, SpaCy, Google Custom Search Engine (CSE), AutoGPTQ, Mistral-7B-Instruct-GPTQ, ROUGE-1, ROUGE-L, BLEUScore-F1</div>
+                <!-- Slide 1 -->
+                <div class="slides">
+                    <lite-youtube class="slideshow-video" videoid="VEnfEZ0Mcxs" style="--aspect-ratio: 16/9;"></lite-youtube>
+                    <div class="slideshow-text">  
+                        <h3>Application Overview</h3>
+                        <div>
+                            This project features ingredient list tokenization, fuzzy matching, alias retrieval, semantic filters, keyword matching, web scraping, summary generation, evaluation metrics, and much more. The aim, hereby, is to showcase the power of preprocessing and task specialization in reducing hallucination and increasing despite decreased model size and complexity.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/projectReport.png') }}" title="Project Report" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Project Report</h3>
+                        <div>
+                            This <a href="https://github.com/LauraAllObe/nutritionAnalyzer/blob/main/projectReport-may5th2025.pdf" target="_blank">project report</a> features a detailed description of the project, including abstract, introduction, related work, methodology, experimental setup, results, and conclusion and future work. 
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/tokenizationAndAliasNormalization.png') }}" title="Tokenization and Alias Normalization" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Tokenization and Alias Normalization</h3>
+                        <div>
+                            The ingredient list was first tokenized into individual ingredients and normalized via fuzzy matching. Then, aliases were retrieved by using inflect for pluralization and singularization and by using the Mistral-7B-Instruct-GPTQ model to generate common name and scientific name aliases. These were then filtered and normalized for use during data retrieval.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/queryingTrustedSites.png') }}" title="Data Retrieval and Web Scraping 1/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Data Retrieval and Web Scraping 1/3</h3>
+                        <div>
+                            Data was retrieved from trusted sites, such as PubMed, OpenFDA, RxNorm, Europe PubMed Central, PubMed Central, and via web scraping using Google Custom Search Engine (CSE). During web scraping, NER entities were extracted from the retrieved data. The search included only matches for health-related keywords and ingredient aliases. Non-human studies, non-relevant NER-labeled data, product-related information, and more was discarded using filters to obtain only relevant data.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/queryingGoogleCSE.png') }}" title="Data Retrieval and Web Scraping 2/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Data Retrieval and Web Scraping 2/3</h3>
+                        <div>
+                            Data was retrieved from trusted sites, such as PubMed, OpenFDA, RxNorm, Europe PubMed Central, PubMed Central, and via web scraping using Google Custom Search Engine (CSE). During web scraping, NER entities were extracted from the retrieved data. The search included only matches for health-related keywords and ingredient aliases. Non-human studies, non-relevant NER-labeled data, product-related information, and more was discarded using filters to obtain only relevant data.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 6 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/studyFiltering.png') }}" title="Data Retrieval and Web Scraping 3/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Data Retrieval and Web Scraping 3/3</h3>
+                        <div>
+                            Data was retrieved from trusted sites, such as PubMed, OpenFDA, RxNorm, Europe PubMed Central, PubMed Central, and via web scraping using Google Custom Search Engine (CSE). During web scraping, NER entities were extracted from the retrieved data. The search included only matches for health-related keywords and ingredient aliases. Non-human studies, non-relevant NER-labeled data, product-related information, and more was discarded using filters to obtain only relevant data.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 7 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/sentenceLevelFilteriing.png') }}" title="Sentence-Level Preprocessing and Summary Generation 1/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Sentence-Level Preprocessing and Summary Generation 1/3</h3>
+                        <div>
+                            The data was parsed into sentences and filtered to only contain those featuring results and conclusion-related terms, an alias, and health-related terms. Sentences were then normalized by removing duplicates and replacing all aliases with the originally matched ingredient name. Then, summaries of health effects and dietary restrictions were generated for each ingredient using the Mistral-7B-Instruct-GPTQ-Model and AutoGPTQ. These were then post-processed to remove duplicates and irrelevant information. The top 5 summaries were selected and displayed.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 8 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/sentenceLevelNormalization.png') }}" title="Sentence-Level Preprocessing and Summary Generation 2/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Sentence-Level Preprocessing and Summary Generation 2/3</h3>
+                        <div>
+                            The data was parsed into sentences and filtered to only contain those featuring results and conclusion-related terms, an alias, and health-related terms. Sentences were then normalized by removing duplicates and replacing all aliases with the originally matched ingredient name. Then, summaries of health effects and dietary restrictions were generated for each ingredient using the Mistral-7B-Instruct-GPTQ-Model and AutoGPTQ. These were then post-processed to remove duplicates and irrelevant information. The top 5 summaries were selected and displayed.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 9 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/summaryGeneration.png') }}" title="Sentence-Level Preprocessing and Summary Generation 3/3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Sentence-Level Preprocessing and Summary Generation 3/3</h3>
+                        <div>
+                            The data was parsed into sentences and filtered to only contain those featuring results and conclusion-related terms, an alias, and health-related terms. Sentences were then normalized by removing duplicates and replacing all aliases with the originally matched ingredient name. Then, summaries of health effects and dietary restrictions were generated for each ingredient using the Mistral-7B-Instruct-GPTQ-Model and AutoGPTQ. These were then post-processed to remove duplicates and irrelevant information. The top 5 summaries were selected and displayed.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 10 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/evaluation.png') }}" title="Automatic Evaluation 1/2" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Automatic Evaluation 1/2</h3>
+                        <div>
+                            Automatic evaluation was performed on three different groups; the dynamize protein powder (rare) ingredient list (image 2, row 1), the common ingredients list (image 2, row 2), and sugar (image 2, row 3); using ROUGE-1, ROUGE-L, and BLEUScore-F1 metrics. ROUGE-1 and ROUGE-L were observed to be noticably lower than the BLEUScore-F1 metric. Since the ROUGE metrics are used to measure token-level precision and recall, while the BLEUScore-F1 metric is used to measure semantic alignment between generated and reference content, this indicates that our summaries generalize well and informativeness and clarity is prioritized over lexical overlap. Note that the right column for each metric (image 2) indicate the scores after alias integration not present during the human evaluation was added.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 11 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/autoEvalSlide.png') }}" title="Automatic Evaluation 2/2" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Automatic Evaluation 2/2</h3>
+                        <div>
+                            Automatic evaluation was performed on three different groups; the dynamize protein powder (rare) ingredient list (image 2, row 1), the common ingredients list (image 2, row 2), and sugar (image 2, row 3); using ROUGE-1, ROUGE-L, and BLEUScore-F1 metrics. ROUGE-1 and ROUGE-L were observed to be noticably lower than the BLEUScore-F1 metric. Since the ROUGE metrics are used to measure token-level precision and recall, while the BLEUScore-F1 metric is used to measure semantic alignment between generated and reference content, this indicates that our summaries generalize well and informativeness and clarity is prioritized over lexical overlap. Note that the right column for each metric (image 2) indicate the scores after alias integration not present during the human evaluation was added.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 12 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesAQ.png') }}" title="Human Evaluation 1/4" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Human Evaluation 1/4</h3>
+                        <div>
+                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 13 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesAA.png') }}" title="Human Evaluation 2/4" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Human Evaluation 2/4</h3>
+                        <div>
+                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 14 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesBQ.png') }}" title="Human Evaluation 3/4" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Human Evaluation 3/4</h3>
+                        <div>
+                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 15 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesBA.png') }}" title="Human Evaluation 4/4" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Human Evaluation 4/4</h3>
+                        <div>
+                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 16 -->
+                <div class="slides">
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/takeawaysSlide.png') }}" title="Key Takeaways and Repository" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Key Takeaways and Repository</h3>
+                        <div>
+                            Based on the automatic and human evaluation results, this indicates that our model was able to preform well overall, even somewhat competitively with ChatGPT-4o. This leads us to infer that, with proper preprocessing and finetuning, small, less complex models are able to perform comparatively well with large, complex models for specialized tasks. Given <a href="https://www.nytimes.com/2025/05/05/technology/ai-hallucinations-chatgpt-google.html#:~:text=Is%20Getting%20More%20Powerful%2C%20but,companies%20don't%20know%20why." target="_blank">the rise of hallucination with increased complexity and size in recent commercialized models</a> , this indicates that model specialization may be the way to go. For future work, further alias tuning, increased model size, reinforcement learning from human feedback (RLHF), sentiment analysis, and non-AI feature inclusion are all worth exploring depending on the scale of the project. To view the project repository, please click <a href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank">here</a>.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow8')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow8')">&#10095;</button>
+                </div>
+            </div>
+        </div>
         <!-- Slideshow 0 -->
         <div class="slideshow-background" id="slideshow0">
             <div class="slideshow-container">
@@ -1104,6 +1281,7 @@
             });
     
             var slideIndices = {
+                'slideshow8': 1,
                 'slideshow0': 1, 
                 'slideshow1': 1, 
                 'slideshow2': 1, 
@@ -1147,6 +1325,7 @@
             }
         
             window.onload = function() {
+                showSlides(slideIndices['slideshow8'], 'slideshow8');
                 showSlides(slideIndices['slideshow0'], 'slideshow0');
                 showSlides(slideIndices['slideshow1'], 'slideshow1');
                 showSlides(slideIndices['slideshow2'], 'slideshow2');
