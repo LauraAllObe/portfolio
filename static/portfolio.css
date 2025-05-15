@@ -51,7 +51,7 @@ a:hover {
     position: relative;
     z-index: 10;
     width: 100%;
-    top: 45vh;
+    top: -75vh;
     left: 0;
     background-attachment: fixed;
     pointer-events: none;
@@ -218,7 +218,7 @@ a:hover {
 .clouds {
     position: relative;
     padding: 52.06px 3.65vw;
-    z-index: -2;
+    z-index: -3;
     opacity: 75%;
 }
 
@@ -481,6 +481,7 @@ a:hover {
     align-items: center;
     justify-content: flex-end;
     padding-bottom: 50px;
+    z-index: 12;
 }
 
 .end-horizontal {
@@ -616,40 +617,34 @@ a:hover {
     transition: background-color 0.2s;
 }
 
-.helicopter-bubble-1 {
-    width: 60px;
-    margin-bottom: -15px;
-    margin-left: 45px;
+.helicopter-text-1 {
+    height: 18vh;
+    margin-top: -5vh;
 }
 
-.helicopter-bubble-2 {
-    width: 60px;
-    margin-bottom: -15px;
-    margin-left: 45px;
+.helicopter-text-2 {
+    height: 18vh;
+    margin-top: -5vh;
 }
 
-.plane-bubble-1 {
-    width: 90px;
-    margin-bottom: -15px;
-    margin-left: 45px;
+.plane-text-1 {
+    height: 18vh;
+    margin-top: -8vh;
 }
 
-.plane-bubble-2 {
-    width: 105px;
-    margin-bottom: -15px;
-    margin-left: 45px;
+.plane-text-2 {
+    height: 18vh;
+    margin-top: -8vh;
 }
 
-.plane-bubble-3 {
-    width: 100px;
-    margin-bottom: -15px;
-    margin-left: 45px;
+.plane-text-3 {
+    height: 18vh;
+    margin-top: -8vh;
 }
 
-.plane-bubble-4 {
-    width: 90px;
-    margin-bottom: -35px;
-    margin-left: 30px;
+.plane-text-4 {
+    height: 18vh;
+    margin-top: -8vh;
 }
 
 .category-icon {
