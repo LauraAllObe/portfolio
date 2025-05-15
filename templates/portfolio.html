@@ -11,8 +11,12 @@
     <script src="/static/lite-yt-embed.js" defer></script>
 </head>
 <body>
+    <div id="top" style="height: 0; width: 100%; position: absolute; top: 0;"></div>
     <div class="foreground">
         <img src="{{ url_for('static', filename='foreground.png') }}" alt="Foreground Image" class="foreground-image">
+    </div>
+    <div>
+        <img src="{{ url_for('static', filename='skylimittext.png') }}" alt="The sky is the limit text" class="sky-limit-text">
     </div>
     <div class="background">
         <img src="{{ url_for('static', filename='background.png') }}" alt="Background Image" class="background-image">
@@ -20,20 +24,54 @@
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
-            <button class="dropbtn" onclick="toggleMenu()">☰</button>
+            <img src="{{ url_for('static', filename='navbar/departures.png') }}" alt="Nav bar Icon" class="dropbtn" onclick="toggleMenu()">
             <div id="myDropdown" class="dropdown-content">
-                <a href="#top">Introduction</a>
-                <a href="#slideshow8" onclick="filterCategories('ml')">NLP Nutrition Summary Generation</a>
-                <a href="#slideshow0" onclick="filterCategories('ml')">Combined Models ML</a>
-                <a href="#slideshow1" onclick="filterCategories('appdev')">Hacker News Web App</a>
-                <a href="#slideshow2" onclick="filterCategories('appdev')">Law Practice Manager App</a>
-                <a href="#slideshow3" onclick="filterCategories('appdev')">My Notes App</a>
-                <a href="#slideshow4" onclick="filterCategories('appdev')">ProFessUp App</a>
-                <a href="#slideshow5" onclick="filterCategories('opsys')">FAT32 Filesystem</a>
-                <a href="#slideshow6" onclick="filterCategories('opsys')">Shell Implementation</a>
-                <a href="#slideshow7" onclick="filterCategories('opsys')">Elevator Kernel Module</a>
+                <div class="menu-item" style="margin-top: 10vh;" onclick="navigateTo('top', 'top')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background">
+                    <span class="menu-text">Skyline</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('overview', 'overview')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview">
+                    <span class="menu-text">Overview</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow8', 'ml')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NLP Nutrition Summary Generation">
+                    <span class="menu-text">NLP Nutrition Summary Generation</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow0', 'ml')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Combined Models ML">
+                    <span class="menu-text">Combined Models ML</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow1', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Hacker News Web App">
+                    <span class="menu-text">Hacker News Web App</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow2', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Law Practice Manager App">
+                    <span class="menu-text">Law Practice Manager App</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow3', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="My Notes App">
+                    <span class="menu-text">My Notes App</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow4', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="ProFessUp App">
+                    <span class="menu-text">ProFessUp App</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow5', 'opsys')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="FAT32 Filesystem">
+                    <span class="menu-text">FAT32 Filesystem</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow6', 'opsys')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Shell Implementation">
+                    <span class="menu-text">Shell Implementation</span>
+                </div>
+                <div class="menu-item" onclick="navigateTo('slideshow7', 'opsys')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Elevator Kernel Module">
+                    <span class="menu-text">Elevator Kernel Module</span>
+                </div>
             </div>
-            <button onclick="toggleMenu()" class="closebtn">✕</button>
+            <img src="{{ url_for('static', filename='navbar/exit2.png') }}" alt="Nav bar Icon" class="closebtn" onclick="toggleMenu()">
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
@@ -1460,6 +1498,7 @@
                     modal.style.display = "none";
                     modalImg.classList.remove('modal-zoomed-in');
                 }
+                window.onscroll();
             }
 
             function openNav() {
@@ -1537,6 +1576,80 @@
                     overview.scrollIntoView();
                 }
             }
+
+            window.onscroll = function () {
+                const sections = [
+                    { id: 'top', name: 'Skyline' },
+                    { id: 'overview', name: 'Overview' },
+                    { id: 'slideshow8', name: 'NLP Nutrition Summary Generation' },
+                    { id: 'slideshow0', name: 'Combined Models ML' },
+                    { id: 'slideshow1', name: 'Hacker News Web App' },
+                    { id: 'slideshow2', name: 'Law Practice Manager App' },
+                    { id: 'slideshow3', name: 'My Notes App' },
+                    { id: 'slideshow4', name: 'ProFessUp App' },
+                    { id: 'slideshow5', name: 'FAT32 Filesystem' },
+                    { id: 'slideshow6', name: 'Shell Implementation' },
+                    { id: 'slideshow7', name: 'Elevator Kernel Module' }
+                ];
+
+                const scrollY = window.scrollY + window.innerHeight / 2;
+
+                let closestSection = null;
+                let minDistance = Infinity;
+
+                sections.forEach(section => {
+                    let offset;
+                    if (section.id === null) {
+                        offset = Math.abs(0 - scrollY); // Distance to top of page
+                    } else {
+                        const el = document.getElementById(section.id);
+                        if (!el || window.getComputedStyle(el).display === 'none') return;
+                        const rect = el.getBoundingClientRect();
+                        offset = Math.abs(rect.top + window.scrollY - scrollY);
+                    }
+
+                    if (offset < minDistance) {
+                        closestSection = section;
+                        minDistance = offset;
+                    }
+                });
+
+                // Update nav images
+                const navItems = document.querySelectorAll('.dropdown-content .menu-item');
+                navItems.forEach(item => {
+                    const span = item.querySelector('.menu-text');
+                    const img = item.querySelector('img');
+
+                    if (span && img) {
+                        if (span.textContent.trim() === closestSection?.name) {
+                            img.src = "/static/navbar/selected.png";
+                            span.style.color = "#171c1f";
+                        } else {
+                            img.src = "/static/navbar/unselected.png";
+                            span.style.color = "#f2d732";
+                        }
+                    }
+                });
+            };
+
+            function navigateTo(id, category = null) {
+                if (category) {
+                    filterCategories(category);
+                }
+
+                // Wait a frame to ensure display update, then scroll
+                setTimeout(() => {
+                    const target = document.getElementById(id);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    if (id === 'top') {
+                        window.scrollTo(0, 0);
+                    }
+                }, 50); // Delay allows DOM updates to complete (e.g., from filterCategories)
+            }
+
+
         </script>
     </div>    
 </body>
