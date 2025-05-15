@@ -11,6 +11,12 @@
     <script src="/static/lite-yt-embed.js" defer></script>
 </head>
 <body>
+    <div class="foreground">
+        <img src="{{ url_for('static', filename='foreground.png') }}" alt="Foreground Image" class="foreground-image">
+    </div>
+    <div class="background">
+        <img src="{{ url_for('static', filename='background.png') }}" alt="Background Image" class="background-image">
+    </div>
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
@@ -63,9 +69,7 @@
             <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">×</a>
             <h2 style="margin-top: -10px">About Me</h2>
             <p>
-                Entering a flow state drives my passion for software engineering. In a competitive tech industry, standing out is essential—what sets me apart is my ability to maintain deep focus and thrive on the challenge of solving complex problems.
-                <br/><br/>
-                I initially pursued software engineering at Stevens Institute of Technology, but after realizing it closely aligned with my previous studies at Florida State University, I made a bold switch to cybersecurity in February 2024. However, I have since recognized that my true passion lies in software engineering, leading me to return to this field. This renewed focus allows me to consistently reach that state of deep concentration and flow, pushing me to innovate and sharpen my skills. I’m excited about the future and the dynamic challenges that software engineering presents.
+                empty for now...
             </p>
         </div>
         <button id="openbutton" class="openbutton" onclick="openNav()">About Me</button>
@@ -108,25 +112,32 @@
                 </button>
             </div>
         </div>  
-        <div class="main-content" id="overview">
-            <div class="main-image-container">
-                <img class="main-image" src="{{ url_for('static', filename='portfolioHeadshot.jpg') }}"/>
-                <img src="{{ url_for('static', filename='frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
-                <img src="{{ url_for('static', filename='frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
-            </div>               
-            <div>
-                <h1>Hey, I'm <mark>Laura Allison Obermaier</mark></h1>
-                <div class="main-text">
-                    <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
-                    <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
-                    MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
-                    BS in <strong>Computer Science</strong> (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
-                    <strong>Full-stack software developer intern for NutriverseAI</strong> - Summer 2025<br/>
-                    <strong>Course Assistant under Dr. Reza Peyrovian</strong> - CS 600-A Advanced Algorithms at SIT - Spring 2025<br/>
-                    <strong>Research Assistant under Dr. Jonathan Adams</strong> - UROP at FSU - Fall 2022 & Spring 2023<br/>
-                    Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
+        <div class="overview" id="overview">
+            <div class="overview-top">
+                <div class="main-image-container">
+                    <img class="main-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
+                    <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
+                    <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
+                </div>               
+                <div class="overview-top-text">
+                    <h1>Hey, I'm <mark>Laura Allison Obermaier</mark></h1>
+                    <div class="main-text">
+                        <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
+                        <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
+                        MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
+                        BS in <strong>Computer Science</strong> (<strong>3.97 GPA</strong>, Honors Program, President's List, & Dean's List)<br/>
+                        <strong>Full-stack software developer intern for NutriverseAI</strong> - Summer 2025<br/>
+                        <strong>Course Assistant under Dr. Reza Peyrovian</strong> - CS 600-A Advanced Algorithms at SIT - Spring 2025<br/>
+                        <strong>Research Assistant under Dr. Jonathan Adams</strong> - UROP at FSU - Fall 2022 & Spring 2023<br/>
+                        Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
+                    </div>
                 </div>
             </div>
+            <p class="overview-bottom-text">
+                    Entering a flow state drives my passion for software engineering. In a competitive tech industry, standing out is essential—what sets me apart is my ability to maintain deep focus and thrive on the challenge of solving complex problems.
+                <br/><br/>
+                    I initially pursued software engineering at Stevens Institute of Technology, but after realizing it closely aligned with my previous studies at Florida State University, I made a bold switch to cybersecurity in February 2024. However, I have since recognized that my true passion lies in software engineering, leading me to return to this field. This renewed focus allows me to consistently reach that state of deep concentration and flow, pushing me to innovate and sharpen my skills. I’m excited about the future and the dynamic challenges that software engineering presents.
+            </p>
         </div>
         <!-- Slideshow 8 (-1) -->   
         <div class="slideshow-background" id="slideshow8">
@@ -1261,11 +1272,10 @@
                 </form>
             </div>
             <div class="end-horizontal">
-                <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='linkedin.png') }}" alt="LinkedIn" loading="lazy"></a>
-                <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='instagram.png') }}" alt="Instagram" loading="lazy"></a>
-                <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='github.png') }}" alt="GitHub" loading="lazy"></a>
-                <a href="mailto:lauraaobermaier@gmail.com?subject=Portfolio Questions&body=Your questions here" target="_blank" class="end-clickables" title="Email Me: lauraaobermaier@gmail.com"><img class="end-clickables" src="{{ url_for('static', filename='mail.png') }}" alt="Email" loading="lazy"></a>
-                <a href="{{ url_for('static', filename='cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='cv.png') }}" alt="CV" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/laura-obermaier-977472226/" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='closing/linkedin.png') }}" alt="LinkedIn" loading="lazy"></a>
+                <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='closing/instagram.png') }}" alt="Instagram" loading="lazy"></a>
+                <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='closing/github.png') }}" alt="GitHub" loading="lazy"></a>
+                <a href="{{ url_for('static', filename='closing/cv.pdf') }}" download="Laura_CV" target="_blank" class="end-clickables" title="Download My CV"><img class="end-clickables" src="{{ url_for('static', filename='closing/cv.png') }}" alt="CV" loading="lazy"></a>
             </div>
             <div class="end-copyright">© 2024 Laura Allison Obermaier. All rights reserved.</div>
         </div>
@@ -1273,7 +1283,7 @@
         <div id="successModal" class="email-modal">
             <div class="email-modal-content">
                 <span class="email-modal-close-button" onclick="closeModal()">&times;</span>
-                <img src="static/happyCat.gif" alt="Success Icon" class="success-image" loading="lazy">
+                <img src="static/closing/happyCat.gif" alt="Success Icon" class="success-image" loading="lazy">
                 <p>Your message has been sent successfully!</p>
             </div>
         </div>

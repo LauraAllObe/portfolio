@@ -13,7 +13,7 @@ mark {
 body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    background-color: #e8eaeb;
+    background-color: #010100;
     overflow: auto;
     font-size: 16px;
     overflow-x: hidden;
@@ -45,6 +45,40 @@ a {
 
 a:hover {
     color: #d5dbe0
+}
+
+.foreground {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    top: 45vh;
+    left: 0;
+    background-attachment: fixed;
+    pointer-events: none;
+}
+
+.foreground-image {
+    position: absolute;
+    width: 100%;
+    scroll-behavior: fixed;
+    overflow: hidden;
+}
+
+.background {
+    position: relative;
+    z-index: -500;
+    width: 100%;
+    top: -75vh;
+    left: 0;
+    background-attachment: fixed;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    opacity: 90%;
+    scroll-behavior: fixed;
+    overflow: hidden;
 }
 
 .navbar {
@@ -105,18 +139,40 @@ a:hover {
     height: 902.5px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 20vh;
 }
 
-.main-content {
-    padding-top: 20vh;
+.overview {
+    padding-top: 10vh;
+    padding-bottom: 3vh;
+    margin-bottom: 20vh;
     width: 80%;
     display: flex;
     justify-self: center;
     align-items: center;
     display: none;
     justify-content: space-evenly;
-    gap: 40px;
-    margin-bottom: 30vh;
+    background-color: #70809054;
+    color: #e8eaebd0;
+    flex-direction: column;
+}
+
+.overview-top {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.overview-top-text {
+    object-fit: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-bottom-text {
+    margin-top: 10vh;
+    align-self: center;
+    width: 80%;
 }
 
 .main-image {
@@ -152,6 +208,7 @@ a:hover {
 }
 
 .main-text {
+    margin-left: 25px;
     text-align: center;
     font-size: 15px;
     line-height: 2;
@@ -161,7 +218,8 @@ a:hover {
 .clouds {
     position: relative;
     padding: 52.06px 3.65vw;
-    z-index: -2
+    z-index: -2;
+    opacity: 75%;
 }
 
 .clouds img {
@@ -589,7 +647,7 @@ a:hover {
 }
 
 .plane-bubble-4 {
-    width: 70px;
+    width: 90px;
     margin-bottom: -35px;
     margin-left: 30px;
 }
@@ -620,7 +678,6 @@ a:hover {
     height: 120%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
     right: 0;
     background-color: rgba(0, 0, 0, 0.722);
