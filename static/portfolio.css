@@ -726,57 +726,76 @@ a:hover {
 }
 
 .sidebar {
-    height: 120%;
-    width: 0;
+    height: 90vh;
+    min-width: 30%;
     position: fixed;
-    top: 0;
+    top: 5%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.722);
+    background-color: transparent;
     overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 40px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
     color: white;
     z-index: 990;
 }
 
-.sidebar p {
-    margin-top: -20px;
+.sidebar-inner {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    right: -20%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
 }
 
-.openbutton {
-    transform: translateY(-50%) rotate(-90deg);
-    font-size: 18px;
+.sidebar-bg {
+    position: absolute;
+    right: 0;
+    height: 90vh;
+    width: auto;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-open-button {
     cursor: pointer;
-    background-color: #70809054;
-    color: #e8eaebd0;
+    background: none;
     border: none;
     position: fixed;
-    top: 50%;
+    display: flex;
+    top: 25%;
     z-index: 990;
-    padding: 10px 15px;
-    right: -40px;
-    box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
+    height: 12vh;
+    right: -1%;
 }
 
-.closebutton {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 10px;
-    font-size: 36px;
+.sidebar-close-button {
+    top:55%;
+    padding-left: 40%;
+    position: relative;
     cursor: pointer;
-    padding: 0.44vh 0.58vw;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center; 
+    height: 10vh;
     z-index: 990;
+    background: none;
 }
 
-.sidebar a, .sidebar h2, .sidebar p {
-    color: #e8eaeb;
-    padding: 8px 15px;
+.sidebar h2, .sidebar p {
+    padding-left: 15%;
+    color: black;
+    margin: 0.5rem 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.sidebar h2 {
+    padding-top: 18%;
 }
 
 .email-form {

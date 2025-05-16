@@ -71,7 +71,7 @@
                     <span class="menu-text">Elevator Kernel Module</span>
                 </div>
             </div>
-            <img src="{{ url_for('static', filename='navbar/exit2.png') }}" alt="Nav bar Icon" class="closebtn" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/exit.png') }}" alt="Nav bar Icon" class="closebtn" onclick="toggleMenu()">
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
@@ -104,13 +104,14 @@
         </div>
         <!-- About Me Sidebar -->
         <div id="aboutMeSidebar" class="sidebar">
-            <a href="javascript:void(0)" class="closebutton" onclick="closeNav()">×</a>
-            <h2 style="margin-top: -10px">About Me</h2>
-            <p>
-                empty for now...
-            </p>
+            <div class="sidebar-inner">
+                <img src="{{ url_for('static', filename='sidebar/display.png') }}" alt="sidebar background" class="sidebar-bg">
+                <h2>Help Desk</h2>
+                <p>empty for now...</p>
+                <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()">
+            </div>
         </div>
-        <button id="openbutton" class="openbutton" onclick="openNav()">About Me</button>
+        <img id="opensidebar" src="{{ url_for('static', filename='sidebar/info.png') }}" alt="Info Icon" class="sidebar-open-button"  onclick="openSidebar()">
         <!-- Header -->
         <div class="main-background">
             <div class="marquee-helicopter1">
@@ -1501,14 +1502,14 @@
                 window.onscroll();
             }
 
-            function openNav() {
-                document.getElementById("aboutMeSidebar").style.width = "250px";
-                document.getElementById("openbutton").style.display = "none";
+            function openSidebar() {
+                document.getElementById("aboutMeSidebar").classList.add("active");
+                document.getElementById("opensidebar").style.display = "none";
             }
 
-            function closeNav() {
-                document.getElementById("aboutMeSidebar").style.width = "0";
-                document.getElementById("openbutton").style.display = "initial";
+            function closeSidebar() {
+                document.getElementById("aboutMeSidebar").classList.remove("active");
+                document.getElementById("opensidebar").style.display = "initial";
             }
 
             function handleFormSubmit(event) {
