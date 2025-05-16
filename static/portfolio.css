@@ -104,8 +104,9 @@ a:hover {
 
 .dropbtn {
     position: fixed;
-    width: 200px;
-    margin-top: -60px;
+    width: 165px;
+    margin-top: 22px;
+    margin-left: 12px;
     opacity: 90%;
     cursor: pointer;
     border: transparent;
@@ -165,6 +166,11 @@ a:hover {
 @font-face {
     font-family: 'BarlowBold';
     src: url('/static/navbar/Barlow-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'BarlowRegular';
+    src: url('/static/navbar/Barlow-Regular.ttf') format('truetype');
 }
 
 .menu-text {
@@ -776,7 +782,7 @@ a:hover {
 }
 
 .sidebar-close-button {
-    top:55%;
+    top:30%;
     padding-left: 40%;
     position: relative;
     cursor: pointer;
@@ -796,6 +802,36 @@ a:hover {
 
 .sidebar h2 {
     padding-top: 18%;
+    font-family: 'BarlowBold';
+}
+
+.sidebar-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 15%;
+    gap: 15px;
+}
+
+.sidebar-row img {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+}
+
+#sidebar-row-3-img {
+    width: 90px;
+}
+
+#sidebar-row-3-text {
+    flex: 1;
+    max-width: calc(100% - 80px);
+}
+
+.sidebar-row p {
+    margin: 0;
+    color: black;
+    font-family: 'BarlowRegular';
+    text-align: left;
 }
 
 .email-form {

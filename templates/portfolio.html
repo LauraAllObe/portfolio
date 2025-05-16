@@ -24,7 +24,7 @@
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
-            <img src="{{ url_for('static', filename='navbar/departures.png') }}" alt="Nav bar Icon" class="dropbtn" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="dropbtn" onclick="toggleMenu()">
             <div id="myDropdown" class="dropdown-content">
                 <div class="menu-item" style="margin-top: 10vh;" onclick="navigateTo('top', 'top')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background">
@@ -107,7 +107,18 @@
             <div class="sidebar-inner">
                 <img src="{{ url_for('static', filename='sidebar/display.png') }}" alt="sidebar background" class="sidebar-bg">
                 <h2>Help Desk</h2>
-                <p>empty for now...</p>
+                <div class="sidebar-row">
+                    <img src="/static/planes&helicopters/plane1.png" alt="Plane icon">
+                    <p>Click a plane to view projects by category.</p>
+                </div>
+                <div class="sidebar-row">
+                    <img src="/static/planes&helicopters/helicopter2.png" alt="Helicopter icon">
+                    <p>Click a helicopter to navigate to social links.</p>
+                </div>
+                <div class="sidebar-row">
+                    <img src="/static/navbar/departures2.png" alt="Projects icon">
+                    <p>Click the projects sign to view a list of projects.</p>
+                </div>
                 <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()">
             </div>
         </div>
