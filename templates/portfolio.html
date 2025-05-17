@@ -162,16 +162,20 @@
                 </button>
             </div>
         </div>  
-        <div class="overview" id="overview">
+        <div class="overview" id="overview" data-bg="/static/suitcases/overview.png">
             <div class="overview-top">
                 <div class="main-image-container">
                     <img class="main-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
                     <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
                     <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
-                </div>               
-                <div class="overview-top-text">
-                    <h1>Hey, I'm <mark>Laura Allison Obermaier</mark></h1>
-                    <div class="main-text">
+                </div>
+                <div class="overview-title-text">
+                    <h1>Hi! I'm Laura Allison Obermaier</h1>
+                </div>
+            </div>
+            <div class="overview-container">
+                <div class="slides overview-slide">
+                    <div class="overview-slideshow-text">
                         <strong>Masters Student</strong> | <strong>Full-Stack Developer</strong> | Possible <strong>future colleague</strong><br/>
                         <strong>Stevens Institute of Technology</strong> '25 | <strong>Florida State University</strong> '23<br/>
                         MS in <strong>Software Engineering</strong>, GC in <strong>Machine Learning</strong>, & GC in <strong>Cyber Security</strong> (<strong>4.0 GPA</strong>)<br/>
@@ -182,15 +186,23 @@
                         Looking for full-time, part-time, & contract roles starting Spring 2026<br/>
                     </div>
                 </div>
+                <div class="slides overview-slide" style="display: none;">
+                    <div class="overview-slideshow-text">
+                        Entering a flow state drives my passion for software engineering. In a competitive tech industry, standing out is essential—what sets me apart is my ability to maintain deep focus and thrive on the challenge of solving complex problems.
+                        <br/><br/>
+                        I initially pursued software engineering at Stevens Institute of Technology, but after realizing it closely aligned with my previous studies at Florida State University, I made a bold switch to cybersecurity in February 2024. However, I have since recognized that my true passion lies in software engineering, leading me to return to this field. This renewed focus allows me to consistently reach that state of deep concentration and flow, pushing me to innovate and sharpen my skills. I’m excited about the future and the dynamic challenges that software engineering presents.
+                    </div>
+                </div>
+
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'overview')">&#10094;</button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'overview')">&#10095;</button>
+                </div>
             </div>
-            <p class="overview-bottom-text">
-                    Entering a flow state drives my passion for software engineering. In a competitive tech industry, standing out is essential—what sets me apart is my ability to maintain deep focus and thrive on the challenge of solving complex problems.
-                <br/><br/>
-                    I initially pursued software engineering at Stevens Institute of Technology, but after realizing it closely aligned with my previous studies at Florida State University, I made a bold switch to cybersecurity in February 2024. However, I have since recognized that my true passion lies in software engineering, leading me to return to this field. This renewed focus allows me to consistently reach that state of deep concentration and flow, pushing me to innovate and sharpen my skills. I’m excited about the future and the dynamic challenges that software engineering presents.
-            </p>
         </div>
         <!-- Slideshow 8 (-1) -->   
-        <div class="slideshow-background" id="slideshow8">
+        <div class="slideshow-background" id="slideshow8" data-bg="/static/suitcases/ml1.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit Nutrition Analyzer Web App on GitHub">
                     <h2>NLP Nutrition Summary Generation</h2>
@@ -364,7 +376,7 @@
             </div>
         </div>
         <!-- Slideshow 0 -->
-        <div class="slideshow-background" id="slideshow0">
+        <div class="slideshow-background" id="slideshow0" data-bg="/static/suitcases/ml2.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Combined Models Machine Learning">
                     <h2>Combined Models ML</h2>
@@ -486,7 +498,7 @@
             </div>
         </div>
         <!-- First slideshow -->
-        <div class="slideshow-background" id="slideshow1">
+        <div class="slideshow-background" id="slideshow1" data-bg="/static/suitcases/appdev1.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
                     <h2>Hacker News Web Application</h2>
@@ -554,15 +566,18 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-image">  
-                        <img id="multi3" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)" loading="lazy">
-                        <img id="multi4" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)" loading="lazy">
-                    </div>
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
                         <h3>User Account</h3>
                         <div>
                             Once logged in, users have the ability to access their personal account page.
                         </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
                         <h3>Sidebar</h3>
                         <div>
                             A list of the all-time users, as well as the UTC time and developer notes can be found in the hacker news sidebar.
@@ -607,7 +622,7 @@
             </div>
         </div>
         <!-- Second slideshow -->
-        <div class="slideshow-background" id="slideshow2">
+        <div class="slideshow-background" id="slideshow2" data-bg="/static/suitcases/appdev2.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Law Practice Manager Web App on GitHub">
                     <h2>Law Practice Manager Web App</h2>
@@ -831,7 +846,7 @@
             </div>
         </div>
         <!-- Third slideshow -->
-        <div class="slideshow-background" id="slideshow3">
+        <div class="slideshow-background" id="slideshow3" data-bg="/static/suitcases/appdev3.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
                     <h2>My Notes Mobile Application</h2>
@@ -869,12 +884,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Fourth slide pair: Image and text -->
-                    <div class="notes-multi-image">
-                        <img class="notes-multi-image-interior" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)" loading="lazy">
-                        <img class="notes-multi-image-interior" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Font Size</h3>
+                        <h3>Font Size 1/2</h3>
+                        <div>
+                            Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Font Size 2/2</h3>
                         <div>
                             Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
                         </div>
@@ -882,13 +904,29 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Fifth slide pair: Image and text -->
-                    <div class="notes-multi-image">
-                        <img class="notes-multi-image-interior" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)" loading="lazy">
-                        <img class="notes-multi-image-interior" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)" loading="lazy">
-                        <img class="notes-multi-image-interior" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Text Alignment</h3>
+                        <h3>Text Alignment 1/3</h3>
+                        <div>
+                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Text Alignment 2/3</h3>
+                        <div>
+                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Text Alignment 3/3</h3>
                         <div>
                             Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
                         </div>
@@ -942,7 +980,7 @@
             </div>
         </div>
         <!-- Fourth slideshow -->
-        <div class="slideshow-background" id="slideshow4">
+        <div class="slideshow-background" id="slideshow4" data-bg="/static/suitcases/appdev4.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
                     <h2>ProFessUp Web Application</h2>
@@ -986,7 +1024,7 @@
             </div>
         </div>
         <!-- Fifth slideshow -->
-        <div class="slideshow-background" id="slideshow5">
+        <div class="slideshow-background" id="slideshow5" data-bg="/static/suitcases/opsys1.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
                     <h2>FAT32 Filesystem</h2>
@@ -1014,13 +1052,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-image">
-                        <img id="multi5" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)" loading="lazy">
-                        <img id="multi6" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Changing Directory and Making a File</h3>
+                        <h3>Changing Directory and Making a File 1/2</h3>
+                        <div>
+                            The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Changing Directory and Making a File 2/2</h3>
                         <div>
                             The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
                         </div>
@@ -1028,13 +1072,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-image">
-                        <img id="multi7" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)" loading="lazy">
-                        <img id="multi8" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Making a Directory</h3>
+                        <h3>Making a Directory 1/2</h3>
+                        <div>
+                            The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fourth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Making a Directory 2/2</h3>
                         <div>
                             The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
                         </div>
@@ -1042,13 +1092,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-image">
-                        <img id="multi9" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)" loading="lazy">
-                        <img id="multi10" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Remove and Recursive Remove</h3>
+                        <h3>Remove and Recursive Remove 1/2</h3>
+                        <div>
+                            The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Fifth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Remove and Recursive Remove 2/2</h3>
                         <div>
                             The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
                         </div>
@@ -1056,13 +1112,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Sixth slide pair: Image and text -->
-                    <div class="slideshow-image" style="max-width: 35vw">
-                        <img src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)" loading="lazy">
-                        <img src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>File Operations 1/2</h3>
+                        <h3>File Operations 1/4</h3>
+                        <div>
+                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Sixth slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>File Operations 2/4</h3>
                         <div>
                             The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
                         </div>
@@ -1070,13 +1132,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-image" style="max-width: 35vw">
-                        <img src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)" loading="lazy">
-                        <img src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>File Operations 2/2</h3>
+                        <h3>File Operations 3/4</h3>
+                        <div>
+                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Seventh slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>File Operations 4/4</h3>
                         <div>
                             The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
                         </div>
@@ -1160,7 +1228,7 @@
             </div>
         </div>
         <!-- Sixth slideshow -->
-        <div class="slideshow-background" id="slideshow6">
+        <div class="slideshow-background" id="slideshow6" data-bg="/static/suitcases/opsys2.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
                     <h2>Shell</h2>
@@ -1180,7 +1248,7 @@
                     <!-- Second slide pair: Image and text -->
                     <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage1.png') }}" title="Execution Image 1" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Execution Part 1/2</h3>
+                        <h3>Execution Part 1/3</h3>
                         <div>
                             On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
                         </div>
@@ -1188,13 +1256,19 @@
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-image">
-                        <img src="{{ url_for('static', filename='slideshow6/demoImage2.png') }}" title="Execution Image 2" onclick="showModal(this.src)" loading="lazy">
-                        <img src="{{ url_for('static', filename='slideshow6/demoImage3.png') }}" title="Execution Image 3" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage2.png') }}" title="Execution Image 2" onclick="showModal(this.src)" loading="lazy">
                     <div class="slideshow-text">
-                        <h3>Execution Part 2/2</h3>
+                        <h3>Execution Part 2/3</h3>
+                        <div>
+                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
+                        </div>
+                    </div>
+                </div>
+                <div class="slides" style="display:none;">
+                    <!-- Third slide pair: Image and text -->
+                    <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage3.png') }}" title="Execution Image 3" onclick="showModal(this.src)" loading="lazy">
+                    <div class="slideshow-text">
+                        <h3>Execution Part 3/3</h3>
                         <div>
                             On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
                         </div>
@@ -1238,7 +1312,7 @@
             </div>
         </div>
         <!-- Seventh slideshow -->
-        <div class="slideshow-background" id="slideshow7">
+        <div class="slideshow-background" id="slideshow7" data-bg="/static/suitcases/opsys3.png">
             <div class="slideshow-container">
                 <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
                     <h2>Elevator Kernel Module</h2>
@@ -1367,6 +1441,7 @@
             });
     
             var slideIndices = {
+                'overview': 1,
                 'slideshow8': 1,
                 'slideshow0': 1, 
                 'slideshow1': 1, 
@@ -1411,6 +1486,7 @@
             }
         
             window.onload = function() {
+                showSlides(slideIndices['overview'], 'overview')
                 showSlides(slideIndices['slideshow8'], 'slideshow8');
                 showSlides(slideIndices['slideshow0'], 'slideshow0');
                 showSlides(slideIndices['slideshow1'], 'slideshow1');
@@ -1661,7 +1737,12 @@
                 }, 50); // Delay allows DOM updates to complete (e.g., from filterCategories)
             }
 
-
+            document.querySelectorAll('.slideshow-background, .overview').forEach(section => {
+                const bg = section.getAttribute('data-bg');
+                if (bg) {
+                    section.style.backgroundImage = `url('${bg}')`;
+                }
+            });
         </script>
     </div>    
 </body>
