@@ -103,7 +103,7 @@
             </div>
         </div>
         <!-- About Me Sidebar -->
-        <div id="aboutMeSidebar" class="sidebar">
+        <div id="helpDeskSidebar" class="sidebar">
             <div class="sidebar-inner">
                 <img src="{{ url_for('static', filename='sidebar/display.png') }}" alt="sidebar background" class="sidebar-bg">
                 <h2>Help Desk</h2>
@@ -166,8 +166,8 @@
             <div class="overview-top">
                 <div class="main-image-container">
                     <img class="main-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
-                    <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
-                    <img src="{{ url_for('static', filename='overview/frame.png') }}" alt="Top Right Corner" class="top-right-corner"/>
+                    <img src="{{ url_for('static', filename='overview/stamp2.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
+                    <img src="{{ url_for('static', filename='overview/stamp1.png') }}" alt="Top Right Corner" class="top-right-corner"/>
                 </div>
                 <div class="overview-title-text">
                     <h1>Hi! I'm Laura Allison Obermaier</h1>
@@ -195,19 +195,25 @@
                 </div>
 
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'overview')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'overview')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'overview')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'overview')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Slideshow 8 (-1) -->   
         <div class="slideshow-background" id="slideshow8" data-bg="/static/suitcases/ml1.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit Nutrition Analyzer Web App on GitHub">
-                    <h2>NLP Nutrition Summary Generation</h2>
-                </a>
-                <div class="slideshow-skills">Jupyter Notebook, Python, NumPy, RapidFuzz, SpaCy, Google Custom Search Engine (CSE), AutoGPTQ, Mistral-7B-Instruct-GPTQ, ROUGE-1, ROUGE-L, BLEUScore-F1</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit Nutrition Analyzer Web App on GitHub">
+                        <h2>NLP Nutrition Summary Generation</h2>
+                    </a>
+                    <div class="slideshow-skills">Jupyter Notebook, Python, NumPy, RapidFuzz, SpaCy, Google Custom Search Engine (CSE), AutoGPTQ, Mistral-7B-Instruct-GPTQ, ROUGE-1, ROUGE-L, BLEUScore-F1</div>
+                </div>
                 <!-- Slide 1 -->
                 <div class="slides">
                     <lite-youtube class="slideshow-video" videoid="VEnfEZ0Mcxs" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -369,19 +375,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow8')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow8')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow8')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow8')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Slideshow 0 -->
         <div class="slideshow-background" id="slideshow0" data-bg="/static/suitcases/ml2.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Combined Models Machine Learning">
-                    <h2>Combined Models ML</h2>
-                </a>            
-                <div class="slideshow-skills">Jupyter Notebook, Python, Pandas, Scikit-learn, Matplotlib, SMOTE, Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, Stacking Classifier</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Combined Models Machine Learning">
+                        <h2>Combined Models ML</h2>
+                    </a>            
+                    <div class="slideshow-skills">Jupyter Notebook, Python, Pandas, Scikit-learn, Matplotlib, SMOTE, Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, Stacking Classifier</div>
+                </div>
                 <!-- Slide 1 -->
                 <div class="slides">
                     <lite-youtube class="slideshow-video" videoid="v3_1wlzuXeE" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -491,19 +503,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow0')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow0')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow0')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow0')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- First slideshow -->
         <div class="slideshow-background" id="slideshow1" data-bg="/static/suitcases/appdev1.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
-                    <h2>Hacker News Web Application</h2>
-                </a>            
-                <div class="slideshow-skills">Python, HTML5, CSS, JSON, SQLite, Auth0, Nginx, Gunicorn, Linode, Lynis</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit Hacker News Web Application on GitHub">
+                        <h2>Hacker News Web Application</h2>
+                    </a>            
+                    <div class="slideshow-skills">Python, HTML5, CSS, JSON, SQLite, Auth0, Nginx, Gunicorn, Linode, Lynis</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="uVsRSZlpIrU" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -615,19 +633,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow1')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow1')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow1')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow1')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Second slideshow -->
         <div class="slideshow-background" id="slideshow2" data-bg="/static/suitcases/appdev2.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Law Practice Manager Web App on GitHub">
-                    <h2>Law Practice Manager Web App</h2>
-                </a>            
-                <div id="slideshow-legal-skills" class="slideshow-skills">C#, XML, JSON, .NET MAUI, Context Factory, DTOs, REST APIs, MVVM</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/Summer2022Proj0" target="_blank" title="Visit the Law Practice Manager Web App on GitHub">
+                        <h2>Law Practice Manager Web App</h2>
+                    </a>            
+                    <div id="slideshow-legal-skills" class="slideshow-skills">C#, XML, JSON, .NET MAUI, Context Factory, DTOs, REST APIs, MVVM</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="4RhOKUSKGfs" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -839,19 +863,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow2')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow2')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow2')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow2')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Third slideshow -->
         <div class="slideshow-background" id="slideshow3" data-bg="/static/suitcases/appdev3.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
-                    <h2>My Notes Mobile Application</h2>
-                </a>            
-                <div class="slideshow-skills">Java, XML, Android SDK, Room DB, MVVM, LiveData, Androidn Nav Component, Fragments, Navigation Graph, Recycler View, Data Passing with Bundles</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
+                        <h2>My Notes Mobile Application</h2>
+                    </a>            
+                    <div class="slideshow-skills">Java, XML, Android SDK, Room DB, MVVM, LiveData, Androidn Nav Component, Fragments, Navigation Graph, Recycler View, Data Passing with Bundles</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="LBIV-_afX_o" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -973,19 +1003,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow3')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow3')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow3')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow3')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Fourth slideshow -->
         <div class="slideshow-background" id="slideshow4" data-bg="/static/suitcases/appdev4.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
-                    <h2>ProFessUp Web Application</h2>
-                </a>            
-                <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js, MongoDB</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
+                        <h2>ProFessUp Web Application</h2>
+                    </a>            
+                    <div class="slideshow-skills">JavaScript, HTML5, CSS, React, node.js, MongoDB</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="0SFSC4hThjk" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -1017,19 +1053,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow4')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow4')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow4')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow4')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Fifth slideshow -->
         <div class="slideshow-background" id="slideshow5" data-bg="/static/suitcases/opsys1.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
-                    <h2>FAT32 Filesystem</h2>
-                </a>            
-                <div class="slideshow-skills">C, FAT32 Filesystem Management, Systems Programming</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
+                        <h2>FAT32 Filesystem</h2>
+                    </a>            
+                    <div class="slideshow-skills">C, FAT32 Filesystem Management, Systems Programming</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="PwfMXMGMbD8" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -1221,19 +1263,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow5')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow5')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow5')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow5')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Sixth slideshow -->
         <div class="slideshow-background" id="slideshow6" data-bg="/static/suitcases/opsys2.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
-                    <h2>Shell</h2>
-                </a>
-                <div class="slideshow-skills">C, Shell Programming, Systems Programming</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
+                        <h2>Shell</h2>
+                    </a>
+                    <div class="slideshow-skills">C, Shell Programming, Systems Programming</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="c9-mLxW2zOw" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -1305,19 +1353,25 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow6')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow6')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow6')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow6')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
         <!-- Seventh slideshow -->
         <div class="slideshow-background" id="slideshow7" data-bg="/static/suitcases/opsys3.png">
             <div class="slideshow-container">
-                <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
-                    <h2>Elevator Kernel Module</h2>
-                </a>            
-                <div class="slideshow-skills">C, Kernel Programming, Systems Programming</div>
+                <div class="slideshow-sign">
+                    <a class="slideshow-title" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
+                        <h2>Elevator Kernel Module</h2>
+                    </a>            
+                    <div class="slideshow-skills">C, Kernel Programming, Systems Programming</div>
+                </div>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
                     <lite-youtube class="slideshow-video" videoid="Nlg-2q-6LFk" style="--aspect-ratio: 16/9;"></lite-youtube>
@@ -1369,9 +1423,13 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'slideshow7')">&#10094;</button>
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow7')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
                     <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'slideshow7')">&#10095;</button>
+                    <button class="next" onclick="plusSlides(1, 'slideshow7')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
@@ -1590,12 +1648,12 @@
             }
 
             function openSidebar() {
-                document.getElementById("aboutMeSidebar").classList.add("active");
+                document.getElementById("helpDeskSidebar").classList.add("active");
                 document.getElementById("opensidebar").style.display = "none";
             }
 
             function closeSidebar() {
-                document.getElementById("aboutMeSidebar").classList.remove("active");
+                document.getElementById("helpDeskSidebar").classList.remove("active");
                 document.getElementById("opensidebar").style.display = "initial";
             }
 

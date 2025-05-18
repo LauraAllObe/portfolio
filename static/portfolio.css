@@ -29,7 +29,7 @@ h1 {
 
 h2 {
     font-family: 'BarlowBold';
-    font-size: 34px;
+    font-size: 28px;
 }
 
 h3 {
@@ -221,17 +221,18 @@ a:hover {
     position: absolute;
     bottom: -10px;
     left: -10px;
-    width: 50px;
-    height: 50px;
-    transform: rotate(180deg);
+    width: 60px;
+    height: 60px;
+    transform: rotate(12deg);
 }
 
 .top-right-corner {
     position: absolute;
-    top: -10px;
+    top: -20px;
     right: -10px;
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
+    transform: rotate(-4deg);
 }
 
 .main-text {
@@ -280,8 +281,8 @@ a:hover {
 }
 
 #cloud5 {
-    top: 161.5px;
-    left: 32.89vw;
+    top: 150px;
+    left: 40vw;
 }
 
 #cloud6 {
@@ -294,16 +295,83 @@ a:hover {
     height: 130.15px;
 }
 
-.slideshow-title {
+.slideshow-sign {
     position: absolute;
-    top: 7.79px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(15, 15, 15);
+    border-radius: 12px;
+    padding: 0.4vh 1vw;
+    top: 2.5vh;
+    z-index: 200;
+    width: fit-content;
+    max-width: 90%;
+    flex-direction: column;
     text-align: center;
+}
+
+.slideshow-sign::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: -6px;
+    right: -6px;
+    bottom: -6px;
+    border: 5px solid rgb(15, 15, 15);
+    border-radius: 16px;
+    z-index: -1;
+}
+
+#slideshow8 .slideshow-sign {
+    border: 2px solid #d788ac;
+}
+
+#slideshow0 .slideshow-sign {
+    border: 2px solid #f3fef5;
+}
+
+#slideshow1 .slideshow-sign {
+    border: 2px solid #bfe8cb;
+}
+
+#slideshow2 .slideshow-sign {
+    border: 2px solid white;
+}
+
+#slideshow3 .slideshow-sign {
+    border: 2px solid #c37539;
+}
+
+#slideshow4 .slideshow-sign {
+    border: 2px solid #fffaec;
+}
+
+#slideshow5 .slideshow-sign {
+    border: 2px solid #ff9225;;
+}
+
+#slideshow6 .slideshow-sign {
+    border: 2px solid #ddcab8;
+}
+
+#slideshow7 .slideshow-sign {
+    border: 2px solid #acb388;
+}
+
+
+.slideshow-title {
+    font-size: 24px;
+    margin-top: -2.5vh;
+    margin-bottom: -2vh;
     text-decoration: none;
     color: inherit;
-    font-size: inherit;
-    z-index: 100;
-    border-radius: 15px;
-    padding: 1vh 1vw;
+}
+
+.slideshow-skills {
+    margin-bottom: 1.5vh;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
 .overview-top {
@@ -430,7 +498,7 @@ a:hover {
 .slideshow-container {
     place-self: center;
     padding-top: 7.79px;
-    min-height: 646px;
+    min-height: 85vh;
     max-height: 80%;
     display: flex;
     flex-direction: column;
@@ -482,7 +550,7 @@ a:hover {
 #slideshow0 .slideshow-container {
     width: 58%;
     margin-right: 1vw;
-    color: #d0e0d4;
+    color: #f3fef5;
 } 
 
 #slideshow1 .slideshow-container {
@@ -493,25 +561,30 @@ a:hover {
 #slideshow2 .slideshow-container {
     width: 65%;
     margin-right: 1vw;
-    color: #ffa95e;
+    color: #ffffff;
 } 
 
 #slideshow3 .slideshow-container {
     width: 60%;
     margin-right: 1vw;
-    color: #b87c4d;
+    color: #c37539;
+}
+
+#slideshow3 .slideshow-text {
+    width: 37%;
+    margin-right: 2.25vw;
 }
 
 #slideshow4 .slideshow-container {
     width: 62%;
     margin-right: 5vw;
-    color: black;
+    color: #fffaec;
 }
 
 #slideshow5 .slideshow-container {
     width: 58%;
     margin-left: 2.5vw;
-    color: #4d1722;
+    color: #ff9225;
 }
 
 #slideshow6 .slideshow-container {
@@ -519,10 +592,20 @@ a:hover {
     color: #ddcab8;
 }
 
+#slideshow6 .slideshow-text {
+    width: 37%;
+    margin-right: 2vw;
+}
+
 #slideshow7 .slideshow-container {
-    width: 66%;
+    width: 68%;
     margin-left: 1vw;
     color: #acb388;
+}
+
+
+#slideshow7 .slideshow-video, #slideshow7 .slideshow-image {
+    margin-right: 9vw;
 }
 
 .slideshow-text {
@@ -531,18 +614,6 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100;
-    border-radius: 15px;
-    padding: 1vh 1vw;
-}
-
-.slideshow-skills {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    top: 85.5px;
-    font-size: 15px;
     z-index: 100;
     border-radius: 15px;
     padding: 1vh 1vw;
@@ -619,27 +690,28 @@ a:hover {
 }
 
 .prev, .next {
-    cursor: pointer;
-    padding: 0px 0px;
-    height: 5vh;
-    width: 2.5vw;
-    color: #d5dbe0;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+    font-size: 2rem;
     font-weight: bold;
-    font-size: 25.5px;
-    transition: 0.6s ease;
-    user-select: none;
-    background-color: rgba(0,0,0,0.8);
-    border-radius: 1.52px 0.2vw;
+    cursor: pointer;
+    height: 18vh;
 }
 
-.prev:hover, .next:hover {
-    background-color: #55616d;
+.nav-icon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .slide-navigation-text {
     position: relative;
-    margin-left: 18vw;
-    margin-right: 18vw;
+    margin-left: 6vw;
+    margin-right: 8vw;
     text-align: center;
     display: flex;
     align-items: center;
@@ -733,7 +805,7 @@ a:hover {
 .end-copyright {
     margin-top: 19px;
     font-size: 15px;
-    font-family: 'BarlowLight'
+    font-family: 'BarlowLight';
     display: block;
     text-align: center;
     color: #d5dbe0;
@@ -1061,6 +1133,7 @@ a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    z-index: 600;
 }
 
 .email-modal-content {
@@ -1069,6 +1142,7 @@ a:hover {
     border: 1px solid #888;
     width: 300px;
     text-align: center;
+    z-index: 600;
 }
 
 .email-modal-close-button {
@@ -1078,6 +1152,7 @@ a:hover {
     font-weight: bold;
     margin-right: -10px;
     margin-top: -22.5px;
+    z-index: 600;
 }
 
 .email-modal-close-button:hover,
