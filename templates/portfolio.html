@@ -30,54 +30,54 @@
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
-            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="dropbtn" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()">
             <div id="myDropdown" class="dropdown-content">
-                <div class="menu-item" style="margin-top: 10vh;" onclick="navigateTo('top', 'top')">
+                <div class="dropdown-item" style="margin-top: 10vh;" onclick="navigateTo('top', 'top')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background">
-                    <span class="menu-text">Skyline</span>
+                    <span class="dropdown-text">Skyline</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('overview', 'overview')">
+                <div class="dropdown-item" onclick="navigateTo('overview', 'overview')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview">
-                    <span class="menu-text">Overview</span>
+                    <span class="dropdown-text">Overview</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow8', 'ml')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow8', 'ml')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NLP Nutrition Summary Generation">
-                    <span class="menu-text">NLP Nutrition Summary Generation</span>
+                    <span class="dropdown-text">NLP Nutrition Summary Generation</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow0', 'ml')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow0', 'ml')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Combined Models ML">
-                    <span class="menu-text">Combined Models ML</span>
+                    <span class="dropdown-text">Combined Models ML</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow1', 'appdev')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow1', 'appdev')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Hacker News Web App">
-                    <span class="menu-text">Hacker News Web App</span>
+                    <span class="dropdown-text">Hacker News Web App</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow2', 'appdev')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow2', 'appdev')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Law Practice Manager App">
-                    <span class="menu-text">Law Practice Manager App</span>
+                    <span class="dropdown-text">Law Practice Manager App</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow3', 'appdev')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow3', 'appdev')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="My Notes App">
-                    <span class="menu-text">My Notes App</span>
+                    <span class="dropdown-text">My Notes App</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow4', 'appdev')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow4', 'appdev')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="ProFessUp App">
-                    <span class="menu-text">ProFessUp App</span>
+                    <span class="dropdown-text">ProFessUp App</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow5', 'opsys')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow5', 'opsys')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="FAT32 Filesystem">
-                    <span class="menu-text">FAT32 Filesystem</span>
+                    <span class="dropdown-text">FAT32 Filesystem</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow6', 'opsys')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow6', 'opsys')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Shell Implementation">
-                    <span class="menu-text">Shell Implementation</span>
+                    <span class="dropdown-text">Shell Implementation</span>
                 </div>
-                <div class="menu-item" onclick="navigateTo('slideshow7', 'opsys')">
+                <div class="dropdown-item" onclick="navigateTo('slideshow7', 'opsys')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Elevator Kernel Module">
-                    <span class="menu-text">Elevator Kernel Module</span>
+                    <span class="dropdown-text">Elevator Kernel Module</span>
                 </div>
             </div>
-            <img src="{{ url_for('static', filename='navbar/exit.png') }}" alt="Nav bar Icon" class="closebtn" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/exit.png') }}" alt="Nav bar Icon" class="navbar-close-button" onclick="toggleMenu()">
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
@@ -100,10 +100,10 @@
             <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
         </div>
         <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <div id="modalContent" class="modal-content">
+        <div id="myModal" class="expanded-image-modal">
+            <div id="modalContent" class="expanded-image-modal-content">
                 <div class="image-container"> <!-- Wrapper for image and close button -->
-                    <img class="modal-image" src="" alt="Expanded view">
+                    <img class="expanded-image-modal-image" src="" alt="Expanded view">
                     <span class="close">&times;</span>
                 </div>
             </div>
@@ -178,10 +178,10 @@
         </div>  
         <div class="overview" id="overview" data-bg="/static/suitcases/overview.svg">
             <div class="overview-top">
-                <div class="main-image-container">
-                    <img class="main-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
-                    <img src="{{ url_for('static', filename='overview/stamp2.png') }}" alt="Bottom Left Corner" class="bottom-left-corner"/>
-                    <img src="{{ url_for('static', filename='overview/stamp1.png') }}" alt="Top Right Corner" class="top-right-corner"/>
+                <div class="overview-image-container">
+                    <img class="overview-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
+                    <img src="{{ url_for('static', filename='overview/stamp2.png') }}" alt="Bottom Left Corner" class="bottom-left-stamp"/>
+                    <img src="{{ url_for('static', filename='overview/stamp1.png') }}" alt="Top Right Corner" class="top-right-stamp"/>
                 </div>
                 <div class="overview-title-text">
                     <h1>Hi! I'm Laura Allison Obermaier</h1>
@@ -1461,9 +1461,9 @@
         <!-- Modal and Slideshow Navigation Code -->
         <script>
             var modal = document.getElementById("myModal");
-            var modalImg = document.querySelector(".modal-image");
+            var modalImg = document.querySelector(".expanded-image-modal-image");
             var span = document.getElementsByClassName("close")[0];
-            var modalContent = document.getElementById("modalContent");
+            var modalContent = document.getElementById("expanded-image-modalContent");
     
             function showModal(src) {
                 modal.style.display = "block";
@@ -1472,14 +1472,14 @@
     
             span.onclick = function() {
                 modal.style.display = "none";
-                modalImg.classList.remove('modal-zoomed-in');
+                modalImg.classList.remove('expanded-image-modal-zoomed-in');
             }
     
             function toggleZoom() {
-                if (modalImg.classList.contains('modal-zoomed-in')) {
-                    modalImg.classList.remove('modal-zoomed-in');
+                if (modalImg.classList.contains('expanded-image-modal-zoomed-in')) {
+                    modalImg.classList.remove('expanded-image-modal-zoomed-in');
                 } else {
-                    modalImg.classList.add('modal-zoomed-in');
+                    modalImg.classList.add('expanded-image-modal-zoomed-in');
                 }
             }
     
@@ -1602,8 +1602,8 @@
 
             function toggleMenu() {
             var dropdown = document.getElementById("myDropdown");
-            var dropbtn = document.querySelector('.dropbtn');
-            var closebtn = document.querySelector('.closebtn');
+            var dropbtn = document.querySelector('.navbar-open-button');
+            var closebtn = document.querySelector('.navbar-close-button');
                 if (dropdown.style.display === "flex") {
                     dropdown.style.display = "none";
                     closebtn.style.display = "none";
@@ -1616,10 +1616,10 @@
             }
 
             window.onclick = function(event) {
-                if (!event.target.matches('.dropbtn')) {
+                if (!event.target.matches('.navbar-open-button')) {
                     var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var dropbtn = document.querySelector('.dropbtn');
-                    var closebtn = document.querySelector('.closebtn');
+                    var dropbtn = document.querySelector('.navbar-open-button');
+                    var closebtn = document.querySelector('.navbar-close-button');
                     for (var i = 0; i < dropdowns.length; i++) {
                         var openDropdown = dropdowns[i];
                         if (openDropdown.style.display === "flex") {
@@ -1631,7 +1631,7 @@
                 }
                 if (event.target == modal) {
                     modal.style.display = "none";
-                    modalImg.classList.remove('modal-zoomed-in');
+                    modalImg.classList.remove('expanded-image-modal-zoomed-in');
                 }
                 window.onscroll();
             }
@@ -1754,9 +1754,9 @@
                 });
 
                 // Update nav images
-                const navItems = document.querySelectorAll('.dropdown-content .menu-item');
+                const navItems = document.querySelectorAll('.dropdown-content .dropdown-item');
                 navItems.forEach(item => {
-                    const span = item.querySelector('.menu-text');
+                    const span = item.querySelector('.dropdown-text');
                     const img = item.querySelector('img');
 
                     if (span && img) {
