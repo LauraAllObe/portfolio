@@ -95,6 +95,25 @@ a:hover {
     top: 40vh;
     left: 25%;
     background-attachment: fixed;
+    animation: neonPulse 2.5s steps(1, end) infinite;
+}
+
+@keyframes neonPulse {
+    0%, 100% {
+        filter: 
+            brightness(1.1)
+            contrast(1.2)
+            drop-shadow(0px 0px 4px #ff0000)
+            drop-shadow(0px 0px 6px #ff0000);
+    }
+
+    50% {
+        filter: 
+            brightness(1.0)
+            contrast(1.1)
+            drop-shadow(0px 0px 0px #ff000080)
+            drop-shadow(0px 0px 0px #ff000080);
+    }
 }
 
 .background-image {
@@ -295,7 +314,7 @@ a:hover {
     height: 130.15px;
 }
 
-.slideshow-title {
+.slideshow-ticket {
     position: absolute;
     top: -112.5vh;
     height: 120vh;
@@ -308,51 +327,51 @@ a:hover {
         top 1s ease-in-out;
 }
 
-.slideshow-title img {
+.slideshow-ticket img {
     height: 100%;
     width: auto;
     object-fit: contain;
     transition: transform 1s ease-in-out;
 }
 
-.slideshow-title.animate {
+.slideshow-ticket.animate {
     height: 30vh;
     top: 50%;
 }
 
-#slideshow8 .slideshow-title.animate {
+#slideshow8 .slideshow-ticket.animate {
     transform: translateX(365%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow0 .slideshow-title.animate {
+#slideshow0 .slideshow-ticket.animate {
     transform: translateX(355%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow1 .slideshow-title.animate {
+#slideshow1 .slideshow-ticket.animate {
     transform: translateX(390%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow2 .slideshow-title.animate {
+#slideshow2 .slideshow-ticket.animate {
     transform: translateX(385%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow3 .slideshow-title.animate {
+#slideshow3 .slideshow-ticket.animate {
     transform: translateX(375%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow4 .slideshow-title.animate {
+#slideshow4 .slideshow-ticket.animate {
     transform: translateX(387.5%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow5 .slideshow-title.animate {
+#slideshow5 .slideshow-ticket.animate {
     transform: translateX(375%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow6 .slideshow-title.animate {
+#slideshow6 .slideshow-ticket.animate {
     transform: translateX(367.5%) translateY(-30%) rotate(90deg);
 }
 
-#slideshow7 .slideshow-title.animate {
+#slideshow7 .slideshow-ticket.animate {
     transform: translateX(370%) translateY(-30%) rotate(90deg);
 }
 
