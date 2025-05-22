@@ -82,16 +82,16 @@
         <!-- Parallax Clouds -->
         <div class="clouds">
             <picture>
-                <source media="all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 4/3)" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
+                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
                 <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
             </picture>
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
             <picture>
-                <source media="all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 4/3)" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
+                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
                 <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
             </picture>
             <picture>
-                <source media="all and (min-width:0px) and (max-width: 1024px) and (max-aspect-ratio: 4/3)" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
+                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
                 <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
             </picture>
             <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
@@ -104,8 +104,10 @@
             <div id="modalContent" class="expanded-image-modal-content">
                 <div class="image-container"> <!-- Wrapper for image and close button -->
                     <img class="expanded-image-modal-image" src="" alt="Expanded view">
-                    <span class="close">&times;</span>
                 </div>
+                <span class="close">
+                    <img src="/static/modal/close.jpg" alt="Close" class="close-icon">
+                </span>
             </div>
         </div>
         <!-- About Me Sidebar -->
@@ -323,7 +325,7 @@
                     <div class="slideshow-text">
                         <h3>Automatic Evaluation 1/2</h3>
                         <div>
-                            Automatic evaluation was performed on three different groups; the dynamize protein powder (rare) ingredient list (image 2, row 1), the common ingredients list (image 2, row 2), and sugar (image 2, row 3); using ROUGE-1, ROUGE-L, and BLEUScore-F1 metrics. ROUGE-1 and ROUGE-L were observed to be noticably lower than the BLEUScore-F1 metric. Since the ROUGE metrics are used to measure token-level precision and recall, while the BLEUScore-F1 metric is used to measure semantic alignment between generated and reference content, this indicates that our summaries generalize well and informativeness and clarity is prioritized over lexical overlap. Note that the right column for each metric (image 2) indicate the scores after alias integration not present during the human evaluation was added.
+                            We evaluated summaries using ROUGE-1, ROUGE-L, and BLEUScore-F1 across three groups: rare (protein powder), common, and sugar ingredients (image 2; row order respectively). BLEUScore-F1 consistently outperformed ROUGE, suggesting our model prioritizes semantic clarity over lexical overlap. Right-column scores reflect improved performance after alias integration.
                         </div>
                     </div>
                 </div>
@@ -333,7 +335,7 @@
                     <div class="slideshow-text">
                         <h3>Automatic Evaluation 2/2</h3>
                         <div>
-                            Automatic evaluation was performed on three different groups; the dynamize protein powder (rare) ingredient list (image 2, row 1), the common ingredients list (image 2, row 2), and sugar (image 2, row 3); using ROUGE-1, ROUGE-L, and BLEUScore-F1 metrics. ROUGE-1 and ROUGE-L were observed to be noticably lower than the BLEUScore-F1 metric. Since the ROUGE metrics are used to measure token-level precision and recall, while the BLEUScore-F1 metric is used to measure semantic alignment between generated and reference content, this indicates that our summaries generalize well and informativeness and clarity is prioritized over lexical overlap. Note that the right column for each metric (image 2) indicate the scores after alias integration not present during the human evaluation was added.
+                            We evaluated summaries using ROUGE-1, ROUGE-L, and BLEUScore-F1 across three groups: rare (protein powder), common, and sugar ingredients (image 2; row order respectively). BLEUScore-F1 consistently outperformed ROUGE, suggesting our model prioritizes semantic clarity over lexical overlap. Right-column scores reflect improved performance after alias integration.
                         </div>
                     </div>
                 </div>
@@ -343,7 +345,7 @@
                     <div class="slideshow-text">
                         <h3>Human Evaluation 1/4</h3>
                         <div>
-                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                            21 participants (19 via social media, 2 via NJ transit) rated our summaries in a two-part survey. Part A used a 1–10 scale to evaluate informativeness, accuracy, and clarity. Part B compared our summaries to ChatGPT-4o’s. Results showed our model was informative and understandable, with no strong preference between the two models. Feedback led to improvements (see strikethroughs in image 2).
                         </div>
                     </div>
                 </div>
@@ -353,7 +355,7 @@
                     <div class="slideshow-text">
                         <h3>Human Evaluation 2/4</h3>
                         <div>
-                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                            21 participants (19 via social media, 2 via NJ transit) rated our summaries in a two-part survey. Part A used a 1–10 scale to evaluate informativeness, accuracy, and clarity. Part B compared our summaries to ChatGPT-4o’s. Results showed our model was informative and understandable, with no strong preference between the two models. Feedback led to improvements (see strikethroughs in image 2).
                         </div>
                     </div>
                 </div>
@@ -363,7 +365,7 @@
                     <div class="slideshow-text">
                         <h3>Human Evaluation 3/4</h3>
                         <div>
-                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                            21 participants (19 via social media, 2 via NJ transit) rated our summaries in a two-part survey. Part A used a 1–10 scale to evaluate informativeness, accuracy, and clarity. Part B compared our summaries to ChatGPT-4o’s. Results showed our model was informative and understandable, with no strong preference between the two models. Feedback led to improvements (see strikethroughs in image 2).
                         </div>
                     </div>
                 </div>
@@ -373,7 +375,7 @@
                     <div class="slideshow-text">
                         <h3>Human Evaluation 4/4</h3>
                         <div>
-                            For the human evaluation, a total of 21 survey participants were included, 19 of which were obtained from social media and 2 of which were obtained from NJ public transit sites. Part A asked the participants to rate our model's summary generation capabilities on a likert 1-10 scale, while part B asked to compare our summary to one generated by ChatGPT-4o on a 1-10 scale, with 1 being definitely A (ours) and 10 being definitely B (ChatGPT-4o's). Participants were also able to leave feedback, which has been used to further improve the model (hence the strike-through text on image 2). Our part A results indicate the summaries were found to be relatively informative, accurate, complete, and easy to understand. The part B results, on the other hand, showcase little-to-no preference for either model in terms of informativeness, accuracy, and completeness (where the red text in image 4 indicates the results after 10-only answers were removed) and a mild preference for ChatGPT-4o in terms of ease of understanding.
+                            21 participants (19 via social media, 2 via NJ transit) rated our summaries in a two-part survey. Part A used a 1–10 scale to evaluate informativeness, accuracy, and clarity. Part B compared our summaries to ChatGPT-4o’s. Results showed our model was informative and understandable, with no strong preference between the two models. Feedback led to improvements (see strikethroughs in image 2).
                         </div>
                     </div>
                 </div>
@@ -383,7 +385,7 @@
                     <div class="slideshow-text">
                         <h3>Key Takeaways and Repository</h3>
                         <div>
-                            Based on the automatic and human evaluation results, this indicates that our model was able to preform well overall, even somewhat competitively with ChatGPT-4o. This leads us to infer that, with proper preprocessing and finetuning, small, less complex models are able to perform comparatively well with large, complex models for specialized tasks. Given <a href="https://www.nytimes.com/2025/05/05/technology/ai-hallucinations-chatgpt-google.html#:~:text=Is%20Getting%20More%20Powerful%2C%20but,companies%20don't%20know%20why." target="_blank">the rise of hallucination with increased complexity and size in recent commercialized models</a> , this indicates that model specialization may be the way to go. For future work, further alias tuning, increased model size, reinforcement learning from human feedback (RLHF), sentiment analysis, and non-AI feature inclusion are all worth exploring depending on the scale of the project. To view the project repository, please click <a href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank">here</a>.
+                            Both human and automatic evaluations show our model performs competitively with ChatGPT-4o. This supports the potential of smaller, specialized models for domain tasks. Future directions include RLHF, larger models, improved aliasing, sentiment analysis, and hybrid systems. <a href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank">Click here to view the repo.</a>
                         </div>
                     </div>
                 </div>
@@ -410,7 +412,7 @@
                     <div class="slideshow-text">  
                         <h3>Application Overview</h3>
                         <div>
-                            This project involved implementing multiple machine learning models and combining them using a stacking ensemble technique. A variety of classifiers, including Logistic Regression, Decision Trees, Random Forests, and Gradient Boosting, were stacked to improve accuracy. The notebook also includes bias-variance decomposition to evaluate model performance, with visuals showcasing trade-offs between bias and variance, as well as model accuracy. The best model combination, Logistic Regression with Random Forest Classifier, achieved a mean accuracy of 98.66% with a Bias^2 + Variance value of 0.5. The project culminates in predicting bankruptcy cases and submitting results in CSV format.
+                            This project combined ML models using stacking (LogReg, Decision Trees, Random Forests, Gradient Boosting). Bias-variance analysis was included. The best combo, LogReg + Random Forest, achieved 98.66% accuracy with a bias² + variance of 0.5. Final output: bankruptcy predictions in CSV format.
                         </div>
                     </div>
                 </div>
@@ -438,7 +440,7 @@
                         </div>
                         <h3>Handling Class Imbalance</h3>
                         <div>
-                            The class imbalance in the dataset is handled using SMOTE (Synthetic Minority Oversampling Technique), ensuring the minority class has adequate representation. A variety of models are initialized for stacking, including Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, and Support Vector Classifier.
+                            The class imbalance in the dataset is handled using SMOTE (Synthetic Minority Oversampling Technique), ensuring the minority class has adequate representation. Stacking models used include Logistic Regression, Decision Trees, Random Forests, Gradient Boosting, and Support Vector Classifier.
                         </div>
                     </div>
                 </div>
@@ -1377,7 +1379,7 @@
                     <div class="slideshow-text">
                         <h3>Elevator Kernel Module</h3>
                         <div>
-                            This program, a custom elevator kernel module, utilizes consumer and producer processes to manage start and stop functions. The proc_read function reports the current operational status. Passengers are serviced in a FIFO (First In, First Out) order, with a capacity limit of 750 lbs or five passengers. Once this limit is reached, the elevator will unload but not accept new passengers until capacity is available. The elevator operates in several states: OFFLINE, IDLE, LOADING, UP, and DOWN, and can transport passengers classified as FRESHMAN, SOPHOMORE, JUNIOR, and SENIOR, weighing 100, 150, 200, and 250 lbs respectively. An IDLE state indicates no current passenger service but readiness for input, while OFFLINE indicates a system shutdown via a custom system call.
+                            A custom elevator kernel module simulates FIFO passenger transport with a 750 lb / 5-person limit. Elevator states include OFFLINE, IDLE, LOADING, UP, and DOWN. Passenger types (Freshman to Senior) have assigned weights. The module uses consumer-producer processes and a proc_read function to report status.
                         </div>
                     </div>
                 </div>

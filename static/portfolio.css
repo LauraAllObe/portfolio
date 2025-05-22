@@ -335,24 +335,27 @@ a:hover {
     z-index: 990;
 }
 
-.sidebar-inner {
-    position: relative;
-    height: 100%;
-    width: 80%;
-    right: -20%;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
-}
-
 .sidebar-bg {
     position: absolute;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
     height: 90vh;
     width: auto;
     z-index: -1;
     pointer-events: none;
+}
+
+.sidebar-inner {
+    position: relative;
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);  
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
 }
 
 .sidebar.active {
@@ -380,6 +383,8 @@ a:hover {
     height: 10vh;
     z-index: 990;
     background: none;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .sidebar h2, .sidebar p {
@@ -403,7 +408,7 @@ a:hover {
 }
 
 .sidebar-row img {
-    width: 60px;
+    max-width: 60px;
     height: 40px;
     object-fit: contain;
 }
@@ -433,7 +438,7 @@ a:hover {
     left: 0;
     width: 85px;
     height: 60px;
-    z-index: 1200;
+    z-index: 900;
 }
 
 .navbar-open-button {
@@ -455,7 +460,8 @@ a:hover {
     border: transparent;
     cursor: pointer;
     top: -1vh;
-    left: 45.5%;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1300;
     display: none;
 }
@@ -464,7 +470,11 @@ a:hover {
     display: none;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     background-color: rgba(0, 0, 0, 0.322);
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1300;
@@ -478,7 +488,7 @@ a:hover {
 .dropdown-item {
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 80%;
     cursor: pointer;
     align-self: center;
 }
@@ -487,7 +497,7 @@ a:hover {
     height: auto;
     display: block;
     opacity: 1;
-    height: 7.5vh;
+    height: 56.5px;
     justify-self: center;
     box-shadow: #000 0px 0px 0px;
 }
@@ -497,9 +507,9 @@ a:hover {
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    left: 18%;
     font-family: 'BarlowBold';
     font-size: 22px;
+    margin-left: -140px;
     color: #f2d732;
     pointer-events: none;
 }
@@ -650,7 +660,7 @@ a:hover {
 
 .slideshow-ticket {
     position: absolute;
-    top: -112.5vh;
+    top: -800px;
     height: 60vw;
     z-index: 200;
     left: 0;
@@ -682,7 +692,7 @@ a:hover {
 }
 
 #slideshow1 .slideshow-ticket.animate {
-    transform: translateX(390%) translateY(-30%) rotate(90deg);
+    transform: translateX(390%) translateY(-15%) rotate(90deg);
 }
 
 #slideshow2 .slideshow-ticket.animate {
@@ -698,7 +708,7 @@ a:hover {
 }
 
 #slideshow5 .slideshow-ticket.animate {
-    transform: translateX(375%) translateY(-30%) rotate(90deg);
+    transform: translateX(375%) translateY(-20%) rotate(90deg);
 }
 
 #slideshow6 .slideshow-ticket.animate {
@@ -706,7 +716,7 @@ a:hover {
 }
 
 #slideshow7 .slideshow-ticket.animate {
-    transform: translateX(370%) translateY(-30%) rotate(90deg);
+    transform: translateX(375%) translateY(-20%) rotate(90deg);
 }
 
 .slideshow-background,
@@ -718,8 +728,8 @@ a:hover {
 }
 
 .slideshow-background {
-    margin-top: 160vh;
-    height: 100vh;
+    margin-top: 1200px;
+    height: 750px;
     padding-bottom: 36.48px;
     background-size: 65%;
     box-sizing: border-box;
@@ -733,8 +743,8 @@ a:hover {
 .slideshow-container {
     position: relative;
     place-self: center;
-    min-height: 85vh;
-    max-height: 80%;
+    min-height: 600px;
+    max-height: 600px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -745,7 +755,7 @@ a:hover {
 .slides {
     display: flex;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: flex-start;
     align-items: center;
     width: 87%;
     margin-top: 10vh;
@@ -768,20 +778,43 @@ a:hover {
 }
 
 .slideshow-image,
-.slideshow-video,
-.slideshow-text {
+.slideshow-video {
     width: 43%;
-    height: auto;
-    max-height: 60vh;
     object-fit: contain;
 }
 
+.slideshow-text,
+.overview-slideshow-text {
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: auto;
+    scrollbar-color: #999 #333;
+    scrollbar-gutter: stable;
+}
+
+.slideshow-text::-webkit-scrollbar,
+.overview-slideshow-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.slideshow-text::-webkit-scrollbar-thumb,
+.overview-slideshow-text::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+.slideshow-text::-webkit-scrollbar-track,
+.overview-slideshow-text::-webkit-scrollbar-track {
+    background-color: #222;
+}
+
 .slideshow-text {
+    width: 43%;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     z-index: 100;
     border-radius: 15px;
     padding: 1vh 1vw;
@@ -794,16 +827,28 @@ a:hover {
 } 
 
 #slideshow8 .slideshow-container {
-    width: 60%; 
-    margin-right: 1vw;
+    width: 62%; 
     color: #d788ac;
 } 
 
+#slideshow8 .slideshow-video, 
+#slideshow8 .slideshow-image, 
+#slideshow8 .slideshow-text {
+    max-height: 360px;
+    margin-top: 45px;
+}
+
 #slideshow0 .slideshow-container {
-    width: 58%;
-    margin-right: 1vw;
+    width: 60%;
     color: #f3fef5;
 } 
+
+#slideshow0 .slideshow-video, 
+#slideshow0 .slideshow-image, 
+#slideshow0 .slideshow-text {
+    max-height: 300px;
+    margin-top: 35px;
+}
 
 #slideshow1 .slideshow-container {
     width: 66%;
@@ -814,11 +859,25 @@ a:hover {
     margin-top: 17.5vh;
 }
 
+#slideshow1 .slideshow-video, 
+#slideshow1 .slideshow-image, 
+#slideshow1 .slideshow-text {
+    max-height: 320px;
+    margin-top: 35px;
+}
+
 #slideshow2 .slideshow-container {
     width: 65%;
     margin-right: 1vw;
     color: #ffffff;
 } 
+
+#slideshow2 .slideshow-video, 
+#slideshow2 .slideshow-image, 
+#slideshow2 .slideshow-text {
+    max-height: 340px;
+    margin-top: 55px;
+}
 
 #slideshow3 .slideshow-container {
     width: 63%;
@@ -828,26 +887,48 @@ a:hover {
 
 #slideshow3 .slideshow-text {
     width: 37%;
-    margin-right: 1.75vw;
+    margin-right: 1.25vw;
+}
+
+#slideshow3 .slideshow-video, 
+#slideshow3 .slideshow-image, 
+#slideshow3 .slideshow-text {
+    max-height: 350px;
+    margin-top: 60px;
 }
 
 #slideshow4 .slideshow-container {
-    width: 62%;
-    margin-right: 5vw;
+    width: 65%;
+    margin-right: 1vw;
     color: #fffaec;
 }
 
 #slideshow4 .slideshow-background {
-    margin-left: 20vw;
+    margin-left: 0;
+}
+
+#slideshow4 .slideshow-video, 
+#slideshow4 .slideshow-image, 
+#slideshow4 .slideshow-text {
+    max-height: 350px;
+    margin-top: 50px;
 }
 
 #slideshow5 .slideshow-container {
     width: 64%;
     color: #ac0028;
+    margin-right: 1vw;
 }
 
 #slideshow5 .slides {
     margin-top: 15vh;
+}
+
+#slideshow5 .slideshow-video, 
+#slideshow5 .slideshow-image, 
+#slideshow5 .slideshow-text {
+    max-height: 370px;
+    margin-top: 45px;
 }
 
 #slideshow6 .slideshow-container {
@@ -857,13 +938,31 @@ a:hover {
 
 #slideshow6 .slideshow-text {
     width: 38%;
-    margin-right: 1.75vw;
+    margin-right: 1.25vw;
+}
+
+#slideshow6 .slideshow-video, 
+#slideshow6 .slideshow-image, 
+#slideshow6 .slideshow-text {
+    max-height: 350px;
+    margin-top: 60px;
 }
 
 #slideshow7 .slideshow-container {
-    width: 61%;
+    width: 64%;
     color: #acb388;
-    margin-left: -1vw;
+    margin-right: 1vw;
+}
+
+#slideshow7 .slides {
+    margin-top: 15vh;
+}
+
+#slideshow7 .slideshow-video, 
+#slideshow7 .slideshow-image, 
+#slideshow7 .slideshow-text {
+    max-height: 370px;
+    margin-top: 45px;
 }
 
 /* Slide navigation */
@@ -915,7 +1014,7 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 1.25vw;
+    margin-left: 5px;
     width: 440px;
     height: 160px;
     background-image: url('/static/slidenav/baggagetag.png');
@@ -1010,19 +1109,22 @@ a:hover {
 
 .close {
     position: absolute;
-    top: -2.5%;
-    right: 5%;
-    color: #77797a;
-    font-size: 42px;
-    font-weight: bold;
+    top: 25px;
+    right: 25px;
     z-index: 1200;
+    cursor: pointer;
 }
 
-.close:hover,
-.close:focus {
-    color: rgba(0,0,0,0.8);
-    text-decoration: none;
-    cursor: pointer;
+.close-icon {
+    width: 60px;
+    height: auto;
+    display: block;
+    filter: brightness(.9);
+    transition: filter 0.2s ease;
+}
+
+.close-icon:hover {
+    filter: brightness(1.2);
 }
 
 /* End Contacts & Copyright */
