@@ -347,8 +347,8 @@ a:hover {
 
 .sidebar-inner {
     position: relative;
-    height: 100%;
-    width: 80%;
+    height: 90vh;
+    width: 45vh;
     margin: 0 auto;
     left: 50%;
     transform: translateX(-50%);  
@@ -369,13 +369,13 @@ a:hover {
     position: fixed;
     display: flex;
     top: 25%;
-    z-index: 990;
-    height: 12vh;
+    z-index: 900;
+    height: 91px;
     right: -1%;
 }
 
 .sidebar-close-button {
-    bottom: 60px;
+    bottom: 8vh;
     align-self: center;
     position: absolute;
     cursor: pointer;
@@ -388,7 +388,7 @@ a:hover {
 }
 
 .sidebar h2, .sidebar p {
-    padding-left: 15%;
+    padding-left: 6vh;
     color: black;
     margin: 0.5rem 0;
     text-align: center;
@@ -396,25 +396,30 @@ a:hover {
 }
 
 .sidebar h2 {
-    padding-top: 18%;
+    padding-top: 8.2vh;
     font-family: 'BarlowBold';
+    font-size: 3.7vh;
+}
+
+.sidebar p {
+    font-size: 2vh;
 }
 
 .sidebar-row {
     display: flex;
     align-items: center;
-    padding: 10px 15%;
-    gap: 15px;
+    padding: 1.3vh 7vh;
+    gap: 2vh;
 }
 
 .sidebar-row img {
-    max-width: 60px;
-    height: 40px;
+    max-width: 8vh;
+    height: 6vh;
     object-fit: contain;
 }
 
 #sidebar-row-3-img {
-    width: 90px;
+    width: 9vh;
 }
 
 #sidebar-row-3-text {
@@ -438,7 +443,7 @@ a:hover {
     left: 0;
     width: 85px;
     height: 60px;
-    z-index: 900;
+    z-index: 1000;
 }
 
 .navbar-open-button {
@@ -758,7 +763,7 @@ a:hover {
     align-items: flex-start;
     align-items: center;
     width: 87%;
-    margin-top: 10vh;
+    margin-top: 50px;
     margin-bottom: 15.58px;
     z-index: 100;
 }
@@ -972,7 +977,7 @@ a:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 100vh;
+    margin-top: 800px;
 }
 
 .prev, .next {
@@ -983,7 +988,7 @@ a:hover {
     color: inherit;
     font-weight: bold;
     cursor: pointer;
-    height: 10vh;
+    height: 75px;
 }
 
 .nav-icon {
@@ -1014,7 +1019,7 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 5px;
+    margin-left: 20px;
     width: 440px;
     height: 160px;
     background-image: url('/static/slidenav/baggagetag.png');
@@ -1130,13 +1135,13 @@ a:hover {
 /* End Contacts & Copyright */
 
 .end-background {
-    margin-top: 80vh;
+    margin-top: 800px;
     width: 100%;
     height: 800px;
     box-sizing: border-box;
     position: relative;
     background-image: url('/static/closing/closingbaggage.svg');
-    background-size: 80vh;
+    background-size: 600px;
     background-position: center;
     background-repeat: no-repeat;
     display: flex;
@@ -1153,8 +1158,8 @@ a:hover {
 }
 
 .end-clickables {
-    margin: 3.5vh 0.5vw;
-    height: 2.5vh;
+    margin: 26px 0.5vw;
+    height: 19px;
 }
 
 .end-copyright {
@@ -1204,7 +1209,7 @@ a:hover {
 }
 
 .email-form {
-    margin-top: 22.5vh;
+    margin-top: 170px;
     margin-left: 1vw;
     background-color: transparent;
     padding: 15px;
