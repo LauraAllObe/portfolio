@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Laura's Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='standard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vertical.css') }}">
+    <link rel="stylesheet" href="/static/lite-yt-embed.css">
     <link rel="icon" type="image/png" href="/static/miniMe.png" />
     <link rel="shortcut icon" href="/static/miniMe.png" />
-    <link rel="stylesheet" href="/static/lite-yt-embed.css">
     <script src="/static/lite-yt-embed.js" defer></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
@@ -1830,6 +1831,15 @@
                     el.style.width = deviceMaxWidth;
                     el.style.maxWidth = deviceMaxWidth;
                 });
+            });
+
+            document.querySelectorAll('.slideshow-background').forEach(bg => {
+                const imgSrc = bg.getAttribute('data-bg');
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.className = 'bg-rotatable';
+                img.alt = 'Rotated background';
+                bg.prepend(img);
             });
         </script>
     </div>    

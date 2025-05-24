@@ -767,6 +767,18 @@ a:hover {
     box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
 }
 
+.slideshow-background img.bg-rotatable {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    pointer-events: none;
+    width: 100%;
+    height: auto;
+    display: none; /* hide by default */
+}
+
 .slideshow-container {
     position: relative;
     place-self: center;

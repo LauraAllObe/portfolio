@@ -1,0 +1,75 @@
+@media only screen and (orientation: portrait), (max-aspect-ratio: 4/3) {
+    .slideshow-background img.bg-rotatable {
+        display: block;
+        transform: rotate(90deg);
+        transform-origin: center;
+    }
+
+    .slideshow-background {
+        background: none !important;
+        margin-left: -4%;
+        margin-top: 170vw;
+    }
+
+    .slides {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15vw;
+        margin-left: 7vw;
+    }
+
+    .slideshow-video,
+    .slideshow-image,
+    .slideshow-text {
+        width: 90%;
+        max-height: 40vw;
+        margin-top: 5vw;
+    }
+
+    .slideshow-text {
+        height: 40vw;
+    }
+
+    .slideshow-video,
+    .slideshow-image {
+        margin-bottom: 15vw;
+    }
+
+    .button-container {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 120vw;
+        margin-left: 11%;
+    }
+
+    .prev, .next {
+        margin: 6vw;
+        height: 7.5vw;
+    }
+
+        
+    .slide-navigation-text {
+        margin-left: 6vw;
+        margin-right: 8vw;
+        min-height: 10vw;
+        font-size: 1.5vw;
+    }
+
+    .slide-navigation-text::before {
+        margin-left: 2.2vw;
+        width: 23vw;
+        height: 19vw;
+    }
+
+    .slideshow-ticket {
+        top: -120vw;
+        height: 80vw;
+        margin-left: 4%;
+    }
+
+    .slideshow-ticket.animate {
+        height: 18vw;
+    }
+}
