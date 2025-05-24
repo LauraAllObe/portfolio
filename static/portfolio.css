@@ -530,13 +530,12 @@ a:hover {
 /* Overview */
 
 .overview {
-    margin-top: 80vh;
-    margin-bottom: 40vh;
+    margin-top: 60vw;
+    margin-bottom: 40vw;
     z-index: 100;
-    height: 110vh;
+    height: 58vw;
     width: auto;
     padding: 10vw;
-    background-size: 95%;
     box-sizing: border-box;
     display: none;
     position: relative;
@@ -553,7 +552,7 @@ a:hover {
     display: block; 
     width: 10vw;
     height: auto;
-    margin: 0px auto;
+    margin: 0 auto;
     object-fit: contain;
     display: flex;
     flex-direction: column;
@@ -566,19 +565,19 @@ a:hover {
 
 .bottom-left-stamp {
     position: absolute;
-    bottom: -10px;
-    left: -10px;
-    width: 60px;
-    height: 60px;
+    bottom: -0.6vw;
+    left: -0.6vw;
+    width: 4vw;
+    height: 4vw;
     transform: rotate(12deg);
 }
 
 .top-right-stamp {
     position: absolute;
-    top: -20px;
-    right: -10px;
-    width: 80px;
-    height: 80px;
+    top: -1.2vw;
+    right: -0.6vw;
+    width: 5.5vw;
+    height: 5.5vw;
     transform: rotate(-4deg);
 }
 
@@ -589,7 +588,7 @@ a:hover {
     margin-bottom: -6%;
     width: 70%;
     max-width: 70%;
-    height: 35vh;
+    height: 20vw;
     text-align: center;
     vertical-align: center;
     display: flex;
@@ -601,11 +600,11 @@ a:hover {
     object-fit: contain;
     display: flex;
     flex-direction: column;
-    border-radius: 15px;
-    padding: 1vh 1vw;
+    border-radius: 2vw;
+    padding: 1vw 1vw;
     width: 90%;
     max-width: 90%;
-    margin-top: 5vh;
+    margin-top: 2vw;
     margin-left: -1.5vw;
     margin-right: 1.5vw;
 }
@@ -617,11 +616,11 @@ a:hover {
     justify-content: center;
     width: 100%;
     max-width: 100%;
-    height: 67.5vh;
-    min-height:30vh;
+    height: 36vw;
+    min-height: 22vw;
     overflow: hidden;
     flex-shrink: 0;
-    margin-bottom: 5vh;
+    margin-bottom: 4vw;
     margin-left: 1.5vw;
     position: relative;
 }
@@ -644,7 +643,7 @@ a:hover {
 .overview-slideshow-text {
     box-sizing: border-box;
     border-radius: 15px;
-    padding: 1vh 1vw;
+    padding: 0.5vw 1vw;
     width: 82%;
     max-width: 72.5ch;
     text-align: center;
@@ -654,7 +653,7 @@ a:hover {
 
 #overview .button-container {
     position: absolute;
-    bottom: -5vh;
+    bottom: -2.4vw;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -665,7 +664,7 @@ a:hover {
 
 .slideshow-ticket {
     position: absolute;
-    top: -800px;
+    top: -60vw;
     height: 60vw;
     z-index: 200;
     left: 0;
@@ -733,14 +732,14 @@ a:hover {
 }
 
 .slideshow-background {
-    margin-top: 1200px;
-    height: 750px;
-    padding-bottom: 36.48px;
+    margin-top: 90vw;
+    height: 52vw;
+    padding-bottom: 5vw;
     background-size: 65%;
     box-sizing: border-box;
     display: none;
     position: relative;
-    margin-bottom: 380px;
+    margin-bottom: 10vw;
     z-index: 100;
     box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
 }
@@ -748,8 +747,8 @@ a:hover {
 .slideshow-container {
     position: relative;
     place-self: center;
-    min-height: 600px;
-    max-height: 600px;
+    min-height: 40vw;
+    max-height: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -763,8 +762,8 @@ a:hover {
     align-items: flex-start;
     align-items: center;
     width: 87%;
-    margin-top: 50px;
-    margin-bottom: 15.58px;
+    margin-top: 5vw;
+    margin-bottom: 2.2vw;
     z-index: 100;
 }
 
@@ -822,7 +821,7 @@ a:hover {
     justify-content: flex-start;
     z-index: 100;
     border-radius: 15px;
-    padding: 1vh 1vw;
+    padding: 1vw 1vw;
 }
 
 #slideshow8 .slideshow-container {
@@ -839,8 +838,8 @@ a:hover {
 #slideshow8 .slideshow-video, 
 #slideshow8 .slideshow-image, 
 #slideshow8 .slideshow-text {
-    max-height: 360px;
-    margin-top: 45px;
+    max-height: 38vw;
+    margin-top: 5vw;
 }
 
 #slideshow0 .slideshow-container {
@@ -851,8 +850,8 @@ a:hover {
 #slideshow0 .slideshow-video, 
 #slideshow0 .slideshow-image, 
 #slideshow0 .slideshow-text {
-    max-height: 300px;
-    margin-top: 35px;
+    max-height: 30vw;
+    margin-top: 5vw;
 }
 
 #slideshow1 .slideshow-container {
@@ -861,14 +860,14 @@ a:hover {
 } 
 
 #slideshow1 .slides {
-    margin-top: 17.5vh;
+    margin-top: 9vw;
 }
 
 #slideshow1 .slideshow-video, 
 #slideshow1 .slideshow-image, 
 #slideshow1 .slideshow-text {
-    max-height: 320px;
-    margin-top: 35px;
+    max-height: 32vw;
+    margin-top: 5vw;
 }
 
 #slideshow2 .slideshow-container {
@@ -880,8 +879,8 @@ a:hover {
 #slideshow2 .slideshow-video, 
 #slideshow2 .slideshow-image, 
 #slideshow2 .slideshow-text {
-    max-height: 340px;
-    margin-top: 55px;
+    max-height: 33vw;
+    margin-top: 7vw;
 }
 
 #slideshow3 .slideshow-container {
@@ -898,8 +897,8 @@ a:hover {
 #slideshow3 .slideshow-video, 
 #slideshow3 .slideshow-image, 
 #slideshow3 .slideshow-text {
-    max-height: 350px;
-    margin-top: 60px;
+    max-height: 36vw;
+    margin-top: 6vw;
 }
 
 #slideshow4 .slideshow-container {
@@ -915,8 +914,8 @@ a:hover {
 #slideshow4 .slideshow-video, 
 #slideshow4 .slideshow-image, 
 #slideshow4 .slideshow-text {
-    max-height: 350px;
-    margin-top: 50px;
+    max-height: 34vw;
+    margin-top: 6.5vw;
 }
 
 #slideshow5 .slideshow-container {
@@ -926,14 +925,14 @@ a:hover {
 }
 
 #slideshow5 .slides {
-    margin-top: 15vh;
+    margin-top: 10vw;
 }
 
 #slideshow5 .slideshow-video, 
 #slideshow5 .slideshow-image, 
 #slideshow5 .slideshow-text {
-    max-height: 370px;
-    margin-top: 45px;
+    max-height: 40vw;
+    margin-top: 4vw;
 }
 
 #slideshow6 .slideshow-container {
@@ -949,8 +948,8 @@ a:hover {
 #slideshow6 .slideshow-video, 
 #slideshow6 .slideshow-image, 
 #slideshow6 .slideshow-text {
-    max-height: 350px;
-    margin-top: 60px;
+    max-height: 36vw;
+    margin-top: 6vw;
 }
 
 #slideshow7 .slideshow-container {
@@ -960,14 +959,14 @@ a:hover {
 }
 
 #slideshow7 .slides {
-    margin-top: 15vh;
+    margin-top: 10vw;
 }
 
 #slideshow7 .slideshow-video, 
 #slideshow7 .slideshow-image, 
 #slideshow7 .slideshow-text {
-    max-height: 370px;
-    margin-top: 45px;
+    max-height: 40vw;
+    margin-top: 4vw;
 }
 
 /* Slide navigation */
@@ -977,7 +976,7 @@ a:hover {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 800px;
+    margin-top: 58vw;
 }
 
 .prev, .next {
@@ -988,7 +987,7 @@ a:hover {
     color: inherit;
     font-weight: bold;
     cursor: pointer;
-    height: 75px;
+    height: 5.2vw;
 }
 
 .nav-icon {
@@ -1006,9 +1005,9 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 1vw;
     font-family: 'BarlowLight';
-    min-height: 80px;
+    min-height: 10vw;
     z-index: 1;
     color: black;
 }
@@ -1019,14 +1018,14 @@ a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-left: 20px;
-    width: 440px;
-    height: 160px;
+    margin-left: 1.2vw;
+    width: 14vw;
+    height: 11vw;
     background-image: url('/static/slidenav/baggagetag.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    z-index: -1; /* make sure it's behind the text */
+    z-index: -1;
     pointer-events: none;
 }
 
