@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Laura's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
     <link rel="icon" type="image/png" href="/static/miniMe.png" />
@@ -32,7 +32,7 @@
         <div class="navbar">
             <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()">
             <div id="myDropdown" class="dropdown-content">
-                <div class="dropdown-item" style="margin-top: 10vh;" onclick="navigateTo('top', 'top')">
+                <div class="dropdown-item" style="margin-top: 100px;" onclick="navigateTo('top', 'top')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background">
                     <span class="dropdown-text">Skyline</span>
                 </div>

@@ -484,7 +484,7 @@ a:hover {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1300;
     text-align: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
@@ -534,7 +534,7 @@ a:hover {
     margin-bottom: 40vw;
     z-index: 100;
     height: 58vw;
-    width: auto;
+    width: 70vw;
     padding: 10vw;
     box-sizing: border-box;
     display: none;
@@ -548,11 +548,27 @@ a:hover {
     justify-content: space-between;
 }
 
+.overview-top {
+    margin-left: 7vw;
+    margin-right: 1.5vw;
+    margin-top: 0vw;
+    margin-bottom: -2.5vw;
+    padding: 0vw 0vw;
+    width: 35vw;
+    max-width: 35vw;
+    height: 20vw;
+    text-align: center;
+    vertical-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
 .overview-image {
     display: block; 
     width: 10vw;
-    height: auto;
-    margin: 0 auto;
+    height: 14vw;
+    margin: 0;
     object-fit: contain;
     display: flex;
     flex-direction: column;
@@ -581,32 +597,15 @@ a:hover {
     transform: rotate(-4deg);
 }
 
-.overview-top {
-    margin-left: 7vw;
-    margin-right: 1.5vw;
-    margin-top: 0%;
-    margin-bottom: -6%;
-    width: 70%;
-    max-width: 70%;
-    height: 20vw;
-    text-align: center;
-    vertical-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
 .overview-title-text {
     object-fit: contain;
     display: flex;
     flex-direction: column;
-    border-radius: 2vw;
-    padding: 1vw 1vw;
-    width: 90%;
-    max-width: 90%;
-    margin-top: 2vw;
-    margin-left: -1.5vw;
-    margin-right: 1.5vw;
+    width: 30vw;
+    max-width: 30vw;
+    position: relative;
+    display: inline-block;
+    vertical-align: center;
 }
 
 .overview-container {
@@ -626,7 +625,7 @@ a:hover {
 }
 
 .overview-slide {
-    width: 100%;
+    width: 72.5vw;
     max-width: 72.5vw;
     display: flex;
     justify-content: center;
@@ -642,13 +641,15 @@ a:hover {
 
 .overview-slideshow-text {
     box-sizing: border-box;
-    border-radius: 15px;
+    border-radius: 2vw;
     padding: 0.5vw 1vw;
     width: 82%;
     max-width: 72.5ch;
     text-align: center;
     word-break: break-word;
     overflow-wrap: break-word;
+    max-height: 17vw;
+    margin-top: 0vw;
 }
 
 #overview .button-container {
@@ -667,8 +668,8 @@ a:hover {
     top: -60vw;
     height: 60vw;
     z-index: 200;
-    left: 0;
-    transform: translateX(0%) rotate(0deg);
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
     transition:
         transform 1s ease-in-out,
         height 1s ease-in-out,
@@ -688,39 +689,39 @@ a:hover {
 }
 
 #slideshow8 .slideshow-ticket.animate {
-    transform: translateX(365%) translateY(-30%) rotate(90deg);
+    transform: translateX(175%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow0 .slideshow-ticket.animate {
-    transform: translateX(355%) translateY(-30%) rotate(90deg);
+    transform: translateX(167.5%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow1 .slideshow-ticket.animate {
-    transform: translateX(390%) translateY(-15%) rotate(90deg);
+    transform: translateX(182.5%) translateY(-15%) rotate(90deg);
 }
 
 #slideshow2 .slideshow-ticket.animate {
-    transform: translateX(385%) translateY(-30%) rotate(90deg);
+    transform: translateX(180%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow3 .slideshow-ticket.animate {
-    transform: translateX(375%) translateY(-30%) rotate(90deg);
+    transform: translateX(172.5%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow4 .slideshow-ticket.animate {
-    transform: translateX(387.5%) translateY(-30%) rotate(90deg);
+    transform: translateX(180%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow5 .slideshow-ticket.animate {
-    transform: translateX(375%) translateY(-20%) rotate(90deg);
+    transform: translateX(175%) translateY(-20%) rotate(90deg);
 }
 
 #slideshow6 .slideshow-ticket.animate {
-    transform: translateX(367.5%) translateY(-30%) rotate(90deg);
+    transform: translateX(170%) translateY(-30%) rotate(90deg);
 }
 
 #slideshow7 .slideshow-ticket.animate {
-    transform: translateX(375%) translateY(-20%) rotate(90deg);
+    transform: translateX(175%) translateY(-20%) rotate(90deg);
 }
 
 .slideshow-background,
@@ -732,6 +733,8 @@ a:hover {
 }
 
 .slideshow-background {
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 90vw;
     height: 52vw;
     padding-bottom: 5vw;
