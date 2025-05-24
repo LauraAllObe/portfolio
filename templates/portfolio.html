@@ -81,19 +81,19 @@
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
-            <picture>
-                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">
+            <!--<picture>-->
+                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">-->
                 <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
-            </picture>
+            <!--</picture>-->
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
-            <picture>
-                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">
+            <!--<picture>-->
+                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">-->
                 <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
-            </picture>
-            <picture>
-                <source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">
+            <!--</picture>-->
+            <!--<picture>-->
+                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">-->
                 <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
-            </picture>
+            <!--</picture>-->
             <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
             <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
             <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
@@ -128,11 +128,11 @@
                     <p>Click the projects sign to view a list of projects.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/prev.svg" alt="Prev icon">
+                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/prev.png" alt="Prev icon">
                     <p>Click the left arrow to view the previous slide.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/next.svg" alt="Next icon">
+                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/next.png" alt="Next icon">
                     <p>Click the right arrow to view the next slide.</p>
                 </div>
                 <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()">
@@ -178,7 +178,7 @@
                 </button>
             </div>
         </div>  
-        <div class="overview" id="overview" data-bg="/static/suitcases/overview.svg">
+        <div class="overview" id="overview" data-bg="/static/suitcases/overview.png">
             <div class="overview-top">
                 <div class="overview-image-container">
                     <img class="overview-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
@@ -214,20 +214,20 @@
 
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'overview')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'overview')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Slideshow 8 (-1) -->   
-        <div class="slideshow-background" id="slideshow8" data-bg="/static/suitcases/ml1.svg">
+        <div class="slideshow-background" id="slideshow8" data-bg="/static/suitcases/ml1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit the Nutrition Analyzer Web App on GitHub">
-                    <img src="/static/tickets/ticket8.svg">
+                    <img src="/static/tickets/ticket8.png">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -391,20 +391,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow8')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow8')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Slideshow 0 -->
-        <div class="slideshow-background" id="slideshow0" data-bg="/static/suitcases/ml2.svg">
+        <div class="slideshow-background" id="slideshow0" data-bg="/static/suitcases/ml2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Visit Combined Models Machine Learning on GitHub">
-                    <img src="/static/tickets/ticket0.svg">
+                    <img src="/static/tickets/ticket0.png">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -516,20 +516,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow0')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow0')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- First slideshow -->
-        <div class="slideshow-background" id="slideshow1" data-bg="/static/suitcases/appdev1.svg">
+        <div class="slideshow-background" id="slideshow1" data-bg="/static/suitcases/appdev1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit the Hacker News Web Application on GitHub">
-                    <img src="/static/tickets/ticket1.svg">
+                    <img src="/static/tickets/ticket1.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -643,20 +643,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow1')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow1')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Second slideshow -->
-        <div class="slideshow-background" id="slideshow2" data-bg="/static/suitcases/appdev2.svg">
+        <div class="slideshow-background" id="slideshow2" data-bg="/static/suitcases/appdev2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/practicePanther" target="_blank" title="Visit the Law Practice Manager Web App on GitHub">
-                    <img src="/static/tickets/ticket2.svg">
+                    <img src="/static/tickets/ticket2.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -870,20 +870,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow2')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow2')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Third slideshow -->
-        <div class="slideshow-background" id="slideshow3" data-bg="/static/suitcases/appdev3.svg">
+        <div class="slideshow-background" id="slideshow3" data-bg="/static/suitcases/appdev3.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
-                    <img src="/static/tickets/ticket3.svg">
+                    <img src="/static/tickets/ticket3.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1007,20 +1007,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow3')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow3')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Fourth slideshow -->
-        <div class="slideshow-background" id="slideshow4" data-bg="/static/suitcases/appdev4.svg">
+        <div class="slideshow-background" id="slideshow4" data-bg="/static/suitcases/appdev4.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
-                    <img src="/static/tickets/ticket4.svg">
+                    <img src="/static/tickets/ticket4.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1054,20 +1054,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow4')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow4')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Fifth slideshow -->
-        <div class="slideshow-background" id="slideshow5" data-bg="/static/suitcases/opsys1.svg">
+        <div class="slideshow-background" id="slideshow5" data-bg="/static/suitcases/opsys1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
-                    <img src="/static/tickets/ticket5.svg">
+                    <img src="/static/tickets/ticket5.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1261,20 +1261,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow5')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow5')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Sixth slideshow -->
-        <div class="slideshow-background" id="slideshow6" data-bg="/static/suitcases/opsys2.svg">
+        <div class="slideshow-background" id="slideshow6" data-bg="/static/suitcases/opsys2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
-                    <img src="/static/tickets/ticket6.svg">
+                    <img src="/static/tickets/ticket6.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1348,20 +1348,20 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow6')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow6')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
         </div>
         <!-- Seventh slideshow -->
-        <div class="slideshow-background" id="slideshow7" data-bg="/static/suitcases/opsys3.svg">
+        <div class="slideshow-background" id="slideshow7" data-bg="/static/suitcases/opsys3.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
-                    <img src="/static/tickets/ticket7.svg">
+                    <img src="/static/tickets/ticket7.png">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1415,11 +1415,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow7')">
-                        <img src="/static/slidenav/prev.svg" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow7')">
-                        <img src="/static/slidenav/next.svg" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
             </div>
