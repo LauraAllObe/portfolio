@@ -1,4 +1,4 @@
-/* Small Phones (Portrait) */
+/* Extra Small Phones (Portrait) */
 @media only screen and (max-width: 479px) {
     .clouds img {
         max-height: 160px;
@@ -192,7 +192,7 @@
     }
 }
 
-/* Small Phones (Landscape) */
+/* Extra Small Phones (Landscape) */
 @media only screen and (max-width: 479px) and ((orientation: landscape) or (min-aspect-ratio: 4/3)){
     .foreground {
         top: 12vh;
@@ -207,22 +207,32 @@
     }
 }
 
+/* Small Phones (Portrait) */
 @media only screen and (min-width: 480px) and (max-width: 639px) {
 
 }
 
+/* Small Phones (Landscape) */
+@media only screen and (min-width: 480px) and (max-width: 639px) and ((orientation: landscape) or (min-aspect-ratio: 4/3)) {
+
+}
+
+/* Tablets (Portrait) */
 @media only screen and (min-width: 640px) and (max-width: 767px) {
 
 }
 
+/* Tablets (Landscape) & Small Laptops */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
 }
 
+/* Desktops & Large Laptops */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
 
 }
 
+/* Extra Large Desktops & 2K+ screens */
 @media only screen and (min-width: 1280px) and (max-width: 1535px) {
 
 }
