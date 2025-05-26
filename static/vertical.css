@@ -1,4 +1,5 @@
-@media only screen and (orientation: portrait), (max-aspect-ratio: 4/3) {
+/* On Portrait Mode / max 4/3 aspect */
+@media only screen and ((orientation: portrait) or (max-aspect-ratio: 4/3)) {
 
     .slideshow-background img.bg-rotatable {
         display: block;
@@ -53,9 +54,14 @@
         transform: translate(2vw, 10vw);
         height: 40vw;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         display: flex;
         -ms-flex-align: center;
+        padding: 0;
+    }
+
+    #slideshow8 .slideshow-text {
+        margin-left: -5vw;
     }
 
     #slideshow0 .slideshow-video {
@@ -86,7 +92,11 @@
 
     #slideshow1 .slides {
         margin-top: 2.5vw;
-        margin-left: -1.5vw;
+        margin-left: 8vw;
+    }
+
+    #slideshow1 img.bg-rotatable {
+        margin-left: 5vw;
     }
 
     #slideshow1 .slideshow-vertical-image-container {
@@ -166,7 +176,12 @@
     #slideshow5 .slideshow-video {
         transform: translate(-2vw, -1vw);
         margin-bottom: -2vw !important;
-        margin-top: 12vw !important;
+        margin-top: 16vw !important;
+        margin-left: 3.5vw;
+    }
+
+    #slideshow5 img.bg-rotatable {
+        margin-left: 2.5vw;
     }
 
     #slideshow5 .slides {
@@ -175,13 +190,15 @@
     }
 
     #slideshow5 .slideshow-vertical-image-container {
-        margin-top: 5vw;
+        margin-top: 9vw;
         margin-bottom: -3vw;
-        margin-left: -4vw;
+        margin-left: 2vw;
     }
 
     #slideshow5 .slideshow-text {
         margin-left: -5vw;
+        margin-top: 10vw;
+        height: 35vw;
     }
 
     #slideshow6 .slideshow-video {
@@ -211,8 +228,12 @@
 
     #slideshow7 .slideshow-video {
         transform: translate(-2vw, -1vw);
-        margin-bottom: -2vw !important;
-        margin-top: 12vw !important;
+        margin-top: 16vw !important;
+        margin-left: 3.5vw;
+    }
+
+    #slideshow7 img.bg-rotatable {
+        margin-left: 2.5vw;
     }
 
     #slideshow7 .slides {
@@ -221,13 +242,15 @@
     }
 
     #slideshow7 .slideshow-vertical-image-container {
-        margin-top: 5vw;
+        margin-top: 9vw;
         margin-bottom: -3vw;
-        margin-left: -4vw;
+        margin-left: 2vw;
     }
 
     #slideshow7 .slideshow-text {
         margin-left: -5vw;
+        margin-top: 10vw;
+        height: 35vw;
     }
 
     .button-container {

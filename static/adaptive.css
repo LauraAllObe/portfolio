@@ -1,0 +1,228 @@
+/* Small Phones (Portrait) */
+@media only screen and (max-width: 479px) {
+    .clouds img {
+        max-height: 160px;
+        height: 160px;
+    }
+ 
+    #cloud1 {
+        top: 100px;
+        left: 0;
+    }
+
+    #cloud2 {
+        top: 0;
+        left: 200px;
+    }
+
+    #cloud3 {
+        top: 500px;
+        left: -50vw;
+    }
+
+    #cloud4 {
+        top: 250px;
+        left: -50vw;
+    }
+
+    #cloud5 {
+        top: 200px;
+        left: 50vw;
+    }
+
+    #cloud6 {
+        top: 446px;
+        left: 100vw;
+    }
+
+    #cloud8 {
+        left: 29.24vw;
+        height: 0px;
+    }
+
+    .foreground {
+        top: 55vh;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .sky-limit-text {
+        height: 115px;
+    }
+
+    .dropdown-item img {
+        height: 35px;
+    }
+
+    .dropdown-text {
+        font-size: 14px;
+        margin-left: -90px;
+    }
+
+    .navbar-close-button {
+        width: 100px;
+    }
+
+    .end-background {
+        margin-top: 200px;
+        background-size: 460px;
+    }
+
+    .email-form {
+        margin-top: 220px;
+        margin-left: 2vw;
+        width: 290px;
+    }
+
+    .email-form form {
+        gap: 4px;
+    }
+
+    .form-heading {
+        font-size: 22px;
+    }
+    .email-form label {
+        font-size: 12px;
+    }
+
+    .email-form input, .email-form textarea {
+        padding: 6px;
+        font-size: 12px;
+    }
+
+    .email-form button {
+        padding: 6px;
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .end-clickables {
+        margin-left: 2vw;
+        margin: 4px 1.25vw;
+        height: 16px;
+    }
+
+    .end-copyright {
+        margin-left: 2vw;
+        margin-top: 12px;
+        font-size: 6.5px;
+    }
+
+    .overview {
+        height: 100vw;
+        width: 82.5vw;
+    }
+
+    .overview-container {
+        height: 50vw;
+        min-height: 50vw;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .overview-top {
+        margin-top: 5vw;
+        margin-left: 0vw;
+        width: 60vw;
+        max-width: 60vw;
+        margin-bottom: 10vw;
+    }
+
+    .overview-image-container {
+        margin-top: 3vw;
+    }
+
+    .overview-image {
+        width: 16vw;
+        height: 22vw;
+    }
+
+    .overview-slide {
+        width: 95vw;
+        max-width: 95vw;
+    }
+
+    #overview .slides {
+        width: 95%;
+    }
+
+    .overview-slideshow-text {
+        width: 100%;
+        max-width: 100%;
+        max-height: 24vw;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    #overview .button-container {
+        bottom: -5vw;
+    }
+
+    h3 {
+        font-size: 12px;
+    }
+
+    body {
+        font-size: 11px;
+    }
+
+    .slide-navigation-text {
+        font-size: 2vw;
+    }
+
+    .slide-navigation-text::before {
+        width: 36vw;
+        height: 24vw;
+        margin-left: 2.8vw;
+    }
+
+    .top-right-stamp {
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .bottom-left-stamp {
+        width: 5vw;
+        height: 5vw;
+        top: 18vw;
+    }
+}
+
+/* Small Phones (Landscape) */
+@media only screen and (max-width: 479px) and ((orientation: landscape) or (min-aspect-ratio: 4/3)){
+    .foreground {
+        top: 12vh;
+    }
+
+    .background {
+        height: 140vh;
+    }
+    
+    .sky-limit-text {
+        top: 30vh;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 639px) {
+
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+
+}
