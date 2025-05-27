@@ -83,19 +83,10 @@
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
-            <!--<picture>-->
-                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud1.0.png') }}">-->
-                <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
-            <!--</picture>-->
+            <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
-            <!--<picture>-->
-                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud3.0.png') }}">-->
-                <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
-            <!--</picture>-->
-            <!--<picture>-->
-                <!--<source media="all and (((min-width:0px) and (max-width: 1024px)) or (max-aspect-ratio: 4/3))" srcset="{{ url_for('static', filename='clouds/cloud4.0.png') }}">-->
-                <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
-            <!--</picture>-->
+            <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
+            <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
             <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
             <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
             <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
@@ -1990,20 +1981,20 @@
                 const slides = document.querySelectorAll(".slideshow-background");
 
                 function checkScroll() {
-                const scrollY = window.scrollY;
+                    const scrollY = window.scrollY;
 
-                slides.forEach(slide => {
-                    const ticket = slide.querySelector(".slideshow-ticket");
-                    if (!ticket) return;
+                    slides.forEach(slide => {
+                        const ticket = slide.querySelector(".slideshow-ticket");
+                        if (!ticket) return;
 
-                    const slideTop = slide.offsetTop;
+                        const slideTop = slide.offsetTop;
 
-                    if (scrollY > slideTop - triggerOffset) {
-                    ticket.classList.add("animate");
-                    } else {
-                    ticket.classList.remove("animate");
-                    }
-                });
+                        if (scrollY > slideTop - triggerOffset) {
+                            ticket.classList.add("animate");
+                        } else {
+                            ticket.classList.remove("animate");
+                        }
+                    });
                 }
 
                 window.addEventListener("scroll", checkScroll);
@@ -2012,11 +2003,12 @@
                 const bg = document.querySelector('.background');
                 const fg = document.querySelector('.foreground');
 
-                const deviceMaxWidth = screen.width + "px"; // full device width
+                const viewportWidth = window.innerWidth + "px"; // actual viewport width
 
                 [bg, fg].forEach(el => {
-                    el.style.width = deviceMaxWidth;
-                    el.style.maxWidth = deviceMaxWidth;
+                    el.style.width = viewportWidth;
+                    el.style.maxWidth = viewportWidth;
+                    el.style.overflowX = "clip";
                 });
             });
 
@@ -2028,6 +2020,21 @@
                 img.alt = 'Rotated background';
                 bg.prepend(img);
             });
+
+            document.addEventListener("DOMContentLoaded", () => {
+                // Loop through all elements and clamp those wider than the viewport
+                const vw = window.innerWidth;
+                const elements = document.querySelectorAll("*");
+
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.width > vw || el.offsetWidth > vw) {
+                        el.style.maxWidth = "100vw";
+                        el.style.overflowX = "hidden";
+                    }
+                });
+            });
+
         </script>
     </div>    
 </body>

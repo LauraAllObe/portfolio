@@ -5,7 +5,9 @@
 }
 
 html { 
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw !important;
 }
 
 mark {
@@ -18,7 +20,7 @@ body {
     background-color: #010100;
     overflow: auto;
     font-size: 15px;
-    overflow-x: hidden;
+    overflow-x: clip !important;
     overflow-y: hidden;
     z-index: 1;
 }
@@ -71,12 +73,16 @@ a:hover {
     max-width: 100vw;
     top: 0;
     left: 0;
+    pointer-events: none;
+    overflow-x: unset;
 }
 
 .foreground-image {
     top: -2.5vw;
     position: absolute;
     width: 100%;
+    pointer-events: none;
+    overflow-x: unset;
 }
 
 .background {
@@ -86,9 +92,9 @@ a:hover {
     width: 100vw;
     height: 120vh;
     z-index: -500;
-    overflow: hidden;
     pointer-events: none;
     background-color: black;
+    overflow-x: clip !important;
 }
 
 .background-image {
@@ -96,6 +102,14 @@ a:hover {
     height: 100%;
     object-fit: cover;
     object-position: center;
+    overflow-x: clip !important;
+}
+
+.foreground,
+.background,
+.foreground-image,
+.background-image {
+    max-width: 100vw;
 }
 
 /* Portfolio Heading */
@@ -131,11 +145,10 @@ a:hover {
     }
 }
 
-/* Animated Clouds */
+/* Parallax Clouds */
 
 .clouds {
     position: relative;
-    padding: 52.06px 3.65vw;
     z-index: -3;
     opacity: 75%;
     pointer-events: none;
@@ -145,8 +158,7 @@ a:hover {
     top: 0;
     left: 0;
     position: absolute;
-    overflow: hidden;
-    overflow-x:hidden;
+    overflow-x: clip;
     overflow-y: hidden;
     max-height: 332.5px;
     height: 332.5px;

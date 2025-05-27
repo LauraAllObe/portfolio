@@ -32,7 +32,8 @@
 
     #cloud6 {
         top: 446px;
-        left: 100vw;
+        left: unset;
+        right: 0vw;
     }
 
     #cloud8 {
@@ -42,6 +43,7 @@
 
     .foreground {
         top: 55vh;
+        overflow-x: unset !important;
     }
 
     .background {
@@ -68,6 +70,8 @@
     .end-background {
         margin-top: 200px;
         background-size: 460px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .email-form {
@@ -113,11 +117,13 @@
     .overview {
         height: 100vw;
         width: 82.5vw;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .overview-container {
         height: 50vw;
-        min-height: 50vw;
+        min-height: 50vw;  
     }
 
     h1 {
@@ -158,6 +164,11 @@
         overflow-wrap: break-word;
     }
 
+    .slideshow-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
     #overview .button-container {
         bottom: -5vw;
     }
@@ -171,7 +182,8 @@
     }
 
     .slide-navigation-text {
-        font-size: 2vw;
+        font-size: 1.8vw;
+        text-wrap: nowrap;
     }
 
     .slide-navigation-text::before {
@@ -189,6 +201,11 @@
         width: 5vw;
         height: 5vw;
         top: 18vw;
+    }
+
+    .slide-navigation-text::before {
+        width: 30vw;
+        height: 25vw;
     }
 }
 
