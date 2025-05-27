@@ -1995,6 +1995,18 @@
                             ticket.classList.remove("animate");
                         }
                     });
+
+                    // Loop through all elements and clamp those wider than the viewport
+                    const vw = window.innerWidth;
+                    const elements = document.querySelectorAll("*");
+
+                    elements.forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.width > vw || el.offsetWidth > vw) {
+                            el.style.maxWidth = "100vw";
+                            el.style.overflowX = "hidden";
+                        }
+                    });
                 }
 
                 window.addEventListener("scroll", checkScroll);
@@ -2020,21 +2032,6 @@
                 img.alt = 'Rotated background';
                 bg.prepend(img);
             });
-
-            document.addEventListener("DOMContentLoaded", () => {
-                // Loop through all elements and clamp those wider than the viewport
-                const vw = window.innerWidth;
-                const elements = document.querySelectorAll("*");
-
-                elements.forEach(el => {
-                    const rect = el.getBoundingClientRect();
-                    if (rect.width > vw || el.offsetWidth > vw) {
-                        el.style.maxWidth = "100vw";
-                        el.style.overflowX = "hidden";
-                    }
-                });
-            });
-
         </script>
     </div>    
 </body>

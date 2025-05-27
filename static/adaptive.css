@@ -72,6 +72,7 @@
         background-size: 460px;
         left: 50%;
         transform: translateX(-50%);
+        background-position-x: center;
     }
 
     .email-form {
