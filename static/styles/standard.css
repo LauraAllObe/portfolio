@@ -515,7 +515,7 @@ a:hover {
     max-width: 80%;
     cursor: pointer;
     align-self: center;
-}
+    }
 
 .dropdown-item img {
     height: auto;
@@ -533,7 +533,7 @@ a:hover {
     top: 50%;
     font-family: 'BarlowBold';
     font-size: 22px;
-    margin-left: -140px;
+    margin-left: -10vw;
     color: #f2d732;
     pointer-events: none;
 }
@@ -565,7 +565,7 @@ a:hover {
     object-fit: contain;
     text-align: center;
     justify-content: space-around;
-}
+    }
 
 .overview-top {
     margin-left: 7vw;
@@ -781,6 +781,7 @@ a:hover {
     margin-bottom: 10vw;
     z-index: 100;
     box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 .slideshow-background img.bg-rotatable {
@@ -805,7 +806,7 @@ a:hover {
     align-items: center;
     justify-content: center;
     z-index: 100;
-}
+    }
 
 .slides {
     display: flex;
@@ -1340,4 +1341,30 @@ a:hover {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* CSS specific to iOS devices */ 
+@supports (-webkit-touch-callout: none) {
+    .dropdown-item {
+        left: 10%;
+        transform: translate(-10%);
+    }
+
+    .overview {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slideshow-container {
+        left: 50%;
+        transform: translate( -50%);
+    }
+
+    .end-background {
+        margin-left: -1%;
+    }
+
+    .dropdown-text {
+        margin-left: -31vw;
+    }
 }

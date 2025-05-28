@@ -56,9 +56,6 @@
     .end-background {
         margin-top: 200px;
         background-size: 460px;
-        left: 50%;
-        transform: translateX(-50%);
-        background-position-x: center;
     }
 
     .email-form {
@@ -104,8 +101,6 @@
     .overview {
         height: 100vw;
         width: 82.5vw;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .overview-container {
@@ -149,11 +144,6 @@
         max-height: 24vw;
         word-break: break-word;
         overflow-wrap: break-word;
-    }
-
-    .slideshow-container {
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     #overview .button-container {
@@ -277,14 +267,5 @@
     .helicopter-text-2 {
         height: 26vh;
         margin-top: -7.5vh;
-    }
-
-    .dropdown-item {
-        left: 90%;
-        transform: translate(-90%);
-    }
-
-    .dropdown-text {
-        margin-left: -31vw;
     }
 }
