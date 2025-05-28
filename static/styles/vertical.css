@@ -64,7 +64,7 @@
     }
 
     .slideshow-container {
-        margin-top: -5vh;
+        top: -2vh !important;
         min-height: 120vh;
     }
 
