@@ -688,6 +688,7 @@ a:hover {
     overflow-wrap: break-word;
     max-height: 17vw;
     margin: 0;
+    color: #141212;
 }
 
 #overview .button-container {
