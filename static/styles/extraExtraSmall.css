@@ -142,8 +142,6 @@
         width: 100%;
         max-width: 100%;
         max-height: 24vw;
-        word-break: break-word;
-        overflow-wrap: break-word;
     }
 
     #overview .button-container {

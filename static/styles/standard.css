@@ -684,8 +684,6 @@ a:hover {
     width: 82%;
     max-width: 72.5ch;
     text-align: center;
-    word-break: break-word;
-    overflow-wrap: break-word;
     max-height: 17vw;
     margin: 0;
     color: #141212;
@@ -1059,11 +1057,14 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1vw;
+    font-size: 0.9vw;
     font-family: 'BarlowLight';
     min-height: 10vw;
     z-index: 1;
     color: black;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
 }
 
 .slide-navigation-text::before {
@@ -1347,6 +1348,7 @@ a:hover {
     cursor: pointer;
 }
 
+
 /* CSS specific to iOS devices */ 
 @supports (-webkit-touch-callout: none) {
     .dropdown-item {
@@ -1371,4 +1373,28 @@ a:hover {
     .dropdown-text {
         margin-left: -31vw;
     }
+}
+
+/* CSS specific to macOS devices */ 
+body.is-macos .dropdown-item {
+    left: 112.5%;
+    transform: translateX(-112.5%);
+}
+
+body.is-macos .overview {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body.is-macos .overview-top {
+    margin-top: 30%;
+}
+
+body.is-macos .slideshow-container {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+body.is-macos .dropdown-text {
+    margin-left: -460px;
 }
