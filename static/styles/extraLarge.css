@@ -1,0 +1,14 @@
+/* Extra Large Desktops & 2K+ screens */
+@media only screen and (min-width: 1280px) and (max-width: 1535px) {
+    /* Defined in standard.css */
+}
+
+/* Portrait */
+@media only screen and (min-width: 1280px) and (max-width: 1535px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
+
+}
+
+/* Landscape */
+@media only screen and (min-height: 1280px) and (max-height: 1535px) and ((orientation: landscape) or (max-aspect-ratio: 1/1)) {
+
+}

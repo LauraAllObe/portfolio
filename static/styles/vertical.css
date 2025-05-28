@@ -1,5 +1,5 @@
-/* On Portrait Mode / max 4/3 aspect */
-@media only screen and ((orientation: portrait) or (max-aspect-ratio: 4/3)) {
+/* On Portrait Mode / max 1/1 aspect */
+@media only screen and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
 
     .slideshow-background img.bg-rotatable {
         display: block;

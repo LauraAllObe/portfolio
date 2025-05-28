@@ -1,10 +1,5 @@
-/* Extra Small Phones (Portrait) */
-@media only screen and (max-width: 479px) {
-    .clouds img {
-        max-height: 160px;
-        height: 160px;
-    }
- 
+/* Extra Small Phones */
+@media only screen and (((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))) {
     #cloud1 {
         top: 100px;
         left: 0;
@@ -42,16 +37,7 @@
     }
 
     .foreground {
-        top: 55vh;
         overflow-x: unset !important;
-    }
-
-    .background {
-        height: 100vh;
-    }
-
-    .sky-limit-text {
-        height: 115px;
     }
 
     .dropdown-item img {
@@ -188,8 +174,8 @@
     }
 
     .slide-navigation-text::before {
-        width: 36vw;
-        height: 24vw;
+        width: 28vw;
+        height: 21vw;
         margin-left: 2.8vw;
     }
 
@@ -204,16 +190,39 @@
         top: 18vw;
     }
 
-    .slide-navigation-text::before {
-        width: 30vw;
-        height: 25vw;
+    .slideshow-background {
+        height: 120vw;
+    }
+
+    .slideshow-container {
+        margin-top: 34vw;
     }
 }
 
-/* Extra Small Phones (Landscape) */
-@media only screen and (max-width: 479px) and ((orientation: landscape) or (min-aspect-ratio: 4/3)){
+/* Portrait */
+@media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .foreground {
-        top: 12vh;
+        top: 55vh;
+    }
+
+    .background {
+        height: 100vh;
+    }
+
+    .sky-limit-text {
+        height: 20vh;
+    }
+
+    .clouds img {
+        max-height: 160px;
+        height: 160px;
+    }
+}
+
+/* Landscape */
+@media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
+    .foreground {
+        top: 4vh !important;
     }
 
     .background {
@@ -221,36 +230,61 @@
     }
     
     .sky-limit-text {
-        top: 30vh;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: unset;
+        width: 60vw;
     }
-}
 
-/* Small Phones (Portrait) */
-@media only screen and (min-width: 480px) and (max-width: 639px) {
+    .clouds img {
+        max-height: 150px;
+        height: 150px;
+    }
+    
+    .marquee-helicopter1 { 
+        margin-top: 100vh;
+    }
 
-}
+    .marquee-helicopter2 { 
+        margin-top: 130vh;
+    }
 
-/* Small Phones (Landscape) */
-@media only screen and (min-width: 480px) and (max-width: 639px) and ((orientation: landscape) or (min-aspect-ratio: 4/3)) {
+    .marquee-plane1 { 
+        margin-top: 74vh;
+    }
 
-}
+    .marquee-plane2 { 
+        margin-top: 38vh;
+    }
 
-/* Tablets (Portrait) */
-@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .marquee-plane3 { 
+        margin-top: 24vh;
+    }
 
-}
+    .marquee-plane4 { 
+        margin-top: 30vh;
+    }
 
-/* Tablets (Landscape) & Small Laptops */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .plane-text-1,
+    .plane-text-2,
+    .plane-text-3, 
+    .plane-text-4{
+        height: 26vh;
+        margin-top: -15vh;
+    }
 
-}
+    .helicopter-text-1,
+    .helicopter-text-2 {
+        height: 26vh;
+        margin-top: -7.5vh;
+    }
 
-/* Desktops & Large Laptops */
-@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+    .dropdown-item {
+        left: 90%;
+        transform: translate(-90%);
+    }
 
-}
-
-/* Extra Large Desktops & 2K+ screens */
-@media only screen and (min-width: 1280px) and (max-width: 1535px) {
-
+    .dropdown-text {
+        margin-left: -31vw;
+    }
 }

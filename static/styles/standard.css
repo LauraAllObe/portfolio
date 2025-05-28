@@ -1,5 +1,7 @@
-/* Basic element attributes */
+/* Standard Style Definitions: Defined with extra large screens in mind */
+/* refer to extraLarge.css for portrait / landscape specific content on extra large screens */
 
+/* Basic element attributes */
 * {
     box-sizing: border-box;
 }
@@ -802,7 +804,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    z-index: 100; 
+    z-index: 100;
 }
 
 .slides {

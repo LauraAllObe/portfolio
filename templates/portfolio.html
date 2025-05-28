@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Laura's Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='standard.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='vertical.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='adaptive.css') }}">
-    <link rel="stylesheet" href="/static/lite-yt-embed.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/standard.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/vertical.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraExtraSmall.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraSmall.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/small.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/medium.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/large.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraLarge.css') }}">
+    <link rel="stylesheet" href="/static/youtube-embed/lite-yt-embed.css">
     <link rel="icon" type="image/png" href="/static/miniMe.png" />
     <link rel="shortcut icon" href="/static/miniMe.png" />
-    <script src="/static/lite-yt-embed.js" defer></script>
+    <script src="/static/youtube-embed/lite-yt-embed.js" defer></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
         (function(){
@@ -2012,15 +2017,9 @@
                 window.addEventListener("scroll", checkScroll);
                 checkScroll(); // initial check
 
-                const bg = document.querySelector('.background');
-                const fg = document.querySelector('.foreground');
-
-                const viewportWidth = window.innerWidth + "px"; // actual viewport width
-
-                [bg, fg].forEach(el => {
-                    el.style.width = viewportWidth;
-                    el.style.maxWidth = viewportWidth;
-                    el.style.overflowX = "clip";
+                window.addEventListener("resize", setBackgroundWidth);
+                window.addEventListener("orientationchange", () => {
+                    setTimeout(setBackgroundWidth, 100);
                 });
             });
 
@@ -2032,6 +2031,21 @@
                 img.alt = 'Rotated background';
                 bg.prepend(img);
             });
+
+            function setBackgroundWidth() {
+                const viewportWidth = window.innerWidth + "px";
+                const bg = document.querySelector('.background');
+                const fg = document.querySelector('.foreground');
+
+                [bg, fg].forEach(el => {
+                    if (el) {
+                        el.style.width = viewportWidth;
+                        el.style.maxWidth = viewportWidth;                            
+                    }
+                });
+                bg.style.overflowX = "clip";
+            }
+
         </script>
     </div>    
 </body>
