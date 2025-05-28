@@ -1377,8 +1377,10 @@ a:hover {
 
 /* CSS specific to macOS devices */ 
 body.is-macos .dropdown-item {
-    left: 112.5%;
-    transform: translateX(-112.5%);
+    margin-left: auto;
+    margin-right: auto;
+    display: block; /* or inline-block */
+    width: fit-content;
 }
 
 body.is-macos .overview {
@@ -1396,5 +1398,8 @@ body.is-macos .slideshow-container {
 }
 
 body.is-macos .dropdown-text {
-    margin-left: -460px;
+    margin-left: 110px;
+    margin-right: auto;
+    display: block; /* or inline-block */
+    width: fit-content;
 }
