@@ -10,6 +10,8 @@ html {
     scroll-behavior: smooth;
     overflow-x: hidden;
     max-width: 100vw !important;
+    overscroll-behavior: none;
+    touch-action: manipulation;
 }
 
 mark {
@@ -25,6 +27,8 @@ body {
     overflow-x: clip !important;
     overflow-y: hidden;
     z-index: 1;
+    overscroll-behavior: none;
+    touch-action: manipulation;
 }
 
 h1 {
@@ -533,7 +537,7 @@ a:hover {
     top: 50%;
     font-family: 'BarlowBold';
     font-size: 22px;
-    margin-left: -10vw;
+    margin-left: -140px;
     color: #f2d732;
     pointer-events: none;
 }
@@ -781,7 +785,7 @@ a:hover {
     margin-bottom: 10vw;
     z-index: 100;
     box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: visible;
 }
 
 .slideshow-background img.bg-rotatable {
@@ -800,13 +804,12 @@ a:hover {
     position: relative;
     place-self: center;
     min-height: 40vw;
-    max-height: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     z-index: 100;
-    }
+}
 
 .slides {
     display: flex;

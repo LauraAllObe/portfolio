@@ -11,6 +11,9 @@
         background: none !important;
         margin-left: -4%;
         margin-top: 170vw;
+        height: 90%;
+        min-height: fit-content;
+        overflow: hidden;
     }
 
     .slides {
@@ -58,6 +61,11 @@
         display: flex;
         -ms-flex-align: center;
         padding: 0;
+    }
+
+    .slideshow-container {
+        margin-top: -5vh;
+        min-height: 120vh;
     }
 
     #slideshow8 .slideshow-text {
