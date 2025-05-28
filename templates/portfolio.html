@@ -1852,6 +1852,8 @@
             }
 
             function filterCategories(category) {
+                sessionStorage.setItem("selectedCategory", category);
+
                 const slideshow8 = document.getElementById('slideshow8');
                 const slideshow0 = document.getElementById('slideshow0');
                 const slideshow1 = document.getElementById('slideshow1');
@@ -1987,6 +1989,8 @@
 
                 function checkScroll() {
                     const scrollY = window.scrollY;
+                    const vw = window.innerWidth;
+                    const paddingOffset = 0.65 * vw; // 65vw converted to pixels
 
                     slides.forEach(slide => {
                         const ticket = slide.querySelector(".slideshow-ticket");
@@ -1994,15 +1998,14 @@
 
                         const slideTop = slide.offsetTop;
 
-                        if (scrollY > slideTop - triggerOffset) {
+                        if (scrollY > slideTop - triggerOffset + paddingOffset) {
                             ticket.classList.add("animate");
                         } else {
                             ticket.classList.remove("animate");
                         }
                     });
 
-                    // Loop through all elements and clamp those wider than the viewport
-                    const vw = window.innerWidth;
+                    // Clamp overly wide elements
                     const elements = document.querySelectorAll("*");
 
                     elements.forEach(el => {
@@ -2027,6 +2030,12 @@
                 const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
                 if (isMac) {
                     document.body.classList.add("is-macos");
+                }
+
+                //restore last selected category from sessionStorage
+                const savedCategory = sessionStorage.getItem("selectedCategory");
+                if (savedCategory) {
+                    filterCategories(savedCategory);
                 }
             });
 
