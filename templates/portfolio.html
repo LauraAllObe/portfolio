@@ -2027,7 +2027,15 @@
                 });
                 
                 //for MAC specific css styles
-                const isMac = navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                const isMac = (() => {
+                    // Prefer userAgentData if available (modern browsers)
+                    if (navigator.userAgentData) {
+                        return navigator.userAgentData.platform.toLowerCase().includes("mac");
+                    }
+                    // Fallback for older browsers
+                    return navigator.userAgent.toLowerCase().includes("macintosh");
+                })();
+
                 if (isMac) {
                     document.body.classList.add("is-macos");
                 }
