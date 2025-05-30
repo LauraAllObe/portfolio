@@ -2060,19 +2060,31 @@
             });
 
             function setBackgroundWidth() {
-                const viewportWidth = window.innerWidth + "px";
+                const viewportWidth = window.innerWidth;
+                const viewportWidthPx = viewportWidth + "px";
                 const bg = document.querySelector('.background');
                 const fg = document.querySelector('.foreground');
 
                 [bg, fg].forEach(el => {
                     if (el) {
-                        el.style.width = viewportWidth;
-                        el.style.maxWidth = viewportWidth;                            
+                        el.style.width = viewportWidthPx;
+                        el.style.maxWidth = viewportWidthPx;
                     }
                 });
                 bg.style.overflowX = "clip";
-            }
 
+                // Adjust foreground vertical position based on viewport width
+                if (fg) {
+                    // Example: as width decreases, top margin increases
+                    // You can tweak the factor and clamp if needed
+                    const baseOffset = 0; // starting point when screen is wide
+                    const scalingFactor = 0.2; // how much margin to add per 100px shrink
+
+                    // Example: increase top margin from 0px at 1440px → ~60px at 1140px
+                    const marginTop = Math.max(baseOffset, (1440 - viewportWidth) * scalingFactor);
+                    fg.style.marginTop = `${marginTop}px`;
+                }
+            }
         </script>
     </div>    
 </body>
