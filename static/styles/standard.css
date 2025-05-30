@@ -1387,22 +1387,18 @@ body.is-macos .dropdown-item {
 }
 
 body.is-macos .overview {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-body.is-macos .overview-top {
-    margin-top: 30%;
+    left: 0%;
+    transform: translateX(-0%);
 }
 
 body.is-macos .slideshow-container {
-    left: 50%;
-    transform: translate(-50%);
+    left: 0%;
+    transform: translate(-0%);
 }
 
 body.is-macos .dropdown-text {
     margin-left: 110px;
     margin-right: auto;
-    display: block; /* or inline-block */
+    display: block;
     width: fit-content;
 }

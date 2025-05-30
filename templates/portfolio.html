@@ -2027,16 +2027,10 @@
                 });
                 
                 //for MAC specific css styles
-                const isMac = (() => {
-                    // Prefer userAgentData if available (modern browsers)
-                    if (navigator.userAgentData) {
-                        return navigator.userAgentData.platform.toLowerCase().includes("mac");
-                    }
-                    // Fallback for older browsers
-                    return navigator.userAgent.toLowerCase().includes("macintosh");
-                })();
+                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
+                    navigator.userAgent.toLowerCase().includes('macintosh');
 
-                if (isMac) {
+                if (isMacOS) {
                     document.body.classList.add("is-macos");
                 }
 
@@ -2046,6 +2040,15 @@
                     filterCategories(savedCategory);
                 }
             });
+
+            function detectMacOS() {
+                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
+                                navigator.userAgent.toLowerCase().includes('macintosh');
+
+                if (isMacOS) {
+                    document.body.classList.add("is-macos");
+                }
+            }
 
             document.querySelectorAll('.slideshow-background').forEach(bg => {
                 const imgSrc = bg.getAttribute('data-bg');
