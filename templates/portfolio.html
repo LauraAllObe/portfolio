@@ -267,7 +267,7 @@
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/queryingGoogleCSE.png') }}" title="Data Retrieval and Web Scraping" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>Data Retrieval and Web Scraping/h3>
+                        <h3>Data Retrieval and Web Scraping</h3>
                         <div>
                             Data was retrieved from trusted sites, such as PubMed, OpenFDA, RxNorm, Europe PubMed Central, PubMed Central, and via web scraping using Google Custom Search Engine (CSE). During web scraping, NER entities were extracted from the retrieved data. The search included only matches for health-related keywords and ingredient aliases. Non-human studies, non-relevant NER-labeled data, product-related information, and more was discarded using filters to obtain only relevant data.
                         </div>
@@ -453,26 +453,16 @@
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>Likes and Dislikes</h3>
+                        <h3>News Items</h3>
                         <div>
-                            Registered users have the ability to like or dislike individual news items. When a user interacts with a news item, their selection is highlighted in red, while unselected options appear in brown. Each interaction updates the total count of likes or dislikes associated with the news item in real time. If a user reselects a highlighted (red) option, it will deselect their like or dislike. Alternatively, if a user selects the opposite option (i.e., liking an item they had previously disliked or vice versa), the system automatically transfers their preference. This user-specific data persists in the database until the user's account is deleted, at which point all associated likes and dislikes are also removed.
+                            Users can like or dislike news items, with selections highlighted in red and updated in real time. Reselecting removes a vote; switching toggles the preference. These choices persist in the database until the user's account is deleted.
+
+                            Items are sorted by likes (then recency), paginated in sets of 10, and navigable via controls or direct URL input.
                         </div>
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/paginationImage.png') }}" title="Pagination" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Sorting and Pagination</h3>
-                        <div>
-                            News items are primarily sorted by the number of likes, from highest to lowest. In cases where items have the same number of likes, they are further sorted by their publication time, from newest to oldest. To facilitate easier viewing, these items are paginated, with each page displaying up to 10 news items. Users can navigate through the pages either by using the page navigation controls located at the bottom of the page or by directly specifying the page number in the URL.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -484,7 +474,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
+                    <!-- Fourth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -496,7 +486,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
+                    <!-- Fifth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -510,58 +500,22 @@
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/accountImage.png') }}" title="Account Page" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>User Account</h3>
+                        <h3>Code Snippets 1/2 </h3>
                         <div>
-                            Once logged in, users have the ability to access their personal account page.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/sidebarImage.png') }}" title="Sidebar" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Sidebar</h3>
-                        <div>
-                            A list of the all-time users, as well as the UTC time and developer notes can be found in the hacker news sidebar.
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
                     <!-- Eigth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>Code Snippets 1/3 </h3>
-                        <div>
-                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Code Snippets 2/3 </h3>
-                        <div>
-                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Tenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Code Snippets 3/3 </h3>
+                        <h3>Code Snippets 2/2 </h3>
                         <div>
                             For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
