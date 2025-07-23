@@ -288,42 +288,6 @@
                 <!-- Slide 6 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/autoEvalSlide.png') }}" title="Automatic Evaluation" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Automatic Evaluation</h3>
-                        <div>
-                            We evaluated summaries using ROUGE-1, ROUGE-L, and BLEUScore-F1 across three groups: rare (protein powder), common, and sugar ingredients (row order respectively). BLEUScore-F1 consistently outperformed ROUGE, suggesting our model prioritizes semantic clarity over lexical overlap. Right-column scores reflect improved performance after alias integration.
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 7 -->
-                <div class="slides">
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesAA.png') }}" title="Human Evaluation 1/2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Human Evaluation 1/2</h3>
-                        <div>
-                            21 participants (19 via social media, 2 via NJ transit) rated our summaries in a two-part survey. Part A used a 1–10 scale to evaluate informativeness (1), accuracy (2), completeness (3), and clarity (4). Part A results show our model was rated highly in each category, with the lowest rating being on clarity (likely due to technical terminology and the earlier presence of plant-related studies). Feedback led to improvements (see strikethrough).
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 8 -->
-                <div class="slides">
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/humanEvalSlidesBA.png') }}" title="Human Evaluation 2/2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Human Evaluation 2/2</h3>
-                        <div>
-                            Part B compared our summaries to ChatGPT-4o’s (1 indicating preference for our summary and 10 indicating a preference for GPT-4o's summary). Results showed our model was seen as more complete, equally accurate and informative, but less clear; with no strong preference between the two models.
-                        </div>
-                    </div>
-                </div>
-                <!-- Slide 9 -->
-                <div class="slides">
-                    <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/takeawaysSlide.png') }}" title="Key Takeaways and Repository" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
@@ -448,52 +412,14 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Second slide pair: Image and text -->
+                    <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/sortingImage.png') }}" title="Sorted News Items" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>News Items</h3>
+                        <h3>Code Snippets 1/3 </h3>
                         <div>
-                            Users can like or dislike news items, with selections highlighted in red and updated in real time. Reselecting removes a vote; switching toggles the preference. These choices persist in the database until the user's account is deleted.
-
-                            Items are sorted by likes (then recency), paginated in sets of 10, and navigable via controls or direct URL input.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/updatesImage.png') }}" title="Last 30 News Items Json" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Automatic Updates</h3>
-                        <div>
-                            The system automatically refreshes news items hourly, retrieving the latest 50 unique entries from the Hacker News Firebase API. To ensure users receive up-to-date information, the top 30 items are displayed on the newsfeed page in JSON format, providing a streamlined view of the latest developments.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/adminImage.png') }}" title="Admin Page" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Admin Permissions</h3>
-                        <div>
-                            Users with administrative privileges can access the admin page, either by entering the URL directly or via the navigation bar. On this page, administrators have the capability to manage user roles. They can remove non-administrative users as well as add or remove administrative rights for existing users. It is important to note that altering administrative rights does not delete the user's account; it merely changes their access permissions within the system.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/auth0LoginImage.png') }}" title="User Login" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>User Login</h3>
-                        <div>
-                            This feature allows users to sign in using their Google account credentials. Upon their initial login, user data is retrieved and automatically added to the Hacker News database. New users will appear in the "All-time users" list accessible from the sidebar.
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
                     </div>
                 </div>
@@ -503,7 +429,7 @@
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>Code Snippets 1/2 </h3>
+                        <h3>Code Snippets 2/3 </h3>
                         <div>
                             For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
@@ -515,7 +441,7 @@
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
-                        <h3>Code Snippets 2/2 </h3>
+                        <h3>Code Snippets 3/3 </h3>
                         <div>
                             For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/hackerNews" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
                         </div>
@@ -551,186 +477,6 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/appMenuImage.png') }}" title="Application Menu" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Navigation</h3>
-                        <div>
-                            Users can seamlessly navigate through the application using interactive buttons that open new views. These include text-based main views and icon-driven secondary views. A dedicated 'Back' button at the bottom of the screen ensures easy navigation to previous screens. The application’s title and the current view (when applicable) are consistently displayed at the top for clear orientation.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeListImage.png') }}" title="Employee List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Employee Management 1/2</h3>
-                        <div>
-                            The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view, ensuring efficient management within the application.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeManagementImage.png') }}" title="Employee Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Employee Management 2/2</h3>
-                        <div>
-                            The Employee Management feature allows users to access a detailed list of all employees. From here, users can edit employee details or add new employees via 'Edit' and 'Add' buttons. The editing interface enables modifications to employee information with options to cancel, undo, or save changes. Invalid entries will not be saved. Additionally, employees can be deleted directly from the list view.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientListImage.png') }}" title="Client List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Client Management 1/2</h3>
-                        <div>
-                            The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientManagementImage.png') }}" title="Client Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Client Management 2/2</h3>
-                        <div>
-                            The Client Management feature provides a comprehensive list of all clients, enabling users to edit existing client details or add new clients through 'Edit' and 'Add' buttons. The interface supports modifications to client information with options to cancel, undo, or save changes. Invalid entries will not be saved. Clients can also be deleted directly from this interface. Furthermore, navigation to associated project and bill management functionalities is facilitated from the list view. It is important to note that clients can only be closed once all associated projects have been concluded.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectListImage.png') }}" title="Project List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Project Management 1/2</h3>
-                        <div>
-                            The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Eigth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectManagementImage.png') }}" title="Project Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Project Management 2/2</h3>
-                        <div>
-                            The Project Management feature provides a comprehensive list of all projects, enabling users to edit existing project details or add new projects through 'Edit' and 'Add' buttons. The interface supports modifications to project information with options to cancel, undo, or save changes. Invalid entries will not be saved. Projects can also be deleted directly from this interface. Furthermore, navigation to associated bill management and timer functionalities is facilitated from the list view.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeListImage.png') }}" title="Time List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Time Management 1/2</h3>
-                        <div>
-                            The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Tenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timeManagementImage.png') }}" title="Time Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Time Management 2/2</h3>
-                        <div>
-                            The Time Management feature provides a comprehensive list of all time entries, enabling users to edit existing time entry details or add new time entries through 'Edit' and 'Add' buttons. The interface supports modifications to time entry information with options to cancel, undo, or save changes. Invalid entries will not be saved. Time entries can also be deleted directy from this interface. It is important to note that time entries can only be edited before a bill has been created for that entry.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Eleventh slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillListImage.png') }}" title="Project Bill List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Bill Management 1/4</h3>
-                        <div>
-                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Twelfth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/projectBillManagementImage.png') }}" title="Project Bill Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Bill Management 2/4</h3>
-                        <div>
-                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Thirteenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillListImage.png') }}" title="Client Bill List" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Bill Management 3/4</h3>
-                        <div>
-                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourteenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/clientBillManagementImage.png') }}" title="Client Bill Management" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Bill Management 4/4</h3>
-                        <div>
-                            The Bill Management feature offers a detailed listing of all bills associated with specific clients or projects, accessible through separate screens. Users can add new time entries via an 'Add' button. The system automatically calculates the bill amount based on the client or project ID and allows modifications to bill details with options to cancel, undo, or save changes. Invalid entries will not be saved. Bill entries can be removed through chained deletion only. Time entries marked as 'False' for 'Bill?' are excluded from billing calculations.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifteenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/employeeSearchImage.png') }}" title="Employee Search" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Searching</h3>
-                        <div>
-                            On all management pages, users have the ability to search for specific object instances using the search bar and button positioned at the top of the screen.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Sixteenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/timerImage.png') }}" title="Timer" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Windowed Timer</h3>
-                        <div>
-                            A windowed timer is accessible via the timer icon button on the project page. Users must specify an Employee ID to activate the timer. The timer features start, stop, and submit functionalities. Note that the submit button is only enabled after the timer exceeds 10 minutes.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Seventeenth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
@@ -741,7 +487,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Eighteenth slide pair: Image and text -->
+                    <!-- Third slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -753,7 +499,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Nineteenth slide pair: Image and text -->
+                    <!-- Fourth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -765,7 +511,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Twentieth slide pair: Image and text -->
+                    <!-- Fifth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -777,7 +523,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Twentyfirst slide pair: Image and text -->
+                    <!-- Sixth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -812,102 +558,6 @@
                         <h3>Application Overview</h3>
                         <div>
                             This Android application provides comprehensive note management and customization features. Users can adjust text color, background color, font size, and text alignment. It supports saving, deleting, and undoing changes to notes, which can be displayed individually or in a card/recycle view format.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Second slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/detailsImage.png') }}" title="Notes Details Screen Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Note Details</h3>
-                        <div>
-                            The note detail view includes a back button, title and content input fields, and customization options such as text color, background color, text alignment, and adjustable font size in increments of 10s and 1s. It also features buttons for note management, including discard, undo, and save actions. Note that upon exiting, the note content will be automatically saved.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/colorImage.png') }}" title="Color Selector Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Color Selection</h3>
-                        <div>
-                            A third-party color selection wheel is utilized to choose both text and background colors. Users can select a color and confirm with "OK" or cancel the selection.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/smallFontImage.png') }}" title="Small Font Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Font Size 1/2</h3>
-                        <div>
-                            Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/largeFontImage.png') }}" title="Large Font Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Font Size 2/2</h3>
-                        <div>
-                            Font size adjustments are made using up and down arrows next to the 10s or 1s buttons, allowing selection within a range of 8 to 98. In the notes overview, font sizes are displayed as follows: sizes above 80 appear as 28, above 60 as 23, above 40 as 18, above 20 as 13, and all others as 8.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/leftAlignImage.png') }}" title="Left Align Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Text Alignment 1/3</h3>
-                        <div>
-                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/middleAlignImage.png') }}" title="Middle Align Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Text Alignment 2/3</h3>
-                        <div>
-                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/rightAlignImage.png') }}" title="Right Align Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Text Alignment 3/3</h3>
-                        <div>
-                            Users have the flexibility to align text left, right, or center through the text alignment button conveniently located at the bottom of the screen.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/scrollImage.png') }}" title="Note Scrolling Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Scrolling and Note Overview</h3>
-                        <div>
-                            The notes overview utilizes a recycle view, allowing users to add and effortlessly scroll through numerous notes. Each note is presented in a card view, maintaining the same customizations and content as seen in the detail view, with the exception of slightly adjusted font sizes.
                         </div>
                     </div>
                 </div>
@@ -1028,150 +678,6 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mountImage.png') }}" title="Mounting the Image Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Mount Image</h3>
-                        <div>
-                            When the program is started, initial values of the image are printed after mounting is complete.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/cd2Image.png') }}" title="Changing Directory Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Changing Directory and Making a File 1/2</h3>
-                        <div>
-                            The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/creatImage.png') }}" title="Making a File Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Changing Directory and Making a File 2/2</h3>
-                        <div>
-                            The ls command is used to list the contents of a directory. To navigate between directories, the cd command is utilized, with support for '.' (current directory) and '..' (parent directory) as arguments. Files can be created within the current directory using the creat command. Each command accepts a maximum of one argument except for 'ls' which accepts none. 
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdirImage.png') }}" title="Making a Directory Image 1" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Making a Directory 1/2</h3>
-                        <div>
-                            The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/mkdir2Image.png') }}" title="Making a Directory Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Making a Directory 2/2</h3>
-                        <div>
-                            The mkdir command is used to make a directory and accepts only one argument. Note that file and directory names must follow 8.3 format guidelines.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rmImage.png') }}" title="Removing a File Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Remove and Recursive Remove 1/2</h3>
-                        <div>
-                            The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/rm-rImage.png') }}" title="Removing a Directory Recursively Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Remove and Recursive Remove 2/2</h3>
-                        <div>
-                            The rm command deletes files and directories. To remove directories recursively, the -r flag must be specified as the first of up to two allowed arguments.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/readImage.png') }}" title="File Operations Image 1" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>File Operations 1/4</h3>
-                        <div>
-                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read2Image.png') }}" title="File Operations Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>File Operations 2/4</h3>
-                        <div>
-                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read3Image.png') }}" title="File Operations Image 3" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>File Operations 3/4</h3>
-                        <div>
-                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Seventh slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/read4Image.png') }}" title="File Operations Image 4" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>File Operations 4/4</h3>
-                        <div>
-                            The following file operations are available: open requires two arguments, close requires one argument, lsof takes no arguments, lseek requires two arguments, read requires two arguments, and append also requires two arguments. For operations involving an offset, such as lseek, the offset cannot exceed the file's length.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Eigth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/infoExitImage.png') }}" title="Get Image Info and Exit Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Get Info and Exit</h3>
-                        <div>
-                            The info command displays image data, and the exit command terminates the program. Neither command requires arguments.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
@@ -1182,7 +688,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1194,7 +700,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1206,7 +712,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1218,7 +724,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1230,7 +736,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Ninth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1271,42 +777,6 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage1.png') }}" title="Execution Image 1" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Execution Part 1/3</h3>
-                        <div>
-                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage2.png') }}" title="Execution Image 2" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Execution Part 2/3</h3>
-                        <div>
-                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/demoImage3.png') }}" title="Execution Image 3" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Execution Part 3/3</h3>
-                        <div>
-                            On the left, you will find a demonstration of the shell interface showcasing a variety of command types and implementations. Please note that while certain commands are reiterated in this demonstration, it is also compatible with other external commands not displayed here.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
@@ -1317,7 +787,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1329,7 +799,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Sixth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1370,18 +840,6 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/elevatorImage.png') }}" title="Elevator Image" onclick="showModal(this.src)" loading="lazy">
-                    </div>
-                    <div class="slideshow-text">
-                        <h3>Elevator Kernel Module</h3>
-                        <div>
-                            A custom elevator kernel module simulates FIFO passenger transport with a 750 lb / 5-person limit. Elevator states include OFFLINE, IDLE, LOADING, UP, and DOWN. Passenger types (Freshman to Senior) have assigned weights. The module uses consumer-producer processes and a proc_read function to report status.
-                        </div>
-                    </div>
-                </div>
-                <div class="slides" style="display:none;">
-                    <!-- Third slide pair: Image and text -->
-                    <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
                     </div>
                     <div class="slideshow-text">
@@ -1392,7 +850,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fourth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
                     </div>
@@ -1404,7 +862,7 @@
                     </div>
                 </div>
                 <div class="slides" style="display:none;">
-                    <!-- Fifth slide pair: Image and text -->
+                    <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
                         <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
                     </div>
