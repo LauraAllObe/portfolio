@@ -68,6 +68,23 @@
         min-height: 120vh;
     }
 
+    #slideshow9 .slides {
+        margin-top: 12vw;
+    }
+
+    #slideshow9 .slideshow-text {
+        margin-left: -7.5vw;
+        margin-top: 10vw;
+    }
+
+    #slideshow9 .slideshow-video {
+        margin-left: -4vw;
+    }
+
+    #slideshow9 .slideshow-image{
+        margin-left: -4vw;
+    }
+
     #slideshow8 .slideshow-text {
         margin-left: -5vw;
     }
