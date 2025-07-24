@@ -206,6 +206,10 @@
         margin-top: 15vh;
     }
 
+    .marquee-plane5 { 
+        margin-top: 24vh;
+    }
+
 }
 
 /* Portrait */
@@ -253,7 +257,8 @@
     .plane-text-1,
     .plane-text-2,
     .plane-text-3, 
-    .plane-text-4{
+    .plane-text-4,
+    .plane-text-5 {
         height: 26vh;
         margin-top: -15vh;
     }

@@ -260,6 +260,13 @@ a:hover {
   animation: MarqueePlaneLeft linear 15s infinite;
 }
 
+.marquee-plane5 { 
+  margin-top: 38vh;
+  overflow: hidden;
+  position: absolute;
+  animation: MarqueePlaneLeft linear 16s infinite;
+}
+
 .category-button {
     top: 0;
     border: transparent;
@@ -316,6 +323,11 @@ a:hover {
 }
 
 .plane-text-4 {
+    height: 18vh;
+    margin-top: -8vh;
+}
+
+.plane-text-5 {
     height: 18vh;
     margin-top: -8vh;
 }
@@ -727,6 +739,10 @@ a:hover {
     top: 50%;
 }
 
+#slideshow9 .slideshow-ticket.animate {
+    transform: translateX(180%) translateY(-30%) rotate(90deg);
+}
+
 #slideshow8 .slideshow-ticket.animate {
     transform: translateX(175%) translateY(-30%) rotate(90deg);
 }
@@ -883,6 +899,18 @@ a:hover {
 
 .slideshow-vertical-image-container {
   display: contents;
+}
+
+#slideshow9 .slideshow-container {
+    width: 67%; 
+    color: #d788ac;
+} 
+
+#slideshow9 .slideshow-video, 
+#slideshow9 .slideshow-image, 
+#slideshow9 .slideshow-text {
+    max-height: 35vw;
+    margin-top: 7vw;
 }
 
 #slideshow8 .slideshow-container {
@@ -1085,6 +1113,10 @@ a:hover {
     background-position: center;
     z-index: -1;
     pointer-events: none;
+}
+
+#slideshow9 .slide-navigation-text::before {
+    background-image: url('/static/slidenav/baggagetag9.png');
 }
 
 #slideshow8 .slide-navigation-text::before {

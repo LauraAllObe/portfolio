@@ -47,6 +47,10 @@
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview">
                     <span class="dropdown-text">Overview</span>
                 </div>
+                <div class="dropdown-item" onclick="navigateTo('slideshow9', 'tools')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Wakatime Readme Stats">
+                    <span class="dropdown-text">Wakatime Readme Stats</span>
+                </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow8', 'ml')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NLP Nutrition Summary Generation">
                     <span class="dropdown-text">NLP Nutrition Summary Generation</span>
@@ -175,6 +179,12 @@
                     <img src="/static/planes&helicopters/planetext4.png" alt="Overview Tab" class="plane-text-4">
                 </button>
             </div>
+            <div class="marquee-plane5">
+                <button class="category-button" onclick="filterCategories('tools')">
+                    <img src="/static/planes&helicopters/plane5.png" alt="Dev Tools Tab" class="category-icon">
+                    <img src="/static/planes&helicopters/planetext5.png" alt="Dev Tools Tab" class="plane-text-5">
+                </button>
+            </div>
         </div>  
         <div class="overview" id="overview" data-bg="/static/suitcases/overview.png">
             <div class="overview-top">
@@ -216,6 +226,69 @@
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'overview')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Slideshow 9 (-2) -->   
+        <div class="slideshow-background" id="slideshow9" data-bg="/static/suitcases/devtools.png">
+            <div class="slideshow-container">
+                <a class="slideshow-ticket" href="https://github.com/LauraAllObe/wakatimeReadmeStats" target="_blank" title="Visit the Wakatime Readme Stats Repository on GitHub">
+                    <img src="/static/tickets/ticket9.png">
+                </a>
+                <!-- Slide 1 -->
+                <div class="slides">
+                    <lite-youtube class="slideshow-video" videoid="JtDCl90kVt8" style="--aspect-ratio: 16/9;"></lite-youtube>
+                    <div class="slideshow-text">  
+                        <h3>Application Overview</h3>
+                        <div>
+                            This project features automated activity tracking, API integration, dynamic SVG generation, GitHub Actions workflows, data caching, CI/CD automation, token-based authentication, and responsive formatting. The aim, hereby, is to showcase the power of workflow orchestration and developer analytics in visualizing coding habits and maintaining up-to-date developer insights directly within version-controlled environments.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-1.png') }}" title="Code Snippet 1/3" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 1/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/wakatimeReadmeStats" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-2.png') }}" title="Code Snippet 2/3" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 2/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/wakatimeReadmeStats" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-3.png') }}" title="Code Snippet 3/3" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">
+                        <h3>Code Snippet 3/3</h3>
+                        <div>
+                            For a comprehensive demonstration of the development skills utilized in this project, please visit the <a href="https://github.com/LauraAllObe/wakatimeReadmeStats" target="_blank">project repository</a>. These code snippets offer a glimpse into the various capabilities employed throughout the project.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow9')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow9')">
                         <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
                     </button>
                 </div>
@@ -951,6 +1024,7 @@
     
             var slideIndices = {
                 'overview': 1,
+                'slideshow9': 1,
                 'slideshow8': 1,
                 'slideshow0': 1, 
                 'slideshow1': 1, 
@@ -996,6 +1070,7 @@
         
             window.onload = function() {
                 showSlides(slideIndices['overview'], 'overview')
+                showSlides(slideIndices['slideshow9'], 'slideshow9');
                 showSlides(slideIndices['slideshow8'], 'slideshow8');
                 showSlides(slideIndices['slideshow0'], 'slideshow0');
                 showSlides(slideIndices['slideshow1'], 'slideshow1');
@@ -1130,6 +1205,7 @@
             function filterCategories(category) {
                 sessionStorage.setItem("selectedCategory", category);
 
+                const slideshow9 = document.getElementById('slideshow9');
                 const slideshow8 = document.getElementById('slideshow8');
                 const slideshow0 = document.getElementById('slideshow0');
                 const slideshow1 = document.getElementById('slideshow1');
@@ -1141,6 +1217,7 @@
                 const slideshow7 = document.getElementById('slideshow7');
                 const overview = document.getElementById('overview');
 
+                slideshow9.style.display = 'none';
                 slideshow8.style.display = 'none';
                 slideshow0.style.display = 'none';
                 slideshow1.style.display = 'none';
@@ -1152,7 +1229,12 @@
                 slideshow7.style.display = 'none';
                 overview.style.display = 'none';
 
-                if (category === 'ml')
+                if (category === 'tools')
+                {
+                    slideshow9.style.display = 'block';
+                    slideshow9.scrollIntoView();
+                }
+                else if (category === 'ml')
                 {
                     slideshow8.style.display = 'block';
                     slideshow0.style.display = 'block';
@@ -1184,6 +1266,7 @@
                 const sections = [
                     { id: 'top', name: 'Skyline' },
                     { id: 'overview', name: 'Overview' },
+                    { id: 'slideshow9', name: 'Wakatime Readme Stats' },
                     { id: 'slideshow8', name: 'NLP Nutrition Summary Generation' },
                     { id: 'slideshow0', name: 'Combined Models ML' },
                     { id: 'slideshow1', name: 'Hacker News Web App' },
