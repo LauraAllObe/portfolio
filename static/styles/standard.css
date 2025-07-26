@@ -1157,6 +1157,15 @@ a:hover {
 
 /* Modal (expands slideshow images) */
 
+.expanded-image-modal-image {
+    transition: transform 0.3s ease, transform-origin 0.3s ease;
+    cursor: zoom-in;
+}
+
+.expanded-image-modal-image.expanded-image-modal-zoomed-in {
+    cursor: zoom-out;
+}
+
 .expanded-image-modal {
     display: none;
     position: fixed;

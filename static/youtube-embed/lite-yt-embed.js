@@ -27,6 +27,9 @@ class LiteYTEmbed extends HTMLElement {
          */
         if (!this.style.backgroundImage) {
           this.style.backgroundImage = `url("https://i.ytimg.com/vi/${this.videoId}/hqdefault.jpg")`;
+          this.style.backgroundPosition = 'center center';
+          this.style.backgroundSize = 'cover';
+          this.style.backgroundRepeat = 'no-repeat';
           this.upgradePosterImage();
         }
 
@@ -231,6 +234,9 @@ class LiteYTEmbed extends HTMLElement {
                 if (noAvailablePoster) return;
 
                 this.style.backgroundImage = `url("${webpUrl}")`;
+                this.style.backgroundPosition = 'center center';
+                this.style.backgroundSize = 'cover'; // Re-apply in case browser dropped it
+                this.style.backgroundRepeat = 'no-repeat';
             }
         }, 100);
     }

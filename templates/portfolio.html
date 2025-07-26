@@ -1010,16 +1010,35 @@
                 modalImg.classList.remove('expanded-image-modal-zoomed-in');
             }
     
-            function toggleZoom() {
-                if (modalImg.classList.contains('expanded-image-modal-zoomed-in')) {
-                    modalImg.classList.remove('expanded-image-modal-zoomed-in');
+            function toggleZoom(e) {
+                const img = modalImg;
+                const rect = img.getBoundingClientRect();
+
+                if (img.classList.contains('expanded-image-modal-zoomed-in')) {
+                    // Zoom out, but preserve origin for smooth animation
+                    img.style.transform = 'scale(1)';
+                    img.classList.remove('expanded-image-modal-zoomed-in');
+
+                    // Delay clearing transformOrigin to let animation complete
+                    setTimeout(() => {
+                        img.style.transformOrigin = '';
+                        img.style.transform = '';
+                    }, 300); // match your CSS transition duration
                 } else {
-                    modalImg.classList.add('expanded-image-modal-zoomed-in');
+                    // Zoom in from click position
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const percentX = (x / rect.width) * 100;
+                    const percentY = (y / rect.height) * 100;
+
+                    img.style.transformOrigin = `${percentX}% ${percentY}%`;
+                    img.style.transform = 'scale(2)';
+                    img.classList.add('expanded-image-modal-zoomed-in');
                 }
             }
     
-            modalImg.addEventListener('click', function() {
-                toggleZoom();
+            modalImg.addEventListener('click', function(e) {
+                toggleZoom(e);
             });
     
             var slideIndices = {
@@ -1187,15 +1206,46 @@
                 event.preventDefault();
                 const form = document.getElementById("contact-form");
 
-                emailjs.sendForm('service_2qkhega', 'template_01xm62i', form)
-                    .then(function () {
-                        document.getElementById("successModal").style.display = "flex";
-                        form.reset();
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                        alert("Email failed to send.");
-                    });
+                const name = form.name.value.trim();
+                const email = form.email.value.trim();
+                const subject = form.subject.value.trim();
+                const message = form.content.value.trim();
+
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+                if (!name || !email || !subject || !message) {
+                    alert("Please fill out all fields.");
+                    return;
                 }
+
+                if (!emailRegex.test(email)) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                const today = new Date().toISOString().split("T")[0];
+
+                fetch('http://localhost:3001/send-email', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name,
+                        email,
+                        subject,
+                        message,
+                        time: today
+                    })
+                })
+                .then(res => {
+                    if (!res.ok) throw new Error('Email failed');
+                    document.getElementById("successModal").style.display = "flex";
+                    form.reset();
+                })
+                .catch(err => {
+                    alert("Email failed to send.");
+                    console.error(err);
+                });
+            }
 
             function closeModal() {
                 const modal = document.getElementById('successModal');
