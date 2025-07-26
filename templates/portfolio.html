@@ -1225,7 +1225,7 @@
 
                 const today = new Date().toISOString().split("T")[0];
 
-                fetch('http://localhost:3001/send-email', {
+                fetch('https://laura-backend.herokuapp.com/send-email', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({
