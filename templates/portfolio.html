@@ -1225,16 +1225,21 @@
 
                 const today = new Date().toISOString().split("T")[0];
 
-                fetch('https://laura-backend.herokuapp.com/send-email', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        name,
-                        email,
-                        subject,
-                        message,
-                        time: today
-                    })
+                const baseUrl =
+                window.location.hostname === 'localhost'
+                    ? 'http://localhost:3001'
+                    : 'https://laura-backend-a4147f87b085.herokuapp.com';
+
+                fetch(`${baseUrl}/send-email`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    subject,
+                    message,
+                    time: today
+                })
                 })
                 .then(res => {
                     if (!res.ok) throw new Error('Email failed');
