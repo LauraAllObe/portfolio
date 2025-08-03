@@ -1003,8 +1003,21 @@
                 <p>Your message has been sent successfully!</p>
             </div>
         </div>
+        <!-- Loading Modal -->
+        <div id="loadingModal" class="loading-modal">
+            <div class="loader"></div>
+        </div>
         <!-- Modal and Slideshow Navigation Code -->
         <script>
+
+            // Example: Hide modal after assets are loaded
+            window.addEventListener('load', () => {
+                const minDisplayTime = 1000; // 1 second
+                setTimeout(() => {
+                    document.getElementById('loadingModal').style.display = 'none';
+                }, minDisplayTime);
+            });
+            
             var modal = document.getElementById("myModal");
             var modalImg = document.querySelector(".expanded-image-modal-image");
             var span = document.getElementsByClassName("close")[0];
