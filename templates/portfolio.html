@@ -196,48 +196,237 @@
                 </button>
             </div>
         </div>  
-        <div class="overview" id="overview" data-bg="/static/suitcases/overview.png">
-            <div class="overview-top">
-                <div class="overview-image-container">
-                    <img class="overview-image" src="{{ url_for('static', filename='overview/portfolioHeadshot.jpg') }}"/>
-                    <img src="{{ url_for('static', filename='overview/stamp2.png') }}" alt="Bottom Left Corner" class="bottom-left-stamp"/>
-                    <img src="{{ url_for('static', filename='overview/stamp1.png') }}" alt="Top Right Corner" class="top-right-stamp"/>
-                </div>
-                <div class="overview-title-text">
-                    <h1>Hi! I'm Laura Allison Obermaier</h1>
+        <div class="overview" id="overview">
+            <div class="airport-table">
+                <img src="/static/overview/airportChairs.png" alt="Airport Table" class="airport-table-image">
+
+                <!-- Backpack front image -->
+                <img src="/static/overview/backpackFront.png" alt="Backpack Front" class="backpack-front">
+
+                <!-- Rectangular button that controls the item transition -->
+                <button class="backpack-trigger" aria-label="Cycle backpack item"></button>
+
+                <!-- Items -->
+                <div class="backpack-items">
+                    <div id="dl" class="backpack-item-wrap"
+                        data-label="Driver's License"
+                        style="--item-rotate: -3deg;">
+                        <img src="/static/overview/driversLicense.png" alt="Driver's License" class="backpack-item active">
+                    </div>
+
+                    <div id="bt" class="backpack-item-wrap"
+                        data-label="Boarding Ticket"
+                        style="--item-rotate: 2deg; --item-active-scale: 10;">
+                        <img src="/static/overview/hardSkills3.svg" alt="Boarding Ticket: Showcasing Hard Skills" class="backpack-item" style="opacity: 0.9">
+                    </div>
+                    <div id="passport" class="backpack-item-wrap"
+                        data-label="Passport"
+                        style="--item-rotate: 1deg; --item-active-scale: 18; --item-active-translate-y: -22vh;">
+                        <img src="/static/overview/passport.png" alt="Passport: Showcasing places lived and where from" class="backpack-item">
+                    </div>
+                    <div id="note" class="backpack-item-wrap"
+                        data-label="Note"
+                        style="--item-rotate: -8deg; --item-active-translate-x: 2vw; --item-active-translate-y: -28vh; --item-active-scale: 16;">
+                        <img src="/static/overview/note.png" alt="Note: Showcasing professional and fun fact" class="backpack-item">
+                    </div>
+                    <div id="zb" class="backpack-item-wrap"
+                        data-label="Ziplock Bag"
+                        style="--item-rotate: -1deg;  --item-active-scale: 16;">
+                        <img src="/static/overview/ziplockBag.png" alt="Ziplock Bag: Showcasing likes" class="backpack-item">
+                    </div>
                 </div>
             </div>
-            <div class="overview-container">
-                <div class="slides overview-slide">
-                    <div class="overview-slideshow-text">
-                        Master’s student in Software Engineering at Stevens Institute of Technology (’25) with graduate certificates in Machine Learning and Cybersecurity. Earned my B.S. in Computer Science from Florida State University (’23), graduating with a 3.97 GPA and honors distinctions.
-                        <br/><br/>
-                        This summer, I’m interning as a full-stack developer at NutriverseAI and serving as a course assistant for Advanced Algorithms. I also conducted undergraduate research under Dr. Jonathan Adams at FSU. Currently seeking full/part-time roles beginning 2026.
-                    </div>
-                </div>
-                <div class="slides overview-slide" style="display: none;">
-                    <div class="overview-slideshow-text">
-                        What drives me is entering a state of deep focus—the “flow state”—where I thrive in solving intricate technical problems. In a highly competitive industry, that intense concentration is what gives me an edge and pushes me to excel.
-                        <br/><br/>
-                        I pursued software engineering at Stevens after realizing my growing interest in full-stack development and system design. But after briefly switching to cybersecurity, I found myself consistently drawn back to the problem-solving mindset that software engineering demands.   
-                    </div>
-                </div>
-                <div class="slides overview-slide" style="display: none;">
-                    <div class="overview-slideshow-text">
-                        That pivot reignited my passion, reaffirming that software engineering is where I’m most engaged and fulfilled. I now lean fully into the discipline that lets me innovate, build, and challenge myself technically every day.
-                        <br/><br/>
-                        With each project, I aim to deepen my skills while bringing creativity, reliability, and precision to the table. I’m excited for the road ahead and the opportunity to contribute meaningfully in a collaborative engineering environment.
-                    </div>
-                </div>
 
-                <div class="button-container">
-                    <button class="prev" onclick="plusSlides(-1, 'overview')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
-                    </button>
-                    <div class="slide-navigation-text"></div>
-                    <button class="next" onclick="plusSlides(1, 'overview')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
-                    </button>
+            <div class="departures-signs">
+                <img src="/static/overview/departureSign.png" alt="Departures Sign" class="departures-signs-image">
+                <div class="tables">
+
+                    <!-- TABLE 1 -->
+                    <table class="table">
+                    <thead>
+                        <tr><th class="table-title" colspan="4">EXPERIENCE</th></tr>
+                        <tr class="table-column-titles">
+                            <th>&nbsp;Company</th>
+                            <th>Date</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" data-href="https://ai-blockchain.com/">
+                            <td>&nbsp;AI Blockchain</td>
+                            <td>SU25</td>
+                            <td>Software Architect</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.linkedin.com/company/nutriverseai/">
+                            <td>&nbsp;NutriverseAI</td>
+                            <td>SU25</td>
+                            <td>Software Engineer</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.stevens.edu/">
+                            <td>&nbsp;SIT</td>
+                            <td>SP25</td>
+                            <td>Course Assistant</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.fsu.edu/">
+                            <td>&nbsp;FSU</td>
+                            <td>FA22-SP23</td>
+                            <td>Research Assistant</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <!-- TABLE 2 -->
+                    <table class="table">
+                    <thead>
+                        <tr><th class="table-title" colspan="4">EDUCATION</th></tr>
+                        <tr class="table-column-titles">
+                            <th>&nbsp;University</th>
+                            <th>Date</th>
+                            <th>Degree</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" data-href="https://www.stevens.edu/">
+                            <td>&nbsp;SIT</td>
+                            <td>SP24-FA25</td>
+                            <td>MS in Software Engineering</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.stevens.edu/">
+                            <td>&nbsp;SIT</td>
+                            <td>SP24-FA25</td>
+                            <td>Grad Cert in Machine Learning</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.stevens.edu/">
+                            <td>&nbsp;SIT</td>
+                            <td>SP24-FA25</td>
+                            <td>Grad Cert in Cyber Security</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://www.fsu.edu/">
+                            <td>&nbsp;FSU</td>
+                            <td>FA21-23</td>
+                            <td>BS in Computer Science</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <!-- TABLE 3 -->
+                    <table class="table">
+                    <thead>
+                        <tr><th class="table-title" colspan="4">PROJECTS</th></tr>
+                        <tr class="table-column-titles">
+                            <th>&nbsp;Repository</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" data-href="https://www.linkedin.com/company/nutriverseai/posts/?feedView=all">
+                            <td>&nbsp;NutriverseAI</td>
+                            <td>Jun-Aug 25</td>
+                            <td>App Dev/ML</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/wakatimeReadmeStats">
+                            <td>&nbsp;WakaTime Readme Stats</td>
+                            <td>Jun-Jul 25</td>
+                            <td>Dev Tools</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://ai-blockchain.com/project">
+                            <td>&nbsp;AGI Epigenetic Reprogramming</td>
+                            <td>Jul-Cur 25</td>
+                            <td>App Dev/ML</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://ai-blockchain.com/project">
+                            <td>&nbsp;Humidor Temp App</td>
+                            <td>Jun 25</td>
+                            <td>App Dev</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://ai-blockchain.com/project">
+                            <td>&nbsp;PP Email Integration</td>
+                            <td>May-Jun 25</td>
+                            <td>App Dev</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/nutritionAnalyzer">
+                            <td>&nbsp;Nutrition Analyzer</td>
+                            <td>Mar-May 25</td>
+                            <td>ML</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/machineLearningProject">
+                            <td>&nbsp;Combined Models</td>
+                            <td>Jul-Aug 2024</td>
+                            <td>ML</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/proFessUp">
+                            <td>&nbsp;ProFessUp</td>
+                            <td>Sep-Dec 23</td>
+                            <td>App Dev</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/fat32filesystem">
+                            <td>&nbsp;Fat32 Filesystem</td>
+                            <td>Nov-Dec 23</td>
+                            <td>Op Sys</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/hackerNews">
+                            <td>&nbsp;Hacker News</td>
+                            <td>Oct-Dec 23</td>
+                            <td>App Dev</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/elevatorKernelModule">
+                            <td>&nbsp;Elevator Kernel Module</td>
+                            <td>Oct-Nov 23</td>
+                            <td>Op Sys/td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/shell">
+                            <td>&nbsp;Shell</td>
+                            <td>Sep-Oct 23</td>
+                            <td>Op Sys</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/practicePanther">
+                            <td>&nbsp;Practice Panther</td>
+                            <td>Jun-Aug 23</td>
+                            <td>App Dev</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/LauraAllObe/myNotes">
+                            <td>&nbsp;My Notes App</td>
+                            <td>Jul-Aug 23</td>
+                            <td>App Dev</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <!-- TABLE 4 -->
+                    <table class="table">
+                    <thead>
+                        <tr><th class="table-title" colspan="4">OS CONTRIBUTIONS</th></tr>
+                        <tr class="table-column-titles">
+                            <th>&nbsp;Repository</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="clickable-row" data-href="https://github.com/JacobLinCool/LeetCode-Stats-Card">
+                            <td>&nbsp;LeetCode Stats Card</td>
+                            <td>08/07/25</td>
+                            <td>PR Open</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/simple-icons/simple-icons">
+                            <td>&nbsp;Simple Icons</td>
+                            <td>08/07/25</td>
+                            <td>PR Open</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">
+                            <td>&nbsp;Awesome Github Profile README</td>
+                            <td>08/05/25</td>
+                            <td>PR Open</td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+                    <div class="departures-footer">
+                        <span class="footer-left" id="footer-day"></span>
+                        <span class="footer-center" id="footer-date"></span>
+                        <span class="footer-right" id="footer-time"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1065,7 +1254,6 @@
             });
     
             var slideIndices = {
-                'overview': 1,
                 'slideshow9': 1,
                 'slideshow8': 1,
                 'slideshow0': 1, 
@@ -1111,7 +1299,6 @@
             }
         
             window.onload = function() {
-                showSlides(slideIndices['overview'], 'overview')
                 showSlides(slideIndices['slideshow9'], 'slideshow9');
                 showSlides(slideIndices['slideshow8'], 'slideshow8');
                 showSlides(slideIndices['slideshow0'], 'slideshow0');
@@ -1522,6 +1709,85 @@
                     fg.style.marginTop = `${marginTop}px`;
                 }
             }
+
+            // Table Slideshow Logic
+            (function() {
+                let tables = document.querySelectorAll('.departures-signs .table');
+                let current = 0;
+                if (tables.length) {
+                    tables[current].classList.add('active');
+                    setInterval(() => {
+                        tables[current].classList.remove('active');
+                        current = (current + 1) % tables.length;
+                        tables[current].classList.add('active');
+                    }, 4000);
+                }
+            })();
+
+            document.querySelectorAll('.clickable-row').forEach(row => {
+                row.addEventListener('click', () => {
+                    window.location.href = row.dataset.href;
+                });
+            });
+
+            function updateDeparturesFooter() {
+                const now = new Date();
+
+                const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+                const monthName = now.toLocaleDateString('en-US', { month: 'long' });
+                const dateNum = now.getDate();
+                const year = now.getFullYear();
+
+                let hours = now.getHours();
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const ampm = hours >= 12 ? 'P' : 'A';
+                hours = hours % 12 || 12;
+
+                document.getElementById('footer-day').textContent = dayName;
+                document.getElementById('footer-date').textContent = `${monthName} ${dateNum}, ${year}`;
+                document.getElementById('footer-time').textContent = `${hours}:${minutes}${ampm}`;
+            }
+
+            // Initialize and refresh every 30 seconds
+            updateDeparturesFooter();
+            setInterval(updateDeparturesFooter, 30000); 
+
+            // Backpack Item Click Logic changed to BUTTON-based control (1 + 2)
+            (function () {
+                const items = Array.from(document.querySelectorAll('.backpack-item'));
+                const trigger = document.querySelector('.backpack-trigger');
+                if (!items.length || !trigger) return;
+
+                let activeIndex = items.findIndex(el => el.classList.contains('active'));
+                if (activeIndex < 0) {
+                    activeIndex = 0;
+                    items[0].classList.add('active');
+                }
+
+                // initial lift
+                items.forEach(img => img.closest('.backpack-item-wrap')?.classList.remove('is-active'));
+                items[activeIndex].closest('.backpack-item-wrap')?.classList.add('is-active');
+
+                const cycle = () => {
+                    const currImg = items[activeIndex];
+                    currImg.classList.remove('active');
+                    currImg.closest('.backpack-item-wrap')?.classList.remove('is-active');
+
+                    activeIndex = (activeIndex + 1) % items.length;
+
+                    const nextImg = items[activeIndex];
+                    nextImg.classList.add('active');
+                    nextImg.closest('.backpack-item-wrap')?.classList.add('is-active');
+                };
+
+                trigger.addEventListener('click', cycle);
+                trigger.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    cycle();
+                    }
+                });
+            })();
         </script>
     </div>    
 </body>
