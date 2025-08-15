@@ -622,7 +622,7 @@ a:hover {
 /* Overview */
 
 .overview {
-    margin-top: 60vw;
+    margin-top: 80vw;
     margin-bottom: 40vw;
     z-index: 100;
     height: 58vw;
@@ -785,19 +785,55 @@ a:hover {
     z-index: 200;
 }
 
-.backpack-trigger {
+.backpack-trigger-wrap {
   position: absolute;
-  bottom: 42.5%;
-  left: 54%;
+  bottom: 39%;
+  left: 53.7%;
   transform: translate(-50%, 0);
   width: 5vh;
   height: 4vh;
   z-index: 310;
-  background: rgba(255, 255, 255, 0);
-  border-color: rgba(255, 255, 255, 0);
+}
+
+.backpack-trigger {
+  position: absolute;
+  bottom: 39%;
+  left: 53.7%;
+  transform: translate(-50%, 0);
+  width: 5vh;
+  height: 4vh;
+  z-index: 310;
   cursor: pointer;
   outline: none;
   transition: background 0.2s ease, border-color 0.2s ease;
+  background: transparent;
+  border-color: transparent;
+}
+
+.trigger-coach {
+  position: absolute;
+  right: 100%;
+  margin-right: 0vh; 
+  top: 20%;
+  z-index: 320;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.9));
+  animation: coachNudge 1.25s ease-in-out infinite;
+}
+
+.coach-arrow {
+  width: 12vh;
+  height: auto;
+}
+
+@keyframes coachNudge {
+  0%   { transform: translateY(-50%) translateX(-0.8vh); }
+  50%  { transform: translateY(-50%) translateX(0); }
+  100% { transform: translateY(-50%) translateX(-0.8vh); }
+}
+
+.trigger-coach.dismissed {
+  display: none;
 }
 
 .backpack-trigger:hover,

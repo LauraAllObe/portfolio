@@ -207,7 +207,27 @@
                 <img src="/static/overview/backpackFront.png" alt="Backpack Front" class="backpack-front">
 
                 <!-- Rectangular button that controls the item transition -->
-                <button class="backpack-trigger" aria-label="Cycle backpack item"></button>
+                <div class="backpack-trigger-wrap">
+                    <button class="backpack-trigger" aria-label="Cycle backpack item"></button>
+
+                    <!-- Coach arrow (points at trigger) -->
+                    <div class="trigger-coach" aria-hidden="true">
+                        <svg class="coach-arrow" viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Shaft -->
+                            <rect x="0" y="35" width="120" height="50" fill="white"/>
+                            <!-- Arrowhead -->
+                            <polygon points="120,10 180,60 120,110" fill="white"/>
+                            <!-- Label -->
+                            <text x="85" y="135" 
+                                text-anchor="middle" 
+                                fill="white" 
+                                font-size="22" 
+                                font-family="BarlowBold, sans-serif">
+                                I'm Interactive!
+                            </text>
+                        </svg>
+                    </div>
+                </div>
 
                 <!-- Items -->
                 <div class="backpack-items">
@@ -218,9 +238,9 @@
                     </div>
 
                     <div id="bt" class="backpack-item-wrap"
-                        data-label="Boarding Ticket"
+                        data-label="Boarding Pass"
                         style="--item-rotate: 2deg; --item-active-scale: 10;">
-                        <img src="/static/overview/hardSkills3.svg" alt="Boarding Ticket: Showcasing Hard Skills" class="backpack-item">
+                        <img src="/static/overview/hardSkills.svg" alt="Boarding Pass: Showcasing Hard Skills" class="backpack-item">
                     </div>
                     <div id="passport" class="backpack-item-wrap"
                         data-label="Passport"
@@ -1528,6 +1548,9 @@
                     overview.style.display = 'flex';
                     overview.scrollIntoView();
                 }
+                else {
+                    overview.style.display = 'flex';
+                }
             }
 
             window.onscroll = function () {
@@ -1759,6 +1782,7 @@
             (function () {
                 const items = Array.from(document.querySelectorAll('.backpack-item'));
                 const trigger = document.querySelector('.backpack-trigger');
+                const coach = document.querySelector('.trigger-coach');   // <- NEW
                 if (!items.length || !trigger) return;
 
                 let activeIndex = items.findIndex(el => el.classList.contains('active'));
@@ -1771,6 +1795,12 @@
                 items.forEach(img => img.closest('.backpack-item-wrap')?.classList.remove('is-active'));
                 items[activeIndex].closest('.backpack-item-wrap')?.classList.add('is-active');
 
+                const dismissCoach = () => {                              // <- NEW
+                    if (coach && !coach.classList.contains('dismissed')) {
+                    coach.classList.add('dismissed');
+                    }
+                };
+
                 const cycle = () => {
                     const currImg = items[activeIndex];
                     currImg.classList.remove('active');
@@ -1781,6 +1811,8 @@
                     const nextImg = items[activeIndex];
                     nextImg.classList.add('active');
                     nextImg.closest('.backpack-item-wrap')?.classList.add('is-active');
+
+                    dismissCoach();                                         // <- NEW
                 };
 
                 trigger.addEventListener('click', cycle);
@@ -1790,6 +1822,10 @@
                     cycle();
                     }
                 });
+
+                // Also dismiss on keyboard focus/activation for accessibility
+                trigger.addEventListener('pointerdown', dismissCoach);    // <- optional extra
+                trigger.addEventListener('focus', dismissCoach);          // <- optional extra
             })();
         </script>
     </div>    
