@@ -640,12 +640,28 @@ a:hover {
     justify-content: space-around;
 }
 
+.airport-background {
+    position: absolute;
+    align-self: center;
+    width: 80%;
+    height: auto;
+    top: 60%;
+    left: 0%;
+    opacity: 0.8;
+    transform: translateY(-35%) translateX(-25%);
+    z-index: -5;
+}
+
+.airport-background-image {
+    z-index: -5;
+}
+
 /* Departures Sign */
 
 .departures-signs {
     position: absolute;
-    top: 0%;
-    right: 5vw;
+    top: -10%;
+    right: -10vw;
     height: 545px;
     z-index: 150;
 }
@@ -757,8 +773,8 @@ a:hover {
 
 .airport-table {
     position: absolute;
-    left: -10vw;
-    top: 70%;
+    left: -15vw;
+    top: 80%;
     height: 350px;
     z-index: 200;
 }
