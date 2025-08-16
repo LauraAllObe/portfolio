@@ -832,6 +832,11 @@ a:hover {
   100% { transform: translateY(-50%) translateX(-0.8vh); }
 }
 
+.backpack-trigger:hover ~ .trigger-coach,
+.backpack-trigger:focus-visible ~ .trigger-coach {
+  opacity: 0.6;
+}
+
 .trigger-coach.dismissed {
   display: none;
 }
