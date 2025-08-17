@@ -676,7 +676,7 @@ a:hover {
     position: absolute;
     padding-left: 1%;
     padding-right: 1%;
-    top: 2.4vh;
+    top: 18px;
     left: 14.4%;
     width: 73.8%;
     height: 100%;
@@ -1654,8 +1654,8 @@ body.is-macos .dropdown-item {
 }
 
 body.is-macos .overview {
-    left: 0%;
-    transform: translateX(-0%);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 body.is-macos .slideshow-container {
