@@ -317,13 +317,11 @@
     }
 
     .departures-signs {
-        top: -30%;
         right: -18vw;
     }
 
     .airport-table {
         left: -30vw;
-        top: 80%;
         height: 300px;
     }
 

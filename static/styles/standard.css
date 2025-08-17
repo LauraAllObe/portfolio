@@ -645,7 +645,7 @@ a:hover {
     align-self: center;
     width: 80%;
     height: auto;
-    top: 60%;
+    bottom: -600px;
     left: 0%;
     opacity: 0.8;
     transform: translateY(-35%) translateX(-25%);
@@ -660,7 +660,7 @@ a:hover {
 
 .departures-signs {
     position: absolute;
-    top: -10%;
+    top: 90px;
     right: -10vw;
     height: 545px;
     z-index: 150;
@@ -774,7 +774,7 @@ a:hover {
 .airport-table {
     position: absolute;
     left: -15vw;
-    top: 80%;
+    top: 650px;
     height: 350px;
     z-index: 200;
 }
