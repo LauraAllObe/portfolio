@@ -76,6 +76,11 @@ a:hover {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'HandMeDownS';
+  src: url('/static/fonts/handmeds.ttf') format('truetype');
+}
+
 /* Fullscreen loading modal */
 .loading-modal {
     position: fixed;
@@ -813,23 +818,25 @@ a:hover {
 .trigger-coach {
   position: absolute;
   right: 100%;
-  margin-right: 0vh; 
-  top: 20%;
-  z-index: 320;
+  margin-right: -1vh;
+  margin-top:10px;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: none;
   filter: drop-shadow(0 0 8px rgba(255,255,255,0.9));
-  animation: coachNudge 1.25s ease-in-out infinite;
 }
 
 .coach-arrow {
-  width: 12vh;
+  width: 25vh;
   height: auto;
+  opacity: 0.7;
 }
 
-@keyframes coachNudge {
-  0%   { transform: translateY(-50%) translateX(-0.8vh); }
-  50%  { transform: translateY(-50%) translateX(0); }
-  100% { transform: translateY(-50%) translateX(-0.8vh); }
+.overview-arrow-text {
+  text-anchor: middle;
+  color: rgba(255,255,255,0.7);
+  font-size: 40px;
+  font-family: 'HandMeDownS', sans-serif;
 }
 
 .backpack-trigger:hover ~ .trigger-coach,
@@ -852,7 +859,7 @@ a:hover {
     bottom: 43%;
     left: 50.5%;
     transform: translateX(-50%);
-    height: 14vh;
+    height: 110px;
     z-index: 300;
 }
 
