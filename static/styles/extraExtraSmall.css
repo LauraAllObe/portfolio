@@ -99,53 +99,74 @@
     }
 
     .overview {
-        height: 100vw;
-        width: 82.5vw;
+        margin-bottom: 120vw;
+        height: 200vw;
+        padding: 10vw;
+    }
+    
+    .departures-signs {
+        top: -180px;
     }
 
-    .overview-container {
-        height: 50vw;
-        min-height: 50vw;  
+    .departures-signs .tables {
+        line-height: 1.8;
+    }
+
+    .airport-background {
+        bottom: -100px;
+    }
+
+    .airport-table {
+        left: -20vw;
+        padding-top: 100px;
+        top: 600px;
+    }
+
+    .backpack-front {
+        height: 8.5vh;
+        bottom: 28%;
+    }
+
+    .backpack-trigger-wrap {
+        bottom: 20%;
+        left: 55%;
+    }
+
+    .backpack-trigger {
+        bottom: 50%;
+        left: 45%;
+    }
+
+    .backpack-items {
+        position: relative;
+        bottom: 73%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .backpack-item-wrap {
+        position: absolute;
+        top: 0;
+        left: 48%;
+        margin: auto;
+        display: block;
+        transform: 
+            translateY(calc(var(--item-translate-y) / 2))
+            scale(var(--item-scale))
+            rotate(var(--item-rotate));
+        transform-origin: bottom center;
+    }
+
+    .backpack-item {
+        height: 2.4vh;
     }
 
     h1 {
         font-size: 18px;
-    }
-
-    .overview-top {
-        margin-top: 5vw;
-        margin-left: 0vw;
-        width: 60vw;
-        max-width: 60vw;
-        margin-bottom: 10vw;
-    }
-
-    .overview-image-container {
-        margin-top: 3vw;
-    }
-
-    .overview-image {
-        width: 16vw;
-        height: 22vw;
-    }
-
-    .overview-slide {
-        width: 95vw;
-        max-width: 95vw;
-    }
-
-    #overview .slides {
-        width: 95%;
-    }
-
-    .overview-slideshow-text {
-        width: 100%;
-        max-width: 100%;
-        max-height: 24vw;
-    }
-
-    #overview .button-container {
-        bottom: -5vw;
     }
 
     h3 {
@@ -165,17 +186,6 @@
         width: 28vw;
         height: 21vw;
         margin-left: 2.8vw;
-    }
-
-    .top-right-stamp {
-        width: 7vw;
-        height: 7vw;
-    }
-
-    .bottom-left-stamp {
-        width: 5vw;
-        height: 5vw;
-        top: 18vw;
     }
 
     .slideshow-background {

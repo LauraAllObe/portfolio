@@ -902,9 +902,11 @@ a:hover {
 
 .backpack-item {
   height: 3vh;
-  transform: none;
   transition: filter 0.18s ease;
   will-change: filter;
+  image-rendering: -webkit-optimize-contrast; /* Safari-specific */
+  transform: translateZ(0); /* force its own layer */
+  backface-visibility: hidden;
 }
 
 .backpack-item-wrap:hover .backpack-item {
