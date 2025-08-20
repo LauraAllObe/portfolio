@@ -99,9 +99,10 @@
     }
     
     .overview {
-        margin-bottom: 300px;
+        margin-bottom: 450px;
         height: 1000px;
-        padding: 100px;
+        padding: 0px;
+        overflow: visible !important;
     }
 
     .trigger-coach {
@@ -119,13 +120,13 @@
     .departures-signs {
         top: 60px;
         height: 450px;
-        right: -20vw;
+        right: -85px;
     }
 
     .departures-signs .tables {
         top: 14px;
         left: 14.4%;
-        width: 73.8%;
+        width: 220px;
         line-height: 1.74;
     }
 
@@ -134,7 +135,7 @@
     }
 
     .departures-signs .table .table-title {
-    font-size: 16px;
+        font-size: 16px;
     }
 
     .departures-signs .table tbody {
@@ -158,6 +159,15 @@
         left: -100px;
         padding-top: 100px;
         top: 600px;
+        overflow: visible !important;
+    }
+
+    .backpack-items,
+    .backpack-front,
+    .backpack-trigger,
+    .backpack-trigger-wrap,
+    .airport-background {
+        overflow: visible !important;
     }
 
     .backpack-front {
