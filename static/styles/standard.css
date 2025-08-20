@@ -844,10 +844,6 @@ a:hover {
   opacity: 0.6;
 }
 
-.trigger-coach.dismissed {
-  display: none;
-}
-
 .backpack-trigger:hover,
 .backpack-trigger:focus-visible {
   background: rgba(255, 255, 255, 0);
@@ -865,13 +861,18 @@ a:hover {
 
 .backpack-items {
   position: absolute;
-  bottom: 65%;
+  bottom: 70%;
   left: 48%;
   transform: translateX(-50%);
   width: max-content;
   height: max-content;
   z-index: 250;
   pointer-events: none;
+}
+
+:root {
+  --bp-move-delay: 0ms;
+  --bp-size-delay: 0ms;
 }
 
 .backpack-item-wrap {
@@ -881,38 +882,39 @@ a:hover {
   display: inline-block;
 
   /* default properties */
-  --item-scale: 1;                     /* current scale */
-  --item-translate-x: 0;               /* base horizontal shift */
-  --item-translate-y: 0;               /* base vertical shift */
+  --item-translate-x: 0;
+  --item-translate-y: 0;
   --item-rotate: 0deg;
-  --item-active-scale: 8;              /* default active scale unless overridden */
-  --item-active-translate-x: 0;        /* active horizontal shift */
-  --item-active-translate-y: -30vh;    /* active vertical shift */
+  --item-active-translate-x: -120px;
+  --item-active-translate-y: -400px;
 
   transform: translateX(var(--item-translate-x))
              translateY(var(--item-translate-y))
-             scale(var(--item-scale))
              rotate(var(--item-rotate));
   transform-origin: bottom center;
-  transition: transform 0.4s ease;
+  transition: transform 400ms ease var(--bp-move-delay);
   will-change: transform;
   pointer-events: auto;
   z-index: 1;
 }
 
 .backpack-item-wrap.is-active {
-  --item-scale: var(--item-active-scale);
   --item-translate-x: var(--item-active-translate-x);
   --item-translate-y: var(--item-active-translate-y);
   z-index: 5;
 }
 
+.backpack-item-wrap.is-active .backpack-item {
+  width: var(--item-active-width, 300px);
+}
+
 .backpack-item {
-  height: 3vh;
-  transition: filter 0.18s ease;
-  will-change: filter;
-  image-rendering: -webkit-optimize-contrast; /* Safari-specific */
-  transform: translateZ(0); /* force its own layer */
+  width: var(--item-inactive-width, 11px);
+  height: auto;
+  transition: width 400ms ease var(--bp-size-delay), filter 180ms ease;
+  will-change: width, filter;
+  image-rendering: -webkit-optimize-contrast;
+  transform: translateZ(0);
   backface-visibility: hidden;
 }
 

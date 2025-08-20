@@ -36,7 +36,7 @@
 <body>
     <div id="top" style="height: 0; width: 100%; position: absolute; top: 0;"></div>
     <div class="foreground">
-        <img src="{{ url_for('static', filename='sky/foreground.svg') }}" alt="Foreground Image" class="foreground-image">
+        <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image">
     </div>
     <div>
         <img src="{{ url_for('static', filename='sky/skylimittext.svg') }}" alt="The sky is the limit text" class="sky-limit-text">
@@ -227,7 +227,7 @@
                 <div class="backpack-items">
                     <div id="dl" class="backpack-item-wrap"
                         data-label="Driver's License"
-                        style="--item-rotate: -3deg;">
+                        style="--item-rotate: -3deg; --item-inactive-width:23px; --item-active-width:300px;">
                         <img 
                             src="/static/overview/driversLicense.png"
                             alt="Driver's License" 
@@ -235,7 +235,7 @@
                     </div>
                     <div id="bt" class="backpack-item-wrap"
                         data-label="Boarding Pass"
-                        style="--item-rotate: 2deg; --item-active-scale: 10;">
+                        style="--item-rotate: 2deg; --item-inactive-width:23px; --item-active-width:650px; --item-active-translate-x:-280px; --item-active-translate-y:-460px;">
                         <img 
                             src="/static/overview/hardSkills.png"
                             alt="Boarding Pass: Showcasing Hard Skills" 
@@ -243,7 +243,7 @@
                     </div>
                     <div id="zb" class="backpack-item-wrap"
                         data-label="Textbook"
-                        style="--item-rotate: -3deg;  --item-active-scale: 24;  --item-active-translate-y: -22vh;">
+                        style="--item-rotate: -3deg; --item-active-translate-y:-710px; --item-active-translate-x:-210px; --item-inactive-width:23px; --item-active-width:500px;">
                         <img 
                             src="/static/overview/lettersOfRec.png"
                             alt="Textbook: Showcasing letters of recommendation" 
@@ -251,7 +251,7 @@
                     </div>
                     <div id="note" class="backpack-item-wrap"
                         data-label="Note"
-                        style="--item-rotate: -8deg; --item-active-translate-x: 2vw; --item-active-translate-y: -26vh; --item-active-scale: 16;">
+                        style="--item-rotate: -8deg; --item-active-translate-x: -120px; --item-active-translate-y: -580px; --item-inactive-width:23px; --item-active-width:320px;">
                         <img 
                             src="/static/overview/note.png"
                             alt="Note: Showcasing professional and fun fact" 
@@ -259,7 +259,7 @@
                     </div>
                     <div id="passport" class="backpack-item-wrap"
                         data-label="Passport"
-                        style="--item-rotate: 6deg; --item-active-scale: 18; --item-active-translate-y: -22vh;">
+                        style="--item-rotate: 6deg; --item-active-translate-y: -610px; --item-active-translate-x: -260px; --item-inactive-width:23px; --item-active-width:600px;">
                         <img 
                             src="/static/overview/passport.png"
                             alt="Passport: Showcasing places lived and where from" 
@@ -267,7 +267,7 @@
                     </div>
                     <div id="zb" class="backpack-item-wrap"
                         data-label="Ziplock Bag"
-                        style="--item-rotate: 1deg;  --item-active-scale: 18;  --item-active-translate-y: -24vh;">
+                        style="--item-rotate: 1deg;  --item-active-translate-y: -610px; --item-active-translate-x: -150px; --item-inactive-width:23px; --item-active-width:380px;">
                         <img 
                             src="/static/overview/ziplockBag.png"
                             alt="Ziplock Bag: Showcasing likes" 
@@ -1794,41 +1794,36 @@
             updateDeparturesFooter();
             setInterval(updateDeparturesFooter, 30000); 
 
-            // Backpack Item Click Logic changed to BUTTON-based control (1 + 2)
+            // Backpack Item Click Logic (BUTTON-based control)
             (function () {
-                const items = Array.from(document.querySelectorAll('.backpack-item'));
+                const wraps = Array.from(document.querySelectorAll('.backpack-item-wrap'));
                 const trigger = document.querySelector('.backpack-trigger');
-                const coach = document.querySelector('.trigger-coach');   // <- NEW
-                if (!items.length || !trigger) return;
+                const coach = document.querySelector('.trigger-coach');
+                if (!wraps.length || !trigger) return;
 
-                let activeIndex = items.findIndex(el => el.classList.contains('active'));
+                let activeIndex = wraps.findIndex(el => el.classList.contains('is-active'));
                 if (activeIndex < 0) {
                     activeIndex = 0;
-                    items[0].classList.add('active');
+                    wraps[0].classList.add('is-active');
                 }
 
-                // initial lift
-                items.forEach(img => img.closest('.backpack-item-wrap')?.classList.remove('is-active'));
-                items[activeIndex].closest('.backpack-item-wrap')?.classList.add('is-active');
-
-                const dismissCoach = () => {                              // <- NEW
+                const dismissCoach = () => {
                     if (coach && !coach.classList.contains('dismissed')) {
                     coach.classList.add('dismissed');
                     }
                 };
 
                 const cycle = () => {
-                    const currImg = items[activeIndex];
-                    currImg.classList.remove('active');
-                    currImg.closest('.backpack-item-wrap')?.classList.remove('is-active');
+                    // remove active from current
+                    wraps[activeIndex].classList.remove('is-active');
 
-                    activeIndex = (activeIndex + 1) % items.length;
+                    // advance index
+                    activeIndex = (activeIndex + 1) % wraps.length;
 
-                    const nextImg = items[activeIndex];
-                    nextImg.classList.add('active');
-                    nextImg.closest('.backpack-item-wrap')?.classList.add('is-active');
+                    // add active to next
+                    wraps[activeIndex].classList.add('is-active');
 
-                    dismissCoach();                                         // <- NEW
+                    dismissCoach();
                 };
 
                 trigger.addEventListener('click', cycle);
@@ -1839,9 +1834,9 @@
                     }
                 });
 
-                // Also dismiss on keyboard focus/activation for accessibility
-                trigger.addEventListener('pointerdown', dismissCoach);    // <- optional extra
-                trigger.addEventListener('focus', dismissCoach);          // <- optional extra
+                // accessibility / UX extras
+                trigger.addEventListener('pointerdown', dismissCoach);
+                trigger.addEventListener('focus', dismissCoach);
             })();
         </script>
     </div>    

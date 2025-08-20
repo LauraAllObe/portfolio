@@ -337,27 +337,16 @@
         --item-active-translate-x: 4vw !important;
     }
 
-    #dl {
-        --item-active-scale: 6 !important;
-    }
-
-    #bt {
-        --item-active-scale: 7 !important;
-    }
-
     #passport {
-        --item-active-scale: 13 !important;
         --item-active-translate-x: 5vw !important;
     }
 
     #note {
-        --item-active-scale: 15 !important;
         --item-active-translate-x: 9vw !important;
         --item-active-translate-y: -20vh !important;
     }
 
     #zb {
-        --item-active-scale: 13.5 !important;
         --item-active-translate-x: 6vw !important;
         --item-active-translate-y: -22vh !important;
     }

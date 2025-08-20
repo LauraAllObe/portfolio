@@ -156,13 +156,17 @@
         display: block;
         transform: 
             translateY(calc(var(--item-translate-y) / 2))
-            scale(var(--item-scale))
             rotate(var(--item-rotate));
         transform-origin: bottom center;
     }
 
     .backpack-item {
-        height: 2.4vh;
+        width: var(--item-inactive-width, 5px);
+        height: auto;
+    }
+
+    .backpack-item-wrap.is-active .backpack-item {
+        width: var(--item-active-width, 150px);
     }
 
     h1 {
