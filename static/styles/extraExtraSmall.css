@@ -97,36 +97,74 @@
         margin-top: 12px;
         font-size: 6.5px;
     }
-
+    
     .overview {
-        margin-bottom: 120vw;
-        height: 200vw;
-        padding: 10vw;
+        margin-bottom: 300px;
+        height: 1000px;
+        padding: 100px;
+    }
+
+    .trigger-coach {
+        margin-top:0px;
+    }
+
+    .coach-arrow {
+        width: 150px;
+    }
+
+    .overview-arrow-text {
+        font-size: 28px;
     }
     
     .departures-signs {
-        top: -180px;
+        top: 60px;
+        height: 450px;
+        right: -20vw;
     }
 
     .departures-signs .tables {
-        line-height: 1.8;
+        top: 14px;
+        left: 14.4%;
+        width: 73.8%;
+        line-height: 1.74;
+    }
+
+    .departures-footer {
+        font-size: 8px;
+    }
+
+    .departures-signs .table .table-title {
+    font-size: 16px;
+    }
+
+    .departures-signs .table tbody {
+        font-size: 8px; 
+    }
+
+    .table-column-titles {
+        font-size: 7px !important;
+        margin-bottom: -1.6% !important;
+    }
+
+    .departures-footer {
+        bottom: 52px;
     }
 
     .airport-background {
-        bottom: -100px;
+        bottom: 50px;
     }
 
     .airport-table {
-        left: -20vw;
+        left: -100px;
         padding-top: 100px;
         top: 600px;
     }
 
     .backpack-front {
-        height: 8.5vh;
+        height: 67px;
         bottom: 28%;
     }
-
+    
     .backpack-trigger-wrap {
         bottom: 20%;
         left: 55%;
@@ -138,35 +176,40 @@
     }
 
     .backpack-items {
-        position: relative;
-        bottom: 73%;
-        left: 50%;
-        transform: translate(-50%, 50%);
+        bottom: 48%;
+        left: 60%;
         width: 95%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        scale: 0.6;
     }
 
-    .backpack-item-wrap {
-        position: absolute;
-        top: 0;
-        left: 48%;
-        margin: auto;
-        display: block;
-        transform: 
-            translateY(calc(var(--item-translate-y) / 2))
-            rotate(var(--item-rotate));
-        transform-origin: bottom center;
+    #dl {
+        --item-active-translate-y:-300px !important;
+        --item-active-translate-x: -140px !important;
     }
 
-    .backpack-item {
-        width: var(--item-inactive-width, 5px);
-        height: auto;
+    #bt {
+        --item-active-translate-y:-360px !important;
+        --item-active-translate-x: -310px !important;
     }
 
-    .backpack-item-wrap.is-active .backpack-item {
-        width: var(--item-active-width, 150px);
+    #tb {
+        --item-active-translate-y:-620px !important;
+        --item-active-translate-x: -240px !important;
+    }
+
+    #note {
+        --item-active-translate-y:-490px !important;
+        --item-active-translate-x: -140px !important;
+    }
+
+    #passport {
+        --item-active-translate-y:-530px !important;
+        --item-active-translate-x: -300px !important;
+    }
+
+    #zb {
+        --item-active-translate-y:-540px !important;
+        --item-active-translate-x: -180px !important;
     }
 
     h1 {

@@ -317,13 +317,13 @@
     }
 
     .departures-signs {
-        top: -30%;
-        right: -18vw;
+        top: -10%;
+        right: -120px;
     }
 
     .airport-table {
-        left: -30vw;
-        top: 80%;
+        left: -150px;
+        top: 150%;
         height: 300px;
     }
 
@@ -331,23 +331,40 @@
         left: 60%;
         width: 20%;
         height: auto;
+        scale: 0.7;
     }
 
-    .backpack-item-wrap {
-        --item-active-translate-x: 4vw !important;
+    .airport-background {
+        bottom: -600px;
     }
 
-    #passport {
-        --item-active-translate-x: 5vw !important;
+    #dl {
+        --item-active-translate-y:-350px !important;
+        --item-active-translate-x: -230px !important;
+    }
+
+    #bt {
+        --item-active-translate-y:-400px !important;
+        --item-active-translate-x: -410px !important;
+    }
+
+    #tb {
+        --item-active-translate-y:-690px !important;
+        --item-active-translate-x: -330px !important;
     }
 
     #note {
-        --item-active-translate-x: 9vw !important;
-        --item-active-translate-y: -20vh !important;
+        --item-active-translate-y:-530px !important;
+        --item-active-translate-x: -220px !important;
+    }
+
+    #passport {
+        --item-active-translate-y:-560px !important;
+        --item-active-translate-x: -400px !important;
     }
 
     #zb {
-        --item-active-translate-x: 6vw !important;
-        --item-active-translate-y: -22vh !important;
+        --item-active-translate-y:-590px !important;
+        --item-active-translate-x: -280px !important;
     }
 }
