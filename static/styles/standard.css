@@ -927,6 +927,7 @@ a:hover {
   content: attr(data-label);
   position: absolute;
   inset: 0;
+  white-space: pre-line;
   margin-bottom:0.5vh;
   display: flex;
   align-items: center;
@@ -941,6 +942,30 @@ a:hover {
   transition: opacity 0.18s ease;
   transform: scale(calc(1 / var(--item-scale)));
   transform-origin: center;
+}
+
+#dl.backpack-item-wrap::after {
+  padding: 10px 30px;
+}
+
+#bt.backpack-item-wrap::after {
+  padding: 10px 80px;
+}
+
+#tb.backpack-item-wrap::after {
+  padding: 10px 50px;
+}
+
+#note.backpack-item-wrap::after {
+  padding: 10px 60px;
+}
+
+#passport.backpack-item-wrap::after {
+  padding: 10px 40px;
+}
+
+#zb.backpack-item-wrap::after {
+  padding: 10px 40px;
 }
 
 .backpack-item-wrap:hover::after {

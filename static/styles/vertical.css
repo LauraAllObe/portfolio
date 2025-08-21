@@ -327,6 +327,10 @@
         height: 300px;
     }
 
+    .backpack-front {
+        height: 100px;
+    }
+
     .backpack-items {
         left: 60%;
         width: 20%;
