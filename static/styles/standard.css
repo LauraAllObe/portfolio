@@ -1010,7 +1010,7 @@ a:hover {
 }
 
 #slideshow9 .slideshow-ticket.animate {
-    transform: translateX(180%) translateY(-30%) rotate(90deg);
+    transform: translateX(180%) translateY(-20%) rotate(90deg);
 }
 
 #slideshow8 .slideshow-ticket.animate {
@@ -1030,7 +1030,7 @@ a:hover {
 }
 
 #slideshow3 .slideshow-ticket.animate {
-    transform: translateX(172.5%) translateY(-30%) rotate(90deg);
+    transform: translateX(177.5%) translateY(-20%) rotate(90deg);
 }
 
 #slideshow4 .slideshow-ticket.animate {
