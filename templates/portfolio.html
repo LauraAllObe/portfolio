@@ -57,6 +57,14 @@
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview">
                     <span class="dropdown-text">Overview</span>
                 </div>
+                <div class="dropdown-item" onclick="navigateTo('slideshow11', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="A.I. Blockchain">
+                    <span class="dropdown-text">A.I. Blockchain</span>
+                </div>
+                <div class="dropdown-item" onclick="navigateTo('slideshow10', 'appdev')">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NutriverseAI">
+                    <span class="dropdown-text">NutriverseAI</span>
+                </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow9', 'tools')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Wakatime Readme Stats">
                     <span class="dropdown-text">Wakatime Readme Stats</span>
@@ -369,7 +377,7 @@
                     <tbody>
                         <tr class="clickable-row" data-href="https://www.linkedin.com/company/nutriverseai/posts/?feedView=all">
                             <td>&nbsp;NutriverseAI</td>
-                            <td>Jun-Aug 25</td>
+                            <td>May-Aug 25</td>
                             <td>App Dev/ML</td>
                         </tr>
                         <tr class="clickable-row" data-href="https://github.com/LauraAllObe/wakatimeReadmeStats">
@@ -381,6 +389,11 @@
                             <td>&nbsp;AGI Epigenetic Reprogramming</td>
                             <td>Jul-Cur 25</td>
                             <td>App Dev/ML</td>
+                        </tr>
+                        <tr class="clickable-row" data-href="https://ai-blockchain.com/project">
+                            <td>&nbsp;Body Metrics</td>
+                            <td>Jul 25</td>
+                            <td>App Dev</td>
                         </tr>
                         <tr class="clickable-row" data-href="https://ai-blockchain.com/project">
                             <td>&nbsp;Humidor Temp App</td>
@@ -474,6 +487,110 @@
                         <span class="footer-center" id="footer-date"></span>
                         <span class="footer-right" id="footer-time"></span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slideshow 11 (-3) -->   
+        <div class="slideshow-background" id="slideshow11" data-bg="/static/suitcases/appdev6.png">
+            <div class="slideshow-container">
+                <a class="slideshow-ticket" href="https://ai-blockchain.com/" target="_blank" title="Visit the A.I. Blockchain website">
+                    <img src="/static/tickets/ticket11.png">
+                </a>
+                <!-- Slide 1 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/stem.png') }}" title="AGI Epigenetic Reprogramming" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">
+                        <h3>AGI Epigenetic Reprogramming</h3>
+                        <div>
+                            I am leading the software architecture and development of an AI-guided epigenetic reprogramming platform that integrates ML models, IoT sensors, and molecular data pipelines to support predictive veterinary and aging research. This in-progress project involves designing secure, scalable workflows and LLM-powered decision support, with the potential to significantly cut treatment costs, accelerate discovery, and build one of the world’s richest longitudinal animal-health datasets.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/body.png') }}" title="Body Metrics" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">  
+                        <h3>Body Metrics</h3>
+                        <div>
+                            I contributed to the backend and software architecture of BodyMetrics, an in-progress mobile 3D body-scanning platform that enables iPhones to capture 80+ body measurements with millimeter-level accuracy. My work focused on building the ARKit-based scanning pipeline, measurement algorithms, and secure data integration layers that power the end-to-end flow from scan to analytics. This system aims to cut apparel returns by double digits and streamline retail integration with privacy-first, scalable infrastructure.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/humidor.png') }}" title="Humidor Temp App" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">  
+                        <h3>Humidor Temp App</h3>
+                        <div>
+                            I contributed to the backend and software architecture of an in-progress IoT-enabled humidor temperature and humidity monitoring app. The system connects an ESP32 sensor to a Flutter-based mobile app via BLE and cloud sync, with a Firebase backend handling real-time data, alerts, and historical dashboards. My work focused on designing the backend workflows, data pipelines, and architecture for reliable device-to-cloud integration and scalable alerting.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/email.png') }}" title="PP Email Integration" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">  
+                        <h3>PP Email Integration</h3>
+                        <div>
+                            I contributed to the software architecture and core implementation of an in-progress middleware system that integrates Gmail/Outlook with PracticePanther. The solution automatically retrieves emails, matches them to legal matters, and forwards them to the correct MailSync addresses, eliminating error-prone manual steps. My work focused on designing the backend server and data flow, including OAuth-based secure email access, matter-matching logic, and database structures for logging and metadata, enabling law firms to maintain a complete, collaborative record of client communications.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow11')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow11')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Slideshow 10 (-2) -->   
+        <div class="slideshow-background" id="slideshow10" data-bg="/static/suitcases/appdev5.png">
+            <div class="slideshow-container">
+                <a class="slideshow-ticket" href="https://www.linkedin.com/company/nutriverseai/posts/?feedView=all" target="_blank" title="Visit the NutriverseAI LinkedIn Profile">
+                    <img src="/static/tickets/ticket10.png">
+                </a>
+                <!-- Slide 1 -->
+                <div class="slides">
+                    <lite-youtube class="slideshow-video" videoid="xRKC359iDsg" title="NutriverseAI - Internship Recap" style="--aspect-ratio: 16/9;"></lite-youtube>
+                    <div class="slideshow-text">
+                        <h3>My Work</h3>
+                        <div>
+                            During the internship, I was in charge of building and refining scalable features for NutriverseAI’s product. I started by running black-box tests and fixing bugs, then went on to design and implement a chatbot UI, social modules, and personalized nutrition tools, all while ensuring stability and clear communication with the team.
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slides">
+                    <div class="slideshow-vertical-image-container">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow10/forumsPost.png') }}" title="NutriverseAI Forums Post" onclick="showModal(this.src)" loading="lazy">
+                    </div>
+                    <div class="slideshow-text">  
+                        <h3>Application Overview</h3>
+                        <div>
+                            This application allows users to plan out their meals using an AI assistant, post and save their recipes, and find groceries nearby.
+                        </div>
+                    </div>
+                </div>
+                <div class="button-container">
+                    <button class="prev" onclick="plusSlides(-1, 'slideshow10')">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                    </button>
+                    <div class="slide-navigation-text"></div>
+                    <button class="next" onclick="plusSlides(1, 'slideshow10')">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                    </button>
                 </div>
             </div>
         </div>
@@ -1304,6 +1421,8 @@
                 'slideshow9': 1,
                 'slideshow8': 1,
                 'slideshow0': 1, 
+                'slideshow11': 1,
+                'slideshow10': 1,
                 'slideshow1': 1, 
                 'slideshow2': 1, 
                 'slideshow3': 1,
@@ -1349,6 +1468,8 @@
                 showSlides(slideIndices['slideshow9'], 'slideshow9');
                 showSlides(slideIndices['slideshow8'], 'slideshow8');
                 showSlides(slideIndices['slideshow0'], 'slideshow0');
+                showSlides(slideIndices['slideshow11'], 'slideshow11');
+                showSlides(slideIndices['slideshow10'], 'slideshow10');
                 showSlides(slideIndices['slideshow1'], 'slideshow1');
                 showSlides(slideIndices['slideshow2'], 'slideshow2');
                 showSlides(slideIndices['slideshow3'], 'slideshow3');
@@ -1520,6 +1641,8 @@
                 const slideshow9 = document.getElementById('slideshow9');
                 const slideshow8 = document.getElementById('slideshow8');
                 const slideshow0 = document.getElementById('slideshow0');
+                const slideshow11 = document.getElementById('slideshow11');
+                const slideshow10 = document.getElementById('slideshow10');
                 const slideshow1 = document.getElementById('slideshow1');
                 const slideshow2 = document.getElementById('slideshow2');
                 const slideshow3 = document.getElementById('slideshow3');
@@ -1532,6 +1655,8 @@
                 slideshow9.style.display = 'none';
                 slideshow8.style.display = 'none';
                 slideshow0.style.display = 'none';
+                slideshow11.style.display = 'none';
+                slideshow10.style.display = 'none';
                 slideshow1.style.display = 'none';
                 slideshow2.style.display = 'none';
                 slideshow3.style.display = 'none';
@@ -1561,6 +1686,8 @@
                 }
                 else if (category === 'appdev')
                 {
+                    slideshow11.style.display = 'block';
+                    slideshow10.style.display = 'block';
                     slideshow1.style.display = 'block';
                     slideshow2.style.display = 'block';
                     slideshow3.style.display = 'block';
@@ -1584,6 +1711,8 @@
                     { id: 'slideshow9', name: 'Wakatime Readme Stats' },
                     { id: 'slideshow8', name: 'NLP Nutrition Summary Generation' },
                     { id: 'slideshow0', name: 'Combined Models ML' },
+                    { id: 'slideshow11', name: 'A.I. Blockchain' },
+                    { id: 'slideshow10', name: 'NutriverseAI' },
                     { id: 'slideshow1', name: 'Hacker News Web App' },
                     { id: 'slideshow2', name: 'Law Practice Manager App' },
                     { id: 'slideshow3', name: 'My Notes App' },

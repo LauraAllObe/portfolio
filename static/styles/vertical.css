@@ -68,6 +68,40 @@
         min-height: 120vh;
     }
 
+    #slideshow11 .slides {
+        margin-top: 12vw;
+    }
+
+    #slideshow11 .slideshow-text {
+        margin-left: -7.5vw;
+        margin-top: 10vw;
+    }
+
+    #slideshow11 .slideshow-video {
+        margin-left: -4vw;
+    }
+
+    #slideshow11 .slideshow-image{
+        margin-left: -4vw;
+    }
+
+    #slideshow10 .slides {
+        margin-top: 12vw;
+    }
+
+    #slideshow10 .slideshow-text {
+        margin-left: -7.5vw;
+        margin-top: 10vw;
+    }
+
+    #slideshow10 .slideshow-video {
+        margin-left: -4vw;
+    }
+
+    #slideshow10 .slideshow-image{
+        margin-left: -4vw;
+    }
+
     #slideshow9 .slides {
         margin-top: 12vw;
     }

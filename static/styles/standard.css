@@ -1001,6 +1001,14 @@ a:hover {
     top: 50%;
 }
 
+#slideshow11 .slideshow-ticket.animate {
+    transform: translateX(183.5%) translateY(-15%) rotate(90deg);
+}
+
+#slideshow10 .slideshow-ticket.animate {
+    transform: translateX(187.5%) translateY(-15%) rotate(90deg);
+}
+
 #slideshow9 .slideshow-ticket.animate {
     transform: translateX(180%) translateY(-30%) rotate(90deg);
 }
@@ -1162,6 +1170,30 @@ a:hover {
 .slideshow-vertical-image-container {
   display: contents;
 }
+
+#slideshow11 .slideshow-container {
+    width: 67%; 
+    color: #fffdf5;
+} 
+
+#slideshow11 .slideshow-video, 
+#slideshow11 .slideshow-image, 
+#slideshow11 .slideshow-text {
+    max-height: 35vw;
+    margin-top: 7vw;
+} 
+
+#slideshow10 .slideshow-container {
+    width: 67%; 
+    color: #fffdf5;
+} 
+
+#slideshow10 .slideshow-video, 
+#slideshow10 .slideshow-image, 
+#slideshow10 .slideshow-text {
+    max-height: 35vw;
+    margin-top: 7vw;
+} 
 
 #slideshow9 .slideshow-container {
     width: 67%; 
@@ -1375,6 +1407,14 @@ a:hover {
     background-position: center;
     z-index: -1;
     pointer-events: none;
+}
+
+#slideshow11 .slide-navigation-text::before {
+    background-image: url('/static/slidenav/baggagetag11.png');
+}
+
+#slideshow10 .slide-navigation-text::before {
+    background-image: url('/static/slidenav/baggagetag10.png');
 }
 
 #slideshow9 .slide-navigation-text::before {
