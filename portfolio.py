@@ -16,6 +16,7 @@ def hello_world():
 
 if __name__ == '__main__':
     app.run(debug=True)
+# activate venv first ".\.venv\Scripts\Activate.ps1"
 
 #run locally using "python -m flask run"
 
