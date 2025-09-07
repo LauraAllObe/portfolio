@@ -135,8 +135,8 @@ a:hover {
 /* Background & Foreground */
 
 .foreground {
-    position: relative;
-    z-index: 10;
+    z-index: 20; 
+    position:absolute;
     width: 100vw;
     max-width: 100vw;
     top: 0;
@@ -277,7 +277,7 @@ a:hover {
     height: 902.5px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20vh;
+    margin-bottom: -650px;
 }
 
 .marquee-helicopter1 { 
@@ -628,7 +628,7 @@ a:hover {
 
 .overview {
     margin-top: 80vw;
-    margin-bottom: 40vw;
+    margin-bottom: 0vw;
     z-index: 100;
     height: 58vw;
     width: 70vw;
@@ -919,7 +919,9 @@ a:hover {
 }
 
 .backpack-item-wrap:hover .backpack-item {
-  filter: drop-shadow(0 0 1px rgba(255, 255, 255, 0.40))
+  filter: 
+          brightness(0.6)
+          drop-shadow(0 0 1px rgba(255, 255, 255, 0.40))
           drop-shadow(0 0 0.5px rgba(255, 255, 255, 0.40));
 }
 
@@ -1060,7 +1062,7 @@ a:hover {
 .slideshow-background {
     left: 50%;
     transform: translateX(-50%);
-    margin-top: 90vw;
+    margin-top: 62vw;
     height: 52vw;
     padding-top: 65vw;
     padding-bottom: 70vw;

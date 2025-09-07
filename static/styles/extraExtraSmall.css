@@ -99,7 +99,8 @@
     }
     
     .overview {
-        margin-bottom: 450px;
+        margin-top: 90vw;
+        margin-bottom: -30vw;
         height: 1000px;
         padding: 0px;
         overflow: visible !important;
@@ -153,6 +154,7 @@
 
     .airport-background {
         bottom: 50px;
+        display: none;
     }
 
     .airport-table {
