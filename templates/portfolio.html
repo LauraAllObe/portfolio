@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Laura's Portfolio</title>
+    <link rel="alternate" type="text/markdown" href="/portfolio.md">
+    <link rel="alternate" type="text/plain"    href="/portfolio.txt">
+    <link rel="canonical" href="https://lauraobermaier.info/">
     <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/VEnfEZ0Mcxs/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/VEnfEZ0Mcxs/sddefault.webp">
     <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/v3_1wlzuXeE/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/v3_1wlzuXeE/sddefault.webp">
     <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/uVsRSZlpIrU/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/uVsRSZlpIrU/sddefault.webp">
@@ -34,6 +37,15 @@
     </script>
 </head>
 <body>
+    <p class="visually-hidden">Text-only version available.</p>
+    <p class="visually-hidden">
+        <a href="/portfolio.md">Text-only / Markdown version</a> · 
+        <a href="/portfolio.txt">Plain-text</a>
+    </p>
+    <a href="/portfolio.md" role="button" class="bot-link">
+        <img src="{{ url_for('static', filename='/bot.png') }}" alt="Bot Icon" class="bot-icon">
+        Are you a bot? Get Markdown
+    </a>
     <div id="top" style="height: 0; width: 100%; position: absolute; top: 0;"></div>
     <div class="foreground">
         <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image">
@@ -1980,4 +1992,11 @@
         </script>
     </div>    
 </body>
+<noscript>
+  <section aria-label="Text summary">
+    <h1>Laura Allison Obermaier — Software Engineer</h1>
+    <p>Overview: skills, education, projects, OS contributions, and contact links.</p>
+    <p>Prefer text? <a href="/portfolio.md">Read the Markdown</a> · <a href="/portfolio.txt">Plain-text</a></p>
+  </section>
+</noscript>
 </html>

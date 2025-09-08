@@ -81,6 +81,52 @@ a:hover {
   src: url('/static/fonts/handmeds.ttf') format('truetype');
 }
 
+/* Bot Styles */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; 
+  height: 1px; 
+  margin: -1px; 
+  padding: 0; 
+  border: 0; 
+  clip: rect(0, 0, 0, 0); 
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bot-link {
+    position: fixed;
+    top: 22px;
+    right: 12px;
+    opacity: 0.9;
+    background: #f2d732; 
+    color: #171c1f;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+
+    /* Flex for vertical centering */
+    display: flex;
+    align-items: center;   /* vertical centering */
+    justify-content: center; /* optional: center horizontally */
+    gap: 8px;              /* space between icon and text */
+}
+
+.bot-link:hover {
+    background: #e6c800;
+    color: #171c1f;
+}
+
+.bot-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block; /* prevents weird baseline shifts */
+}
+
 /* Fullscreen loading modal */
 .loading-modal {
     position: fixed;

@@ -1,5 +1,18 @@
 /* Extra Small Phones */
 @media only screen and (((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))) {
+    .bot-link {
+        top: 28px;
+        right: 12px;
+        padding: 4px 10px;
+        gap: 6px;
+        font-size: 10px;
+    }
+
+    .bot-icon {
+        width: 15px;
+        height: 15px;
+    }
+
     #cloud1 {
         top: 100px;
         left: 0;
