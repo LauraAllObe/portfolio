@@ -1,4 +1,4 @@
-# Laura Allison Obermaier - Portfolio (Plaintext)
+# Laura Allison Obermaier - Portfolio (Markdown)
 
 Contact:
 - Email: lobermai@stevens.edu
