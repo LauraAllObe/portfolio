@@ -27,6 +27,20 @@ def sitemap_xml():
 def portfolio_txt():
     return send_from_directory("static", "portfolio.txt", mimetype="text/plain")
 
+# --- add below your existing @app.route('/') view ---
+@app.get("/Google")
+def google_page():
+    # keep slide indexes behavior the same
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Google")
+
+@app.get("/Amazon")
+def amazon_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
+
 if __name__ == '__main__':
     app.run(debug=True)
 # activate venv first ".\.venv\Scripts\Activate.ps1"
