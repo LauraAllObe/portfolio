@@ -1505,23 +1505,27 @@
             }
         
             window.onload = function() {
-                showSlides(slideIndices['slideshow9'], 'slideshow9');
-                showSlides(slideIndices['slideshow8'], 'slideshow8');
-                showSlides(slideIndices['slideshow0'], 'slideshow0');
-                showSlides(slideIndices['slideshow11'], 'slideshow11');
-                showSlides(slideIndices['slideshow10'], 'slideshow10');
-                showSlides(slideIndices['slideshow1'], 'slideshow1');
-                showSlides(slideIndices['slideshow2'], 'slideshow2');
-                showSlides(slideIndices['slideshow3'], 'slideshow3');
-                showSlides(slideIndices['slideshow4'], 'slideshow4');
-                showSlides(slideIndices['slideshow5'], 'slideshow5');
-                showSlides(slideIndices['slideshow6'], 'slideshow6');
-                showSlides(slideIndices['slideshow7'], 'slideshow7');
                 adjustElementPosition();
                 const body = document.body;
                 body.style.overflowY = 'visible';
                 clearInterval(interval);
             };
+
+            function initSlideshowOnce(id){
+                const el = document.getElementById(id);
+                if (!el || el.dataset.inited) return;
+                el.dataset.inited = '1';
+                showSlides(slideIndices[id], id);
+            }
+
+            const io = new IntersectionObserver((entries)=>{
+                entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
+            }, { rootMargin: '200px 0px' });
+
+            Object.keys(slideIndices).forEach(id=>{
+                const el = document.getElementById(id);
+                if (el) io.observe(el);
+            });
     
             let cloud1 = document.getElementById('cloud1');
             let cloud2 = document.getElementById('cloud2');
