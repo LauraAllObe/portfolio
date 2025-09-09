@@ -7,16 +7,6 @@
     <link rel="alternate" type="text/markdown" href="/portfolio.md">
     <link rel="alternate" type="text/plain"    href="/portfolio.txt">
     <link rel="canonical" href="https://lauraobermaier.info/">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/VEnfEZ0Mcxs/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/VEnfEZ0Mcxs/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/v3_1wlzuXeE/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/v3_1wlzuXeE/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/uVsRSZlpIrU/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/uVsRSZlpIrU/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/4RhOKUSKGfs/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/4RhOKUSKGfs/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/LBIV-_afX_o/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/LBIV-_afX_o/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/0SFSC4hThjk/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/0SFSC4hThjk/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/PwfMXMGMbD8/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/PwfMXMGMbD8/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/c9-mLxW2zOw/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/c9-mLxW2zOw/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/Nlg-2q-6LFk/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/Nlg-2q-6LFk/sddefault.webp">
-    <link rel="preload" as="image" href="https://i.ytimg.com/vi_webp/JtDCl90kVt8/sddefault.webp" imagesrcset="https://i.ytimg.com/vi_webp/JtDCl90kVt8/sddefault.webp">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/standard.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/vertical.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraExtraSmall.css') }}">
@@ -31,9 +21,9 @@
     <script src="/static/youtube-embed/lite-yt-embed.js" defer></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function(){
-            emailjs.init("MXT3jSb_rDcclPwFE");
-        })();
+        window.addEventListener('DOMContentLoaded', () => {
+            if (window.emailjs && emailjs.init) emailjs.init("MXT3jSb_rDcclPwFE");
+        });
         window.COMPANY = "{{ company|default('') }}";
     </script>
 </head>
@@ -44,12 +34,12 @@
         <a href="/portfolio.txt">Plain-text</a>
     </p>
     <a href="/portfolio.md" role="button" class="bot-link">
-        <img src="{{ url_for('static', filename='/bot.png') }}" alt="Bot Icon" class="bot-icon">
+        <img src="{{ url_for('static', filename='/bot.png') }}" alt="Bot Icon" class="bot-icon" fetchpriority="high" decoding="async">
         Are you a bot? Get Markdown
     </a>
     <div id="top" style="height: 0; width: 100%; position: absolute; top: 0;"></div>
     <div class="foreground">
-        <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image">
+        <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image" fetchpriority="high" decoding="async">
     </div>
     <div>
         <div class="sky-limit-text">
@@ -58,175 +48,175 @@
         </div>
     </div>
     <div class="background">
-        <img src="{{ url_for('static', filename='sky/background.jpg') }}" alt="Background Image" class="background-image">
+        <img src="{{ url_for('static', filename='sky/background.jpg') }}" alt="Background Image" class="background-image" fetchpriority="high" decoding="async">
     </div>
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
-            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()" fetchpriority="high" decoding="async">
             <div id="myDropdown" class="dropdown-content">
                 <div class="dropdown-item" style="margin-top: 100px;" onclick="navigateTo('top', 'top')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background" loading="lazy" decoding="async">
                     <span class="dropdown-text">Skyline</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('overview', 'overview')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Overview" loading="lazy" decoding="async">
                     <span class="dropdown-text">Overview</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow11', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="A.I. Blockchain">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="A.I. Blockchain" loading="lazy" decoding="async">
                     <span class="dropdown-text">A.I. Blockchain</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow10', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NutriverseAI">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NutriverseAI" loading="lazy" decoding="async">
                     <span class="dropdown-text">NutriverseAI</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow9', 'tools')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Wakatime Readme Stats">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Wakatime Readme Stats" loading="lazy" decoding="async">
                     <span class="dropdown-text">Wakatime Readme Stats</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow8', 'ml')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NLP Nutrition Summary Generation">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="NLP Nutrition Summary Generation" loading="lazy" decoding="async">
                     <span class="dropdown-text">NLP Nutrition Summary Generation</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow0', 'ml')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Combined Models ML">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Combined Models ML" loading="lazy" decoding="async">
                     <span class="dropdown-text">Combined Models ML</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow4', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="ProFessUp App">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="ProFessUp App" loading="lazy" decoding="async">
                     <span class="dropdown-text">ProFessUp App</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow5', 'opsys')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="FAT32 Filesystem">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="FAT32 Filesystem" loading="lazy" decoding="async">
                     <span class="dropdown-text">FAT32 Filesystem</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow1', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Hacker News Web App">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Hacker News Web App" loading="lazy" decoding="async">
                     <span class="dropdown-text">Hacker News Web App</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow7', 'opsys')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Elevator Kernel Module">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Elevator Kernel Module" loading="lazy" decoding="async">
                     <span class="dropdown-text">Elevator Kernel Module</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow6', 'opsys')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Shell Implementation">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Shell Implementation" loading="lazy" decoding="async">
                     <span class="dropdown-text">Shell Implementation</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow2', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Law Practice Manager App">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Law Practice Manager App" loading="lazy" decoding="async">
                     <span class="dropdown-text">Law Practice Manager App</span>
                 </div>
                 <div class="dropdown-item" onclick="navigateTo('slideshow3', 'appdev')">
-                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="My Notes App">
+                    <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="My Notes App" loading="lazy" decoding="async">
                     <span class="dropdown-text">My Notes App</span>
                 </div>
             </div>
-            <img src="{{ url_for('static', filename='navbar/exit.png') }}" alt="Nav bar Icon" class="navbar-close-button" onclick="toggleMenu()">
+            <img src="{{ url_for('static', filename='navbar/exit.png') }}" alt="Nav bar Icon" class="navbar-close-button" onclick="toggleMenu()" loading="lazy" decoding="async">
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
-            <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud">
-            <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}"/>
-            <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}"/>
-            <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}"/>
-            <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}"/>
-            <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}"/>
-            <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}"/>
-            <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}"/>
+            <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud" fetchpriority="high" decoding="async/">
+            <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
         </div>
         <!-- The Modal -->
         <div id="myModal" class="expanded-image-modal">
             <div id="modalContent" class="expanded-image-modal-content">
                 <div class="image-container"> <!-- Wrapper for image and close button -->
-                    <img class="expanded-image-modal-image" src="" alt="Expanded view">
+                    <img class="expanded-image-modal-image" src="" alt="Expanded view" loading="lazy" decoding="async">
                 </div>
                 <span class="close">
-                    <img src="/static/modal/close.jpg" alt="Close" class="close-icon">
+                    <img src="/static/modal/close.jpg" alt="Close" class="close-icon" loading="lazy" decoding="async">
                 </span>
             </div>
         </div>
         <!-- About Me Sidebar -->
         <div id="helpDeskSidebar" class="sidebar">
             <div class="sidebar-inner">
-                <img src="{{ url_for('static', filename='sidebar/display.png') }}" alt="sidebar background" class="sidebar-bg">
+                <img src="{{ url_for('static', filename='sidebar/display.png') }}" alt="sidebar background" class="sidebar-bg" loading="lazy" decoding="async">
                 <h2>Help Desk</h2>
                 <div class="sidebar-row">
-                    <img src="/static/planes&helicopters/plane1.png" alt="Plane icon">
+                    <img src="/static/planes&helicopters/plane1.png" alt="Plane icon" loading="lazy" decoding="async">
                     <p>Click to view projects by category.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img src="/static/planes&helicopters/helicopter2.png" alt="Helicopter icon">
+                    <img src="/static/planes&helicopters/helicopter2.png" alt="Helicopter icon" loading="lazy" decoding="async">
                     <p>Click to navigate to social links.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img src="/static/navbar/departures2.png" alt="Projects icon">
+                    <img src="/static/navbar/departures2.png" alt="Projects icon" loading="lazy" decoding="async">
                     <p>Click to view a list of projects.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/prev.png" alt="Prev icon">
+                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/prev.png" alt="Prev icon" loading="lazy" decoding="async">
                     <p>Click to view the previous slide.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/next.png" alt="Next icon">
+                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/slidenav/next.png" alt="Next icon" loading="lazy" decoding="async">
                     <p>Click to view the next slide.</p>
                 </div>
                 <div class="sidebar-row">
-                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/sidebar/patchy.png" alt="Patch icon">
+                    <img style="padding-left: 0.5vw; padding-right: 0.5vw;" src="/static/sidebar/patchy.png" alt="Patch icon" loading="lazy" decoding="async">
                     <p>Click to view the next backpack item.</p>
                 </div>
-                <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()">
+                <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()" loading="lazy" decoding="async">
             </div>
         </div>
-        <img id="opensidebar" src="{{ url_for('static', filename='sidebar/info.png') }}" alt="Info Icon" class="sidebar-open-button"  onclick="openSidebar()">
+        <img id="opensidebar" src="{{ url_for('static', filename='sidebar/info.png') }}" alt="Info Icon" class="sidebar-open-button"  onclick="openSidebar()" fetchpriority="high" decoding="async">
         <!-- Header -->
         <div class="main-background">
             <div class="marquee-helicopter1">
                 <a href="https://www.linkedin.com/in/laura-obermaier" target="_blank" class="social-link">
-                    <img src="/static/planes&helicopters/helicopter1.png" alt="LinkedIn Helicopter" class="social-icon">
-                    <img src="/static/planes&helicopters/helicoptertext1.png" alt="ML Tab" class="helicopter-text-1">
+                    <img src="/static/planes&helicopters/helicopter1.png" alt="LinkedIn Helicopter" class="social-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/helicoptertext1.png" alt="ML Tab" class="helicopter-text-1" fetchpriority="high" decoding="async">
                 </a>
             </div>
             <div class="marquee-helicopter2">
                 <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
-                    <img src="/static/planes&helicopters/helicopter2.png" alt="GitHub Helicopter" class="social-icon">
-                    <img src="/static/planes&helicopters/helicoptertext2.png" alt="ML Tab" class="helicopter-text-2">
+                    <img src="/static/planes&helicopters/helicopter2.png" alt="GitHub Helicopter" class="social-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/helicoptertext2.png" alt="ML Tab" class="helicopter-text-2" fetchpriority="high" decoding="async">
                 </a>
             </div>
             <div class="marquee-plane1">
                 <button class="category-button" onclick="filterCategories('ml')">
-                    <img src="/static/planes&helicopters/plane1.png" alt="ML Tab" class="category-icon">
-                    <img src="/static/planes&helicopters/planetext1.png" alt="ML Tab" class="plane-text-1">
+                    <img src="/static/planes&helicopters/plane1.png" alt="ML Tab" class="category-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/planetext1.png" alt="ML Tab" class="plane-text-1" fetchpriority="high" decoding="async">
                 </button>
             </div>
             <div class="marquee-plane2">
                 <button class="category-button" onclick="filterCategories('appdev')">
-                    <img src="/static/planes&helicopters/plane2.png" alt="ML Tab" class="category-icon">
-                    <img src="/static/planes&helicopters/planetext2.png" alt="ML Tab" class="plane-text-2">
+                    <img src="/static/planes&helicopters/plane2.png" alt="ML Tab" class="category-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/planetext2.png" alt="ML Tab" class="plane-text-2" fetchpriority="high" decoding="async">
                 </button>
             </div>
             <div class="marquee-plane3">
                 <button class="category-button" onclick="filterCategories('opsys')">
-                    <img src="/static/planes&helicopters/plane3.png" alt="Op Sys Tab" class="category-icon">
-                    <img src="/static/planes&helicopters/planetext3.png" alt="Op Sys Tab" class="plane-text-3">
+                    <img src="/static/planes&helicopters/plane3.png" alt="Op Sys Tab" class="category-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/planetext3.png" alt="Op Sys Tab" class="plane-text-3" fetchpriority="high" decoding="async">
                 </button>
             </div>
             <div class="marquee-plane4">
                 <button class="category-button" onclick="filterCategories('overview')">
-                    <img src="/static/planes&helicopters/plane4.png" alt="Overview Tab" class="category-icon">
-                    <img src="/static/planes&helicopters/planetext4.png" alt="Overview Tab" class="plane-text-4">
+                    <img src="/static/planes&helicopters/plane4.png" alt="Overview Tab" class="category-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/planetext4.png" alt="Overview Tab" class="plane-text-4" fetchpriority="high" decoding="async">
                 </button>
             </div>
             <div class="marquee-plane5">
                 <button class="category-button" onclick="filterCategories('tools')">
-                    <img src="/static/planes&helicopters/plane5.png" alt="Dev Tools Tab" class="category-icon">
-                    <img src="/static/planes&helicopters/planetext5.png" alt="Dev Tools Tab" class="plane-text-5">
+                    <img src="/static/planes&helicopters/plane5.png" alt="Dev Tools Tab" class="category-icon" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/planetext5.png" alt="Dev Tools Tab" class="plane-text-5" fetchpriority="high" decoding="async">
                 </button>
             </div>
         </div>  
         <div class="overview" id="overview">
             <div class="airport-background">
-                <img src="/static/overview/airportBackground.png" alt="Airport Background" class="airport-background-image">
+                <img src="/static/overview/airportBackground.png" alt="Airport Background" class="airport-background-image" loading="lazy" decoding="async">
             </div>
             <div class="airport-table">
                 <img src="/static/overview/airportChairs.png" alt="Airport Table" class="airport-table-image">
@@ -240,7 +230,7 @@
 
                     <!-- Coach arrow (points at trigger) -->
                     <div class="trigger-coach" aria-hidden="true">
-                        <img src="/static/overview/arrow.png" alt="Arrow" class="coach-arrow">
+                        <img src="/static/overview/arrow.png" alt="Arrow" class="coach-arrow" loading="lazy" decoding="async">
                         <text class="overview-arrow-text">
                             Click here
                         </text>
@@ -255,7 +245,7 @@
                         <img 
                             src="/static/overview/driversLicense.png"
                             alt="Driver's License" 
-                            class="backpack-item active">
+                            class="backpack-item active" loading="lazy" decoding="async">
                     </div>
                     <div id="bt" class="backpack-item-wrap"
                         data-label="Technologies & Tools: Vim, Linux, Ubuntu, Windows, Flask, React, Expo, Auth0, Node.js, NPM, Nginx, Gunicorn, Android, Android Studio, Visual Studio, VSCode, Git, GitHub, Docker, OpenAI, .NET MAUI, Jupyter Notebook, Visual Paradigm, Virtual Box, Linode, Microsoft Azure, Anaconda, and Hugging Face Transformers.
@@ -265,7 +255,7 @@
                         <img 
                             src="/static/overview/hardSkills.png"
                             alt="Boarding Pass: Showcasing Hard Skills" 
-                            class="backpack-item">
+                            class="backpack-item" loading="lazy" decoding="async">
                     </div>
                     <div id="tb" class="backpack-item-wrap"
                         data-label="“She consistently delivered features quickly, cleanly, and without introducing bugs. Her implementations are not only efficient but also reliable, often requiring minimal to no follow-up or rework.”-Bhargav Vasireddy, founder of NutriverseAI
@@ -277,7 +267,7 @@
                         <img 
                             src="/static/overview/lettersOfRec.png"
                             alt="Textbook: Showcasing letters of recommendation" 
-                            class="backpack-item">
+                            class="backpack-item" loading="lazy" decoding="async">
                     </div>
                     <div id="note" class="backpack-item-wrap"
                         data-label="Professional Fact: I completed my bachelor's degree in just 2.5 years.
@@ -287,7 +277,7 @@
                         <img 
                             src="/static/overview/note.png"
                             alt="Note: Showcasing professional and fun fact" 
-                            class="backpack-item">
+                            class="backpack-item" loading="lazy" decoding="async">
                     </div>
                     <div id="passport" class="backpack-item-wrap"
                         data-label="I'm from Germany and Saba and I've lived in Windach, Germany; Beijing, China; Weston, Florida; and Hoboken, New Jersey."
@@ -295,7 +285,7 @@
                         <img 
                             src="/static/overview/passport.png"
                             alt="Passport: Showcasing places lived and where from" 
-                            class="backpack-item">
+                            class="backpack-item" loading="lazy" decoding="async">
                     </div>
                     <div id="zb" class="backpack-item-wrap"
                         data-label="My Likes: Ceramics, Skincare, Z(Pet), Anime, Gym"
@@ -303,13 +293,13 @@
                         <img 
                             src="/static/overview/ziplockBag.png"
                             alt="Ziplock Bag: Showcasing likes" 
-                            class="backpack-item">
+                            class="backpack-item" loading="lazy" decoding="async">
                     </div>
                 </div>
             </div>
 
             <div class="departures-signs">
-                <img src="/static/overview/departureSign.png" alt="Departures Sign" class="departures-signs-image">
+                <img src="/static/overview/departureSign.png" alt="Departures Sign" class="departures-signs-image" loading="lazy" decoding="async">
                 <div class="tables">
 
                     <!-- TABLE 1 -->
@@ -510,24 +500,24 @@
         <div class="slideshow-background" id="slideshow11" data-bg="/static/suitcases/appdev6.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://ai-blockchain.com/" target="_blank" title="Visit the A.I. Blockchain website">
-                    <img src="/static/tickets/ticket11.png">
+                    <img src="/static/tickets/ticket11.png" loading="lazy" decoding="async">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/stem.png') }}" title="AGI Epigenetic Reprogramming" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/stem.png') }}" title="AGI Epigenetic Reprogramming" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>AGI Epigenetic Reprogramming</h3>
                         <div>
-                            I am leading the software architecture and development of an AI-guided epigenetic reprogramming platform that integrates ML models, IoT sensors, and molecular data pipelines to support predictive veterinary and aging research. This in-progress project involves designing secure, scalable workflows and LLM-powered decision support, with the potential to significantly cut treatment costs, accelerate discovery, and build one of the world’s richest longitudinal animal-health datasets.
+                            I am leading the software architecture and development of an AI-guided epigenetic reprogramming platform that integrates ML models, IoT sensors, and molecular data pipelines to support predictive veterinary and aging research. This in-progress project involves designing secure, scalable workflows and LLM-powered decision support, with the potential to significantly cut treatment costs, accelerate discovery, and build one of the world's richest longitudinal animal-health datasets.
                         </div>
                     </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/body.png') }}" title="Body Metrics" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/body.png') }}" title="Body Metrics" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">  
                         <h3>Body Metrics</h3>
@@ -539,7 +529,7 @@
                 <!-- Slide 3 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/humidor.png') }}" title="Humidor Temp App" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/humidor.png') }}" title="Humidor Temp App" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">  
                         <h3>Humidor Temp App</h3>
@@ -551,7 +541,7 @@
                 <!-- Slide 4 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/email.png') }}" title="PP Email Integration" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow11/email.png') }}" title="PP Email Integration" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">  
                         <h3>PP Email Integration</h3>
@@ -562,11 +552,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow11')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow11')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -575,7 +565,7 @@
         <div class="slideshow-background" id="slideshow10" data-bg="/static/suitcases/appdev5.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://www.linkedin.com/company/nutriverseai/posts/?feedView=all" target="_blank" title="Visit the NutriverseAI LinkedIn Profile">
-                    <img src="/static/tickets/ticket10.png">
+                    <img src="/static/tickets/ticket10.png" loading="lazy" decoding="async">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -590,7 +580,7 @@
                 <!-- Slide 2 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow10/forumsPost.png') }}" title="NutriverseAI Forums Post" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow10/forumsPost.png') }}" title="NutriverseAI Forums Post" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">  
                         <h3>Application Overview</h3>
@@ -601,11 +591,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow10')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow10')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -614,7 +604,7 @@
         <div class="slideshow-background" id="slideshow9" data-bg="/static/suitcases/devtools.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/wakatimeReadmeStats" target="_blank" title="Visit the Wakatime Readme Stats Repository on GitHub">
-                    <img src="/static/tickets/ticket9.png">
+                    <img src="/static/tickets/ticket9.png" loading="lazy" decoding="async">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -629,7 +619,7 @@
                 <!-- Slide 2 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-1.png') }}" title="Code Snippet 1/3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-1.png') }}" title="Code Snippet 1/3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/3</h3>
@@ -641,7 +631,7 @@
                 <!-- Slide 3 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-2.png') }}" title="Code Snippet 2/3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-2.png') }}" title="Code Snippet 2/3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/3</h3>
@@ -653,7 +643,7 @@
                 <!-- Slide 4 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-3.png') }}" title="Code Snippet 3/3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow9/codeSnippet9-3.png') }}" title="Code Snippet 3/3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/3</h3>
@@ -664,11 +654,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow9')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow9')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -677,7 +667,7 @@
         <div class="slideshow-background" id="slideshow8" data-bg="/static/suitcases/ml1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/nutritionAnalyzer" target="_blank" title="Visit the Nutrition Analyzer Web App on GitHub">
-                    <img src="/static/tickets/ticket8.png">
+                    <img src="/static/tickets/ticket8.png" loading="lazy" decoding="async">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -692,7 +682,7 @@
                 <!-- Slide 2 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/projectReport.png') }}" title="Project Report" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/projectReport.png') }}" title="Project Report" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Project Report</h3>
@@ -704,7 +694,7 @@
                 <!-- Slide 3 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/tokenizationAndAliasNormalization.png') }}" title="Tokenization and Alias Normalization" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/tokenizationAndAliasNormalization.png') }}" title="Tokenization and Alias Normalization" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Tokenization and Alias Normalization</h3>
@@ -716,7 +706,7 @@
                 <!-- Slide 4 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/queryingGoogleCSE.png') }}" title="Data Retrieval and Web Scraping" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/queryingGoogleCSE.png') }}" title="Data Retrieval and Web Scraping" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Data Retrieval and Web Scraping</h3>
@@ -728,7 +718,7 @@
                 <!-- Slide 5 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/summaryGeneration.png') }}" title="Sentence-Level Preprocessing and Summary Generation" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/summaryGeneration.png') }}" title="Sentence-Level Preprocessing and Summary Generation" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Sentence-Level Preprocessing and Summary Generation</h3>
@@ -740,7 +730,7 @@
                 <!-- Slide 6 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/takeawaysSlide.png') }}" title="Key Takeaways and Repository" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow8/takeawaysSlide.png') }}" title="Key Takeaways and Repository" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Key Takeaways and Repository</h3>
@@ -751,11 +741,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow8')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow8')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -764,7 +754,7 @@
         <div class="slideshow-background" id="slideshow0" data-bg="/static/suitcases/ml2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/machineLearningProject" target="_blank" title="Visit Combined Models Machine Learning on GitHub">
-                    <img src="/static/tickets/ticket0.png">
+                    <img src="/static/tickets/ticket0.png" loading="lazy" decoding="async">
                 </a>
                 <!-- Slide 1 -->
                 <div class="slides">
@@ -779,7 +769,7 @@
                 <!-- Slide 2 -->
                 <div class="slides">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-1.png') }}" title="Dataset Import and Scaling" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-1.png') }}" title="Dataset Import and Scaling" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Dataset Import and Scaling</h3>
@@ -791,7 +781,7 @@
                 <!-- Slide 3 -->
                 <div class="slides" style="display:none;">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-2.png') }}" title="Handling Class Imbalance" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-2.png') }}" title="Handling Class Imbalance" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Handling Class Imbalance</h3>
@@ -803,7 +793,7 @@
                 <!-- Slide 4 -->
                 <div class="slides" style="display:none;">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-3.png') }}" title="Bias^2 and Variance Computation" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-3.png') }}" title="Bias^2 and Variance Computation" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Bias^2 and Variance Computation</h3>
@@ -815,7 +805,7 @@
                 <!-- Slide 5 -->
                 <div class="slides" style="display:none;">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-4.png') }}" title="Model Combination and Evaluation 1/2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-4.png') }}" title="Model Combination and Evaluation 1/2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Model Combination and Evaluation 1/2</h3>
@@ -827,7 +817,7 @@
                 <!-- Slide 6 -->
                 <div class="slides" style="display:none;">
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-5.png') }}" title="Model Combination and Evaluation 2/2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow0/codeSnippet0-5.png') }}" title="Model Combination and Evaluation 2/2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Model Combination and Evaluation 2/2</h3>
@@ -838,11 +828,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow0')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow0')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -851,7 +841,7 @@
         <div class="slideshow-background" id="slideshow1" data-bg="/static/suitcases/appdev1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/hackerNews" target="_blank" title="Visit the Hacker News Web Application on GitHub">
-                    <img src="/static/tickets/ticket1.png">
+                    <img src="/static/tickets/ticket1.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -866,7 +856,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippets 1/3 </h3>
@@ -878,7 +868,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-2.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippets 2/3 </h3>
@@ -890,7 +880,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Eigth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow1/codeSnippet1-3.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippets 3/3 </h3>
@@ -901,11 +891,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow1')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow1')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -914,7 +904,7 @@
         <div class="slideshow-background" id="slideshow2" data-bg="/static/suitcases/appdev2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/practicePanther" target="_blank" title="Visit the Law Practice Manager Web App on GitHub">
-                    <img src="/static/tickets/ticket2.png">
+                    <img src="/static/tickets/ticket2.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -929,7 +919,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/5</h3>
@@ -941,7 +931,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Third slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/5</h3>
@@ -953,7 +943,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Fourth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/5</h3>
@@ -965,7 +955,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Fifth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 4/5</h3>
@@ -977,7 +967,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Sixth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow2/codeSnippet2-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 5/5</h3>
@@ -988,11 +978,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow2')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow2')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1001,7 +991,7 @@
         <div class="slideshow-background" id="slideshow3" data-bg="/static/suitcases/appdev3.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/myNotes" target="_blank" title="Visit the My Notes Web Application on GitHub">
-                    <img src="/static/tickets/ticket3.png">
+                    <img src="/static/tickets/ticket3.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1016,7 +1006,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Seventh slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/3</h3>
@@ -1028,7 +1018,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Eigth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/3</h3>
@@ -1040,7 +1030,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Ninth slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow3/codeSnippet3-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/3</h3>
@@ -1051,11 +1041,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow3')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow3')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1064,7 +1054,7 @@
         <div class="slideshow-background" id="slideshow4" data-bg="/static/suitcases/appdev4.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/proFessUp" target="_blank" title="Visit the ProFessUp Web Application on GitHub">
-                    <img src="/static/tickets/ticket4.png">
+                    <img src="/static/tickets/ticket4.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1079,7 +1069,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/2</h3>
@@ -1091,7 +1081,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Third slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow4/codeSnippet4-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/2</h3>
@@ -1102,11 +1092,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow4')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow4')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1115,7 +1105,7 @@
         <div class="slideshow-background" id="slideshow5" data-bg="/static/suitcases/opsys1.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/fat32filesystem" target="_blank" title="Visit the FAT 32 Filesystem implementation on GitHub">
-                    <img src="/static/tickets/ticket5.png">
+                    <img src="/static/tickets/ticket5.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1130,7 +1120,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/6</h3>
@@ -1142,7 +1132,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/6</h3>
@@ -1154,7 +1144,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/6</h3>
@@ -1166,7 +1156,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-4.png') }}" title="Code Snippets - Image 4" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 4/6</h3>
@@ -1178,7 +1168,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-5.png') }}" title="Code Snippets - Image 5" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 5/6</h3>
@@ -1190,7 +1180,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow5/codeSnippet5-6.png') }}" title="Code Snippets - Image 6" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 6/6</h3>
@@ -1201,11 +1191,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow5')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow5')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1214,7 +1204,7 @@
         <div class="slideshow-background" id="slideshow6" data-bg="/static/suitcases/opsys2.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/shell" target="_blank" title="Visit the Shell implementation on GitHub">
-                    <img src="/static/tickets/ticket6.png">
+                    <img src="/static/tickets/ticket6.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1229,7 +1219,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/3</h3>
@@ -1241,7 +1231,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/3</h3>
@@ -1253,7 +1243,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow6/codeSnippet6-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/3</h3>
@@ -1264,11 +1254,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow6')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow6')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1277,7 +1267,7 @@
         <div class="slideshow-background" id="slideshow7" data-bg="/static/suitcases/opsys3.png">
             <div class="slideshow-container">
                 <a class="slideshow-ticket" href="https://github.com/LauraAllObe/elevatorKernelModule" target="_blank" title="Visit the Elevator Kernel Module implementation on GitHub">
-                    <img src="/static/tickets/ticket7.png">
+                    <img src="/static/tickets/ticket7.png" loading="lazy" decoding="async">
                 </a>
                 <div class="slides">
                     <!-- First slide pair: Image and text -->
@@ -1292,7 +1282,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-1.png') }}" title="Code Snippets - Image 1" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 1/3</h3>
@@ -1304,7 +1294,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-2.png') }}" title="Code Snippets - Image 2" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 2/3</h3>
@@ -1316,7 +1306,7 @@
                 <div class="slides" style="display:none;">
                     <!-- Second slide pair: Image and text -->
                     <div class="slideshow-vertical-image-container">
-                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy">
+                        <img class="slideshow-image" src="{{ url_for('static', filename='slideshow7/codeSnippet7-3.png') }}" title="Code Snippets - Image 3" onclick="showModal(this.src)" loading="lazy" decoding="async">
                     </div>
                     <div class="slideshow-text">
                         <h3>Code Snippet 3/3</h3>
@@ -1327,11 +1317,11 @@
                 </div>
                 <div class="button-container">
                     <button class="prev" onclick="plusSlides(-1, 'slideshow7')">
-                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon">
+                        <img src="/static/slidenav/prev.png" alt="Previous" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                     <div class="slide-navigation-text"></div>
                     <button class="next" onclick="plusSlides(1, 'slideshow7')">
-                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon">
+                        <img src="/static/slidenav/next.png" alt="Next" class="nav-icon" loading="lazy" decoding="async">
                     </button>
                 </div>
             </div>
@@ -1357,10 +1347,10 @@
                 </form>
             </div>
             <div class="end-horizontal">
-                <a href="https://www.linkedin.com/in/laura-obermaier" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='closing/linkedin.png') }}" alt="LinkedIn" loading="lazy"></a>
-                <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='closing/instagram.png') }}" alt="Instagram" loading="lazy"></a>
-                <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='closing/github.png') }}" alt="GitHub" loading="lazy"></a>
-                <a href="{{ url_for('static', filename='closing/cv.pdf') }}" download="Obermaier_Laura_Resume" target="_blank" class="end-clickables" title="Download My Resume"><img class="end-clickables" src="{{ url_for('static', filename='closing/cv.png') }}" alt="Resume" loading="lazy"></a>
+                <a href="https://www.linkedin.com/in/laura-obermaier" target="_blank" class="end-clickables" title="LinkedIn: Laura Obermaier"><img class="end-clickables" src="{{ url_for('static', filename='closing/linkedin.png') }}" alt="LinkedIn" loading="lazy" decoding="async"></a>
+                <a href="https://www.instagram.com/laura.allison._/" target="_blank" class="end-clickables" title="Instagram: laura.allison._"><img class="end-clickables" src="{{ url_for('static', filename='closing/instagram.png') }}" alt="Instagram" loading="lazy" decoding="async"></a>
+                <a href="https://github.com/LauraAllObe" target="_blank" class="end-clickables" title="GitHub: LauraAllObe"><img class="end-clickables" src="{{ url_for('static', filename='closing/github.png') }}" alt="GitHub" loading="lazy" decoding="async"></a>
+                <a href="{{ url_for('static', filename='closing/cv.pdf') }}" download="Obermaier_Laura_Resume" target="_blank" class="end-clickables" title="Download My Resume"><img class="end-clickables" src="{{ url_for('static', filename='closing/cv.png') }}" alt="Resume" loading="lazy" decoding="async"></a>
             </div>
             <div class="end-copyright">© 2025 Laura Allison Obermaier. All rights reserved.</div>
         </div>
@@ -1368,7 +1358,7 @@
         <div id="successModal" class="email-modal">
             <div class="email-modal-content">
                 <span class="email-modal-close-button" onclick="closeModal()">&times;</span>
-                <img src="static/closing/happyCat.gif" alt="Success Icon" class="success-image" loading="lazy">
+                <img src="static/closing/happyCat.gif" alt="Success Icon" class="success-image" loading="lazy" decoding="async">
                 <p>Your message has been sent successfully!</p>
             </div>
         </div>
@@ -1384,7 +1374,6 @@
                 if (window.COMPANY) return;
                 const titles = [
                     "The Sky is the Limit",
-                    "Code Takes Flight",
                     "Cruising at Altitude",
                     "Engineering at 30,000ft",
                     "Cloud-Native Navigator",
@@ -1548,27 +1537,52 @@
                 window.scrollTo(0, 0);
             });
     
-            window.addEventListener('scroll', () => {
-                let value = window.scrollY;
-                let st = window.pageYOffset || document.documentElement.scrollTop;
-    
-                cloud1.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud1.style.marginLeft = (-value * 0.0913) + 'vw';
-                cloud2.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud2.style.marginLeft = (value * 0.0913) + 'vw';
-                cloud3.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud3.style.marginLeft = (value * 0.0913) + 'vw';
-                cloud4.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud4.style.marginLeft = (-value * 0.0913) + 'vw';
-                cloud5.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud5.style.marginLeft = (-value * 0.0913) + 'vw';
-                cloud6.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud6.style.marginLeft = (value * 0.0913) + 'vw';
-                cloud7.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud7.style.marginLeft = (value * 0.0913) + 'vw';
-                cloud8.style.marginTop = (-value * 0.0822) + 'vh';
-                cloud8.style.marginLeft = (value * 0.0913) + 'vw';
+            // Use transforms (no reflow) but move in vw/vh so clouds can leave the screen
+            const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud7, cloud8];
+
+            // Hint to the browser that transforms will change
+            clouds.forEach(el => { if (el) el.style.willChange = 'transform'; });
+
+            /*
+            We scale movement by "viewport heights scrolled":
+            t = scrollY / innerHeight
+            So after ~1 screen of scroll, clouds can move ~90vw horizontally and ~8vh vertically
+            — enough to exit the screen like your original margins did.
+            */
+            const SPEEDS = [
+            { xVW: -91.3, yVH: -8.22 }, // cloud1  ← left, up
+            { xVW: +91.3, yVH: -8.22 }, // cloud2  → right, up
+            { xVW: +91.3, yVH: -8.22 }, // cloud3  → right, up
+            { xVW: -91.3, yVH: -8.22 }, // cloud4  ← left, up
+            { xVW: -91.3, yVH: -8.22 }, // cloud5  ← left, up
+            { xVW: +91.3, yVH: -8.22 }, // cloud6  → right, up
+            { xVW: +91.3, yVH: -8.22 }, // cloud7  → right, up
+            { xVW: +91.3, yVH: -8.22 }, // cloud8  → right, up
+            ];
+
+            let ticking = false;
+
+            function updateClouds() {
+            const t = window.scrollY / window.innerHeight; // viewport-heights scrolled
+            clouds.forEach((el, i) => {
+                if (!el) return;
+                const s = SPEEDS[i];
+                // Move in vw/vh so after ~1vh of scroll they travel ~90vw horizontally (off-screen)
+                el.style.transform = `translate(${t * s.xVW}vw, ${t * s.yVH}vh)`;
             });
+            ticking = false;
+            }
+
+            window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(updateClouds);
+                ticking = true;
+            }
+            }, { passive: true });
+
+            // Ensure correct starting position at load and after resizes
+            window.addEventListener('load', updateClouds);
+            window.addEventListener('resize', updateClouds);        
     
             function adjustElementPosition() {
                 var slideshowBackground = document.querySelector('.slideshow-background');
@@ -1890,7 +1904,7 @@
 
                 //restore last selected category from sessionStorage
                 if (window.COMPANY) {
-                applyCompanyView(window.COMPANY);
+                    applyCompanyView(window.COMPANY);
                 } else {
                     const savedCategory = sessionStorage.getItem("selectedCategory");
                     if (savedCategory) {
