@@ -292,6 +292,13 @@
         margin-top: 24vh;
     }
 
+    .category-icon {
+        width: 110px;
+    }
+
+    .social-icon {
+        width: 60px;
+    }
 }
 
 /* Portrait */

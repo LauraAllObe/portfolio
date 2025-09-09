@@ -81,6 +81,11 @@ a:hover {
   src: url('/static/fonts/handmeds.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Horizon';
+  src: url('/static/fonts/Horizon.otf') format('truetype');
+}
+
 /* Bot Styles */
 .visually-hidden {
   position: absolute !important;
@@ -228,17 +233,41 @@ a:hover {
 
 /* Portfolio Heading */
 
+.sky-limit-text-horizon,
+.sky-limit-subheading {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .sky-limit-text {
     position: absolute;
     pointer-events: none;
     overflow: hidden;
     z-index: -400;
     height: 178px;
-    top: 40vh;
+    top: 45vh;
     left: 50%;                 
     transform: translateX(-50%);
     background-attachment: fixed;
     animation: neonPulse 2.5s steps(1, end) infinite;
+}
+
+.sky-limit-text-horizon {
+    font-family: 'Horizon', sans-serif;
+    font-size: 2.6vw;
+    color: #f46060;
+    display: block;
+    text-align: center;
+}
+
+.sky-limit-subheading {
+    font-family: 'Horizon', sans-serif;
+    font-size: 0.8vw;
+    color: #f46060;
+    display: block;
+    text-align: center;
+    margin-top: 0vw;
 }
 
 @keyframes neonPulse {
@@ -246,16 +275,16 @@ a:hover {
         filter: 
             brightness(1.1)
             contrast(1.2)
-            drop-shadow(0px 0px 4px #ff0000)
-            drop-shadow(0px 0px 6px #ff0000);
+            drop-shadow(0px 0px 8px #ff0000)
+            drop-shadow(0px 0px 14px #ff0000);
     }
 
     50% {
         filter: 
             brightness(1.0)
             contrast(1.1)
-            drop-shadow(0px 0px 0px #ff000080)
-            drop-shadow(0px 0px 0px #ff000080);
+            drop-shadow(0px 0px 4px #ff000080)
+            drop-shadow(0px 0px 8px #ff000080);
     }
 }
 
@@ -330,49 +359,49 @@ a:hover {
   margin-top: 63vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueeHelicopterLeft linear 35s infinite;
+  animation: MarqueeHelicopterLeft linear 40s infinite;
 }
 
 .marquee-helicopter2 { 
   margin-top: 80vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueeHelicopterLeft linear 40s infinite;
+  animation: MarqueeHelicopterLeft linear 45s infinite;
 }
 
 .marquee-plane1 { 
   margin-top: 42vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueePlaneLeft linear 22s infinite;
+  animation: MarqueePlaneLeft linear 27s infinite;
 }
 
 .marquee-plane2 { 
   margin-top: 19vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueePlaneLeft linear 20s infinite;
+  animation: MarqueePlaneLeft linear 25s infinite;
 }
 
 .marquee-plane3 { 
-  margin-top: 12vh;
+  margin-top: 8vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueePlaneLeft linear 18s infinite;
+  animation: MarqueePlaneLeft linear 23s infinite;
 }
 
 .marquee-plane4 { 
   margin-top: 15vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueePlaneLeft linear 15s infinite;
+  animation: MarqueePlaneLeft linear 20s infinite;
 }
 
 .marquee-plane5 { 
   margin-top: 38vh;
   overflow: hidden;
   position: absolute;
-  animation: MarqueePlaneLeft linear 16s infinite;
+  animation: MarqueePlaneLeft linear 21s infinite;
 }
 
 .category-button {
@@ -674,7 +703,7 @@ a:hover {
 
 .overview {
     margin-top: 80vw;
-    margin-bottom: 0vw;
+    margin-bottom: -60vw;
     z-index: 100;
     height: 58vw;
     width: 70vw;
@@ -966,7 +995,7 @@ a:hover {
 
 .backpack-item-wrap:hover .backpack-item {
   filter: 
-          brightness(0.6)
+          brightness(0.7)
           drop-shadow(0 0 1px rgba(255, 255, 255, 0.40))
           drop-shadow(0 0 0.5px rgba(255, 255, 255, 0.40));
 }
@@ -1026,7 +1055,7 @@ a:hover {
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
-    top: -60vw;
+    top: -50vw;
     height: 60vw;
     z-index: 200;
     left: 50%;
@@ -1112,14 +1141,13 @@ a:hover {
     height: 52vw;
     padding-top: 65vw;
     padding-bottom: 70vw;
-    margin-bottom: -85vw;
+    margin-bottom: -100vw;
     background-size: 65%;
     background-position-y: 67.5vw;
     box-sizing: border-box;
     display: none;
     position: relative;
     z-index: 100;
-    box-shadow: -8px -8px 12px rgba(0, 0, 0, 0.1), 8px 8px 12px rgba(0, 0, 0, 0.1);
     overflow: visible !important;
 }
 

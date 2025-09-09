@@ -411,4 +411,23 @@
         --item-active-translate-y:-590px !important;
         --item-active-translate-x: -280px !important;
     }
+
+    .helicopter-text-1,
+    .helicopter-text-2,
+    .plane-text-1,
+    .plane-text-2,
+    .plane-text-3,
+    .plane-text-4,
+    .plane-text-5 {
+        height: 13vh;
+    }
+
+    
+.sky-limit-text-horizon {
+    font-size: 4vw;
+}
+
+.sky-limit-subheading {
+    font-size: 1.6vw;
+}
 }

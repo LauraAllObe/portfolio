@@ -51,7 +51,10 @@
         <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image">
     </div>
     <div>
-        <img src="{{ url_for('static', filename='sky/skylimittext.svg') }}" alt="The sky is the limit text" class="sky-limit-text">
+        <div class="sky-limit-text">
+            <span class="sky-limit-text-horizon" id="sky-title">'The Sky is the Limit'</span>
+            <span class="sky-limit-subheading" id="sky-subtitle">'Click on a plane to navigate.'</span>
+        </div>
     </div>
     <div class="background">
         <img src="{{ url_for('static', filename='sky/background.jpg') }}" alt="Background Image" class="background-image">
@@ -484,7 +487,7 @@
                         <tr class="clickable-row" data-href="https://github.com/simple-icons/simple-icons">
                             <td>&nbsp;Simple Icons</td>
                             <td>08/07/25</td>
-                            <td>PR Open</td>
+                            <td>Complete</td>
                         </tr>
                         <tr class="clickable-row" data-href="https://github.com/abhisheknaiidu/awesome-github-profile-readme">
                             <td>&nbsp;Awesome Github Profile README</td>
@@ -1374,8 +1377,44 @@
         </div>
         <!-- Modal and Slideshow Navigation Code -->
         <script>
-
             // Example: Hide modal after assets are loaded
+            // Dynamic sky-limit title/subtitle
+            window.addEventListener('DOMContentLoaded', () => {
+                const titles = [
+                    "The Sky is the Limit",
+                    "Code Takes Flight",
+                    "Cleared for Landing",
+                    "Cruising at Altitude",
+                    "Engineering at 30,000ft",
+                    "Cloud-Native Navigator",
+                    "Pilot of Possibilities",
+                    "Flying High with Code",
+                    "From Runway to Release",
+                    "Skybound Solutions"
+                ];
+                const subtitles = [
+                    "Click a plane to view projects by category",
+                    "Click the projects menu to view all projects",
+                    "Click the information sign for helpful tips",
+                    "Hover over a backpack item to view details",
+                    "Click the backpack patch to tab through items",
+                    "Enter and submit the contact form to email me",
+                    "Click the information sign for helpful tips",
+                    "Click the suitcase arrows to view project details",
+                    "Zoom in on project images by clicking them",
+                    "Demo videos are available for each project",
+                    "Submit a contact form to see a cute cat gif",
+                    "Airport sign items are clickable links",
+                    "Project tickets are clickable links",
+                    "Click the information sign for helpful tips",
+                    "For a simplified view, click the bot button",
+                    "Click a helicopter to visit my LinkedIn/GitHub"
+                ];
+                const idx = Math.floor(Math.random() * titles.length);
+                document.getElementById('sky-title').textContent = titles[idx];
+                document.getElementById('sky-subtitle').textContent = subtitles[idx];
+            });
+
             window.addEventListener('load', () => {
                 const minDisplayTime = 1000; // 1 second
                 setTimeout(() => {
