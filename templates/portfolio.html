@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        /* While loading, prevent any scroll movement */
+        html.is-loading, body.is-loading {
+            height: 100%;
+            overflow: hidden;
+            overscroll-behavior: none; /* stops iOS/Android rubber-band */
+        }
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Laura's Portfolio</title>
@@ -21,6 +29,33 @@
     <script src="/static/youtube-embed/lite-yt-embed.js" defer></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
+        // Run ASAP to keep the page pinned at top during load
+        (function lockAtTopEarly() {
+            // Don’t restore previous scroll position (e.g., bfcache/back nav)
+            if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+            }
+
+            // Start locked at the top
+            window.scrollTo(0, 0);
+            document.documentElement.classList.add('is-loading');
+            // body might not exist yet; add once it does.
+            document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('is-loading');
+            });
+
+            // Extra guard for iOS: block touchmove while loading
+            const block = (e) => e.preventDefault();
+            window.addEventListener('touchmove', block, { passive: false });
+
+            // Expose an unlock function you can call after your loader hides
+            window.__unlockScrollAfterLoad = function () {
+            window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+            document.documentElement.classList.remove('is-loading');
+            document.body.classList.remove('is-loading');
+            window.removeEventListener('touchmove', block);
+            };
+        })();
         window.addEventListener('DOMContentLoaded', () => {
             if (window.emailjs && emailjs.init) emailjs.init("MXT3jSb_rDcclPwFE");
         });
@@ -1405,9 +1440,22 @@
             });
 
             window.addEventListener('load', () => {
-                const minDisplayTime = 1000; // 1 second
+                const minDisplayTime = 1000; // 1s
                 setTimeout(() => {
-                    document.getElementById('loadingModal').style.display = 'none';
+                    // Hide your loading modal
+                    const modal = document.getElementById('loadingModal');
+                    if (modal) modal.style.display = 'none';
+
+                    // Final guarantee: go to top and unlock scrolling
+                    if (window.__unlockScrollAfterLoad) {
+                    window.__unlockScrollAfterLoad();
+                    } else {
+                    // Fallback if the head script didn’t run for some reason
+                    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+                    window.scrollTo(0, 0);
+                    document.documentElement.classList.remove('is-loading');
+                    document.body.classList.remove('is-loading');
+                    }
                 }, minDisplayTime);
             });
             
