@@ -718,7 +718,6 @@ a:hover {
     object-fit: contain;
     text-align: center;
     justify-content: space-around;
-    overflow: hidden;
 }
 
 .airport-background {
