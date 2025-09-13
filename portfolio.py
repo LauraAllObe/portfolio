@@ -41,6 +41,12 @@ def amazon_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
 
+@app.get("/Microsoft")
+def microsoft_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
+
 @app.get("/GEVernova")
 def ge_vernova_page():
     if 'slideIndexes' not in session:
