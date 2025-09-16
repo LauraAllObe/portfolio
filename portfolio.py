@@ -53,6 +53,12 @@ def ge_vernova_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="GE Vernova")
 
+@app.get("/GoldmanSachs")
+def goldman_sachs_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Goldman Sachs")
+
 @app.get("/Jerry")
 def jerry_page():
     if 'slideIndexes' not in session:
