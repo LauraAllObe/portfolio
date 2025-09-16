@@ -27,26 +27,7 @@ def sitemap_xml():
 def portfolio_txt():
     return send_from_directory("static", "portfolio.txt", mimetype="text/plain")
 
-# --- add below your existing @app.route('/') view ---
-@app.get("/Google")
-def google_page():
-    # keep slide indexes behavior the same
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Google")
-
-@app.get("/Amazon")
-def amazon_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
-
-@app.get("/Microsoft")
-def microsoft_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
-
+# Company specific routes (custom project lists and headings)
 @app.get("/GEVernova")
 def ge_vernova_page():
     if 'slideIndexes' not in session:
@@ -64,6 +45,18 @@ def jerry_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Jerry")
+
+@app.get("/Microsoft")
+def microsoft_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
+
+@app.get("/Optimum")
+def optimum_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Optimum")
 
 if __name__ == '__main__':
     app.run(debug=True)
