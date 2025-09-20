@@ -70,6 +70,12 @@ def microsoft_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
 
+@app.get("/NYTimes")
+def ny_times_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="NY Times")
+
 @app.get("/Optimum")
 def optimum_page():
     if 'slideIndexes' not in session:
