@@ -52,6 +52,12 @@ def google_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Google")
 
+@app.get("/Heron")
+def heron_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Heron")
+
 @app.get("/Jerry")
 def jerry_page():
     if 'slideIndexes' not in session:
