@@ -1432,6 +1432,14 @@
                 { xVW: +91.3, yVH: -8.22 }, // cloud8  → right, up
             ];
 
+            const initialOffsets = new Map();
+                clouds.forEach((el) => {
+                const cs = getComputedStyle(el);
+                const left = parseFloat(cs.left) || 0;
+                const top  = parseFloat(cs.top)  || 0;
+                initialOffsets.set(el, {left, top});
+            });
+
             const io = new IntersectionObserver((entries)=>{
                 entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
             }, { rootMargin: '200px 0px' });
@@ -1619,13 +1627,15 @@
                 showSlides(slideIndices[id], id);
             }
 
+            // then in updateClouds, add the base offset via translate3d too
             function updateClouds() {
-                const t = window.scrollY / window.innerHeight; // viewport-heights scrolled
+                const t = window.scrollY / window.innerHeight;
                 clouds.forEach((el, i) => {
                     if (!el) return;
                     const s = SPEEDS[i];
-                    // Move in vw/vh so after ~1vh of scroll they travel ~90vw horizontally (off-screen)
-                    el.style.transform = `translate(${t * s.xVW}vw, ${t * s.yVH}vh)`;
+                    const base = initialOffsets.get(el) || {left: 0, top: 0};
+                    el.style.transform = `translate3d(calc(${base.left}px + ${t * s.xVW}vw),
+                                                    calc(${base.top}px  + ${t * s.yVH}vh), 0)`;
                 });
                 ticking = false;
             }
