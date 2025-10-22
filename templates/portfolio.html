@@ -69,12 +69,12 @@
         <a href="/portfolio.txt">Plain-text</a>
     </p>
     <a href="/portfolio.md" role="button" class="bot-link">
-        <img src="{{ url_for('static', filename='/bot.png') }}" alt="Bot Icon" class="bot-icon" fetchpriority="high" decoding="async">
+        <img src="{{ url_for('static', filename='bot.png') }}" alt="Bot Icon" class="bot-icon"  decoding="async">
         Are you a bot? Get Markdown
     </a>
     <div id="top" style="height: 0; width: 100%; position: absolute; top: 0;"></div>
     <div class="foreground">
-        <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image" fetchpriority="high" decoding="async">
+        <img src="{{ url_for('static', filename='sky/foreground.png') }}" alt="Foreground Image" class="foreground-image"  decoding="async">
     </div>
     <div>
         <div class="sky-limit-text">
@@ -88,7 +88,7 @@
     <div class="overflow-mobile">
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
-            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()" fetchpriority="high" decoding="async">
+            <img src="{{ url_for('static', filename='navbar/departures2.png') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()"  decoding="async">
             <div id="myDropdown" class="dropdown-content">
                 <div class="dropdown-item" style="margin-top: 100px;" onclick="navigateTo('top', 'top')">
                     <img src="{{ url_for('static', filename='navbar/unselected.png') }}" alt="Background" loading="lazy" decoding="async">
@@ -151,14 +151,14 @@
         </div>
         <!-- Parallax Clouds -->
         <div class="clouds">
-            <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud" fetchpriority="high" decoding="async/">
-            <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
-            <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}" alt="Cloud" fetchpriority="high" decoding="async"/>
+            <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud2.0.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud3" src="{{ url_for('static', filename='clouds/cloud3.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud4" src="{{ url_for('static', filename='clouds/cloud4.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud5" src="{{ url_for('static', filename='clouds/cloud5.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud6" src="{{ url_for('static', filename='clouds/cloud6.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud7" src="{{ url_for('static', filename='clouds/cloud7.png') }}" alt="Cloud"  decoding="async"/>
+            <img id="cloud8" src="{{ url_for('static', filename='clouds/cloud8.0.png') }}" alt="Cloud"  decoding="async"/>
         </div>
         <!-- The Modal -->
         <div id="myModal" class="expanded-image-modal">
@@ -203,49 +203,49 @@
                 <img id="closesidebar" src="{{ url_for('static', filename='sidebar/end.png') }}" alt="End Icon" class="sidebar-close-button" onclick="closeSidebar()" loading="lazy" decoding="async">
             </div>
         </div>
-        <img id="opensidebar" src="{{ url_for('static', filename='sidebar/info.png') }}" alt="Info Icon" class="sidebar-open-button"  onclick="openSidebar()" fetchpriority="high" decoding="async">
+        <img id="opensidebar" src="{{ url_for('static', filename='sidebar/info.png') }}" alt="Info Icon" class="sidebar-open-button"  onclick="openSidebar()"  decoding="async">
         <!-- Header -->
         <div class="main-background">
             <div class="marquee-helicopter1">
                 <a href="https://www.linkedin.com/in/laura-obermaier" target="_blank" class="social-link">
-                    <img src="/static/planes&helicopters/helicopter1.png" alt="LinkedIn Helicopter" class="social-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/helicoptertext1.png" alt="ML Tab" class="helicopter-text-1" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/helicopter1.png" alt="LinkedIn Helicopter" class="social-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/helicoptertext1.png" alt="ML Tab" class="helicopter-text-1"  decoding="async">
                 </a>
             </div>
             <div class="marquee-helicopter2">
                 <a href="https://github.com/LauraAllObe" target="_blank" class="social-link">
-                    <img src="/static/planes&helicopters/helicopter2.png" alt="GitHub Helicopter" class="social-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/helicoptertext2.png" alt="ML Tab" class="helicopter-text-2" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/helicopter2.png" alt="GitHub Helicopter" class="social-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/helicoptertext2.png" alt="ML Tab" class="helicopter-text-2"  decoding="async">
                 </a>
             </div>
             <div class="marquee-plane1">
                 <button class="category-button" onclick="filterCategories('ml')">
-                    <img src="/static/planes&helicopters/plane1.png" alt="ML Tab" class="category-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/planetext1.png" alt="ML Tab" class="plane-text-1" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/plane1.png" alt="ML Tab" class="category-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/planetext1.png" alt="ML Tab" class="plane-text-1"  decoding="async">
                 </button>
             </div>
             <div class="marquee-plane2">
                 <button class="category-button" onclick="filterCategories('appdev')">
-                    <img src="/static/planes&helicopters/plane2.png" alt="ML Tab" class="category-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/planetext2.png" alt="ML Tab" class="plane-text-2" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/plane2.png" alt="ML Tab" class="category-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/planetext2.png" alt="ML Tab" class="plane-text-2"  decoding="async">
                 </button>
             </div>
             <div class="marquee-plane3">
                 <button class="category-button" onclick="filterCategories('opsys')">
-                    <img src="/static/planes&helicopters/plane3.png" alt="Op Sys Tab" class="category-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/planetext3.png" alt="Op Sys Tab" class="plane-text-3" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/plane3.png" alt="Op Sys Tab" class="category-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/planetext3.png" alt="Op Sys Tab" class="plane-text-3"  decoding="async">
                 </button>
             </div>
             <div class="marquee-plane4">
                 <button class="category-button" onclick="filterCategories('overview')">
-                    <img src="/static/planes&helicopters/plane4.png" alt="Overview Tab" class="category-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/planetext4.png" alt="Overview Tab" class="plane-text-4" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/plane4.png" alt="Overview Tab" class="category-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/planetext4.png" alt="Overview Tab" class="plane-text-4"  decoding="async">
                 </button>
             </div>
             <div class="marquee-plane5">
                 <button class="category-button" onclick="filterCategories('tools')">
-                    <img src="/static/planes&helicopters/plane5.png" alt="Dev Tools Tab" class="category-icon" fetchpriority="high" decoding="async">
-                    <img src="/static/planes&helicopters/planetext5.png" alt="Dev Tools Tab" class="plane-text-5" fetchpriority="high" decoding="async">
+                    <img src="/static/planes&helicopters/plane5.png" alt="Dev Tools Tab" class="category-icon"  decoding="async">
+                    <img src="/static/planes&helicopters/planetext5.png" alt="Dev Tools Tab" class="plane-text-5"  decoding="async">
                 </button>
             </div>
         </div>  
@@ -1403,7 +1403,86 @@
         </div>
         <!-- Modal and Slideshow Navigation Code -->
         <script>
-            // Example: Hide modal after assets are loaded
+            // =============================
+            // CONSTANTS AND INITIALIZATIONS
+            // =============================
+
+            const COMPANY_TOP3 = {
+                Akamai: ["slideshow10", "slideshow5", "slideshow11"], // NutriverseAI, Fat 32 Filesystem, A.I. Blockchain
+                Amazon: ["slideshow8", "slideshow1", "slideshow5"], // NLP Nutrition Analyzer, Hacker News Web App, Fat 32 Filesystem
+                Celoxica: ["slideshow5", "slideshow1", "slideshow2"], // FAT32 Filesystem, Hacker News Web App, Law Practice Manager App
+                "GE Vernova": ["slideshow10", "slideshow11", "slideshow5"],  // NutriverseAI, A.I. Blockchain, Fat 32 Filesystem
+                "Goldman Sachs": ["slideshow11", "slideshow10", "slideshow5"], // A.I. Blockchain, NutriverseAI, Fat 32 Filesystem
+                Google: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
+                Heron: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
+                Jerry: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
+                Microsoft:   ["slideshow5", "slideshow6", "slideshow7"], // FAT32 Filesystem, Shell Implementation, Elevator Kernel Module
+                "NY Times": ["slideshow11", "slideshow10", "slideshow1"], // A.I. Blockchain, NutriverseAI, Hacker News Web App
+                Optimum: ["slideshow11", "slideshow10", "slideshow3"], // A.I. Blockchain, NutriverseAI, My Notes App
+            };
+
+            const SPEEDS = [
+                { xVW: -91.3, yVH: -8.22 }, // cloud1  ← left, up
+                { xVW: +91.3, yVH: -8.22 }, // cloud2  → right, up
+                { xVW: +91.3, yVH: -8.22 }, // cloud3  → right, up
+                { xVW: -91.3, yVH: -8.22 }, // cloud4  ← left, up
+                { xVW: -91.3, yVH: -8.22 }, // cloud5  ← left, up
+                { xVW: +91.3, yVH: -8.22 }, // cloud6  → right, up
+                { xVW: +91.3, yVH: -8.22 }, // cloud7  → right, up
+                { xVW: +91.3, yVH: -8.22 }, // cloud8  → right, up
+            ];
+
+            const io = new IntersectionObserver((entries)=>{
+                entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
+            }, { rootMargin: '200px 0px' });
+
+            const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud7, cloud8];
+
+            var slideIndices = {
+                'slideshow9': 1,
+                'slideshow8': 1,
+                'slideshow0': 1, 
+                'slideshow11': 1,
+                'slideshow10': 1,
+                'slideshow1': 1, 
+                'slideshow2': 1, 
+                'slideshow3': 1,
+                'slideshow4': 1,
+                'slideshow5': 1,
+                'slideshow6': 1,
+                'slideshow7': 1
+            };
+
+            var modal = document.getElementById("myModal");
+            var modalImg = document.querySelector(".expanded-image-modal-image");
+            var span = document.getElementsByClassName("close")[0];
+            var modalContent = document.getElementById("expanded-image-modalContent");
+    
+            let cloud1 = document.getElementById('cloud1');
+            let cloud2 = document.getElementById('cloud2');
+            let cloud3 = document.getElementById('cloud3');
+            let cloud4 = document.getElementById('cloud4');
+            let cloud5 = document.getElementById('cloud5');
+            let cloud6 = document.getElementById('cloud6');
+            let cloud7 = document.getElementById('cloud7');
+            let cloud8 = document.getElementById('cloud8');
+            let ticking = false;
+
+            Object.keys(slideIndices).forEach(id=>{
+                const el = document.getElementById(id);
+                if (el) io.observe(el);
+            });
+
+            clouds.forEach(el => { if (el) el.style.willChange = 'transform'; });
+
+            // Initialize and refresh every 30 seconds
+            updateDeparturesFooter();
+            setInterval(updateDeparturesFooter, 30000); 
+
+            // ===================================
+            // LIGHTWEIGHT DOM CONTENT AND LOADING
+            // ===================================
+
             // Dynamic sky-limit title/subtitle
             window.addEventListener('DOMContentLoaded', () => {
                 if (window.COMPANY) return;
@@ -1439,6 +1518,13 @@
                 document.getElementById('sky-subtitle').textContent = subtitles[idx];
             });
 
+            window.onload = function() {
+                adjustElementPosition();
+                const body = document.body;
+                body.style.overflowY = 'visible';
+                clearInterval(interval);
+            };
+
             window.addEventListener('load', () => {
                 const minDisplayTime = 1000; // 1s
                 setTimeout(() => {
@@ -1458,20 +1544,14 @@
                     }
                 }, minDisplayTime);
             });
-            
-            var modal = document.getElementById("myModal");
-            var modalImg = document.querySelector(".expanded-image-modal-image");
-            var span = document.getElementsByClassName("close")[0];
-            var modalContent = document.getElementById("expanded-image-modalContent");
+
+            // ================
+            // HELPER FUNCTIONS
+            // ================
     
             function showModal(src) {
                 modal.style.display = "block";
                 modalImg.src = src;
-            }
-    
-            span.onclick = function() {
-                modal.style.display = "none";
-                modalImg.classList.remove('expanded-image-modal-zoomed-in');
             }
     
             function toggleZoom(e) {
@@ -1500,26 +1580,7 @@
                     img.classList.add('expanded-image-modal-zoomed-in');
                 }
             }
-    
-            modalImg.addEventListener('click', function(e) {
-                toggleZoom(e);
-            });
-    
-            var slideIndices = {
-                'slideshow9': 1,
-                'slideshow8': 1,
-                'slideshow0': 1, 
-                'slideshow11': 1,
-                'slideshow10': 1,
-                'slideshow1': 1, 
-                'slideshow2': 1, 
-                'slideshow3': 1,
-                'slideshow4': 1,
-                'slideshow5': 1,
-                'slideshow6': 1,
-                'slideshow7': 1
-            };
-            
+
             function showSlides(n, slideshowId) {
                 var i;
                 var slides = document.querySelectorAll("#" + slideshowId + " .slides");
@@ -1546,18 +1607,10 @@
     
                 slideIndices[slideshowId] = slideIndex;
             }
-    
         
             function plusSlides(n, slideshowId) {
                 showSlides(slideIndices[slideshowId] += n, slideshowId);
             }
-        
-            window.onload = function() {
-                adjustElementPosition();
-                const body = document.body;
-                body.style.overflowY = 'visible';
-                clearInterval(interval);
-            };
 
             function initSlideshowOnce(id){
                 const el = document.getElementById(id);
@@ -1566,76 +1619,17 @@
                 showSlides(slideIndices[id], id);
             }
 
-            const io = new IntersectionObserver((entries)=>{
-                entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
-            }, { rootMargin: '200px 0px' });
-
-            Object.keys(slideIndices).forEach(id=>{
-                const el = document.getElementById(id);
-                if (el) io.observe(el);
-            });
-    
-            let cloud1 = document.getElementById('cloud1');
-            let cloud2 = document.getElementById('cloud2');
-            let cloud3 = document.getElementById('cloud3');
-            let cloud4 = document.getElementById('cloud4');
-            let cloud5 = document.getElementById('cloud5');
-            let cloud6 = document.getElementById('cloud6');
-            let cloud7 = document.getElementById('cloud7');
-            let cloud8 = document.getElementById('cloud8');
-    
-    
-            window.addEventListener('load', () => {
-                window.scrollTo(0, 0);
-            });
-    
-            // Use transforms (no reflow) but move in vw/vh so clouds can leave the screen
-            const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud7, cloud8];
-
-            // Hint to the browser that transforms will change
-            clouds.forEach(el => { if (el) el.style.willChange = 'transform'; });
-
-            /*
-            We scale movement by "viewport heights scrolled":
-            t = scrollY / innerHeight
-            So after ~1 screen of scroll, clouds can move ~90vw horizontally and ~8vh vertically
-            — enough to exit the screen like your original margins did.
-            */
-            const SPEEDS = [
-            { xVW: -91.3, yVH: -8.22 }, // cloud1  ← left, up
-            { xVW: +91.3, yVH: -8.22 }, // cloud2  → right, up
-            { xVW: +91.3, yVH: -8.22 }, // cloud3  → right, up
-            { xVW: -91.3, yVH: -8.22 }, // cloud4  ← left, up
-            { xVW: -91.3, yVH: -8.22 }, // cloud5  ← left, up
-            { xVW: +91.3, yVH: -8.22 }, // cloud6  → right, up
-            { xVW: +91.3, yVH: -8.22 }, // cloud7  → right, up
-            { xVW: +91.3, yVH: -8.22 }, // cloud8  → right, up
-            ];
-
-            let ticking = false;
-
             function updateClouds() {
-            const t = window.scrollY / window.innerHeight; // viewport-heights scrolled
-            clouds.forEach((el, i) => {
-                if (!el) return;
-                const s = SPEEDS[i];
-                // Move in vw/vh so after ~1vh of scroll they travel ~90vw horizontally (off-screen)
-                el.style.transform = `translate(${t * s.xVW}vw, ${t * s.yVH}vh)`;
-            });
-            ticking = false;
+                const t = window.scrollY / window.innerHeight; // viewport-heights scrolled
+                clouds.forEach((el, i) => {
+                    if (!el) return;
+                    const s = SPEEDS[i];
+                    // Move in vw/vh so after ~1vh of scroll they travel ~90vw horizontally (off-screen)
+                    el.style.transform = `translate(${t * s.xVW}vw, ${t * s.yVH}vh)`;
+                });
+                ticking = false;
             }
 
-            window.addEventListener('scroll', () => {
-            if (!ticking) {
-                requestAnimationFrame(updateClouds);
-                ticking = true;
-            }
-            }, { passive: true });
-
-            // Ensure correct starting position at load and after resizes
-            window.addEventListener('load', updateClouds);
-            window.addEventListener('resize', updateClouds);        
-    
             function adjustElementPosition() {
                 var slideshowBackground = document.querySelector('.slideshow-background');
                 var width = slideshowBackground.offsetWidth;
@@ -1652,39 +1646,18 @@
             }
 
             function toggleMenu() {
-            var dropdown = document.getElementById("myDropdown");
-            var dropbtn = document.querySelector('.navbar-open-button');
-            var closebtn = document.querySelector('.navbar-close-button');
-                if (dropdown.style.display === "flex") {
-                    dropdown.style.display = "none";
-                    closebtn.style.display = "none";
-                    dropbtn.style.display = "block";
-                } else {
-                    dropdown.style.display = "flex";
-                    closebtn.style.display = "block";
-                    dropbtn.style.display = "none";
-                }
-            }
-
-            window.onclick = function(event) {
-                if (!event.target.matches('.navbar-open-button')) {
-                    var dropdowns = document.getElementsByClassName("dropdown-content");
-                    var dropbtn = document.querySelector('.navbar-open-button');
-                    var closebtn = document.querySelector('.navbar-close-button');
-                    for (var i = 0; i < dropdowns.length; i++) {
-                        var openDropdown = dropdowns[i];
-                        if (openDropdown.style.display === "flex") {
-                            openDropdown.style.display = "none";
-                            closebtn.style.display = "none";
-                            dropbtn.style.display = "block";
-                        }
+                var dropdown = document.getElementById("myDropdown");
+                var dropbtn = document.querySelector('.navbar-open-button');
+                var closebtn = document.querySelector('.navbar-close-button');
+                    if (dropdown.style.display === "flex") {
+                        dropdown.style.display = "none";
+                        closebtn.style.display = "none";
+                        dropbtn.style.display = "block";
+                    } else {
+                        dropdown.style.display = "flex";
+                        closebtn.style.display = "block";
+                        dropbtn.style.display = "none";
                     }
-                }
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    modalImg.classList.remove('expanded-image-modal-zoomed-in');
-                }
-                window.onscroll();
             }
 
             function openSidebar() {
@@ -1821,6 +1794,217 @@
                 }
             }
 
+            function navigateTo(id, category = null) {
+                if (category) {
+                    filterCategories(category);
+                }
+
+                // Wait a frame to ensure display update, then scroll
+                setTimeout(() => {
+                    const target = document.getElementById(id);
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                    if (id === 'top') {
+                        window.scrollTo(0, 0);
+                    }
+                }, 50); // Delay allows DOM updates to complete (e.g., from filterCategories)
+            }
+
+            function detectMacOS() {
+                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
+                                navigator.userAgent.toLowerCase().includes('macintosh');
+
+                if (isMacOS) {
+                    document.body.classList.add("is-macos");
+                }
+            }
+
+            function setBackgroundWidth() {
+                const viewportWidth = window.innerWidth;
+                const viewportWidthPx = viewportWidth + "px";
+                const bg = document.querySelector('.background');
+                const fg = document.querySelector('.foreground');
+
+                [bg, fg].forEach(el => {
+                    if (el) {
+                        el.style.width = viewportWidthPx;
+                        el.style.maxWidth = viewportWidthPx;
+                    }
+                });
+                bg.style.overflowX = "clip";
+
+                // Adjust foreground vertical position based on viewport width
+                if (fg) {
+                    // Example: as width decreases, top margin increases
+                    // You can tweak the factor and clamp if needed
+                    const baseOffset = 0; // starting point when screen is wide
+                    const scalingFactor = 0.2; // how much margin to add per 100px shrink
+
+                    // Example: increase top margin from 0px at 1440px → ~60px at 1140px
+                    const marginTop = Math.max(baseOffset, (1440 - viewportWidth) * scalingFactor);
+                    fg.style.marginTop = `${marginTop}px`;
+                }
+            }
+
+            // Table Slideshow Logic
+            (function() {
+                let tables = document.querySelectorAll('.departures-signs .table');
+                let current = 0;
+                if (tables.length) {
+                    tables[current].classList.add('active');
+                    setInterval(() => {
+                        tables[current].classList.remove('active');
+                        current = (current + 1) % tables.length;
+                        tables[current].classList.add('active');
+                    }, 3000);
+                }
+            })();
+
+            function updateDeparturesFooter() {
+                const now = new Date();
+
+                const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
+                const monthName = now.toLocaleDateString('en-US', { month: 'long' });
+                const dateNum = now.getDate();
+                const year = now.getFullYear();
+
+                let hours = now.getHours();
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const ampm = hours >= 12 ? 'P' : 'A';
+                hours = hours % 12 || 12;
+
+                document.getElementById('footer-day').textContent = dayName;
+                document.getElementById('footer-date').textContent = `${monthName} ${dateNum}, ${year}`;
+                document.getElementById('footer-time').textContent = `${hours}:${minutes}${ampm}`;
+            }
+
+            // Backpack Item Click Logic (BUTTON-based control)
+            (function () {
+                const wraps = Array.from(document.querySelectorAll('.backpack-item-wrap'));
+                const trigger = document.querySelector('.backpack-trigger');
+                const coach = document.querySelector('.trigger-coach');
+                if (!wraps.length || !trigger) return;
+
+                let activeIndex = wraps.findIndex(el => el.classList.contains('is-active'));
+                if (activeIndex < 0) {
+                    activeIndex = 0;
+                    wraps[0].classList.add('is-active');
+                }
+
+                const dismissCoach = () => {
+                    if (coach && !coach.classList.contains('dismissed')) {
+                    coach.classList.add('dismissed');
+                    }
+                };
+
+                const cycle = () => {
+                    // remove active from current
+                    wraps[activeIndex].classList.remove('is-active');
+
+                    // advance index
+                    activeIndex = (activeIndex + 1) % wraps.length;
+
+                    // add active to next
+                    wraps[activeIndex].classList.add('is-active');
+
+                    dismissCoach();
+                };
+
+                trigger.addEventListener('click', cycle);
+                trigger.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    cycle();
+                    }
+                });
+
+                // accessibility / UX extras
+                trigger.addEventListener('pointerdown', dismissCoach);
+                trigger.addEventListener('focus', dismissCoach);
+            })();
+
+            function applyCompanyView(company) {
+                const titleEl = document.getElementById("sky-title");
+                const subEl   = document.getElementById("sky-subtitle");
+
+                // 1) Custom skyline copy
+                if (titleEl) titleEl.textContent = `Welcome ${company}!`;
+                if (subEl)   subEl.textContent   = `Scroll to view my most relevant projects for ${company}`;
+
+                // 2) Overview + top 3 relevant projects visible
+                const allIds = [
+                "slideshow9","slideshow8","slideshow0","slideshow11","slideshow10",
+                "slideshow1","slideshow2","slideshow3","slideshow4","slideshow5",
+                "slideshow6","slideshow7"
+                ];
+                const overview = document.getElementById("overview");
+                const want = new Set(COMPANY_TOP3[company] || []);
+
+                allIds.forEach(id => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                el.style.display = want.has(id) ? "block" : "none";
+                });
+
+                if (overview) {
+                overview.style.display = "flex";
+                overview.scrollIntoView();
+                }
+
+                // 3) Don’t let the savedCategory override this initial curated view
+                sessionStorage.removeItem("selectedCategory");
+            }
+
+            // ============================
+            // EVENT BINDINGS AND BOOTSTRAP
+            // ============================
+
+            span.onclick = function() {
+                modal.style.display = "none";
+                modalImg.classList.remove('expanded-image-modal-zoomed-in');
+            }
+    
+            modalImg.addEventListener('click', function(e) {
+                toggleZoom(e);
+            });
+    
+            window.addEventListener('load', () => {
+                window.scrollTo(0, 0);
+            });
+
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateClouds);
+                    ticking = true;
+                }
+            }, { passive: true });
+
+            // Ensure correct starting position at load and after resizes
+            window.addEventListener('load', updateClouds);
+            window.addEventListener('resize', updateClouds);        
+
+            window.onclick = function(event) {
+                if (!event.target.matches('.navbar-open-button')) {
+                    var dropdowns = document.getElementsByClassName("dropdown-content");
+                    var dropbtn = document.querySelector('.navbar-open-button');
+                    var closebtn = document.querySelector('.navbar-close-button');
+                    for (var i = 0; i < dropdowns.length; i++) {
+                        var openDropdown = dropdowns[i];
+                        if (openDropdown.style.display === "flex") {
+                            openDropdown.style.display = "none";
+                            closebtn.style.display = "none";
+                            dropbtn.style.display = "block";
+                        }
+                    }
+                }
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    modalImg.classList.remove('expanded-image-modal-zoomed-in');
+                }
+                window.onscroll();
+            }
+
             window.onscroll = function () {
                 const sections = [
                     { id: 'top', name: 'Skyline' },
@@ -1878,23 +2062,6 @@
                     }
                 });
             };
-
-            function navigateTo(id, category = null) {
-                if (category) {
-                    filterCategories(category);
-                }
-
-                // Wait a frame to ensure display update, then scroll
-                setTimeout(() => {
-                    const target = document.getElementById(id);
-                    if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                    if (id === 'top') {
-                        window.scrollTo(0, 0);
-                    }
-                }, 50); // Delay allows DOM updates to complete (e.g., from filterCategories)
-            }
 
             document.querySelectorAll('.slideshow-background, .overview').forEach(section => {
                 const bg = section.getAttribute('data-bg');
@@ -1967,15 +2134,6 @@
                 }
             });
 
-            function detectMacOS() {
-                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
-                                navigator.userAgent.toLowerCase().includes('macintosh');
-
-                if (isMacOS) {
-                    document.body.classList.add("is-macos");
-                }
-            }
-
             document.querySelectorAll('.slideshow-background').forEach(bg => {
                 const imgSrc = bg.getAttribute('data-bg');
                 const img = document.createElement('img');
@@ -1985,165 +2143,11 @@
                 bg.prepend(img);
             });
 
-            function setBackgroundWidth() {
-                const viewportWidth = window.innerWidth;
-                const viewportWidthPx = viewportWidth + "px";
-                const bg = document.querySelector('.background');
-                const fg = document.querySelector('.foreground');
-
-                [bg, fg].forEach(el => {
-                    if (el) {
-                        el.style.width = viewportWidthPx;
-                        el.style.maxWidth = viewportWidthPx;
-                    }
-                });
-                bg.style.overflowX = "clip";
-
-                // Adjust foreground vertical position based on viewport width
-                if (fg) {
-                    // Example: as width decreases, top margin increases
-                    // You can tweak the factor and clamp if needed
-                    const baseOffset = 0; // starting point when screen is wide
-                    const scalingFactor = 0.2; // how much margin to add per 100px shrink
-
-                    // Example: increase top margin from 0px at 1440px → ~60px at 1140px
-                    const marginTop = Math.max(baseOffset, (1440 - viewportWidth) * scalingFactor);
-                    fg.style.marginTop = `${marginTop}px`;
-                }
-            }
-
-            // Table Slideshow Logic
-            (function() {
-                let tables = document.querySelectorAll('.departures-signs .table');
-                let current = 0;
-                if (tables.length) {
-                    tables[current].classList.add('active');
-                    setInterval(() => {
-                        tables[current].classList.remove('active');
-                        current = (current + 1) % tables.length;
-                        tables[current].classList.add('active');
-                    }, 3000);
-                }
-            })();
-
             document.querySelectorAll('.clickable-row').forEach(row => {
                 row.addEventListener('click', () => {
                     window.location.href = row.dataset.href;
                 });
             });
-
-            function updateDeparturesFooter() {
-                const now = new Date();
-
-                const dayName = now.toLocaleDateString('en-US', { weekday: 'long' });
-                const monthName = now.toLocaleDateString('en-US', { month: 'long' });
-                const dateNum = now.getDate();
-                const year = now.getFullYear();
-
-                let hours = now.getHours();
-                const minutes = now.getMinutes().toString().padStart(2, '0');
-                const ampm = hours >= 12 ? 'P' : 'A';
-                hours = hours % 12 || 12;
-
-                document.getElementById('footer-day').textContent = dayName;
-                document.getElementById('footer-date').textContent = `${monthName} ${dateNum}, ${year}`;
-                document.getElementById('footer-time').textContent = `${hours}:${minutes}${ampm}`;
-            }
-
-            // Initialize and refresh every 30 seconds
-            updateDeparturesFooter();
-            setInterval(updateDeparturesFooter, 30000); 
-
-            // Backpack Item Click Logic (BUTTON-based control)
-            (function () {
-                const wraps = Array.from(document.querySelectorAll('.backpack-item-wrap'));
-                const trigger = document.querySelector('.backpack-trigger');
-                const coach = document.querySelector('.trigger-coach');
-                if (!wraps.length || !trigger) return;
-
-                let activeIndex = wraps.findIndex(el => el.classList.contains('is-active'));
-                if (activeIndex < 0) {
-                    activeIndex = 0;
-                    wraps[0].classList.add('is-active');
-                }
-
-                const dismissCoach = () => {
-                    if (coach && !coach.classList.contains('dismissed')) {
-                    coach.classList.add('dismissed');
-                    }
-                };
-
-                const cycle = () => {
-                    // remove active from current
-                    wraps[activeIndex].classList.remove('is-active');
-
-                    // advance index
-                    activeIndex = (activeIndex + 1) % wraps.length;
-
-                    // add active to next
-                    wraps[activeIndex].classList.add('is-active');
-
-                    dismissCoach();
-                };
-
-                trigger.addEventListener('click', cycle);
-                trigger.addEventListener('keydown', (e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    cycle();
-                    }
-                });
-
-                // accessibility / UX extras
-                trigger.addEventListener('pointerdown', dismissCoach);
-                trigger.addEventListener('focus', dismissCoach);
-            })();
-
-            const COMPANY_TOP3 = {
-                Akamai: ["slideshow10", "slideshow5", "slideshow11"], // NutriverseAI, Fat 32 Filesystem, A.I. Blockchain
-                Amazon: ["slideshow8", "slideshow1", "slideshow5"], // NLP Nutrition Analyzer, Hacker News Web App, Fat 32 Filesystem
-                Celoxica: ["slideshow5", "slideshow1", "slideshow2"], // FAT32 Filesystem, Hacker News Web App, Law Practice Manager App
-                "GE Vernova": ["slideshow10", "slideshow11", "slideshow5"],  // NutriverseAI, A.I. Blockchain, Fat 32 Filesystem
-                "Goldman Sachs": ["slideshow11", "slideshow10", "slideshow5"], // A.I. Blockchain, NutriverseAI, Fat 32 Filesystem
-                Google: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
-                Heron: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
-                Jerry: ["slideshow11", "slideshow10", "slideshow8"], // A.I. Blockchain, NutriverseAI, NLP Nutrition Analyzer
-                Microsoft:   ["slideshow5", "slideshow6", "slideshow7"], // FAT32 Filesystem, Shell Implementation, Elevator Kernel Module
-                "NY Times": ["slideshow11", "slideshow10", "slideshow1"], // A.I. Blockchain, NutriverseAI, Hacker News Web App
-                Optimum: ["slideshow11", "slideshow10", "slideshow3"], // A.I. Blockchain, NutriverseAI, My Notes App
-            };
-
-            function applyCompanyView(company) {
-                const titleEl = document.getElementById("sky-title");
-                const subEl   = document.getElementById("sky-subtitle");
-
-                // 1) Custom skyline copy
-                if (titleEl) titleEl.textContent = `Welcome ${company}!`;
-                if (subEl)   subEl.textContent   = `Scroll to view my most relevant projects for ${company}`;
-
-                // 2) Overview + top 3 relevant projects visible
-                const allIds = [
-                "slideshow9","slideshow8","slideshow0","slideshow11","slideshow10",
-                "slideshow1","slideshow2","slideshow3","slideshow4","slideshow5",
-                "slideshow6","slideshow7"
-                ];
-                const overview = document.getElementById("overview");
-                const want = new Set(COMPANY_TOP3[company] || []);
-
-                allIds.forEach(id => {
-                const el = document.getElementById(id);
-                if (!el) return;
-                el.style.display = want.has(id) ? "block" : "none";
-                });
-
-                if (overview) {
-                overview.style.display = "flex";
-                overview.scrollIntoView();
-                }
-
-                // 3) Don’t let the savedCategory override this initial curated view
-                sessionStorage.removeItem("selectedCategory");
-            }
         </script>
     </div>    
 </body>
