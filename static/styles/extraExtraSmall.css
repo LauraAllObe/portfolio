@@ -14,38 +14,43 @@
     }
 
     #cloud1 {
-        top: 100px;
-        left: 0;
+        --baseX: 0vw;
+        --baseY: 100px;
     }
 
     #cloud2 {
-        top: 0;
-        left: 200px;
+        --baseX: 200px;
+        --baseY: 0px;
     }
 
     #cloud3 {
-        top: 500px;
-        left: -50vw;
+        --baseX: -50vw;
+        --baseY: 500px;
     }
 
     #cloud4 {
-        top: 250px;
-        left: -50vw;
+        --baseX: -50vw;
+        --baseY: 250px;
     }
 
     #cloud5 {
-        top: 200px;
-        left: 50vw;
+        --baseX: 50vw;
+        --baseY: 200px;
     }
 
     #cloud6 {
-        top: 446px;
-        left: unset;
-        right: 0vw;
+        --baseX: 0vw;
+        --baseY: 446px;
+    }
+
+    #cloud7 {
+        --baseX: 0vw;
+        --baseY: 0px;
     }
 
     #cloud8 {
-        left: 29.24vw;
+        --baseX: 29.24vw;
+        --baseY: 0;
         height: 0px;
     }
 

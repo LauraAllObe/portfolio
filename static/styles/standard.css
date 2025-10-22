@@ -291,57 +291,38 @@ a:hover {
 /* Parallax Clouds */
 
 .clouds {
-    position: relative;
-    z-index: -3;
-    opacity: 75%;
-    pointer-events: none;
+  position: relative;
+  z-index: -3;
+  opacity: 75%;
+  pointer-events: none;
 }
 
 .clouds img {
-    top: 0;
-    left: 0;
-    position: absolute;
-    overflow-x: clip;
-    overflow-y: hidden;
-    max-height: 332.5px;
-    height: 332.5px;
-    transition: margin-top 0.5s ease-out, opacity 0.5s ease-out;
+  position: absolute;
+  overflow-x: clip;
+  overflow-y: hidden;
+  max-height: 332.5px;
+  height: 332.5px;
+
+  transform: translate3d(
+    calc(var(--baseX, 0) + var(--dx, 0)),
+    calc(var(--baseY, 0) + var(--dy, 0)),
+    0
+  );
+
+  transition: opacity 0.5s ease-out;
+
+  will-change: transform;
 }
 
-#cloud1 {
-    top: 47.5px;
-    left: 0;
-}
-
-#cloud2 {
-    top: 0;
-    left: 0;
-}
-
-#cloud3 {
-    top: 451px;
-    left: 56.55vw;
-}
-
-#cloud4 {
-    top: 389px;
-    left: -6vw;
-}
-
-#cloud5 {
-    top: 150px;
-    left: 40vw;
-}
-
-#cloud6 {
-    top: 546px;
-    left: 31.93vw;
-}
-
-#cloud8 {
-    left: 29.24vw;
-    height: 130.15px;
-}
+#cloud1 { --baseX: 0vw;        --baseY: 47.5px; }
+#cloud2 { --baseX: 0vw;        --baseY: 0px; }
+#cloud3 { --baseX: 56.55vw;  --baseY: 451px; }
+#cloud4 { --baseX: -6vw;     --baseY: 389px; }
+#cloud5 { --baseX: 40vw;     --baseY: 150px; }
+#cloud6 { --baseX: 31.93vw;  --baseY: 546px; }
+#cloud7 { --baseX: 0vw;        --baseY: 0px; }      /* you didn’t set these before; keep 0,0 */
+#cloud8 { --baseX: 29.24vw;  --baseY: 0px; height: 130.15px; }
 
 /* Clickable planes & helicopters for project categories */
 
