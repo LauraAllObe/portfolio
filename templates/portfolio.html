@@ -8,6 +8,57 @@
             overflow: hidden;
             overscroll-behavior: none; /* stops iOS/Android rubber-band */
         }
+
+        /* Fullscreen loading modal */
+        .loading-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #080c0b;
+            z-index: 99999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+        width: 50px;
+        scale: 0.6;
+        aspect-ratio: 1;
+        box-shadow: 0 0 0 3px #ffffff00 inset;
+        background: #ffffffb7;
+        border-radius: 50%;
+        position: relative;
+        animation: l11 4s infinite;
+        }
+
+        .loader:before,
+        .loader:after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 3px);
+        left: calc(50% - 12.5px);
+        background: #ffffff75;
+        box-shadow: inherit;
+        width: 25px;
+        scale: 1.1;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        transform-origin: 50% -28px;
+        animation: l11 2s infinite;
+        }
+
+        .loader:after {
+        animation-delay: -1s;
+        }
+
+        @keyframes l11 {
+        100% {
+            transform: rotate(360deg);
+        }
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
@@ -31,6 +82,9 @@
     <script type="text/javascript">
         // Run ASAP to keep the page pinned at top during load
         (function lockAtTopEarly() {
+            const earlyModal = document.getElementById('loadingModal');
+            if (earlyModal) earlyModal.style.display = 'flex';
+
             // Don’t restore previous scroll position (e.g., bfcache/back nav)
             if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -86,6 +140,10 @@
         <img src="{{ url_for('static', filename='sky/background.avif') }}" alt="Background Image" class="background-image" fetchpriority="high" decoding="async">
     </div>
     <div class="overflow-mobile">
+        <!-- Loading Modal -->
+        <div id="loadingModal" class="loading-modal">
+            <div class="loader"></div>
+        </div>
         <!-- Navigation Icon and Dropdown Menu -->
         <div class="navbar">
             <img src="{{ url_for('static', filename='navbar/departures2.avif') }}" alt="Nav bar Icon" class="navbar-open-button" onclick="toggleMenu()"  decoding="async">
@@ -1397,10 +1455,7 @@
                 <p>Your message has been sent successfully!</p>
             </div>
         </div>
-        <!-- Loading Modal -->
-        <div id="loadingModal" class="loading-modal">
-            <div class="loader"></div>
-        </div>
+
         <!-- Modal and Slideshow Navigation Code -->
         <script>
             // =============================
@@ -1533,7 +1588,7 @@
             };
 
             window.addEventListener('load', () => {
-                const minDisplayTime = 500; // 0.5s
+                const minDisplayTime = 0;
                 setTimeout(() => {
                     // Hide your loading modal
                     const modal = document.getElementById('loadingModal');
