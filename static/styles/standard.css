@@ -264,14 +264,13 @@ a:hover {
   will-change: transform;
 }
 
-#cloud1 { --baseX: 0vw;        --baseY: 47.5px; }
-#cloud2 { --baseX: 0vw;        --baseY: 0px; }
-#cloud3 { --baseX: 56.55vw;  --baseY: 451px; }
-#cloud4 { --baseX: -6vw;     --baseY: 389px; }
-#cloud5 { --baseX: 40vw;     --baseY: 150px; }
-#cloud6 { --baseX: 31.93vw;  --baseY: 546px; }
-#cloud7 { --baseX: 0vw;        --baseY: 0px; }      /* you didn’t set these before; keep 0,0 */
-#cloud8 { --baseX: 29.24vw;  --baseY: 0px; height: 130.15px; }
+#cloud1 { --baseX: -10vw;        --baseY: 47.5px; }
+#cloud2 { --baseX: 10vw;        --baseY: 0px; }
+#cloud3 { --baseX: 56.55vw;  --baseY: 351px; }
+#cloud4 { --baseX: -11vw;     --baseY: 359px; }
+#cloud5 { --baseX: 60vw;     --baseY: 50px; }
+#cloud6 { --baseX: 31.93vw;  --baseY: 446px; }
+#cloud8 { --baseX: 39.24vw;  --baseY: 0px; height: 250.15px; }
 
 /* Clickable planes & helicopters for project categories */
 
