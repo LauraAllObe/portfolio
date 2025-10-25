@@ -94,6 +94,12 @@ def optimum_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Optimum")
 
+@app.get("/Thatch")
+def thatch_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Thatch")
+
 if __name__ == '__main__':
     app.run(debug=True)
 # activate venv first ".\.venv\Scripts\Activate.ps1"
