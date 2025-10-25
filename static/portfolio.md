@@ -21,7 +21,7 @@ design, and research and course assistantships.
 
 ## Experience
 
-A.I. Blockchain, New York, US (Remote) | May 2025 - Present
+A.I. Blockchain, New York, US (Remote) | May 2025 - October 2025
 Role: Software Engineer, Architect, and Planning Intern
 - Designed scalable architectures and backends for ML/IoT platforms (epigenetics, body scanning, legal-tech).
 - Built data pipelines and integrations, improving reliability and security.
@@ -49,8 +49,8 @@ Role: Research Assistant under Dr. Jonathan Adams
 ## Education
 
 Stevens Institute of Technology, Hoboken, NJ | Jan 2024 - Dec 2025
-- Master of Science, Software Engineering (4.0 GPA)
-- Graduate Certificates: Machine Learning (4.0) & Cybersecurity (3.9)
+- Master of Science, Software Engineering (3.91 GPA)
+- Graduate Certificates: Machine Learning & Cybersecurity
 - Scholarship: Stevens Graduate Scholarship
 
 Florida State University, Tallahassee, FL | Aug 2021 - Dec 2023
@@ -62,7 +62,7 @@ Florida State University, Tallahassee, FL | Aug 2021 - Dec 2023
 
 ## Skills
 
-Programming: Python, C, C++, C#, Java, TypeScript/JavaScript, SQL/NoSQL, HTML/CSS, Bash/Shell, Assembly, LaTeX/Markdown, JSON/XML  
+Programming: Python, C, C++, C#, Java, TypeScript/JavaScript, SQL/NoSQL, HTML/CSS, SCSS, Tailwind, Bash/Shell, Assembly, LaTeX/Markdown, JSON/XML  
 Frameworks/Tools: React, Node.js, Next.js, .NET MAUI, Flask, Hugging Face, OpenAI, Jupyter, Docker, Git/GitHub/GitLab  
 Cloud/DevOps: AWS, Azure, Firebase, Nginx, Gunicorn, Auth0, Linode, Jira  
 Languages: English (native), German (native), French (advanced)
@@ -143,7 +143,7 @@ Other Projects (from resume/portfolio):
 
 ## Open Source Contributions
 - LeetCode Stats Card (PR Open)
-- Simple Icons (PR Open)
+- Simple Icons (PR Accepted)
 - Awesome GitHub Profile README (PR Open)
 
 
