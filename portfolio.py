@@ -39,7 +39,12 @@ def amazon_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
-
+    
+@app.get("/BeaconFire")
+def beacon_fire_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="BeaconFire")
 @app.get("/Celoxica")
 def celoxica_page():
     if 'slideIndexes' not in session:
