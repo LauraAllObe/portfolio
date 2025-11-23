@@ -88,12 +88,6 @@ def jerry_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Jerry")
 
-@app.get("/Maybern")
-def maybern_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Maybern")
-
 @app.get("/Microsoft")
 def microsoft_page():
     if 'slideIndexes' not in session:
