@@ -45,6 +45,7 @@ def beacon_fire_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="BeaconFire")
+
 @app.get("/Celoxica")
 def celoxica_page():
     if 'slideIndexes' not in session:
@@ -86,6 +87,12 @@ def jerry_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Jerry")
+
+@app.get("/Maybern")
+def maybern_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Maybern")
 
 @app.get("/Microsoft")
 def microsoft_page():
