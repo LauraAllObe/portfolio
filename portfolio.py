@@ -118,6 +118,11 @@ def microsoft_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
 
+@app.get("/NYOAG")
+def ny_oag_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="NY OAG")
 @app.get("/NYTimes")
 def ny_times_page():
     if 'slideIndexes' not in session:
