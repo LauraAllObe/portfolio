@@ -94,6 +94,12 @@ def jerry_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Jerry")
 
+@app.get("/KKR")
+def kkr_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="KKR")
+
 @app.get("/Mercor")
 def mercor_page():
     if 'slideIndexes' not in session:
