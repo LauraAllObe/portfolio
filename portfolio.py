@@ -45,6 +45,12 @@ def amazon_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
+
+@app.get("/BAE_Systems")
+def bae_systems_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="BAE Systems")
     
 @app.get("/BeaconFire")
 def beacon_fire_page():
@@ -111,12 +117,6 @@ def kkr_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="KKR")
-
-@app.get("/Lensa")
-def lensa_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Lensa")
 
 @app.get("/Mercor")
 def mercor_page():
