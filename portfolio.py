@@ -28,7 +28,6 @@ def portfolio_txt():
     return send_from_directory("static", "portfolio.txt", mimetype="text/plain")
 
 # Company specific routes (custom project lists and headings)
-
 @app.get("/Affirm")
 def affirm_page():
     if 'slideIndexes' not in session:
