@@ -112,6 +112,12 @@ def kkr_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="KKR")
 
+@app.get("/Lensa")
+def lensa_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Lensa")
+
 @app.get("/Mercor")
 def mercor_page():
     if 'slideIndexes' not in session:
