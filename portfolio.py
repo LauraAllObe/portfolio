@@ -28,6 +28,13 @@ def portfolio_txt():
     return send_from_directory("static", "portfolio.txt", mimetype="text/plain")
 
 # Company specific routes (custom project lists and headings)
+
+@app.get("/Affirm")
+def affirm_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Affirm")
+
 @app.get("/Akamai")
 def akamai_page():
     if 'slideIndexes' not in session:
