@@ -135,6 +135,7 @@ def ny_oag_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="NY OAG")
+
 @app.get("/NYTimes")
 def ny_times_page():
     if 'slideIndexes' not in session:
@@ -146,6 +147,12 @@ def optimum_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Optimum")
+
+@app.get("/Ramp")
+def ramp_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Ramp")
 
 @app.get("/Thatch")
 def thatch_page():
