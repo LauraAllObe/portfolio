@@ -160,6 +160,12 @@ def thatch_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Thatch")
 
+@app.get("/Zoetis")
+def zoetis_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Zoetis")
+
 if __name__ == '__main__':
     app.run(debug=True)
 # activate venv first ".\.venv\Scripts\Activate.ps1"
