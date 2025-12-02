@@ -6,7 +6,7 @@ Contact:
 - Phone: (954) 348-8139
 - LinkedIn: https://www.linkedin.com/in/laura-obermaier
 - GitHub: https://github.com/LauraAllObe
-- Portfolio: https://lauraobermaier.info
+- Portfolio: https://lauralovelace.info
 
 
 ---
