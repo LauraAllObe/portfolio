@@ -4,7 +4,7 @@ Contact:
 - Email: lauraaobermaier@gmail.com
 - Location: Hoboken, NJ 07030
 - Phone: (954) 348-8139
-- LinkedIn: https://www.linkedin.com/in/laura-obermaier
+- LinkedIn: https://www.linkedin.com/in/laura-a-lovelace/
 - GitHub: https://github.com/LauraAllObe
 - Portfolio: https://lauralovelace.info
 
