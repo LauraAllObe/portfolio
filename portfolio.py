@@ -166,6 +166,12 @@ def zoetis_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Zoetis")
 
+@app.get("/Valon")
+def valon_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Valon")
+
 if __name__ == '__main__':
     app.run(debug=True)
 # activate venv first ".\.venv\Scripts\Activate.ps1"
