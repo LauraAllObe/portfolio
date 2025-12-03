@@ -64,6 +64,12 @@ def celoxica_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Celoxica")
 
+@app.get("/Chalk")
+def chalk_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Chalk")
+
 @app.get("/GEVernova")
 def ge_vernova_page():
     if 'slideIndexes' not in session:
