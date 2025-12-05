@@ -100,6 +100,12 @@ def heron_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Heron")
 
+@app.get("/IBM")
+def ibm_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="IBM")
+
 @app.get("/Icahn")
 def icahn_page():
     if 'slideIndexes' not in session:
