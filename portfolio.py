@@ -76,6 +76,12 @@ def citadel_securities_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Citadel Securities")
 
+@app.get("/Flex")
+def flex_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Flex")
+
 @app.get("/GEVernova")
 def ge_vernova_page():
     if 'slideIndexes' not in session:
