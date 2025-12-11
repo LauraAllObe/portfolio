@@ -178,6 +178,12 @@ def optimum_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Optimum")
 
+@app.get("/Precisely")
+def precisely_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Precisely")
+
 @app.get("/Ramp")
 def ramp_page():
     if 'slideIndexes' not in session:
