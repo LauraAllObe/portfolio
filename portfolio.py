@@ -106,6 +106,12 @@ def gp_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="gp")
 
+@app.get("/Greenway")
+def greenway_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Greenway")
+
 @app.get("/Heron")
 def heron_page():
     if 'slideIndexes' not in session:
