@@ -70,6 +70,12 @@ def chalk_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Chalk")
 
+@app.get("/Citadel-Securities")
+def citadel_securities_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Citadel Securities")
+
 @app.get("/GEVernova")
 def ge_vernova_page():
     if 'slideIndexes' not in session:
