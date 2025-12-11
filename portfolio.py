@@ -172,6 +172,12 @@ def ramp_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Ramp")
 
+@app.get("/Rokt")
+def rokt_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Rokt")
+
 @app.get("/Thatch")
 def thatch_page():
     if 'slideIndexes' not in session:
