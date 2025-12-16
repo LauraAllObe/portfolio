@@ -196,6 +196,12 @@ def rokt_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Rokt")
 
+@app.get("/Runpod")
+def runpod_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Runpod")
+
 @app.get("/Thatch")
 def thatch_page():
     if 'slideIndexes' not in session:
