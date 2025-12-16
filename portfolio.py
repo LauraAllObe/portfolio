@@ -214,17 +214,23 @@ def thatch_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Thatch")
 
-@app.get("/Zoetis")
-def zoetis_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Zoetis")
-
 @app.get("/Valon")
 def valon_page():
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Valon")
+
+@app.get("/Wanderlog")
+def wanderlog_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Wanderlog")
+
+@app.get("/Zoetis")
+def zoetis_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Zoetis")
 
 if __name__ == '__main__':
     app.run(debug=True)
