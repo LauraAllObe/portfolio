@@ -202,6 +202,12 @@ def runpod_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Runpod")
 
+@app.get("/Stayd")
+def stayd_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Stayd")
+
 @app.get("/Thatch")
 def thatch_page():
     if 'slideIndexes' not in session:
