@@ -190,6 +190,12 @@ def ramp_page():
         session['slideIndexes'] = [1, 1]
     return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Ramp")
 
+@app.get("/Revature")
+def revature_page():
+    if 'slideIndexes' not in session:
+        session['slideIndexes'] = [1, 1]
+    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Revature")
+
 @app.get("/Rokt")
 def rokt_page():
     if 'slideIndexes' not in session:
