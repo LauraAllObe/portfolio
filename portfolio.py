@@ -1,4 +1,5 @@
 from flask import Flask, send_from_directory, render_template, session
+from werkzeug.routing import BaseConverter
 from dotenv import load_dotenv
 import os
 
@@ -6,6 +7,49 @@ load_dotenv()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
+# Custom URL converter - automatically converts all incoming URLs to lowercase
+class LowercaseConverter(BaseConverter):
+    def to_python(self, value):
+        return value.lower()
+    
+    def to_url(self, value):
+        return value.lower()
+
+app.url_map.converters['lowercase'] = LowercaseConverter
+
+# Valid company keys (all lowercase) - includes all previously defined companies
+VALID_COMPANIES = {
+    'affirm', 'akamai', 'amazon', 'bae_systems', 'beaconfire', 'celoxica',
+    'chalk', 'citadelsecurities', 'flex', 'gevernova', 'goldmansachs',
+    'google', 'gp', 'greenway', 'heron', 'ibm', 'icahn', 'intuit', 'jerry',
+    'kkr', 'mercor', 'microsoft', 'nyoag', 'nytimes', 'optimum', 'precisely',
+    'ramp', 'revature', 'rokt', 'runpod', 'stayd', 'thatch', 'valon',
+    'wanderlog', 'zoetis',
+}
+
+def find_company(input_key):
+    """
+    Find a valid company by normalizing various formatting variations.
+    Handles hyphens, underscores, and mixed formatting.
+    """
+    # First try direct match (already lowercase from converter)
+    if input_key in VALID_COMPANIES:
+        return input_key
+    
+    # Try with hyphen to underscore conversion
+    normalized = input_key.replace('-', '_')
+    if normalized in VALID_COMPANIES:
+        return normalized
+    
+    # Try removing all special chars/underscores and match alphanumeric
+    input_no_special = ''.join(c for c in input_key if c.isalnum())
+    for company in VALID_COMPANIES:
+        company_no_special = ''.join(c for c in company if c.isalnum())
+        if input_no_special == company_no_special:
+            return company
+    
+    return None
 
 @app.route('/')
 def hello_world():
@@ -27,216 +71,21 @@ def sitemap_xml():
 def portfolio_txt():
     return send_from_directory("static", "portfolio.txt", mimetype="text/plain")
 
-# Company specific routes (custom project lists and headings)
-@app.get("/Affirm")
-def affirm_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Affirm")
-
-@app.get("/Akamai")
-def akamai_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Akamai")
-
-@app.get("/Amazon")
-def amazon_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Amazon")
-
-@app.get("/BAE_Systems")
-def bae_systems_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="BAE Systems")
+# Unified company route - accepts any case and converts to lowercase
+@app.get("/<lowercase:company_key>")
+def company_page(company_key):
+    # Try to find the company with various formatting normalizations
+    valid_company = find_company(company_key)
     
-@app.get("/BeaconFire")
-def beacon_fire_page():
+    if not valid_company:
+        return "Company not found", 404
+    
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="BeaconFire")
-
-@app.get("/Celoxica")
-def celoxica_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Celoxica")
-
-@app.get("/Chalk")
-def chalk_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Chalk")
-
-@app.get("/CitadelSecurities")
-def citadel_securities_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Citadel Securities")
-
-@app.get("/Flex")
-def flex_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Flex")
-
-@app.get("/GEVernova")
-def ge_vernova_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="GE Vernova")
-
-@app.get("/GoldmanSachs")
-def goldman_sachs_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Goldman Sachs")
-
-@app.get("/Google")
-def google_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Google")
-
-@app.get("/gp")
-def gp_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="gp")
-
-@app.get("/Greenway")
-def greenway_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Greenway")
-
-@app.get("/Heron")
-def heron_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Heron")
-
-@app.get("/IBM")
-def ibm_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="IBM")
-
-@app.get("/Icahn")
-def icahn_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Icahn")
-
-@app.get("/Intuit")
-def intuit_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Intuit")
-
-@app.get("/Jerry")
-def jerry_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Jerry")
-
-@app.get("/KKR")
-def kkr_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="KKR")
-
-@app.get("/Mercor")
-def mercor_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Mercor")
-
-@app.get("/Microsoft")
-def microsoft_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Microsoft")
-
-@app.get("/NYOAG")
-def ny_oag_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="NY OAG")
-
-@app.get("/NYTimes")
-def ny_times_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="NY Times")
-
-@app.get("/Optimum")
-def optimum_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Optimum")
-
-@app.get("/Precisely")
-def precisely_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Precisely")
-
-@app.get("/Ramp")
-def ramp_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Ramp")
-
-@app.get("/Revature")
-def revature_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Revature")
-
-@app.get("/Rokt")
-def rokt_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Rokt")
-
-@app.get("/Runpod")
-def runpod_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Runpod")
-
-@app.get("/Stayd")
-def stayd_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Stayd")
-
-@app.get("/Thatch")
-def thatch_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Thatch")
-
-@app.get("/Valon")
-def valon_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Valon")
-
-@app.get("/Wanderlog")
-def wanderlog_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Wanderlog")
-
-@app.get("/Zoetis")
-def zoetis_page():
-    if 'slideIndexes' not in session:
-        session['slideIndexes'] = [1, 1]
-    return render_template("portfolio.html", slideIndexes=session['slideIndexes'], company="Zoetis")
+    
+    return render_template("portfolio.html", 
+                          slideIndexes=session['slideIndexes'], 
+                          company=valid_company)
 
 if __name__ == '__main__':
     app.run(debug=True)
