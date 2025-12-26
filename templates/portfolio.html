@@ -113,7 +113,7 @@
         window.addEventListener('DOMContentLoaded', () => {
             if (window.emailjs && emailjs.init) emailjs.init("MXT3jSb_rDcclPwFE");
         });
-        window.COMPANY = "{{ company|default('') }}";
+        window.COMPANY = "{{ company_display|default('') }}";
     </script>
 </head>
 <body>

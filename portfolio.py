@@ -28,6 +28,45 @@ VALID_COMPANIES = {
     'wanderlog', 'zoetis',
 }
 
+# Mapping of company keys to display names with proper spacing and capitalization
+COMPANY_DISPLAY_NAMES = {
+    'affirm': 'Affirm',
+    'akamai': 'Akamai',
+    'amazon': 'Amazon',
+    'bae_systems': 'BAE Systems',
+    'beaconfire': 'Beaconfire',
+    'celoxica': 'Celoxica',
+    'chalk': 'Chalk',
+    'citadelsecurities': 'Citadel Securities',
+    'flex': 'Flex',
+    'gevernova': 'Gevernova',
+    'goldmansachs': 'Goldman Sachs',
+    'google': 'Google',
+    'gp': 'GP',
+    'greenway': 'Greenway',
+    'heron': 'Heron',
+    'ibm': 'IBM',
+    'icahn': 'Icahn',
+    'intuit': 'Intuit',
+    'jerry': 'Jerry',
+    'kkr': 'KKR',
+    'mercor': 'Mercor',
+    'microsoft': 'Microsoft',
+    'nyoag': 'NY OAG',
+    'nytimes': 'NY Times',
+    'optimum': 'Optimum',
+    'precisely': 'Precisely',
+    'ramp': 'Ramp',
+    'revature': 'Revature',
+    'rokt': 'ROKT',
+    'runpod': 'RunPod',
+    'stayd': 'StayD',
+    'thatch': 'Thatch',
+    'valon': 'Valon',
+    'wanderlog': 'Wanderlog',
+    'zoetis': 'Zoetis',
+}
+
 def find_company(input_key):
     """
     Find a valid company by normalizing various formatting variations.
@@ -56,7 +95,7 @@ def hello_world():
     # Initialize session data for slide indexes if it doesn't exist
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]  # Example for two slideshows
-    return render_template('portfolio.html', slideIndexes=session['slideIndexes'])
+    return render_template('portfolio.html', slideIndexes=session['slideIndexes'], company_display='')
 
 @app.get("/portfolio.md")
 def portfolio_md():
@@ -83,9 +122,12 @@ def company_page(company_key):
     if 'slideIndexes' not in session:
         session['slideIndexes'] = [1, 1]
     
+    company_display = COMPANY_DISPLAY_NAMES.get(valid_company, valid_company)
+    
     return render_template("portfolio.html", 
                           slideIndexes=session['slideIndexes'], 
-                          company=valid_company)
+                          company=valid_company,
+                          company_display=company_display)
 
 if __name__ == '__main__':
     app.run(debug=True)
