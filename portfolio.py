@@ -21,7 +21,7 @@ app.url_map.converters['lowercase'] = LowercaseConverter
 # Valid company keys (all lowercase) - includes all previously defined companies
 VALID_COMPANIES = {
     'affirm', 'akamai', 'amazon', 'bae_systems', 'beaconfire', 'celoxica',
-    'chalk', 'citadelsecurities', 'flex', 'gevernova', 'goldmansachs',
+    'chalk', 'citadelsecurities', 'flex', 'gevernova', 'github', 'goldmansachs',
     'google', 'gp', 'greenway', 'heron', 'ibm', 'icahn', 'intuit', 'jerry',
     'kkr', 'mercor', 'microsoft', 'nyoag', 'nytimes', 'optimum', 'precisely',
     'ramp', 'revature', 'rokt', 'runpod', 'stayd', 'thatch', 'valon',
@@ -40,6 +40,7 @@ COMPANY_DISPLAY_NAMES = {
     'citadelsecurities': 'Citadel Securities',
     'flex': 'Flex',
     'gevernova': 'Gevernova',
+    'github': 'GitHub',
     'goldmansachs': 'Goldman Sachs',
     'google': 'Google',
     'gp': 'GP',
