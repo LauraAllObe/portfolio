@@ -113,7 +113,8 @@
         window.addEventListener('DOMContentLoaded', () => {
             if (window.emailjs && emailjs.init) emailjs.init("MXT3jSb_rDcclPwFE");
         });
-        window.COMPANY = "{{ company_display|default('') }}";
+        window.COMPANY = "{{ company|default('') }}";
+        window.COMPANY_DISPLAY = "{{ company_display|default('') }}";
     </script>
 </head>
 <body>
@@ -1478,6 +1479,7 @@
                 amazon: ["slideshow8", "slideshow1", "slideshow10"],
                 bae_systems: ["slideshow7", "slideshow5", "slideshow8", "slideshow6"],
                 beaconfire: ["slideshow10", "slideshow1", "slideshow3"],
+                brex: ["slideshow10", "slideshow9", "slideshow2"],
                 celoxica: ["slideshow5", "slideshow1", "slideshow2"],
                 chalk: ["slideshow10", "slideshow8", "slideshow5"],
                 citadelsecurities: ["slideshow10", "slideshow5", "slideshow1"],
@@ -2011,9 +2013,10 @@
                 const titleEl = document.getElementById("sky-title");
                 const subEl   = document.getElementById("sky-subtitle");
 
-                // 1) Custom skyline copy
-                if (titleEl) titleEl.textContent = `Welcome ${company}!`;
-                if (subEl)   subEl.textContent   = `Scroll to view my most relevant projects for ${company}`;
+                // 1) Custom skyline copy (use human-friendly display name when available)
+                const displayName = (window.COMPANY_DISPLAY && window.COMPANY_DISPLAY.length) ? window.COMPANY_DISPLAY : company;
+                if (titleEl) titleEl.textContent = `Welcome ${displayName}!`;
+                if (subEl)   subEl.textContent   = `Scroll to view my most relevant projects for ${displayName}`;
 
                 // 2) Overview + top 3 relevant projects visible
                 const allIds = [
