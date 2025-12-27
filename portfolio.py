@@ -24,7 +24,7 @@ VALID_COMPANIES = {
     'chalk', 'citadelsecurities', 'flex', 'gevernova', 'github', 'goldmansachs',
     'google', 'gp', 'greenway', 'heron', 'ibm', 'icahn', 'intuit', 'jerry',
     'kkr', 'mercor', 'microsoft', 'nyoag', 'nytimes', 'optimum', 'precisely',
-    'ramp', 'revature', 'rokt', 'runpod', 'stayd', 'thatch', 'valon',
+    'ramp', 'revature', 'rokt', 'runpod', 'squarespace', 'stayd', 'thatch', 'valon',
     'wanderlog', 'zoetis',
 }
 
@@ -62,6 +62,7 @@ COMPANY_DISPLAY_NAMES = {
     'rokt': 'ROKT',
     'runpod': 'RunPod',
     'stayd': 'StayD',
+    'squarespace': 'Squarespace',
     'thatch': 'Thatch',
     'valon': 'Valon',
     'wanderlog': 'Wanderlog',
