@@ -21,8 +21,8 @@ design, and research and course assistantships.
 
 ## Experience
 
-A.I. Blockchain, New York, US (Remote) | May 2025 - October 2025
-Role: Software Engineer, Architect, and Planning Intern
+A.I. Blockchain, New York, US (Remote) | May 2025 - December 2025
+Role: Software Engineer Intern
 - Designed scalable architectures and backends for ML/IoT platforms (epigenetics, body scanning, legal-tech).
 - Built data pipelines and integrations, improving reliability and security.
 - Led design reviews aligning deliverables with technical strategy.
@@ -49,7 +49,7 @@ Role: Research Assistant under Dr. Jonathan Adams
 ## Education
 
 Stevens Institute of Technology, Hoboken, NJ | Jan 2024 - Dec 2025
-- Master of Science, Software Engineering (3.91 GPA)
+- Master of Science, Software Engineering (3.97 GPA)
 - Graduate Certificates: Machine Learning & Cybersecurity
 - Scholarship: Stevens Graduate Scholarship
 
@@ -142,8 +142,8 @@ Other Projects (from resume/portfolio):
 ---
 
 ## Open Source Contributions
-- LeetCode Stats Card (PR Open)
-- Simple Icons (PR Accepted)
+- LeetCode Stats Card (PR Integrated)
+- Simple Icons (PR Integrated)
 - Awesome GitHub Profile README (PR Open)
 
 
