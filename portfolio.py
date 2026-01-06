@@ -3,10 +3,29 @@ from werkzeug.routing import BaseConverter
 from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# Detect Vercel environment
+IS_VERCEL = os.getenv("VERCEL") == "1"
+VERCEL_ENV = os.getenv("VERCEL_ENV")  # "production" | "preview" | "development"
+IS_PROD = (VERCEL_ENV == "production") or (os.getenv("FLASK_ENV") == "production")
 
-app = Flask(__name__)
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+# Only load .env locally (or Vercel dev)
+if not IS_VERCEL:
+    load_dotenv()
+
+app = Flask(__name__, template_folder="templates", static_folder="static")
+
+secret_key = os.getenv("SECRET_KEY")
+
+# In production, require a real secret key
+if IS_PROD and not secret_key:
+    raise RuntimeError("SECRET_KEY is not set. Add it in Vercel Project Settings → Environment Variables.")
+
+# For local dev only, you *may* fall back to something predictable
+# (Better: set SECRET_KEY in your .env file)
+if not secret_key:
+    secret_key = "dev-only-secret-key-change-me"
+
+app.config["SECRET_KEY"] = secret_key
 
 # Custom URL converter - automatically converts all incoming URLs to lowercase
 class LowercaseConverter(BaseConverter):
@@ -134,7 +153,6 @@ def company_page(company_key):
 
 if __name__ == '__main__':
     app.run(debug=True)
-# activate venv first ".\.venv\Scripts\Activate.ps1"
 
 #run locally using "python -m flask run"
 
