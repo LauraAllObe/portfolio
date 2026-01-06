@@ -16,7 +16,7 @@ if not IS_VERCEL:
 # Repo root is one level above /api
 REPO_ROOT = Path(__file__).resolve().parent.parent
 STATIC_DIR = REPO_ROOT / "static"
-TEMPLATES_DIR = STATIC_DIR / "template"
+TEMPLATES_DIR = STATIC_DIR / "templates"
 
 app = Flask(
     __name__,
