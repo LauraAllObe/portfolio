@@ -1613,6 +1613,15 @@ a:hover {
     transform: translateY(-12px);
 }
 
+.hp-wrap {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
 .email-form {
     margin-top: 170px;
     margin-left: 1vw;

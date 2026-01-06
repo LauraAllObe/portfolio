@@ -1424,6 +1424,15 @@
             <div id="email-form" class="email-form">
                 <h2 class="form-heading">Contact Me</h2>
                 <form id="contact-form" onsubmit="handleFormSubmit(event)">
+                    <!-- 🕳️ Honeypot: should stay empty -->
+                    <div class="hp-wrap" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                    </div>
+
+                    <!-- ⏱️ Timestamp: set by JS on page load -->
+                    <input type="hidden" id="form_ts" name="form_ts" value="">
+                    
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required>
                     
@@ -1764,6 +1773,12 @@
                 const subject = form.subject.value.trim();
                 const message = form.content.value.trim();
 
+                // 🕳️ Honeypot value (should be empty)
+                const website = (form.website?.value || "").trim();
+
+                // ⏱️ Timestamp (ms)
+                const formTs = parseInt(form.form_ts?.value || "0", 10);
+
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
                 if (!name || !email || !subject || !message) {
@@ -1776,34 +1791,50 @@
                     return;
                 }
 
+                // ⏱️ Client-side minimum time-to-submit (server will enforce too)
+                const elapsedMs = Date.now() - (Number.isFinite(formTs) ? formTs : 0);
+                if (elapsedMs > 0 && elapsedMs < 2500) {
+                    alert("Please wait a moment and try again.");
+                    return;
+                }
+
                 const today = new Date().toISOString().split("T")[0];
 
-                const baseUrl =
-                window.location.hostname === 'localhost'
-                    ? 'http://localhost:3001'
-                    : 'https://laura-backend-a4147f87b085.herokuapp.com';
+                // ✅ Same-origin in production on Vercel
+                const endpoint =
+                    window.location.hostname === "localhost"
+                    ? "http://localhost:3001/sendEmail"
+                    : "/api/sendEmail";
 
-                fetch(`${baseUrl}/send-email`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
+                fetch(endpoint, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
                     name,
                     email,
                     subject,
                     message,
-                    time: today
+                    time: today,
+
+                    // send spam-defense fields
+                    website,
+                    form_ts: formTs
+                    })
                 })
-                })
-                .then(res => {
-                    if (!res.ok) throw new Error('Email failed');
+                    .then((res) => {
+                    if (!res.ok) throw new Error("Email failed");
                     document.getElementById("successModal").style.display = "flex";
                     form.reset();
-                })
-                .catch(err => {
+
+                    // reset timestamp for the next send
+                    const ts = document.getElementById("form_ts");
+                    if (ts) ts.value = Date.now().toString();
+                    })
+                    .catch((err) => {
                     alert("Email failed to send.");
                     console.error(err);
-                });
-            }
+                    });
+                }
 
             function closeModal() {
                 const modal = document.getElementById('successModal');
@@ -2188,6 +2219,9 @@
                             el.style.overflowX = "hidden";
                         }
                     });
+
+                    const ts = document.getElementById("form_ts");
+                    if (ts) ts.value = Date.now().toString();
                 }
 
                 window.addEventListener("scroll", checkScroll);
