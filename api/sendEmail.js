@@ -52,11 +52,6 @@ function isValidEmail(email) {
 // ---- Handler ----
 export default async function handler(req, res) {
   // If you’re calling same-origin (/api/sendEmail), you can remove CORS entirely.
-  res.setHeader("Access-Control-Allow-Origin", process.env.CORS_ORIGIN || "*");
-  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
-
-  if (req.method === "OPTIONS") return res.status(204).end();
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const ip = getClientIp(req);
@@ -104,7 +99,7 @@ export default async function handler(req, res) {
 
     await transporter.sendMail({
       from: `"${name}" <contact@lauralovelace.info>`,
-      to: process.env.MAIL_TO || "laura.builds.tech@gmail.com",
+      to: process.env.MAIL_TO,
       replyTo: email,
       subject,
       html: `

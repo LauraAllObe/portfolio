@@ -14,18 +14,7 @@ if not IS_VERCEL:
 
 app = Flask(__name__, template_folder="templates", static_folder="static")
 
-secret_key = os.getenv("SECRET_KEY")
-
-# In production, require a real secret key
-if IS_PROD and not secret_key:
-    raise RuntimeError("SECRET_KEY is not set. Add it in Vercel Project Settings → Environment Variables.")
-
-# For local dev only, you *may* fall back to something predictable
-# (Better: set SECRET_KEY in your .env file)
-if not secret_key:
-    secret_key = "dev-only-secret-key-change-me"
-
-app.config["SECRET_KEY"] = secret_key
+app.config["SECRET_KEY"] = os.environ["SECRET_KEY"]
 
 # Custom URL converter - automatically converts all incoming URLs to lowercase
 class LowercaseConverter(BaseConverter):
