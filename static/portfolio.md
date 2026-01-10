@@ -1,4 +1,4 @@
-# Laura Allison Obermaier - Portfolio (Markdown)
+# Laura Allison Lovelace - Portfolio (Markdown)
 
 Contact:
 - Email: laura.builds.tech@gmail.com
