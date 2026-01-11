@@ -208,7 +208,7 @@
             </div>
             <img src="{{ url_for('static', filename='navbar/exit.avif') }}" alt="Nav bar Icon" class="navbar-close-button" onclick="toggleMenu()" loading="lazy" decoding="async">
         </div>
-        <!-- Clouds -->
+        <!-- Parallax Clouds -->
         <div class="clouds">
             <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.avif') }}" alt="Cloud"  decoding="async"/>
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud7.avif') }}" alt="Cloud"  decoding="async"/>
@@ -1570,6 +1570,8 @@
                     });
                 }, { rootMargin: '200px 0px' });
                 cloudObserver.observe(cloudsWrap);
+            } else if (cloudsWrap) {
+                cloudsWrap.classList.remove('is-paused');
             }
 
             // Initialize and refresh every 30 seconds
