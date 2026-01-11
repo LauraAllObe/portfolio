@@ -208,7 +208,7 @@
             </div>
             <img src="{{ url_for('static', filename='navbar/exit.avif') }}" alt="Nav bar Icon" class="navbar-close-button" onclick="toggleMenu()" loading="lazy" decoding="async">
         </div>
-        <!-- Parallax Clouds -->
+        <!-- Clouds -->
         <div class="clouds">
             <img id="cloud1" src="{{ url_for('static', filename='clouds/cloud1.avif') }}" alt="Cloud"  decoding="async"/>
             <img id="cloud2" src="{{ url_for('static', filename='clouds/cloud7.avif') }}" alt="Cloud"  decoding="async"/>
@@ -1532,19 +1532,6 @@
             const cloud8 = document.getElementById('cloud8');
             const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud8];
             const cloudsWrap = document.querySelector('.clouds');
-            let cloudsActive = true;
-            const SPEEDS = [
-                { xVW: -191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: -191.3, yPx: -1.65 },
-                { xVW: -191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-                { xVW: +191.3, yPx: -1.65 },
-            ];
 
             const io = new IntersectionObserver((entries)=>{
                 entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
@@ -1570,8 +1557,6 @@
             var span = document.getElementsByClassName("close")[0];
             var modalContent = document.getElementById("expanded-image-modalContent");
 
-            let ticking = false;
-
             Object.keys(slideIndices).forEach(id=>{
                 const el = document.getElementById(id);
                 if (el) io.observe(el);
@@ -1581,11 +1566,7 @@
             if (cloudsWrap && 'IntersectionObserver' in window) {
                 const cloudObserver = new IntersectionObserver((entries) => {
                     entries.forEach((entry) => {
-                        cloudsActive = entry.isIntersecting;
-                        if (cloudsActive && !ticking) {
-                            requestAnimationFrame(updateClouds);
-                            ticking = true;
-                        }
+                        cloudsWrap.classList.toggle('is-paused', !entry.isIntersecting);
                     });
                 }, { rootMargin: '200px 0px' });
                 cloudObserver.observe(cloudsWrap);
@@ -1732,18 +1713,6 @@
                 if (!el || el.dataset.inited) return;
                 el.dataset.inited = '1';
                 showSlides(slideIndices[id], id);
-            }
-
-            // Parallax cloud update
-            function updateClouds() {
-                const t = window.scrollY / window.innerHeight;
-                clouds.forEach((el, i) => {
-                    if (!el) return;
-                    const s = SPEEDS[i];
-                    el.style.setProperty('--dx', `${t * s.xVW}vw`);
-                    el.style.setProperty('--dy', `${window.scrollY * s.yPx}px`);
-                });
-                ticking = false;
             }
 
             function toggleMenu() {
@@ -2096,18 +2065,6 @@
             window.addEventListener('load', () => {
                 window.scrollTo(0, 0);
             });
-
-            window.addEventListener('scroll', () => {
-                if (!cloudsActive) return;
-                if (!ticking) {
-                    requestAnimationFrame(updateClouds);
-                    ticking = true;
-                }
-            }, { passive: true });
-
-            // Ensure correct starting position at load and after resizes
-            window.addEventListener('load', updateClouds);
-            window.addEventListener('resize', updateClouds);
 
             window.onclick = function(event) {
                 if (!event.target.matches('.navbar-open-button')) {
