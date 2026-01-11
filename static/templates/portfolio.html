@@ -1734,13 +1734,12 @@
 
             // Parallax cloud update
             function updateClouds() {
-                const scrollMax = document.documentElement.scrollHeight - window.innerHeight;
-                const t = scrollMax > 0 ? (window.scrollY / scrollMax) : 0;
+                const t = window.scrollY / window.innerHeight;
                 clouds.forEach((el, i) => {
                     if (!el) return;
                     const s = SPEEDS[i];
                     el.style.setProperty('--dx', `${t * s.xVW}vw`);
-                    el.style.setProperty('--dy', `${t * s.yVH}vh`);
+                    el.style.setProperty('--dy', `${window.scrollY * s.yPx}px`);
                 });
                 ticking = false;
             }
