@@ -303,10 +303,6 @@
 
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
-    .foreground {
-        top: 32.5vh;
-        top: 32.5svh;
-    }
 
     .background {
         height: 100vh;
@@ -325,9 +321,6 @@
 
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
-    .foreground {
-        top: -50vh !important;
-    }
 
     .background {
         height: 140vh;
