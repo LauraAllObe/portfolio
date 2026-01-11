@@ -38,7 +38,7 @@ Role: Course Assistant under Dr. Reza Peyrovian
 - Graded algorithm assignments for 50+ students and supported instruction.
 
 Florida State University, Tallahassee, FL | Aug 2022 - Jun 2023
-Role: Research Assistant under Dr. Jonathan Adams
+Role: AI Research Assistant under Dr. Jonathan Adams
 - Conducted prompt optimization using Stable Diffusion, built binaural beats mobile app.
 - Co-authored paper on AI-in-Education (published at AACE EdMedia+ 2023).
 - Presented research at FSU Undergraduate Symposium.
