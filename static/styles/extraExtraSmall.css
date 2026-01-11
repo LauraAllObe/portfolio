@@ -306,9 +306,6 @@
     .foreground {
         top: 32.5vh;
         top: 32.5svh;
-        position: fixed;
-        left: 0;
-        transform: translateZ(0);
     }
 
     .background {
@@ -331,9 +328,6 @@
     .foreground {
         top: -50vh !important;
         top: -50svh !important;
-        position: fixed;
-        left: 0;
-        transform: translateZ(0);
     }
 
     .background {
