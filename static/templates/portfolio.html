@@ -1534,14 +1534,14 @@
             const cloudsWrap = document.querySelector('.clouds');
             let cloudsActive = true;
             const SPEEDS = [
-                { xVW: -91.3, yVH: -8.22 },
-                { xVW: +91.3, yVH: -8.22 },
-                { xVW: +91.3, yVH: -8.22 },
-                { xVW: -91.3, yVH: -8.22 },
-                { xVW: -91.3, yVH: -8.22 },
-                { xVW: +91.3, yVH: -8.22 },
-                { xVW: +91.3, yVH: -8.22 },
-                { xVW: +91.3, yVH: -8.22 },
+                { xVW: -91.3, yPx: -0.35 },
+                { xVW: +91.3, yPx: -0.35 },
+                { xVW: +91.3, yPx: -0.35 },
+                { xVW: -91.3, yPx: -0.35 },
+                { xVW: -91.3, yPx: -0.35 },
+                { xVW: +91.3, yPx: -0.35 },
+                { xVW: +91.3, yPx: -0.35 },
+                { xVW: +91.3, yPx: -0.35 },
             ];
 
             const io = new IntersectionObserver((entries)=>{
@@ -1739,7 +1739,7 @@
                     if (!el) return;
                     const s = SPEEDS[i];
                     el.style.setProperty('--dx', `${t * s.xVW}vw`);
-                    el.style.setProperty('--dy', `${t * s.yVH}vh`);
+                    el.style.setProperty('--dy', `${window.scrollY * s.yPx}px`);
                 });
                 ticking = false;
             }
