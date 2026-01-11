@@ -288,49 +288,70 @@ a:hover {
   margin-top: 63vh;
   overflow: hidden;
   position: absolute;
+  right: -2%;
   animation: MarqueeHelicopterLeft linear 40s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-helicopter2 { 
   margin-top: 80vh;
   overflow: hidden;
   position: absolute;
+  right: -2%;
   animation: MarqueeHelicopterLeft linear 45s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-plane1 { 
   margin-top: 42vh;
   overflow: hidden;
   position: absolute;
+  right: -30%;
   animation: MarqueePlaneLeft linear 27s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-plane2 { 
   margin-top: 19vh;
   overflow: hidden;
   position: absolute;
+  right: -30%;
   animation: MarqueePlaneLeft linear 25s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-plane3 { 
   margin-top: 8vh;
   overflow: hidden;
   position: absolute;
+  right: -30%;
   animation: MarqueePlaneLeft linear 23s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-plane4 { 
   margin-top: 15vh;
   overflow: hidden;
   position: absolute;
+  right: -30%;
   animation: MarqueePlaneLeft linear 20s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .marquee-plane5 { 
   margin-top: 38vh;
   overflow: hidden;
   position: absolute;
+  right: -30%;
   animation: MarqueePlaneLeft linear 21s infinite;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
 }
 
 .category-button {
@@ -410,14 +431,14 @@ a:hover {
 
 @keyframes MarqueeHelicopterLeft
 {
-  0% { right: -2% }
-  100% { right: 100% }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-140vw, 0, 0); }
 }
 
 @keyframes MarqueePlaneLeft
 {
-  0% { right: -30% }
-  100% { right: 100% }
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-140vw, 0, 0); }
 }
 
 /* Sidebar / Help Desk */
