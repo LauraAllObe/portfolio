@@ -652,8 +652,8 @@ a:hover {
 /* Overview */
 
 .overview {
-    margin-top: 80vw;
-    margin-bottom: -60vw;
+    margin-top: 1152px;
+    margin-bottom: -864px;
     z-index: 100;
     height: 58vw;
     width: 70vw;
