@@ -1967,6 +1967,14 @@
                 }
             }
 
+            // Use a stable vh unit to avoid iOS URL bar reflow shifting foreground.
+            let stableViewportWidth = window.innerWidth;
+
+            function setStableVh() {
+                const vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--stable-vh', `${vh}px`);
+            }
+
             // Table Slideshow Logic
             (function() {
                 let tables = document.querySelectorAll('.departures-signs .table');
@@ -2235,6 +2243,21 @@
                 window.addEventListener("resize", setBackgroundWidth);
                 window.addEventListener("orientationchange", () => {
                     setTimeout(setBackgroundWidth, 100);
+                });
+
+                setStableVh();
+                window.addEventListener("resize", () => {
+                    const width = window.innerWidth;
+                    if (Math.abs(width - stableViewportWidth) > 5) {
+                        stableViewportWidth = width;
+                        setStableVh();
+                    }
+                });
+                window.addEventListener("orientationchange", () => {
+                    setTimeout(() => {
+                        stableViewportWidth = window.innerWidth;
+                        setStableVh();
+                    }, 200);
                 });
                 
                 //for MAC specific css styles

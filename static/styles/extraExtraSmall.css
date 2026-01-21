@@ -304,8 +304,7 @@
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .foreground {
-        top: 40vh;
-        top: 40svh;
+        top: calc(var(--stable-vh, 1vh) * 40);
     }
 
     .background {
@@ -326,8 +325,7 @@
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
     .foreground {
-        top: -50vh !important;
-        top: -50lvh !important;
+        top: calc(var(--stable-vh, 1vh) * -50) !important;
     }
 
     .background {
