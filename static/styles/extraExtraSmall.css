@@ -304,13 +304,13 @@
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .foreground {
-        top: 32.5vh;
-        top: 32.5lvh;
+        top: 45vh !important;
+        top: 45lvh !important; 
     }
 
     .background {
-        height: 100vh;
-        height: 100lvh;
+        height: 80vh;
+        height: 80lvh;
     }
 
     .sky-limit-text {
