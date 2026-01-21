@@ -353,31 +353,31 @@
     }
 
     .marquee-helicopter1 { 
-        margin-top: 68vh;
+        margin-top: 85vh;
     }
 
     .marquee-helicopter2 { 
-        margin-top: 75vh;
+        margin-top: 95vh;
     }
 
     .marquee-plane1 { 
-        margin-top: 55vh;
+        margin-top: 70vh;
     }
 
     .marquee-plane2 { 
-        margin-top: 36vh;
+        margin-top: 46vh;
     }
 
     .marquee-plane3 { 
-        margin-top: 27vh;
+        margin-top: 32vh;
     }
 
     .marquee-plane4 { 
-        margin-top: 31vh;
+        margin-top: 38vh;
     }
 
     .marquee-plane5 { 
-        margin-top: 42vh;
+        margin-top: 56vh;
     }
 
     .plane-text-1,
@@ -393,6 +393,17 @@
     .helicopter-text-2 {
         height: 26vh;
         margin-top: -7.5vh;
+    }
+
+    .dropdown-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .dropdown-item img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .end-background {
