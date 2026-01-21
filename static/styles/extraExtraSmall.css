@@ -307,6 +307,26 @@
         top: calc(var(--stable-vh, 1vh) * 42.5);
     }
 
+    .marquee-plane1 { 
+        margin-top: 45vh;
+    }
+
+    .marquee-plane2 { 
+        margin-top: 26vh;
+    }
+
+    .marquee-plane3 { 
+        margin-top: 17vh;
+    }
+
+    .marquee-plane4 { 
+        margin-top: 21vh;
+    }
+
+    .marquee-plane5 { 
+        margin-top: 32vh;
+    }
+
     .background {
         height: 80vh;
         height: 80lvh;
