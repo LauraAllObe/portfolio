@@ -326,7 +326,7 @@
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
     .foreground {
-        top: calc(var(--stable-vh, 1vh) * -20) !important;
+        top: calc(var(--stable-vh, 1vh) * 10) !important;
     }
 
     .background {
@@ -336,6 +336,7 @@
 
     .overview {
         margin-top: 338px;
+        margin-bottom: 0px;
     }
     
     .sky-limit-text {
@@ -367,7 +368,7 @@
     }
 
     .end-background {
-        margin-top: 200px !important;
+        margin-top: 600px !important;
     }
 }
 
