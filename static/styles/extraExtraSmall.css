@@ -336,7 +336,7 @@
 
     .overview {
         margin-top: 338px;
-        margin-bottom: -300px;
+        margin-bottom: -500px !important;
     }
     
     .sky-limit-text {
