@@ -361,5 +361,9 @@
         height: 26vh;
         margin-top: -7.5vh;
     }
+
+    .end-background {
+        margin-top: 600px !important;
+    }
 }
 
