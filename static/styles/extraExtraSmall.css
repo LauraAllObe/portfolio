@@ -333,6 +333,10 @@
         height: 140vh;
         height: 140lvh;
     }
+
+    .overview {
+        margin-top: 438px;
+    }
     
     .sky-limit-text {
         top: 50%;
@@ -363,7 +367,7 @@
     }
 
     .end-background {
-        margin-top: 800px !important;
+        margin-top: 500px !important;
     }
 }
 
