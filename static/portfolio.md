@@ -62,15 +62,25 @@ Florida State University, Tallahassee, FL | Aug 2021 - Dec 2023
 
 ## Skills
 
-Programming: Python, C, C++, C#, Java, TypeScript/JavaScript, SQL/NoSQL, HTML/CSS, SCSS, Tailwind, Bash/Shell, Assembly, LaTeX/Markdown, JSON/XML  
-Frameworks/Tools: React, Node.js, Next.js, .NET MAUI, Flask, Hugging Face, OpenAI, Jupyter, Docker, Git/GitHub/GitLab  
-Cloud/DevOps: AWS, Azure, Firebase, Nginx, Gunicorn, Auth0, Linode, Jira  
-Languages: English (native), German (native), French (advanced)
+- Programming Languages: Python, TypeScript/JavaScript, Go, SQL (PostgreSQL, MySQL, SQLite), NoSQL, C++, Java, C, C#,  HTML, CSS/SCSS
+- AI/ML: Applied ML, Hugging Face,  OpenAI / LLM APIs, Jupyter/JupyterHub, LLM Integration, GitHub Copilot, OpenAI Codex
+- Frameworks: React, Next.js, Node.js, FastAPI, RESTful APIs, Flask, ExpressJS, .NET MAUI
+- Cloud/DevOps: AWS, Azure, Docker, GitHub Actions, CI/CD, IaC, Cloud Infrastructure, Secure Deployments, Nginx
+- Data: MongoDB, NoSQL, Firebase/Supabase, Relational Databases, Landsat 8, CESM2, Data Modeling, Data Pipelines
+- Tools: Git (GitHub/GitLab), Version Control, Jira, VS Code, Bash/Shell Scripting, JSON/XML, Linux, Windows
+- Principles: System Design, Scalability, Testing (Unit/Integration/E2E), Automation, Clean Code, Ownership Mentality
+- Soft: Problem Solving, Eagerness to Learn, Growth Mindset, Leadership, Communication, Cross-functional Collaboration
+- Spoken Languages: English (native), German (native), French (advanced)
 
 
 ---
 
 ## Projects
+Urban Futures Hackathon - American Museum of Natural History (LEAP)	January 2026
+_Climate Resilience, Data Analysis, Environmental Modeling_
+- Integrated demographic, zoning, and climate data for 49 redevelopment sites, converting addresses to lat/long for analysis
+- Modeled 2025–2035 temperature projections by combining CESM2 deltas with high-resolution Landsat data
+- Quantified cooling impact of 6 green interventions using 20+ sources and visualized results via StoryMaps
 
 NLP Nutrition Summary Generation (03/31/25 – 05/13/25, Stevens Institute of Technology)
 - Skills: Python, SpaCy, Mistral-7B-GPTQ, AutoGPTQ, ROUGE-L, BLEU, Google CSE
