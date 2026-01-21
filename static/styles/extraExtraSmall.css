@@ -55,6 +55,8 @@
 
     .dropdown-item img {
         height: 35px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .dropdown-text {
