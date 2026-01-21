@@ -1956,6 +1956,11 @@
 
                 // Adjust foreground vertical position based on viewport width
                 if (fg) {
+                    if (window.matchMedia(extraExtraSmallQuery).matches) {
+                        fg.style.marginTop = "";
+                        return;
+                    }
+
                     // Example: as width decreases, top margin increases
                     // You can tweak the factor and clamp if needed
                     const baseOffset = 0; // starting point when screen is wide
@@ -2259,6 +2264,7 @@
                 window.addEventListener("orientationchange", () => {
                     setTimeout(setBackgroundWidth, 100);
                 });
+                setBackgroundWidth();
 
                 setStableVh();
                 lockForegroundTop();
