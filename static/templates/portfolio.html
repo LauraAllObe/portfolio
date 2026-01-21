@@ -1975,6 +1975,21 @@
                 document.documentElement.style.setProperty('--stable-vh', `${vh}px`);
             }
 
+            const extraExtraSmallQuery = "((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))";
+
+            function lockForegroundTop() {
+                const fg = document.querySelector('.foreground');
+                if (!fg || !window.matchMedia(extraExtraSmallQuery).matches) {
+                    return;
+                }
+
+                fg.style.top = "";
+                const computedTop = window.getComputedStyle(fg).top;
+                if (computedTop) {
+                    fg.style.top = computedTop;
+                }
+            }
+
             // Table Slideshow Logic
             (function() {
                 let tables = document.querySelectorAll('.departures-signs .table');
@@ -2246,17 +2261,20 @@
                 });
 
                 setStableVh();
+                lockForegroundTop();
                 window.addEventListener("resize", () => {
                     const width = window.innerWidth;
                     if (Math.abs(width - stableViewportWidth) > 5) {
                         stableViewportWidth = width;
                         setStableVh();
+                        lockForegroundTop();
                     }
                 });
                 window.addEventListener("orientationchange", () => {
                     setTimeout(() => {
                         stableViewportWidth = window.innerWidth;
                         setStableVh();
+                        lockForegroundTop();
                     }, 200);
                 });
                 
