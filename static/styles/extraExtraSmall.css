@@ -55,8 +55,6 @@
 
     .dropdown-item img {
         height: 35px;
-        left: 50%;
-        transform: translateX(-50%);
     }
 
     .dropdown-text {
@@ -328,7 +326,7 @@
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
     .foreground {
-        top: calc(var(--stable-vh, 1vh) * 10) !important;
+        top: calc(var(--stable-vh, 1vh) * 2) !important;
     }
 
     .background {
@@ -338,7 +336,7 @@
 
     .overview {
         margin-top: 338px;
-        margin-bottom: 0px;
+        margin-bottom: -300px;
     }
     
     .sky-limit-text {
@@ -352,6 +350,34 @@
     .clouds img {
         max-height: 150px;
         height: 150px;
+    }
+
+    .marquee-helicopter1 { 
+        margin-top: 68vh;
+    }
+
+    .marquee-helicopter2 { 
+        margin-top: 75vh;
+    }
+
+    .marquee-plane1 { 
+        margin-top: 55vh;
+    }
+
+    .marquee-plane2 { 
+        margin-top: 36vh;
+    }
+
+    .marquee-plane3 { 
+        margin-top: 27vh;
+    }
+
+    .marquee-plane4 { 
+        margin-top: 31vh;
+    }
+
+    .marquee-plane5 { 
+        margin-top: 42vh;
     }
 
     .plane-text-1,
@@ -370,7 +396,7 @@
     }
 
     .end-background {
-        margin-top: 600px !important;
+        margin-top: 800px !important;
     }
 }
 
