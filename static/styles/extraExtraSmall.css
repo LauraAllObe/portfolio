@@ -304,7 +304,7 @@
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .foreground {
-        top: calc(var(--stable-vh, 1vh) * 40);
+        top: calc(var(--stable-vh, 1vh) * 42.5);
     }
 
     .background {
