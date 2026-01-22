@@ -68,12 +68,7 @@
     <link rel="canonical" href="https://lauralovelace.info/">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/standard.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/vertical.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraExtraSmall.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraSmall.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/small.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/medium.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/large.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/extraLarge.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mobile.css') }}">
     <link rel="stylesheet" href="/static/youtube-embed/lite-yt-embed.css">
     <link rel="icon" type="image/png" href="/static/miniMe.avif" />
     <link rel="shortcut icon" href="/static/miniMe.avif" />
@@ -1966,7 +1961,7 @@
 
                 // Adjust foreground vertical position based on viewport width
                 if (fg) {
-                    if (window.matchMedia(extraExtraSmallQuery).matches) {
+                    if (window.matchMedia(mobileQuery).matches) {
                         fg.style.marginTop = "";
                         return;
                     }
@@ -1990,11 +1985,11 @@
                 document.documentElement.style.setProperty('--stable-vh', `${vh}px`);
             }
 
-            const extraExtraSmallQuery = "((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))";
+            const mobileQuery = "((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))";
 
             function lockForegroundTop() {
                 const fg = document.querySelector('.foreground');
-                if (!fg || !window.matchMedia(extraExtraSmallQuery).matches) {
+                if (!fg || !window.matchMedia(mobileQuery).matches) {
                     return;
                 }
 
