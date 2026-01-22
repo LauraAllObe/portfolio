@@ -72,6 +72,11 @@ Climate Resilience, Data Analysis, Environmental Modeling
 - Modeled 2025–2035 temperature projections by combining CESM2 deltas with high-resolution Landsat data
 - Quantified cooling impact of 6 green interventions using 20+ sources and visualized results via StoryMaps
 
+Health Bud Mobile Application (09/15/25 - 12/02/25, Stevens Institute of Technology)
+- Skills: TypeScript, React Native, Expo Go, PostgreSQL, Firebase, RDMS, LLM APIs
+- Group of 5
+- Comprehensive nutrition tracking and scoring tool with AI integration.
+
 NLP Nutrition Summary Generation (03/31/25 – 05/13/25, Stevens Institute of Technology)
 - Skills: Python, SpaCy, Mistral-7B-GPTQ, AutoGPTQ, ROUGE-L, BLEU, Google CSE
 - Solo project.

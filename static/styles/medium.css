@@ -1,14 +1,289 @@
 /* Small Laptops */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .bot-link {
+        top: 23px;
+        right: 12px;
+        padding: 6px 12px;
+        gap: 7px;
+        font-size: 13px;
+    }
 
+    .bot-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+    #cloud1 { --baseX: -9vw;  --baseY: 60px; }
+    #cloud2 { --baseX: 12vw;  --baseY: 0px; }
+    #cloud3 { --baseX: 46vw;  --baseY: 380px; }
+    #cloud4 { --baseX: -15vw; --baseY: 345px; }
+    #cloud5 { --baseX: 55vw;  --baseY: 80px; }
+    #cloud6 { --baseX: 25vw;  --baseY: 440px; }
+    #cloud8 { --baseX: 38vw;  --baseY: 0px; height: 220px; }
+
+    .dropdown-item img {
+        height: 52px;
+    }
+
+    .dropdown-text {
+        font-size: 19px;
+        margin-left: -130px;
+    }
+
+    .navbar-close-button {
+        width: 125px;
+    }
+
+    .end-background {
+        margin-top: 900px;
+        background-size: 580px;
+    }
+
+    .email-form {
+        margin-top: 180px;
+        margin-left: 1vw;
+        width: 360px;
+    }
+
+    .email-form form {
+        gap: 7px;
+    }
+
+    .form-heading {
+        font-size: 24px;
+    }
+
+    .email-form label {
+        font-size: 13px;
+    }
+
+    .email-form input, .email-form textarea {
+        padding: 7.5px;
+        font-size: 13px;
+    }
+
+    .email-form button {
+        padding: 7.5px;
+        font-size: 13.5px;
+    }
+
+    .end-clickables {
+        margin: 14px 0.75vw;
+        height: 18px;
+    }
+
+    .end-copyright {
+        margin-top: 17px;
+        font-size: 7.5px;
+    }
+
+    .overview {
+        margin-top: 1300px;
+        margin-bottom: -150px;
+        padding: 70px;
+        overflow: visible !important;
+    }
+
+    .coach-arrow {
+        width: 190px;
+    }
+
+    .overview-arrow-text {
+        font-size: 34px;
+    }
+
+    .departures-signs {
+        top: 90px;
+        height: 520px;
+        right: -115px;
+    }
+
+    .departures-signs .tables {
+        top: 17px;
+        width: 280px;
+        line-height: 1.76;
+    }
+
+    .departures-footer {
+        font-size: 9px;
+        bottom: 60px;
+    }
+
+    .departures-signs .table .table-title {
+        font-size: 18px;
+    }
+
+    .departures-signs .table tbody {
+        font-size: 9px;
+    }
+
+    .table-column-titles {
+        font-size: 8px !important;
+        margin-bottom: -1% !important;
+    }
+
+    .airport-background {
+        bottom: -500px;
+    }
+
+    .airport-table {
+        left: -12vw;
+        top: 620px;
+        height: 340px;
+    }
+
+    .backpack-front {
+        height: 95px;
+    }
+
+    .backpack-items {
+        left: 54%;
+        width: 30%;
+        scale: 0.85;
+    }
+
+    #dl {
+        --item-active-translate-y: -360px !important;
+        --item-active-translate-x: -220px !important;
+    }
+
+    #bt {
+        --item-active-translate-y: -420px !important;
+        --item-active-translate-x: -380px !important;
+    }
+
+    #tb {
+        --item-active-translate-y: -680px !important;
+        --item-active-translate-x: -320px !important;
+    }
+
+    #note {
+        --item-active-translate-y: -540px !important;
+        --item-active-translate-x: -210px !important;
+    }
+
+    #passport {
+        --item-active-translate-y: -580px !important;
+        --item-active-translate-x: -370px !important;
+    }
+
+    #zb {
+        --item-active-translate-y: -600px !important;
+        --item-active-translate-x: -250px !important;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    body {
+        font-size: 13.5px;
+    }
+
+    .slide-navigation-text {
+        font-size: 1.2vw;
+        text-wrap: nowrap;
+    }
+
+    .slide-navigation-text::before {
+        width: 20vw;
+        height: 14vw;
+        margin-left: 2vw;
+    }
+
+    .slideshow-background {
+        height: 80vw;
+    }
+
+    .marquee-helicopter1 { 
+        margin-top: 62vh;
+    }
+
+    .marquee-helicopter2 { 
+        margin-top: 78vh;
+    }
+
+    .marquee-plane1 { 
+        margin-top: 43vh;
+    }
+
+    .marquee-plane2 { 
+        margin-top: 23vh;
+    }
+
+    .marquee-plane3 { 
+        margin-top: 15vh;
+    }
+
+    .marquee-plane4 { 
+        margin-top: 18vh;
+    }
+
+    .marquee-plane5 { 
+        margin-top: 36vh;
+    }
+
+    .category-icon {
+        width: 140px;
+    }
+
+    .social-icon {
+        width: 75px;
+    }
 }
 
 /* Portrait */
 @media only screen and (min-width: 768px) and (max-width: 1023px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
+    .foreground {
+        top: calc(var(--stable-vh, 1vh) * 40);
+    }
 
+    .background {
+        height: 85vh;
+        height: 85lvh;
+    }
+
+    .sky-limit-text {
+        height: 26vh;
+        overflow: visible;
+    }
+
+    .clouds img {
+        max-height: 240px;
+        height: 240px;
+    }
 }
 
 /* Landscape */
 @media only screen and (min-height: 768px) and (max-height: 1023px) and ((orientation: landscape) or (max-aspect-ratio: 1/1)) {
+    .foreground {
+        top: calc(var(--stable-vh, 1vh) * 2.5) !important;
+    }
 
+    .background {
+        height: 120vh;
+        height: 120lvh;
+    }
+
+    .overview {
+        margin-top: 1100px;
+        margin-bottom: -400px !important;
+    }
+
+    .sky-limit-text {
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: unset;
+        width: 60vw;
+        overflow: visible;
+    }
+
+    .clouds img {
+        max-height: 230px;
+        height: 230px;
+    }
 }
