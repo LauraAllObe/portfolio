@@ -1099,6 +1099,7 @@ a:hover {
     flex-direction: column;
     gap: 0.4vw;
     margin-bottom: 1.2vw;
+    width: 10%;
 }
 
 .slideshow-ticket .ticket-label {
@@ -1151,18 +1152,26 @@ a:hover {
     background:
         linear-gradient(
             to right,
-            #1e1e1e 0, #1e1e1e 2px,
-            transparent 2px, transparent 5px,
-            #1e1e1e 5px, #1e1e1e 7px,
-            transparent 7px, transparent 10px,
-            #1e1e1e 10px, #1e1e1e 11px,
-            transparent 11px, transparent 14px,
-            #1e1e1e 14px, #1e1e1e 18px,
-            transparent 18px, transparent 21px,
-            #1e1e1e 21px, #1e1e1e 23px,
-            transparent 23px, transparent 27px,
-            #1e1e1e 27px, #1e1e1e 30px,
-            transparent 30px, transparent 34px
+            #1e1e1e 0, #1e1e1e 1px,
+            transparent 1px, transparent 3px,
+            #1e1e1e 3px, #1e1e1e 5px,
+            transparent 5px, transparent 7px,
+            #1e1e1e 7px, #1e1e1e 8px,
+            transparent 8px, transparent 10px,
+            #1e1e1e 10px, #1e1e1e 13px,
+            transparent 13px, transparent 15px,
+            #1e1e1e 15px, #1e1e1e 16px,
+            transparent 16px, transparent 18px,
+            #1e1e1e 18px, #1e1e1e 20px,
+            transparent 20px, transparent 22px,
+            #1e1e1e 22px, #1e1e1e 25px,
+            transparent 25px, transparent 27px,
+            #1e1e1e 27px, #1e1e1e 28px,
+            transparent 28px, transparent 30px,
+            #1e1e1e 30px, #1e1e1e 32px,
+            transparent 32px, transparent 34px,
+            #1e1e1e 34px, #1e1e1e 37px,
+            transparent 37px, transparent 39px
         );
     border-radius: 2px;
     opacity: 0.8;
