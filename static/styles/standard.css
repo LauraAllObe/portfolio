@@ -1044,9 +1044,9 @@ a:hover {
     align-items: center;
     background: linear-gradient(90deg, #8a8f9d, #7f8491);
     color: #f1f3f6;
-    padding: 1.2vw 2vw 1vw 2.2vw;
+    padding: 1.3vw 2vw 1.1vw 2.2vw;
     font-family: 'BarlowBold';
-    font-size: 1.8vw;
+    font-size: 2.2vw;
 }
 
 .slideshow-ticket .ticket-head-right {
@@ -1063,7 +1063,7 @@ a:hover {
 }
 
 .slideshow-ticket .ticket-plane {
-    width: 2.2vw;
+    width: 2.6vw;
     height: auto;
     color: #f1f3f6;
 }
@@ -1104,15 +1104,19 @@ a:hover {
 .slideshow-ticket .ticket-label {
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    font-size: 0.85vw;
+    font-size: 0.9vw;
     color: #8a8a8a;
     font-family: 'BarlowBold';
 }
 
 .slideshow-ticket .ticket-value {
-    font-size: 1.25vw;
+    font-size: 1.35vw;
     font-family: 'BarlowBold';
     color: #2b2f37;
+}
+
+.slideshow-ticket .ticket-name {
+    font-size: 1.6vw;
 }
 
 .slideshow-ticket .ticket-value-small {
@@ -1123,7 +1127,7 @@ a:hover {
 
 .slideshow-ticket .ticket-meta {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.8fr 1fr 0.7fr;
     gap: 1vw;
     margin-top: 0.6vw;
     margin-bottom: 1.4vw;
@@ -1138,18 +1142,27 @@ a:hover {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 6px;
-    padding: 0.7vw 0.8vw;
+    padding: 0.6vw 0.7vw;
+    text-align: center;
 }
 
 .slideshow-ticket .ticket-barcode {
     height: 2.6vw;
     background:
-        repeating-linear-gradient(
+        linear-gradient(
             to right,
-            #1e1e1e 0,
-            #1e1e1e 2px,
-            transparent 2px,
-            transparent 5px
+            #1e1e1e 0, #1e1e1e 2px,
+            transparent 2px, transparent 5px,
+            #1e1e1e 5px, #1e1e1e 7px,
+            transparent 7px, transparent 10px,
+            #1e1e1e 10px, #1e1e1e 11px,
+            transparent 11px, transparent 14px,
+            #1e1e1e 14px, #1e1e1e 18px,
+            transparent 18px, transparent 21px,
+            #1e1e1e 21px, #1e1e1e 23px,
+            transparent 23px, transparent 27px,
+            #1e1e1e 27px, #1e1e1e 30px,
+            transparent 30px, transparent 34px
         );
     border-radius: 2px;
     opacity: 0.8;
