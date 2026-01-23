@@ -1544,15 +1544,14 @@
             let __ticketTriggerOffset = 500;
             let __scrollTicking = false;
             let __latestScrollY = 0;
-            const triggerOffset = 500;
-            const slides = document.querySelectorAll(".slideshow-background");
 
             const initialOffsets = new Map();
+                if (!el) return;
                 clouds.forEach((el) => {
-                const cs = getComputedStyle(el);
-                const left = parseFloat(cs.left) || 0;
-                const top  = parseFloat(cs.top)  || 0;
-                initialOffsets.set(el, {left, top});
+                    const cs = getComputedStyle(el);
+                    const left = parseFloat(cs.left) || 0;
+                    const top  = parseFloat(cs.top)  || 0;
+                    initialOffsets.set(el, {left, top});
             });
 
             const SPEEDS = [
@@ -1590,8 +1589,6 @@
             var span = document.getElementsByClassName("close")[0];
             var modalContent = document.getElementById("expanded-image-modalContent");
 
-            let ticking = false;
-
             Object.keys(slideIndices).forEach(id=>{
                 const el = document.getElementById(id);
                 if (el) io.observe(el);
@@ -1602,10 +1599,6 @@
             // Initialize and refresh every 30 seconds
             updateDeparturesFooter();
             setInterval(updateDeparturesFooter, 30000); 
-            
-            initTicketScroll(slides, triggerOffset);
-            __latestScrollY = window.scrollY;
-            runScrollPipeline();
 
             // ===================================
             // LIGHTWEIGHT DOM CONTENT AND LOADING
@@ -1659,11 +1652,11 @@
                 document.getElementById('sky-subtitle').textContent = subtitles[idx];
             });
 
-            window.onload = function() {
+            window.addEventListener('load', () => {
                 const body = document.body;
                 body.style.overflowY = 'visible';
                 if (typeof interval !== 'undefined') clearInterval(interval);
-            };
+            });
 
             window.addEventListener('load', () => {
                 const minDisplayTime = 0;
@@ -1759,6 +1752,52 @@
                 showSlides(slideIndices[id], id);
             }
 
+            // ============================
+            // CACHES (avoid repeated queries)
+            // ============================
+
+            const __sections = [
+            { id: 'top', name: 'Skyline' },
+            { id: 'overview', name: 'Overview' },
+            { id: 'slideshow9', name: 'Wakatime Readme Stats' },
+            { id: 'slideshow8', name: 'NLP Nutrition Summary Generation' },
+            { id: 'slideshow0', name: 'Combined Models ML' },
+            { id: 'slideshow11', name: 'A.I. Blockchain' },
+            { id: 'slideshow10', name: 'NutriverseAI' },
+            { id: 'slideshow1', name: 'Hacker News Web App' },
+            { id: 'slideshow2', name: 'Law Practice Manager App' },
+            { id: 'slideshow3', name: 'My Notes App' },
+            { id: 'slideshow4', name: 'ProFessUp App' },
+            { id: 'slideshow5', name: 'FAT32 Filesystem' },
+            { id: 'slideshow6', name: 'Shell Implementation' },
+            { id: 'slideshow7', name: 'Elevator Kernel Module' }
+            ];
+
+            let __sectionEls = [];      // [{ id, name, el }]
+            let __navItems = [];        // [{ name, span, img }]
+            let __visibleSectionIds = new Set(); // updated by filterCategories()
+
+            function initScrollCaches() {
+            __sectionEls = __sections
+                .map(s => ({ ...s, el: document.getElementById(s.id) }))
+                .filter(s => !!s.el);
+
+            __navItems = Array.from(document.querySelectorAll('.dropdown-content .dropdown-item'))
+                .map(item => {
+                const span = item.querySelector('.dropdown-text');
+                const img = item.querySelector('img');
+                return (span && img) ? { name: span.textContent.trim(), span, img } : null;
+                })
+                .filter(Boolean);
+
+            // default visibility: whatever is currently displayed
+            __visibleSectionIds = new Set(
+                __sectionEls
+                .filter(s => s.el.style.display !== 'none') // cheap check
+                .map(s => s.id)
+            );
+            }
+
             function updateClouds(scrollY) {
                 const t = scrollY / window.innerHeight;
                 clouds.forEach((el, i) => {
@@ -1770,56 +1809,33 @@
             }
 
             function updateNavHighlight(scrollY) {
-                const sections = [
-                    { id: 'top', name: 'Skyline' },
-                    { id: 'overview', name: 'Overview' },
-                    { id: 'slideshow9', name: 'Wakatime Readme Stats' },
-                    { id: 'slideshow8', name: 'NLP Nutrition Summary Generation' },
-                    { id: 'slideshow0', name: 'Combined Models ML' },
-                    { id: 'slideshow11', name: 'A.I. Blockchain' },
-                    { id: 'slideshow10', name: 'NutriverseAI' },
-                    { id: 'slideshow1', name: 'Hacker News Web App' },
-                    { id: 'slideshow2', name: 'Law Practice Manager App' },
-                    { id: 'slideshow3', name: 'My Notes App' },
-                    { id: 'slideshow4', name: 'ProFessUp App' },
-                    { id: 'slideshow5', name: 'FAT32 Filesystem' },
-                    { id: 'slideshow6', name: 'Shell Implementation' },
-                    { id: 'slideshow7', name: 'Elevator Kernel Module' }
-                ];
-
                 const targetY = scrollY + window.innerHeight / 2;
 
-                let closestSection = null;
+                let closestName = null;
                 let minDistance = Infinity;
 
-                sections.forEach(section => {
-                    const el = document.getElementById(section.id);
-                    if (!el || window.getComputedStyle(el).display === 'none') return;
+                for (const s of __sectionEls) {
+                    if (!__visibleSectionIds.has(s.id)) continue;
 
-                    const rect = el.getBoundingClientRect();
+                    const rect = s.el.getBoundingClientRect();
                     const absTop = rect.top + scrollY;
                     const dist = Math.abs(absTop - targetY);
 
                     if (dist < minDistance) {
-                        closestSection = section;
-                        minDistance = dist;
+                    minDistance = dist;
+                    closestName = s.name;
                     }
-                });
+                }
 
-                const navItems = document.querySelectorAll('.dropdown-content .dropdown-item');
-                navItems.forEach(item => {
-                    const span = item.querySelector('.dropdown-text');
-                    const img = item.querySelector('img');
-                    if (!span || !img) return;
-
-                    if (span.textContent.trim() === closestSection?.name) {
-                        img.src = "/static/navbar/selected.avif";
-                        span.style.color = "#171c1f";
+                for (const item of __navItems) {
+                    if (item.name === closestName) {
+                    item.img.src = "/static/navbar/selected.avif";
+                    item.span.style.color = "#171c1f";
                     } else {
-                        img.src = "/static/navbar/unselected.avif";
-                        span.style.color = "#f2d732";
+                    item.img.src = "/static/navbar/unselected.avif";
+                    item.span.style.color = "#f2d732";
                     }
-                });
+                }
             }
 
             function initTicketScroll(slides, triggerOffset = 500) {
@@ -2032,6 +2048,17 @@
                 else {
                     overview.style.display = 'flex';
                 }
+
+                // Update cached visibility for nav highlight (cheap)
+                __visibleSectionIds = new Set(
+                __sectionEls
+                    .filter(s => s.el && s.el.style.display !== 'none')
+                    .map(s => s.id)
+                );
+
+                // Update nav highlight immediately after category change
+                __latestScrollY = window.scrollY;
+                runScrollPipeline();
             }
 
             function navigateTo(id, category = null) {
@@ -2270,50 +2297,23 @@
             });
 
             document.addEventListener("DOMContentLoaded", function () {
-                const triggerOffset = 500; // Distance before slideshow triggers animation
                 const slides = document.querySelectorAll(".slideshow-background");
-
-                function checkScroll() {
-                    const scrollY = window.scrollY;
-                    const vw = window.innerWidth;
-                    const paddingOffset = 0.65 * vw; // 65vw converted to pixels
-
-                    slides.forEach(slide => {
-                        const ticket = slide.querySelector(".slideshow-ticket");
-                        if (!ticket) return;
-
-                        const slideTop = slide.offsetTop;
-
-                        if (scrollY > slideTop - triggerOffset + paddingOffset) {
-                            ticket.classList.add("animate");
-                        } else {
-                            ticket.classList.remove("animate");
-                        }
-                    });
-
-                    // Clamp overly wide elements
-                    const elements = document.querySelectorAll("*");
-
-                    elements.forEach(el => {
-                        const rect = el.getBoundingClientRect();
-                        if (rect.width > vw || el.offsetWidth > vw) {
-                            el.style.maxWidth = "100vw";
-                            el.style.overflowX = "hidden";
-                        }
-                    });
-
-                    const ts = document.getElementById("form_ts");
-                    if (ts) ts.value = Date.now().toString();
-                }
-
-                checkScroll(); // initial check
-                
                 //triggers resize on orientation change (mobile mostly)
                 window.addEventListener("resize", setBackgroundWidth);
                 window.addEventListener("orientationchange", () => {
                     setTimeout(setBackgroundWidth, 100);
                 });
                 setBackgroundWidth();
+
+                // Build caches AFTER DOM exists
+                initScrollCaches();
+
+                // Tickets: init AFTER DOM exists
+                initTicketScroll(slides, 500);
+
+                // Initial render
+                __latestScrollY = window.scrollY;
+                runScrollPipeline();
 
                 setStableVh();
                 lockForegroundTop();
