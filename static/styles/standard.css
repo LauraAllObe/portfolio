@@ -1003,7 +1003,7 @@ a:hover {
     position: absolute;
     overflow-x: hidden;
     overflow-y: hidden;
-    top: -50vw;
+    top: -35vw;
     width: 80vw;
     height: 33.5vw;
     z-index: 200;
@@ -1063,9 +1063,13 @@ a:hover {
 }
 
 .slideshow-ticket .ticket-plane {
-    width: 2.6vw;
+    width: 4vw;
     height: auto;
-    color: #f1f3f6;
+    color: #ffffff;
+}
+
+#slideshow9 .ticket-plane {
+    transform: translateY(0.1vw);
 }
 
 .slideshow-ticket .ticket-body {
@@ -1156,26 +1160,32 @@ a:hover {
 }
 
 .slideshow-ticket .ticket-barcode {
-    height: 2.4vw;
+    height: 3.2vw;
     background:
         repeating-linear-gradient(
             to right,
             #1e1e1e 0, #1e1e1e 1px,
-            transparent 1px, transparent 2.5px,
-            #1e1e1e 2.5px, #1e1e1e 5.5px,
-            transparent 5.5px, transparent 7px,
-            #1e1e1e 7px, #1e1e1e 8px,
-            transparent 8px, transparent 10.5px,
-            #1e1e1e 10.5px, #1e1e1e 13.5px,
-            transparent 13.5px, transparent 15px,
-            #1e1e1e 15px, #1e1e1e 16px,
-            transparent 16px, transparent 18.5px,
-            #1e1e1e 18.5px, #1e1e1e 22px,
-            transparent 22px, transparent 24px,
-            #1e1e1e 24px, #1e1e1e 26px,
-            transparent 26px, transparent 28.5px,
-            #1e1e1e 28.5px, #1e1e1e 31.5px,
-            transparent 31.5px, transparent 33px
+            transparent 1px, transparent 4px,
+            #1e1e1e 4px, #1e1e1e 6px,
+            transparent 6px, transparent 10px,
+            #1e1e1e 10px, #1e1e1e 12.5px,
+            transparent 12.5px, transparent 18px,
+            #1e1e1e 18px, #1e1e1e 19px,
+            transparent 19px, transparent 26px,
+            #1e1e1e 26px, #1e1e1e 30px,
+            transparent 30px, transparent 33.5px,
+            #1e1e1e 33.5px, #1e1e1e 35px,
+            transparent 35px, transparent 41.5px,
+            #1e1e1e 41.5px, #1e1e1e 45.5px,
+            transparent 45.5px, transparent 49px,
+            #1e1e1e 49px, #1e1e1e 50.5px,
+            transparent 50.5px, transparent 58px,
+            #1e1e1e 58px, #1e1e1e 63.5px,
+            transparent 63.5px, transparent 67px,
+            #1e1e1e 67px, #1e1e1e 68px,
+            transparent 68px, transparent 74px,
+            #1e1e1e 74px, #1e1e1e 76.5px,
+            transparent 76.5px, transparent 82px
         );
     border-radius: 2px;
     opacity: 0.8;
@@ -1197,16 +1207,16 @@ a:hover {
 
 .slideshow-ticket .ticket-barcode-main {
     position: absolute;
-    left: 0;
-    bottom: 0.2vw;
-    width: 52%;
+    left: 18%;
+    bottom: 2.8vw;
+    width: 60%;
 }
 
 .slideshow-ticket .ticket-barcode-stub {
     position: absolute;
-    right: 0.2vw;
-    bottom: 1.2vw;
-    width: 8vw;
+    right: 2vw;
+    bottom: 30%;
+    width: 10vw;
     transform: rotate(90deg);
     transform-origin: right bottom;
 }
@@ -1221,51 +1231,87 @@ a:hover {
 }
 
 #slideshow11 .slideshow-ticket.animate {
-    transform: translateX(183.5%) translateY(-15%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow10 .slideshow-ticket.animate {
-    transform: translateX(187.5%) translateY(-15%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow9 .slideshow-ticket.animate {
-    transform: translateX(180%) translateY(-20%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow8 .slideshow-ticket.animate {
-    transform: translateX(175%) translateY(-30%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow0 .slideshow-ticket.animate {
-    transform: translateX(167.5%) translateY(-30%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow1 .slideshow-ticket.animate {
-    transform: translateX(182.5%) translateY(-15%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow2 .slideshow-ticket.animate {
-    transform: translateX(180%) translateY(-30%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow3 .slideshow-ticket.animate {
-    transform: translateX(177.5%) translateY(-20%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow4 .slideshow-ticket.animate {
-    transform: translateX(180%) translateY(-30%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow5 .slideshow-ticket.animate {
-    transform: translateX(175%) translateY(-20%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow6 .slideshow-ticket.animate {
-    transform: translateX(170%) translateY(-30%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 #slideshow7 .slideshow-ticket.animate {
-    transform: translateX(175%) translateY(-20%) rotate(90deg);
+    height: 33.5vw;
+    top: 25%;
+    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform-origin: center;
 }
 
 .slideshow-background,
