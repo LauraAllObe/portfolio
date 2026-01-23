@@ -918,7 +918,6 @@ a:hover {
              rotate(var(--item-rotate));
   transform-origin: bottom center;
   transition: transform 400ms ease var(--bp-move-delay);
-  will-change: transform;
   pointer-events: auto;
   z-index: 1;
 }
@@ -937,7 +936,6 @@ a:hover {
   width: var(--item-inactive-width, 11px);
   height: auto;
   transition: width 400ms ease var(--bp-size-delay), filter 180ms ease;
-  will-change: width, filter;
   image-rendering: -webkit-optimize-contrast;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -1021,6 +1019,146 @@ a:hover {
     width: auto;
     object-fit: contain;
     transition: transform 1s ease-in-out;
+}
+
+.slideshow-ticket .ticket-card {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 2.4 / 1;
+    display: flex;
+    flex-direction: column;
+    background:
+        linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.9)),
+        radial-gradient(120% 120% at 10% 10%, #f4f2ee 0%, #e8e5df 45%, #ddd9d1 100%);
+    border-radius: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    color: #2b2f37;
+    overflow: hidden;
+    font-family: 'BarlowRegular';
+}
+
+.slideshow-ticket .ticket-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    background: linear-gradient(90deg, #8a8f9d, #7f8491);
+    color: #f1f3f6;
+    padding: 1.2vw 2vw 1vw 2.2vw;
+    font-family: 'BarlowBold';
+    font-size: 1.8vw;
+}
+
+.slideshow-ticket .ticket-head-right {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    font-size: 1.6vw;
+}
+
+.slideshow-ticket .ticket-head-left {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+.slideshow-ticket .ticket-plane {
+    width: 2.2vw;
+    height: auto;
+    color: #f1f3f6;
+}
+
+.slideshow-ticket .ticket-body {
+    position: relative;
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 1.5vw;
+    padding: 1.8vw 2.2vw 2vw 2.2vw;
+    font-size: 1.1vw;
+    line-height: 1.2;
+}
+
+.slideshow-ticket .ticket-body::after {
+    content: "";
+    position: absolute;
+    top: 0.8vw;
+    bottom: 0.8vw;
+    left: calc(68% + 0.4vw);
+    width: 2px;
+    background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(120, 120, 120, 0.6),
+        rgba(120, 120, 120, 0.6) 10px,
+        transparent 10px,
+        transparent 18px
+    );
+}
+
+.slideshow-ticket .ticket-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4vw;
+    margin-bottom: 1.2vw;
+}
+
+.slideshow-ticket .ticket-label {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.85vw;
+    color: #8a8a8a;
+    font-family: 'BarlowBold';
+}
+
+.slideshow-ticket .ticket-value {
+    font-size: 1.25vw;
+    font-family: 'BarlowBold';
+    color: #2b2f37;
+}
+
+.slideshow-ticket .ticket-value-small {
+    font-family: 'BarlowRegular';
+    font-size: 1.1vw;
+    color: #3c4048;
+}
+
+.slideshow-ticket .ticket-meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    margin-top: 0.6vw;
+    margin-bottom: 1.4vw;
+}
+
+.slideshow-ticket .ticket-meta-compact {
+    grid-template-columns: 1fr;
+    gap: 0.6vw;
+}
+
+.slideshow-ticket .ticket-meta-block {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    padding: 0.7vw 0.8vw;
+}
+
+.slideshow-ticket .ticket-barcode {
+    height: 2.6vw;
+    background:
+        repeating-linear-gradient(
+            to right,
+            #1e1e1e 0,
+            #1e1e1e 2px,
+            transparent 2px,
+            transparent 5px
+        );
+    border-radius: 2px;
+    opacity: 0.8;
+}
+
+.slideshow-ticket .ticket-stub {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vw;
+    padding-left: 0.8vw;
 }
 
 .slideshow-ticket.animate {
