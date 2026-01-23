@@ -1578,6 +1578,15 @@
                 ['.marquee-plane4', 20],
                 ['.marquee-plane5', 21],
             ]);
+            const MARQUEE_OFFSET_PX = new Map([
+                ['.marquee-helicopter1', -140],
+                ['.marquee-helicopter2', -260],
+                ['.marquee-plane1', -80],
+                ['.marquee-plane2', -200],
+                ['.marquee-plane3', -320],
+                ['.marquee-plane4', -460],
+                ['.marquee-plane5', -140],
+            ]);
             let __motionScale = 1;
 
             const io = new IntersectionObserver((entries)=>{
@@ -1831,7 +1840,13 @@
                 const durationScale = 1 / __motionScale;
                 MARQUEE_BASE_DURATIONS.forEach((base, selector) => {
                     document.querySelectorAll(selector).forEach(el => {
-                        el.style.animationDuration = `${(base * durationScale).toFixed(2)}s`;
+                        const duration = base * durationScale;
+                        el.style.animationDuration = `${duration.toFixed(2)}s`;
+                        const offsetPx = MARQUEE_OFFSET_PX.get(selector) || 0;
+                        const travelPx = Math.max(window.innerWidth * 1.4, 1);
+                        const offsetRatio = Math.min(Math.max(Math.abs(offsetPx) / travelPx, 0), 0.98);
+                        const delay = -duration * offsetRatio;
+                        el.style.animationDelay = `${delay.toFixed(2)}s`;
                     });
                 });
             }
