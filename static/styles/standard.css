@@ -1161,17 +1161,21 @@ a:hover {
         repeating-linear-gradient(
             to right,
             #1e1e1e 0, #1e1e1e 1px,
-            transparent 1px, transparent 3px,
-            #1e1e1e 3px, #1e1e1e 6px,
-            transparent 6px, transparent 8px,
-            #1e1e1e 8px, #1e1e1e 9px,
-            transparent 9px, transparent 12px,
-            #1e1e1e 12px, #1e1e1e 15px,
-            transparent 15px, transparent 17px,
-            #1e1e1e 17px, #1e1e1e 18px,
-            transparent 18px, transparent 21px,
-            #1e1e1e 21px, #1e1e1e 24px,
-            transparent 24px, transparent 26px
+            transparent 1px, transparent 2.5px,
+            #1e1e1e 2.5px, #1e1e1e 5.5px,
+            transparent 5.5px, transparent 7px,
+            #1e1e1e 7px, #1e1e1e 8px,
+            transparent 8px, transparent 10.5px,
+            #1e1e1e 10.5px, #1e1e1e 13.5px,
+            transparent 13.5px, transparent 15px,
+            #1e1e1e 15px, #1e1e1e 16px,
+            transparent 16px, transparent 18.5px,
+            #1e1e1e 18.5px, #1e1e1e 22px,
+            transparent 22px, transparent 24px,
+            #1e1e1e 24px, #1e1e1e 26px,
+            transparent 26px, transparent 28.5px,
+            #1e1e1e 28.5px, #1e1e1e 31.5px,
+            transparent 31.5px, transparent 33px
         );
     border-radius: 2px;
     opacity: 0.8;
@@ -1195,14 +1199,14 @@ a:hover {
     position: absolute;
     left: 0;
     bottom: 0.2vw;
-    width: 70%;
+    width: 52%;
 }
 
 .slideshow-ticket .ticket-barcode-stub {
     position: absolute;
-    right: -1.2vw;
-    bottom: 1vw;
-    width: 10vw;
+    right: 0.2vw;
+    bottom: 1.2vw;
+    width: 8vw;
     transform: rotate(90deg);
     transform-origin: right bottom;
 }
