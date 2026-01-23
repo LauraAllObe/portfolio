@@ -1569,7 +1569,9 @@
                 clampWidth: 1400,
                 exponent: 1.8,
                 minScale: 0.1,
-                speedBoost: 1.1,
+                speedBoost: 1.2,
+                wideSpeedBoost: 1.35,
+                wideMinWidth: 1200,
                 maxScale: 1,
             };
             const MARQUEE_BASE_DURATIONS = new Map([
@@ -1836,8 +1838,11 @@
             function computeMotionScale() {
                 const width = Math.max(window.innerWidth || 0, 320);
                 const effectiveWidth = Math.min(width, MOTION_SCALE_CONFIG.clampWidth);
+                const boost = width >= MOTION_SCALE_CONFIG.wideMinWidth
+                    ? MOTION_SCALE_CONFIG.wideSpeedBoost
+                    : MOTION_SCALE_CONFIG.speedBoost;
                 const scale = Math.pow(MOTION_SCALE_CONFIG.baseWidth / effectiveWidth, MOTION_SCALE_CONFIG.exponent)
-                    * MOTION_SCALE_CONFIG.speedBoost;
+                    * boost;
                 return Math.max(MOTION_SCALE_CONFIG.minScale, Math.min(MOTION_SCALE_CONFIG.maxScale, scale));
             }
 
