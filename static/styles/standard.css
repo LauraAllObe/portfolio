@@ -1107,12 +1107,14 @@ a:hover {
     font-size: 0.9vw;
     color: #8a8a8a;
     font-family: 'BarlowBold';
+    display: block;
 }
 
 .slideshow-ticket .ticket-value {
     font-size: 1.35vw;
     font-family: 'BarlowBold';
     color: #2b2f37;
+    display: block;
 }
 
 .slideshow-ticket .ticket-name {
@@ -1127,7 +1129,7 @@ a:hover {
 
 .slideshow-ticket .ticket-meta {
     display: grid;
-    grid-template-columns: 0.7fr 0.8fr 0.6fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1vw;
     justify-content: start;
     margin-top: 0.6vw;
@@ -1145,34 +1147,68 @@ a:hover {
     border-radius: 6px;
     padding: 0.6vw 0.7vw;
     text-align: center;
-    width: 100%;
-    max-width: 10.5vw;
-    justify-self: start;
+    width: 9.5vw;
+    height: 4.8vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .slideshow-ticket .ticket-barcode {
-    height: 2.6vw;
+    height: 2.4vw;
     background:
         repeating-linear-gradient(
             to right,
-            #1e1e1e 0, #1e1e1e 1.5px,
-            transparent 1.5px, transparent 4.5px,
-            #1e1e1e 4.5px, #1e1e1e 6px,
-            transparent 6px, transparent 9px
+            #1e1e1e 0, #1e1e1e 1px,
+            transparent 1px, transparent 3px,
+            #1e1e1e 3px, #1e1e1e 6px,
+            transparent 6px, transparent 8px,
+            #1e1e1e 8px, #1e1e1e 9px,
+            transparent 9px, transparent 12px,
+            #1e1e1e 12px, #1e1e1e 15px,
+            transparent 15px, transparent 17px,
+            #1e1e1e 17px, #1e1e1e 18px,
+            transparent 18px, transparent 21px,
+            #1e1e1e 21px, #1e1e1e 24px,
+            transparent 24px, transparent 26px
         );
     border-radius: 2px;
     opacity: 0.8;
 }
 
-.slideshow-ticket .ticket-meta-compact .ticket-meta-block {
-    max-width: 12vw;
+.slideshow-ticket .ticket-main {
+    position: relative;
+    padding-bottom: 4.2vw;
 }
 
 .slideshow-ticket .ticket-stub {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.8vw;
     padding-left: 0.8vw;
+    padding-bottom: 4.2vw;
+}
+
+.slideshow-ticket .ticket-barcode-main {
+    position: absolute;
+    left: 0;
+    bottom: 0.2vw;
+    width: 70%;
+}
+
+.slideshow-ticket .ticket-barcode-stub {
+    position: absolute;
+    right: -1.2vw;
+    bottom: 1vw;
+    width: 10vw;
+    transform: rotate(90deg);
+    transform-origin: right bottom;
+}
+
+.slideshow-ticket .ticket-meta-compact .ticket-meta-block {
+    width: 9.5vw;
 }
 
 .slideshow-ticket.animate {
