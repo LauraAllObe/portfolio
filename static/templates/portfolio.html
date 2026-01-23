@@ -1564,6 +1564,21 @@
                 { xVW: +91.3, yVH: -8.22 },
                 { xVW: +91.3, yVH: -8.22 },
             ];
+            const MOTION_SCALE_CONFIG = {
+                baseWidth: 1200,
+                minScale: 0.6,
+                maxScale: 1,
+            };
+            const MARQUEE_BASE_DURATIONS = new Map([
+                ['.marquee-helicopter1', 40],
+                ['.marquee-helicopter2', 45],
+                ['.marquee-plane1', 27],
+                ['.marquee-plane2', 25],
+                ['.marquee-plane3', 23],
+                ['.marquee-plane4', 20],
+                ['.marquee-plane5', 21],
+            ]);
+            let __motionScale = 1;
 
             const io = new IntersectionObserver((entries)=>{
                 entries.forEach(e => { if (e.isIntersecting) initSlideshowOnce(e.target.id); });
@@ -1606,11 +1621,13 @@
             window.addEventListener('load', () => {
                 __latestScrollY = window.scrollY;
                 runScrollPipeline();
+                updateMotionScale();
             });
 
             window.addEventListener('resize', () => {
                 __latestScrollY = window.scrollY;
                 runScrollPipeline();
+                updateMotionScale();
             });
 
             // Dynamic sky-limit title/subtitle
@@ -1799,9 +1816,29 @@
                 clouds.forEach((el, i) => {
                     if (!el) return;
                     const s = SPEEDS[i];
-                    el.style.setProperty('--dx', `${t * s.xVW}vw`);
-                    el.style.setProperty('--dy', `${t * s.yVH}vh`);
+                    el.style.setProperty('--dx', `${t * s.xVW * __motionScale}vw`);
+                    el.style.setProperty('--dy', `${t * s.yVH * __motionScale}vh`);
                 });
+            }
+
+            function computeMotionScale() {
+                const width = Math.max(window.innerWidth || 0, 320);
+                const scale = MOTION_SCALE_CONFIG.baseWidth / width;
+                return Math.max(MOTION_SCALE_CONFIG.minScale, Math.min(MOTION_SCALE_CONFIG.maxScale, scale));
+            }
+
+            function applyMarqueeDurations() {
+                const durationScale = 1 / __motionScale;
+                MARQUEE_BASE_DURATIONS.forEach((base, selector) => {
+                    document.querySelectorAll(selector).forEach(el => {
+                        el.style.animationDuration = `${(base * durationScale).toFixed(2)}s`;
+                    });
+                });
+            }
+
+            function updateMotionScale() {
+                __motionScale = computeMotionScale();
+                applyMarqueeDurations();
             }
 
             function updateNavHighlight(scrollY) {
@@ -2302,6 +2339,7 @@
                     setTimeout(setBackgroundWidth, 100);
                 });
                 setBackgroundWidth();
+                updateMotionScale();
 
                 // Build caches AFTER DOM exists
                 initScrollCaches();
