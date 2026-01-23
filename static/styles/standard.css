@@ -1099,7 +1099,6 @@ a:hover {
     flex-direction: column;
     gap: 0.4vw;
     margin-bottom: 1.2vw;
-    width: 10%;
 }
 
 .slideshow-ticket .ticket-label {
@@ -1128,8 +1127,9 @@ a:hover {
 
 .slideshow-ticket .ticket-meta {
     display: grid;
-    grid-template-columns: 0.8fr 1fr 0.7fr;
+    grid-template-columns: 0.7fr 0.8fr 0.6fr;
     gap: 1vw;
+    justify-content: start;
     margin-top: 0.6vw;
     margin-bottom: 1.4vw;
 }
@@ -1145,36 +1145,27 @@ a:hover {
     border-radius: 6px;
     padding: 0.6vw 0.7vw;
     text-align: center;
+    width: 100%;
+    max-width: 10.5vw;
+    justify-self: start;
 }
 
 .slideshow-ticket .ticket-barcode {
     height: 2.6vw;
     background:
-        linear-gradient(
+        repeating-linear-gradient(
             to right,
-            #1e1e1e 0, #1e1e1e 1px,
-            transparent 1px, transparent 3px,
-            #1e1e1e 3px, #1e1e1e 5px,
-            transparent 5px, transparent 7px,
-            #1e1e1e 7px, #1e1e1e 8px,
-            transparent 8px, transparent 10px,
-            #1e1e1e 10px, #1e1e1e 13px,
-            transparent 13px, transparent 15px,
-            #1e1e1e 15px, #1e1e1e 16px,
-            transparent 16px, transparent 18px,
-            #1e1e1e 18px, #1e1e1e 20px,
-            transparent 20px, transparent 22px,
-            #1e1e1e 22px, #1e1e1e 25px,
-            transparent 25px, transparent 27px,
-            #1e1e1e 27px, #1e1e1e 28px,
-            transparent 28px, transparent 30px,
-            #1e1e1e 30px, #1e1e1e 32px,
-            transparent 32px, transparent 34px,
-            #1e1e1e 34px, #1e1e1e 37px,
-            transparent 37px, transparent 39px
+            #1e1e1e 0, #1e1e1e 1.5px,
+            transparent 1.5px, transparent 4.5px,
+            #1e1e1e 4.5px, #1e1e1e 6px,
+            transparent 6px, transparent 9px
         );
     border-radius: 2px;
     opacity: 0.8;
+}
+
+.slideshow-ticket .ticket-meta-compact .ticket-meta-block {
+    max-width: 12vw;
 }
 
 .slideshow-ticket .ticket-stub {
