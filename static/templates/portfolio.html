@@ -1540,14 +1540,6 @@
             const cloud6 = document.getElementById('cloud6');
             const cloud8 = document.getElementById('cloud8');
             const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud8];
-            const SPRING_K = 140;
-            const SPRING_C = 26;
-            const MAX_DT = 0.05;
-            let targetT = 0;
-            let currentT = 0;
-            let velT = 0;
-            let rafId = null;
-            let lastTs = 0;
 
             const initialOffsets = new Map();
                 clouds.forEach((el) => {
@@ -1591,6 +1583,8 @@
             var modalImg = document.querySelector(".expanded-image-modal-image");
             var span = document.getElementsByClassName("close")[0];
             var modalContent = document.getElementById("expanded-image-modalContent");
+
+            let ticking = false;
 
             Object.keys(slideIndices).forEach(id=>{
                 const el = document.getElementById(id);
@@ -1742,64 +1736,16 @@
                 showSlides(slideIndices[id], id);
             }
 
-            function syncCloudsImmediate() {
-                targetT = computeTargetT();
-                currentT = targetT;
-                velT = 0;
-                applyCloudParallax(currentT);
-            }
-
-            function onScrollForClouds() {
-                targetT = computeTargetT();
-
-                if (rafId === null) {
-                    rafId = requestAnimationFrame(animateCloudParallax);
-                }
-            }
-
-            function computeTargetT() {
-                return window.scrollY / window.innerHeight;
-            }
-
-            function applyCloudParallax(t) {
+            // then in updateClouds, add the base offset via translate3d too
+            function updateClouds() {
+                const t = window.scrollY / window.innerHeight;
                 clouds.forEach((el, i) => {
                     if (!el) return;
                     const s = SPEEDS[i];
                     el.style.setProperty('--dx', `${t * s.xVW}vw`);
                     el.style.setProperty('--dy', `${t * s.yVH}vh`);
                 });
-            }
-
-            function animateCloudParallax(ts) {
-                if (!lastTs) lastTs = ts;
-                let dt = (ts - lastTs) / 1000;
-                lastTs = ts;
-                if (dt > MAX_DT) dt = MAX_DT;
-
-                // Spring physics: a = k(x_target - x) - c*v
-                const x = currentT;
-                const v = velT;
-                const a = SPRING_K * (targetT - x) - SPRING_C * v;
-
-                velT = v + a * dt;
-                currentT = x + velT * dt;
-
-                applyCloudParallax(currentT);
-
-                // Stop when close enough (saves CPU)
-                const done =
-                    Math.abs(targetT - currentT) < 0.0005 && Math.abs(velT) < 0.0005;
-
-                if (!done) {
-                    rafId = requestAnimationFrame(animateCloudParallax);
-                } else {
-                    // snap to final to avoid tiny drift
-                    currentT = targetT;
-                    velT = 0;
-                    applyCloudParallax(currentT);
-                    rafId = null;
-                    lastTs = 0;
-                }
+                ticking = false;
             }
 
             function toggleMenu() {
@@ -1836,8 +1782,10 @@
                 const subject = form.subject.value.trim();
                 const message = form.content.value.trim();
 
+                // 🕳️ Honeypot value (should be empty)
                 const website = (form.website?.value || "").trim();
 
+                // ⏱️ Timestamp (ms)
                 const formTs = parseInt(form.form_ts?.value || "0", 10);
 
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -1852,6 +1800,7 @@
                     return;
                 }
 
+                // ⏱️ Client-side minimum time-to-submit (server will enforce too)
                 const elapsedMs = Date.now() - (Number.isFinite(formTs) ? formTs : 0);
                 if (elapsedMs > 0 && elapsedMs < 2500) {
                     alert("Please wait a moment and try again.");
@@ -1860,6 +1809,7 @@
 
                 const today = new Date().toISOString().split("T")[0];
 
+                // ✅ Same-origin in production on Vercel
                 const endpoint =
                     window.location.hostname === "localhost"
                     ? "http://localhost:3001/sendEmail"
@@ -2172,16 +2122,21 @@
             modalImg.addEventListener('click', function(e) {
                 toggleZoom(e);
             });
-
-            window.addEventListener('scroll', onScrollForClouds, { passive: true });
     
             window.addEventListener('load', () => {
                 window.scrollTo(0, 0);
             });
 
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(updateClouds);
+                    ticking = true;
+                }
+            }, { passive: true });
+
             // Ensure correct starting position at load and after resizes
-            window.addEventListener('load', syncCloudsImmediate);
-            window.addEventListener('resize', syncCloudsImmediate);        
+            window.addEventListener('load', updateClouds);
+            window.addEventListener('resize', updateClouds);        
 
             window.onclick = function(event) {
                 if (!event.target.matches('.navbar-open-button')) {
