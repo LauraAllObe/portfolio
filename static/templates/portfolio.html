@@ -1566,6 +1566,8 @@
             ];
             const MOTION_SCALE_CONFIG = {
                 baseWidth: 700,
+                clampWidth: 900,
+                exponent: 1.5,
                 minScale: 0.18,
                 maxScale: 1,
             };
@@ -1832,7 +1834,8 @@
 
             function computeMotionScale() {
                 const width = Math.max(window.innerWidth || 0, 320);
-                const scale = MOTION_SCALE_CONFIG.baseWidth / width;
+                const effectiveWidth = Math.min(width, MOTION_SCALE_CONFIG.clampWidth);
+                const scale = Math.pow(MOTION_SCALE_CONFIG.baseWidth / effectiveWidth, MOTION_SCALE_CONFIG.exponent);
                 return Math.max(MOTION_SCALE_CONFIG.minScale, Math.min(MOTION_SCALE_CONFIG.maxScale, scale));
             }
 
