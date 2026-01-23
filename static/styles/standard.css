@@ -1004,7 +1004,8 @@ a:hover {
     overflow-x: hidden;
     overflow-y: hidden;
     top: -50vw;
-    height: 60vw;
+    width: 80vw;
+    height: 33.5vw;
     z-index: 200;
     left: 50%;
     transform: translateX(-50%) rotate(0deg);
@@ -1162,7 +1163,7 @@ a:hover {
 }
 
 .slideshow-ticket.animate {
-    height: 15.75vw;
+    height: 8.8vw;
     top: 50%;
 }
 
