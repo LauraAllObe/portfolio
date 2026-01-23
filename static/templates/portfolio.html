@@ -1546,12 +1546,12 @@
             let __latestScrollY = 0;
 
             const initialOffsets = new Map();
+            clouds.forEach((el) => {
                 if (!el) return;
-                clouds.forEach((el) => {
-                    const cs = getComputedStyle(el);
-                    const left = parseFloat(cs.left) || 0;
-                    const top  = parseFloat(cs.top)  || 0;
-                    initialOffsets.set(el, {left, top});
+                const cs = getComputedStyle(el);
+                const left = parseFloat(cs.left) || 0;
+                const top  = parseFloat(cs.top)  || 0;
+                initialOffsets.set(el, { left, top });
             });
 
             const SPEEDS = [
@@ -1595,10 +1595,6 @@
             });
 
             clouds.forEach(el => { if (el) el.style.willChange = 'transform'; });
-
-            // Initialize and refresh every 30 seconds
-            updateDeparturesFooter();
-            setInterval(updateDeparturesFooter, 30000); 
 
             // ===================================
             // LIGHTWEIGHT DOM CONTENT AND LOADING
@@ -2297,6 +2293,8 @@
             });
 
             document.addEventListener("DOMContentLoaded", function () {
+                updateDeparturesFooter();
+                setInterval(updateDeparturesFooter, 30000);
                 const slides = document.querySelectorAll(".slideshow-background");
                 //triggers resize on orientation change (mobile mostly)
                 window.addEventListener("resize", setBackgroundWidth);
