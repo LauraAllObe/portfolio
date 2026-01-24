@@ -1013,6 +1013,7 @@ a:hover {
         transform 1s ease-in-out,
         height 1s ease-in-out,
         top 1s ease-in-out;
+    text-decoration: none;
 }
 
 .slideshow-ticket img {
@@ -1047,6 +1048,66 @@ a:hover {
     padding: 1.3vw 2vw 1.1vw 2.2vw;
     font-family: 'BarlowBold';
     font-size: 2.2vw;
+}
+
+#slideshow5 .slideshow-ticket .ticket-head {
+    color: #6e8c82e2;
+    background: linear-gradient(90deg, #573d46, #573d46);
+}
+
+#slideshow6 .slideshow-ticket .ticket-head {
+    color: #ddcab8e2;
+    background: linear-gradient(90deg, #80427d, #80427d);
+}
+
+#slideshow7 .slideshow-ticket .ticket-head {
+    color: #acb388e2;
+    background: linear-gradient(90deg, #514c38, #514c38);
+}
+
+#slideshow8 .slideshow-ticket .ticket-head {
+    color: #d788ace2;
+    background: linear-gradient(90deg, #434446, #434446);
+}
+
+#slideshow0 .slideshow-ticket .ticket-head {
+    color: #ceded4ee;
+    background: linear-gradient(90deg, #2d3234e2, #2d3234e2);
+}
+
+#slideshow4 .slideshow-ticket .ticket-head {
+    color: #fffaece2;
+    background: linear-gradient(90deg, #96887f, #96887f);
+}
+
+#slideshow3 .slideshow-ticket .ticket-head {
+    color: #c37539e2;
+    background: linear-gradient(90deg, #167c93, #167c93);
+}
+
+#slideshow2 .slideshow-ticket .ticket-head {
+    color: #ffffffe2;
+    background: linear-gradient(90deg, #dedee8, #dedee8);
+}
+
+#slideshow1 .slideshow-ticket .ticket-head {
+    color: #dbd4c6e2;
+    background: linear-gradient(90deg, #42352c, #42352c);
+}
+
+#slideshow10 .slideshow-ticket .ticket-head {
+    color: #fffdf5e2;
+    background: linear-gradient(90deg, #323f4f, #323f4f);
+}
+
+#slideshow11 .slideshow-ticket .ticket-head {
+    color: #726c6ee2;
+    background: linear-gradient(90deg, #1c1a1b, #1c1a1b);
+}
+
+#slideshow9 .slideshow-ticket .ticket-head {
+    color: #151518e2;
+    background: linear-gradient(90deg, #27262be2, #27262be2);
 }
 
 .slideshow-ticket .ticket-head-right {
@@ -1196,12 +1257,20 @@ a:hover {
     padding-bottom: 4.2vw;
 }
 
+.slideshow-ticket .ticket-main .ticket-row {
+    padding-bottom: 0.8vw;
+}
+
+.slideshow-ticket .ticket-main .ticket-meta {
+    padding-top: 2.5vw;
+}
+
 .slideshow-ticket .ticket-stub {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 0.8vw;
-    padding-left: 0.8vw;
+    padding-left: 2.5vw;
     padding-bottom: 4.2vw;
 }
 
@@ -1210,6 +1279,30 @@ a:hover {
     left: 18%;
     bottom: 2.8vw;
     width: 60%;
+}
+
+#slideshow1 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
+}
+
+#slideshow2 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
+}
+
+#slideshow3 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
+}
+
+#slideshow4 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
+}
+
+#slideshow8 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
+}
+
+#slideshow0 .slideshow-ticket .ticket-barcode-main {
+    bottom: 4.7vw;
 }
 
 .slideshow-ticket .ticket-barcode-stub {
@@ -1233,84 +1326,84 @@ a:hover {
 #slideshow11 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow10 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow9 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow8 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow0 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow1 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow2 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow3 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow4 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow5 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow6 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
 #slideshow7 .slideshow-ticket.animate {
     height: 33.5vw;
     top: 25%;
-    transform: translateX(-2.5%) translateY(-4%) rotate(90deg) scale(0.3);
+    transform: translateX(-2%) translateY(-4%) rotate(90deg) scale(0.2);
     transform-origin: center;
 }
 
@@ -1461,7 +1554,7 @@ a:hover {
 
 #slideshow9 .slideshow-container {
     width: 67%; 
-    color: #fffdf5;
+    color: #090808;
 } 
 
 #slideshow9 .slideshow-video, 
@@ -1561,7 +1654,7 @@ a:hover {
 
 #slideshow5 .slideshow-container {
     width: 64%;
-    color: #ac0028;
+    color: #6e8c82;
     margin-right: 1vw;
 }
 

@@ -347,13 +347,11 @@
     }
 
     .slideshow-ticket {
-        top: -120vw;
-        height: 80vw;
-        margin-left: 8%;
+        margin-left: 6%;
     }
 
     .slideshow-ticket.animate {
-        height: 18vw;
+        transform: translateX(-2%) translateY(40vh) rotate(90deg) scale(0.2) !important;
     }
 
     .departures-signs {
