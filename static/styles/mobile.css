@@ -299,10 +299,6 @@
     .social-icon {
         width: 60px;
     }
-
-    .slideshow-ticket {
-        top: 0% !important;
-    }
 }
 
 /* Portrait */
@@ -313,7 +309,7 @@
     }
     
     .slideshow-ticket.animate {
-        transform: translateX(-8%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
+        transform: translateX(-7%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
     }
 
     .foreground {
