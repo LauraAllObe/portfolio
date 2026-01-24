@@ -334,11 +334,6 @@
 
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
-    .sidebar {
-        top: 10%;
-        height: 85vh;
-    }
-
     .sidebar, .sidebar-bg, .sidebar-inner {
         top: 12%;
         height: 78vh;
