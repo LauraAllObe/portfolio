@@ -304,7 +304,7 @@
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .slideshow-ticket.animate {
-        transform: translateX(-0.5%) translateY(35vh) rotate(90deg) scale(0.2) !important;
+        transform: translateX(1%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
     }
 
     .foreground {
@@ -325,10 +325,19 @@
         max-height: 160px;
         height: 160px;
     }
+
+    .sidebar {
+        height: 80vh;
+    }
 }
 
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
+    .sidebar {
+        top: 10%;
+        height: 85vh;
+    }
+
     .foreground {
         top: calc(var(--stable-vh, 1vh) * 2) !important;
     }
