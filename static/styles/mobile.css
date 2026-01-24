@@ -300,8 +300,8 @@
         width: 60px;
     }
 
-    .slideshow-ticket {
-        top: -20vw;
+    .slideshow-ticket.animate {
+        top: 40%;
     }
 }
 
@@ -309,6 +309,7 @@
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
     .slideshow-ticket {
         width: 90vw;
+        height: 37.8vw;
     }
     
     .slideshow-ticket.animate {
