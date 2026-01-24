@@ -326,8 +326,9 @@
         height: 160px;
     }
 
-    .sidebar {
-        height: 80vh;
+    .sidebar, .sidebar-bg, .sidebar-inner {
+        top: 7%;
+        height: 88vh;
     }
 }
 
@@ -336,6 +337,11 @@
     .sidebar {
         top: 10%;
         height: 85vh;
+    }
+
+    .sidebar, .sidebar-bg, .sidebar-inner {
+        top: 12%;
+        height: 78vh;
     }
 
     .foreground {
