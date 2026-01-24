@@ -300,8 +300,8 @@
         width: 60px;
     }
 
-    .slideshow-ticket.animate {
-        top: 120% !important;
+    .slideshow-ticket {
+        top: 0% !important;
     }
 }
 
