@@ -327,8 +327,7 @@
     }
 
     .sidebar, .sidebar-bg, .sidebar-inner {
-        top: 7%;
-        height: 88vh;
+        scale: 0.8;
     }
 }
 
@@ -336,7 +335,7 @@
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
     .sidebar, .sidebar-bg, .sidebar-inner {
         top: 12%;
-        height: 78vh;
+        scale: 0.8;
     }
 
     .foreground {
