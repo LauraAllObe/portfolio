@@ -313,7 +313,7 @@
     }
     
     .slideshow-ticket.animate {
-        transform: translateX(1%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
+        transform: translateX(-2%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
     }
 
     .foreground {
