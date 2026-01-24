@@ -325,19 +325,10 @@
         max-height: 160px;
         height: 160px;
     }
-
-    .sidebar, .sidebar-bg, .sidebar-inner {
-        scale: 0.8;
-    }
 }
 
 /* Landscape */
 @media only screen and (max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)) {
-    .sidebar, .sidebar-bg, .sidebar-inner {
-        top: 12%;
-        scale: 0.8;
-    }
-
     .foreground {
         top: calc(var(--stable-vh, 1vh) * 2) !important;
     }
