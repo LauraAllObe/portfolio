@@ -299,10 +299,18 @@
     .social-icon {
         width: 60px;
     }
+
+    .slideshow-ticket {
+        top: -20vw;
+    }
 }
 
 /* Portrait */
 @media only screen and (max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1)) {
+    .slideshow-ticket {
+        width: 90vw;
+    }
+    
     .slideshow-ticket.animate {
         transform: translateX(1%) translateY(37.5vh) rotate(90deg) scale(0.2) !important;
     }
