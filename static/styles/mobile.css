@@ -69,6 +69,15 @@
     .navbar-close-button {
         width: 100px;
     }
+    
+    .sidebar {
+        transform: translateX(100%) translateY(5%) scale(0.82);
+        transform-origin: right top;
+    }
+
+    .sidebar.active {
+        transform: translateX(0) translateY(5%) scale(0.82);
+    }
 
     .end-background {
         margin-top: 100px;
@@ -417,6 +426,15 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .sidebar {
+        transform: translateX(100%) translateY(9%) scale(0.88) !important;
+        transform-origin: right top;
+    }
+
+    .sidebar.active {
+        transform: translateX(0) translateY(9%) scale(0.88) !important;
     }
 
     .end-background {
