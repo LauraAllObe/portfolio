@@ -2297,7 +2297,8 @@
             const cloud8 = document.getElementById('cloud8');
             const clouds = [cloud1, cloud2, cloud3, cloud4, cloud5, cloud6, cloud8];
             let __ticketSlides = [];
-            let __ticketTriggerOffset = 500;
+            let __ticketLastScrollY = 0;
+            const __ticketState = new WeakMap();
             let __scrollTicking = false;
             let __latestScrollY = 0;
 
@@ -2652,32 +2653,59 @@
                 }
             }
 
-            function initTicketScroll(slides, triggerOffset = 500) {
-                __ticketSlides = Array.from(slides || []);
-                __ticketTriggerOffset = triggerOffset;
+            function initTicketScroll(slides) {
+                __ticketSlides = Array.from(slides || [])
+                    .map(slide => slide.querySelector(".slideshow-ticket"))
+                    .filter(Boolean);
+                resetTicketState();
+            }
+
+            function resetTicketState() {
+                __ticketLastScrollY = window.scrollY;
+                const viewportCenter = window.innerHeight / 2;
+                __ticketSlides.forEach(ticket => {
+                    const rect = ticket.getBoundingClientRect();
+                    if (rect.width === 0 && rect.height === 0) return;
+                    const center = rect.top + rect.height / 2;
+                    __ticketState.set(ticket, { rel: center - viewportCenter });
+                });
             }
 
             function updateTickets(scrollY) {
                 if (!__ticketSlides.length) return;
 
-                const vw = window.innerWidth;
-                const paddingOffset = 0.65 * vw; // 65vw -> px
+                const delta = scrollY - __ticketLastScrollY;
+                if (delta === 0) return;
 
-                __ticketSlides.forEach(slide => {
-                    const ticket = slide.querySelector(".slideshow-ticket");
-                    if (!ticket) return;
+                const direction = delta > 0 ? 1 : -1;
+                const viewportCenter = window.innerHeight / 2;
 
-                    const slideTop = slide.offsetTop;
-                    if (scrollY > slideTop - __ticketTriggerOffset + paddingOffset) {
+                __ticketSlides.forEach(ticket => {
+                    const rect = ticket.getBoundingClientRect();
+                    if (rect.width === 0 && rect.height === 0) return;
+
+                    const center = rect.top + rect.height / 2;
+                    const rel = center - viewportCenter;
+                    const prev = __ticketState.get(ticket);
+                    const prevRel = prev ? prev.rel : rel;
+
+                    // Direction-aware trigger:
+                    // - scrolling down: if ticket center is above viewport center, ensure animated
+                    // - scrolling up:   if ticket center is below viewport center, ensure un-animated
+                    if (direction > 0 && rel < 0) {
                         ticket.classList.add("animate");
-                    } else {
+                    } else if (direction < 0 && rel > 0) {
                         ticket.classList.remove("animate");
                     }
+
+                    __ticketState.set(ticket, { rel });
                 });
 
                 // keep your timestamp update behavior
                 const ts = document.getElementById("form_ts");
                 if (ts) ts.value = Date.now().toString();
+
+                __ticketLastScrollY = scrollY;
             }
 
             function runScrollPipeline() {
@@ -2869,6 +2897,9 @@
                     .filter(s => s.el && s.el.style.display !== 'none')
                     .map(s => s.id)
                 );
+
+                // Reset ticket trigger state after category change
+                resetTicketState();
 
                 // Update nav highlight immediately after category change
                 __latestScrollY = window.scrollY;
@@ -3115,9 +3146,15 @@
                 setInterval(updateDeparturesFooter, 30000);
                 const slides = document.querySelectorAll(".slideshow-background");
                 //triggers resize on orientation change (mobile mostly)
-                window.addEventListener("resize", setBackgroundWidth);
+                window.addEventListener("resize", () => {
+                    setBackgroundWidth();
+                    resetTicketState();
+                });
                 window.addEventListener("orientationchange", () => {
-                    setTimeout(setBackgroundWidth, 100);
+                    setTimeout(() => {
+                        setBackgroundWidth();
+                        resetTicketState();
+                    }, 100);
                 });
                 setBackgroundWidth();
                 updateMotionScale();
@@ -3126,7 +3163,7 @@
                 initScrollCaches();
 
                 // Tickets: init AFTER DOM exists
-                initTicketScroll(slides, 500);
+                initTicketScroll(slides);
 
                 // Initial render
                 __latestScrollY = window.scrollY;

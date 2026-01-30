@@ -1,5 +1,9 @@
 /* Extra Small Phones */
 @media only screen and (((max-width: 479px) and ((orientation: portrait) or (max-aspect-ratio: 1/1))) or ((max-height: 479px) and ((orientation: landscape) or (min-aspect-ratio: 1/1)))) {
+    .main-background {
+        margin-bottom: -650px !important;
+    }
+    
     .bot-link {
         top: 28px;
         right: 12px;
