@@ -19,6 +19,10 @@
         overflow: visible !important;
     }
 
+    body.is-macos.is-chrome .departures-signs {
+        top: -100%;
+    }
+
     .slides {
         flex-direction: column;
         align-items: center;

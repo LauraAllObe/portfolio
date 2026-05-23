@@ -192,9 +192,10 @@ a:hover {
 .sky-limit-text {
     position: absolute;
     pointer-events: none;
-    overflow: hidden;
+    overflow: visible;
     z-index: -400;
     height: 178px;
+    padding: 24px 40px;
     top: 45vh;
     left: 50%;                 
     transform: translateX(-50%);
@@ -2102,6 +2103,25 @@ body.is-macos .overview {
 body.is-macos .slideshow-container {
     left: 0%;
     transform: translate(-0%);
+}
+
+body.is-macos.is-chrome .departures-signs {
+    right: 10%;
+    left: auto;
+    transform: none;
+}
+
+body.is-macos.is-chrome .airport-table {
+    left: -28vw;
+}
+
+body.is-macos.is-chrome .airport-background {
+    left: -20%;
+}
+
+body.is-macos.is-safari .slideshow-container {
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 body.is-macos .dropdown-text {

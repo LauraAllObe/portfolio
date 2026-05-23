@@ -2898,13 +2898,25 @@
                 }, 50); // Delay allows DOM updates to complete (e.g., from filterCategories)
             }
 
-            function detectMacOS() {
-                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
-                                navigator.userAgent.toLowerCase().includes('macintosh');
+            function detectPlatformClasses() {
+                const ua = navigator.userAgent.toLowerCase();
+                const platform = navigator.userAgentData?.platform?.toLowerCase() || "";
+                const isMacOS = platform.includes('mac') || ua.includes('macintosh');
+                const isChromiumFamily = ua.includes('chrome') ||
+                    ua.includes('crios') ||
+                    ua.includes('chromium') ||
+                    ua.includes('edg') ||
+                    ua.includes('opr') ||
+                    ua.includes('opera');
+                const isChrome = (ua.includes('chrome') || ua.includes('crios')) &&
+                    !ua.includes('edg') &&
+                    !ua.includes('opr') &&
+                    !ua.includes('opera');
+                const isSafari = ua.includes('safari') && !isChromiumFamily;
 
-                if (isMacOS) {
-                    document.body.classList.add("is-macos");
-                }
+                document.body.classList.toggle("is-macos", isMacOS);
+                document.body.classList.toggle("is-chrome", isChrome);
+                document.body.classList.toggle("is-safari", isSafari);
             }
 
             function setBackgroundWidth() {
@@ -3162,13 +3174,8 @@
                     }, 200);
                 });
                 
-                //for MAC specific css styles
-                const isMacOS = navigator.userAgentData?.platform?.toLowerCase().includes('mac') ||
-                    navigator.userAgent.toLowerCase().includes('macintosh');
-
-                if (isMacOS) {
-                    document.body.classList.add("is-macos");
-                }
+                // Browser / OS specific CSS hooks.
+                detectPlatformClasses();
 
                 //restore last selected category from sessionStorage
                 if (window.COMPANY) {
