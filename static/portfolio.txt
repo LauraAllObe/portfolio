@@ -2,7 +2,7 @@
 
 Contact:
 - Email: laura.builds.tech@gmail.com
-- Location: Hoboken, NJ 07030
+- Location: White Plains, NY 10601
 - Phone: (954) 348-8139
 - LinkedIn: https://www.linkedin.com/in/laura-a-lovelace/
 - GitHub: https://github.com/LauraAllObe
