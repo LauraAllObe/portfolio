@@ -12,8 +12,8 @@ Contact:
 ---
 
 ## Summary
-Master’s student in Software Engineering with graduate certificates in Machine Learning and Cybersecurity,
-and a B.S. in Computer Science. Experienced in full-stack development, AI development, software architecture
+Poughkeepsie IBMer working on AI on Z, contributing to torch-spyre. Master’s alumni in Software Engineering with graduate certificates in Machine Learning and Cybersecurity,
+and a B.S. in Computer Science. Experienced in low-level and OS development, full-stack development, AI development, software architecture
 design, and research and course assistantships.
 
 
